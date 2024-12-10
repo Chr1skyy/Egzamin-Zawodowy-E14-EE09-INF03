@@ -1,0 +1,18 @@
+#kw1
+select imie, nazwisko
+from osoby
+where osoby.dataUr > 2000;
+
+#kw2
+select distinct adresy.miasto 
+from adresy
+order by adresy.miasto;
+
+#kw3
+select osoby.imie, osoby.nazwisko, telefony.numer
+from osoby
+inner join telefony on telefony.Osoby_id = osoby.id;
+
+#kw4
+alter table adresy
+add column if not exists numerMieszkania int after numer;

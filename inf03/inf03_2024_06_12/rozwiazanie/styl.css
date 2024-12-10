@@ -1,0 +1,59 @@
+* {
+  font-family: Century, serif;
+  text-align: center;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  background-color: indigo;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+
+  clear: both;
+}
+
+.blok {
+  width: 50%;
+  height: 470px;
+  display: inline-block;
+}
+
+#blok2,
+#blok4 {
+  float: right;
+}
+
+img {
+  padding: 3px;
+  margin: 10px;
+  border: dashed 2px slateblue;
+}
+
+a {
+  color: white;
+}
+
+button {
+  background-color: slateblue;
+  color: white;
+  border: none;
+  padding-block: 10px;
+  padding-inline: 20px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: indigo;
+}
+
+input[type="range"] {
+  width: 80%;
+}

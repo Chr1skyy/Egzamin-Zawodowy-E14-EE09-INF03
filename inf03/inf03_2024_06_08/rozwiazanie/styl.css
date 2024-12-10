@@ -1,0 +1,93 @@
+* {
+  font-family: Cambria;
+}
+
+body {
+  background-color: Linen;
+}
+
+#boczny,
+#baner,
+footer {
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+}
+
+#boczny {
+  width: 25%;
+  height: 510px;
+  margin-block: 0;
+  margin-inline: 1%;
+  box-shadow: 4px 4px 5px dimgray;
+
+  float: left;
+}
+
+body > *:not(#boczny) {
+  float: right;
+}
+
+#baner {
+  width: 73%;
+  height: 80px;
+}
+
+main {
+  width: 73%;
+  height: 400px;
+}
+
+button {
+  background-color: steelblue;
+  color: white;
+  width: 20%;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 130%;
+  border: none;
+}
+
+button:hover {
+  background-color: navy;
+}
+
+#blok-1,
+#blok-2,
+#blok-3 {
+  background-color: lightblue;
+  margin-right: 80px;
+  padding: 10px;
+  display: none;
+}
+
+.active-block {
+  display: flex !important;
+  flex-direction: column;
+}
+
+#progress {
+  background-color: lightgrey;
+  width: 73%;
+  margin-bottom: 10px;
+}
+
+#progress > * {
+  background-color: navy;
+  width: 4%;
+  height: 30px;
+}
+
+table {
+  width: 100%;
+  border: 1px dotted navy;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+}
+
+h4 {
+  margin: 0;
+}

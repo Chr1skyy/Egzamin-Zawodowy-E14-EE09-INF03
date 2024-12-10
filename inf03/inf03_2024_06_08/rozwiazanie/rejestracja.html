@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <aside id="boczny">
+      <img src="obraz.png" alt="promocje" />
+      <h2>Sprawdź promocje</h2>
+      <table>
+        <tr>
+          <th>co?</th>
+          <th>ile taniej?</th>
+        </tr>
+        <tr>
+          <td>ubrania</td>
+          <td>buty</td>
+        </tr>
+        <tr>
+          <td>15%</td>
+          <td>25%</td>
+        </tr>
+      </table>
+    </aside>
+    <header id="baner">
+      <h1>Zarejestruj się w sklepie</h1>
+    </header>
+    <main>
+      <button id="klient-button">Klient</button>
+      <button id="adres-button">Adres</button>
+      <button id="kontakt-button">Kontakt</button>
+
+      <div id="blok-1" class="active-block">
+        <p>Imię</p>
+        <input type="text" name="imie" id="imie" placeholder="Wpisz dane..." />
+
+        <p>Nazwisko</p>
+        <input
+          type="text"
+          name="nazwisko"
+          id="nazwisko"
+          placeholder="Wpisz dane..."
+        />
+
+        <p>Data urodzenia</p>
+        <input
+          type="date"
+          name="birth"
+          id="birth"
+          placeholder="Wpisz dane..."
+        />
+      </div>
+      <div id="blok-2">
+        <p>Ulica</p>
+        <input type="text" name="ulica" id="ulica" />
+
+        <p>Numer</p>
+        <input type="text" name="numer" id="numer" inputmode="numeric" />
+
+        <p>Miasto</p>
+        <input type="text" name="miasto" id="miasto" />
+      </div>
+
+      <div id="blok-3">
+        <p>Numer komórkowy</p>
+        <input type="tel" name="telefon" id="telefon" />
+
+        <div>
+          <label for="rodo">Akceptuję RODO</label>
+          <input type="checkbox" name="rodo" id="rodo" />
+        </div>
+
+        <button id="confirm-button">Zatwierdź dane</button>
+      </div>
+    </main>
+    <section id="progress">
+      <section></section>
+    </section>
+    <footer>
+      <h4>Rejestrację do sklepu wykonał: 000000000000</h4>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

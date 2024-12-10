@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css" />
+  </head>
+  <body>
+    <header id="baner">
+      <h2>Efekty na obrazach</h2>
+    </header>
+    <aside id="blok1" class="blok">
+      <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku" />
+      <div>
+        <input type="radio" name="img1-transform" checked value="blur(8px)" />
+        <label for="img1-transform">Blur</label>
+      </div>
+      <div>
+        <input type="radio" name="img1-transform" value="sepia(100%)" />
+        <label for="img1-transform">Sepia</label>
+      </div>
+      <div>
+        <input type="radio" name="img1-transform" value="invert(100%)" />
+        <label for="img1-transform">Negatyw</label>
+      </div>
+
+      <button>Zastosuj</button>
+    </aside>
+    <aside id="blok2" class="blok">
+      <img src="pomarancza.jpg" alt="drzewo pomarańczy" />
+      <div>
+        <button id="img2-color">Kolorowy</button>
+        <button id="img2-black-white">Czarno-biały</button>
+      </div>
+    </aside>
+    <aside id="blok3" class="blok">
+      <img src="owoce.jpg" alt="Kosz pełen owoców" />
+      <input type="range" min="0" max="100" value="100" id="img3-opacity" />
+      <div>
+        <button>Zatosuj</button>
+      </div>
+    </aside>
+    <aside id="blok4" class="blok">
+      <img src="zolw.jpg" alt="Żółw w wodzie" />
+      <input type="range" min="0" max="250" value="100" id="img4-brightness" />
+      <div>
+        <button>Zastosuj</button>
+      </div>
+    </aside>
+    <footer>
+      <p>
+        <a href="http://www.css.com/" target="_blank"
+          >Zobacz inne efekty obrazu</a
+        >
+      </p>
+      <p>Stronę wykonał: 0000000000</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

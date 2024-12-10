@@ -1,0 +1,18 @@
+#kw1
+select pracownicy.imie, pracownicy.pensja
+from pracownicy
+where pracownicy.staz < 5;
+
+#kw2
+select stanowiska.nazwa, avg(pracownicy.pensja)
+from stanowiska
+left join pracownicy on stanowiska.id = pracownicy.stanowiska_id
+group by stanowiska.nazwa;
+
+#kw3
+select imie, nazwisko, max(pensja)
+from pracownicy;
+
+#kw4
+update pracownicy
+set pracownicy.staz = pracownicy.staz + 1;
