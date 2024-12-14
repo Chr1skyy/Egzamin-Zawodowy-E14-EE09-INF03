@@ -1,0 +1,4 @@
+1. INSERT INTO logowanie(id, nick, haslo) VALUES (3, 'Jeremi', 'Jer123');
+2. SELECT FLOOR(AVG(rokUr)) AS "Średni rok urodzenia" FROM uczestnicy;
+3. SELECT imie, nazwisko, nick, haslo FROM uczestnicy JOIN logowanie ON uczestnicy.logowanie_id = logowanie.id WHERE imie LIKE "J%";
+4. CREATE USER 'uczestnik'@'localhost' IDENTIFIED BY "Ucz123&"

@@ -1,0 +1,63 @@
+* {
+    font-family: Roboto, Serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 30px;
+    padding: 10px;
+}
+
+#baner {
+    background-color: mistyrose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px;
+    border: 1px solid crimson;
+}
+
+#baner img {
+    float: left;
+    height: 100%;
+}
+
+.blok {
+    background-color: snow;
+    height: 450px;
+    width: 21%;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid crimson;
+    float: left;
+}
+
+footer {
+    background-color: crimson;
+    color: white;
+    clear: both;
+}
+
+#marki {
+    clear: both;
+}
+
+img {
+    max-width: 100%;
+}
+
+h4 {
+    font-size: 180%;
+    text-align: center;
+    color: crimson;
+}
+
+a {
+    color: white;
+}
