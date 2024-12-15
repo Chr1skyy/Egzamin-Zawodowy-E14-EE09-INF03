@@ -13,15 +13,13 @@ const replies = [
 function sendMessage() {
     const messageInput = document.getElementById('messageInput');
     const messageText = messageInput.value;
-    if (messageText.trim()) {
-        const chat = document.querySelector('#chat');
-        const newMessage = document.createElement('div');
-        newMessage.classList.add('message', 'jolanta');
-        newMessage.innerHTML = "<img src='Jolka.jpg' alt='Jolanta Nowak'><p>" + messageText + "</p>";
-        chat.appendChild(newMessage);
-        newMessage.scrollIntoView();
-        messageInput.value = '';
-    }
+    const chat = document.querySelector('#chat');
+    const newMessage = document.createElement('div');
+    newMessage.classList.add('message', 'jolanta');
+    newMessage.innerHTML = "<img src='Jolka.jpg' alt='Jolanta Nowak'><p>" + messageText + "</p>";
+    chat.appendChild(newMessage);
+    newMessage.scrollIntoView();
+    messageInput.value = '';
 }
 
 function generateRandomReply() {
