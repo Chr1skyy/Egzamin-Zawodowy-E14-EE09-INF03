@@ -1,0 +1,85 @@
+* {
+    font-family: Cambria;
+}
+
+body {
+    background-color: Linen;
+    margin: 0;
+}
+
+aside,
+header,
+footer {
+    background-color: SteelBlue;
+    color: white;
+    text-align: center;
+}
+
+aside {
+    width: 25%;
+    height: 510px;
+    margin: 0 1%;
+    box-shadow: 4px 4px 5px DimGray;
+    float: left;
+}
+
+header {
+    width: 73%;
+    height: 80px;
+    float: left;
+}
+
+main {
+    width: 73%;
+    height: 400px;
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+button {
+    background-color: steelblue;
+    color: white;
+    width: 20%;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 130%;
+    border: none;
+}
+
+button:hover {
+    background-color: navy;
+}
+
+#blok1,
+#blok2,
+#blok3 {
+    background-color: lightblue;
+    margin-right: 80px;
+    padding: 10px;
+}
+
+#blok2,
+#blok3 {
+    display: none;
+}
+
+#pasek_postepu {
+    background-color: lightgray;
+    width: 73%;
+    margin-bottom: 10px;
+    float: left;
+}
+
+#pasek {
+    background-color: Navy;
+    width: 4%;
+    height: 30px;
+}
+
+table {
+    width: 100%;
+    border: 1px dotted Navy;
+}

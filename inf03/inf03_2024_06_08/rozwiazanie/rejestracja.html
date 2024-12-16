@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <aside>
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </aside>
+    <header>
+        <h1>Zarejestruj się w sklepie</h1>
+    </header>
+    <main>
+        <section>
+            <button onclick="pokazBlok('blok1')">Klient</button>
+            <button onclick="pokazBlok('blok2')">Adres</button>
+            <button onclick="pokazBlok('blok3')">Kontakt</button>
+        </section>
+        <section id="blok1">
+            <p>Imię</p>
+            <input id="imie" type="text" placeholder="Wpisz dane...">
+            <p>Nazwisko</p>
+            <input id="nazwisko" type="text">
+            <p>Data urodzenia</p>
+            <input id="dataUrodzenia" type="date">
+        </section>
+        <section id="blok2">
+            <p>Ulica</p>
+            <input id="ulica" type="text">
+            <p>Numer</p>
+            <input id="numer" type="number">
+            <p>Miasto</p>
+            <input id="miasto" type="text">
+        </section>
+        <section id="blok3">
+            <p>Numer komórkowy</p>
+            <input id="numerTelefonu" type="tel">
+            <br>
+            <label>
+                <input type="checkbox" id="rodo">
+                Akceptuję RODO
+            </label>
+            <br>
+            <button id="zatwierdz" onclick="zatwierdz()">Zatwierdź dane</button>
+        </section>
+    </main>
+    <section id="pasek_postepu">
+        <section id="pasek"></section>
+    </section>
+    <footer>
+        <h4>Rejestrację do sklepu wykonał: Chriskyy</h4>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
