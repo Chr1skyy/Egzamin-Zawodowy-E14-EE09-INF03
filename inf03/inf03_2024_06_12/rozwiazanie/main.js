@@ -1,21 +1,9 @@
 function zastosujEfekt() {
     const zdjecie = document.querySelector("img[src='pszczola.jpg']")
     const efekty = document.querySelectorAll("input[name='efekt']")
-    efekty.forEach(e => {
+    efekty.forEach((e) => {
         if (e.checked) {
-            switch (e.value) {
-                case 'blur':
-                    zdjecie.style.filter = 'blur(6px)';
-                    break;
-                case 'sepia':
-                    zdjecie.style.filter = 'sepia(100%)';
-                    break;
-                case 'negative':
-                    zdjecie.style.filter = 'invert(100%)';
-                    break;
-                default:
-                    zdjecie.style.filter = 'none';
-            }
+			zdjecie.style.filter = e.value
         }
     });
 }
