@@ -9,7 +9,7 @@
 
 <body>
     <header>
-        <h1><em>KupAuto! Internetowy Komis Samochodowy</em></h1>
+        <h1><em>KupAuto!</em> Internetowy Komis Samochodowy</h1>
     </header>
     <main>
         <section id="baner">
