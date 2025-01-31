@@ -1,0 +1,4 @@
+1. SELECT nazwa, miasto FROM lokale
+2. SELECT id, nazwa, cena FROM dania WHERE typ = 3
+3. SELECT MIN(cena) FROM dania WHERE typ = 2
+4. UPDATE lokale SET id = 23 WHERE id = 1

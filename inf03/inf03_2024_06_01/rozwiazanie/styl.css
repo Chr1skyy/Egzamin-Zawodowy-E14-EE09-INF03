@@ -1,0 +1,68 @@
+* {
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+img[src="motor.png"] {
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(60, 120, 160, 0.9);
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+}
+
+#lewy {
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 2%;
+    width: 75%;
+    height: 600px;
+    font-size: 120%;
+    overflow: auto;
+    box-shadow: 10px 10px 7px DimGray;
+    float: left;
+}
+
+#prawy1,
+#prawy2 {
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 1%;
+    width: 15%;
+    height: 300px;
+    box-shadow: 10px 10px 7px DimGray;
+    float: left;
+}
+
+footer {
+    background-color: rgba(60, 120, 160, 0.9);
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-style: italic;
+}
+
+dt,
+a {
+    color: white;
+}
+
+dd {
+    padding: 1%;
+}
+
+dd:hover {
+    background-color: LightGreen;
+}

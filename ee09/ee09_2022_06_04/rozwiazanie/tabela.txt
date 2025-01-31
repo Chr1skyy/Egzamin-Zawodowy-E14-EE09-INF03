@@ -1,0 +1,4 @@
+Skrêtka U/UTP drut;metr;20
+Skrêtka U/UTP linka;metr;2
+Wtyki 8P8C;sztuki;10
+Modu³y Keystone;sztuki;30

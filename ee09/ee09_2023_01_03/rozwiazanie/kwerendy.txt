@@ -1,0 +1,4 @@
+1. SELECT id, tytul FROM ogloszenia ORDER BY tytul ASC;
+2. SELECT tytul FROM ogloszena WHERE kategoria = 1 AND podkategoria = 13;
+3. UPDATE ogloszenia SET podkategoria = 1 WHERE id = 5;
+4. ALTER TABLE ogloszenia DROP COLUMN uzytkownik_id;

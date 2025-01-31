@@ -1,0 +1,69 @@
+body {
+	margin: 0;
+	font-family: Garamond;
+	font-size: 110%;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: #965873;
+	color: white;
+	text-align: center;
+	height: 100px;
+}
+
+#kontener {
+	display: flex;
+}
+
+aside {
+	background: #965873;
+	color: white;
+	width: 30%;
+	height: 750px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+}
+
+#gorny {
+	background: #AAC28A;
+	height: 250px;
+	text-align: right;
+}
+
+#dolny {
+	background: #86A25F;
+	height: 500px;
+	text-align: center;
+}
+
+footer {
+	background: #965873;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+#gorny img {
+	width: 18%;
+	margin: 10px;
+}
+
+#dolny img {
+	border: 6px dotted #965873;
+}
+
+#dolny img:hover {
+	border-color: green;
+}
+
+h2 {
+	margin: 0;
+}

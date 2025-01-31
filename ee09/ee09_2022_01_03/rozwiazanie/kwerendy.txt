@@ -1,0 +1,4 @@
+1. INSERT INTO ratownicy VALUES (NULL, 20, 'Adam Nowak', 'Jan Kowalski', 'Anna Nowakowska');
+2. SELECT id, adres, ratownicy_id FROM zgloszenia WHERE dyspozytorzy_id = 4;
+3. CREATE USER 'adam' IDENTIFIED BY 'Adam6&';
+4. GRANT CREATE, ALTER, DROP ON ee09.ratownicy TO 'adam';

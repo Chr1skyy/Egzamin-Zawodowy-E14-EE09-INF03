@@ -1,0 +1,4 @@
+1. SELECT id, dataWyjazdu, cel, cena FROM wycieczki WHERE dostepna = TRUE;
+2. SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis ASC;
+3. SELECT zdjecia.nazwaPliku, wycieczki.cel FROM zdjecia INNER JOIN wycieczki ON zdjecia.id = wycieczki.zdjecia_id WHERE wycieczki.cena > 1000;
+4. ALTER TABLE wycieczki ADD COLUMN dataPrzyjazdu date after dataWyjazdu;

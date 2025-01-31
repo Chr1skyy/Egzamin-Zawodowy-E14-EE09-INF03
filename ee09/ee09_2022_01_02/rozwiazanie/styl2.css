@@ -1,0 +1,50 @@
+body {
+	margin: 0;
+	font-family: Helvetica;
+}
+#baner1,
+#baner3 {
+	background: rgb(70, 130, 180);
+	color: white;
+	width: 25%;
+	height: 80px;
+	float: left;
+}
+#baner2 {
+	background: rgb(70, 130, 180);
+	color: white;
+	width: 50%;
+	height: 80px;
+	text-align: center;
+	float: left;
+}
+#glowny {
+	background: rgb(224, 255, 255);
+	padding: 40px;
+	clear: both;
+}
+#lewy,
+#prawy {
+	background: rgb(70, 130, 180);
+	width: 50%;
+	height: 200px;
+	text-align: center;
+	float: left;
+}
+#stopka {
+	background: rgb(224, 255, 255);
+	clear: both;
+}
+table {
+	border: 1px solid blue;
+	width: 100%;
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid blue;
+}
+th {
+	border: 1px solid blue;
+	background: blue;
+	color: white;
+}

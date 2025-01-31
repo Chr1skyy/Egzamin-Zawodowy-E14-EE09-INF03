@@ -1,0 +1,4 @@
+1. SELECT * FROM pogoda WHERE miasta_id = 1 ORDER BY data_prognozy ASC;
+2. SELECT id, data_prognozy FROM pogoda WHERE opady > 30;
+3. SELECT pogoda.data_prognozy, pogoda.temperatura_noc, miasta.nazwa FROM pogoda INNER JOIN miasta ON pogoda.miasta_id = miasta.id WHERE pogoda.temperatura_noc < 6;
+4. ALTER TABLE miasta ADD COLUMN wojewodztwo TEXT;

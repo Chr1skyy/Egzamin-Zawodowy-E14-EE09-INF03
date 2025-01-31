@@ -1,0 +1,56 @@
+body {
+	margin: 0;
+	background: #F6E5DC;
+	font-family: Tahoma;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: #2F180C;
+	text-align: center;
+	color: white;
+	height: 60px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+#gora {
+	display: flex;
+}
+
+#lewy {
+	width: 60%;
+}
+
+#prawy {
+	font-size: 200%;
+	padding: 50px;
+}
+
+#dol {
+	background: #D0B6A8;
+	text-align: center;
+	padding: 30px;
+}
+
+footer {
+	background: #2F180C;
+	color: white;
+	height: 60px;
+}
+
+img {
+	height: 400px;
+}
+
+ul {
+	list-style-type: circle;
+}
+
+h1 {
+	margin: 0;
+}

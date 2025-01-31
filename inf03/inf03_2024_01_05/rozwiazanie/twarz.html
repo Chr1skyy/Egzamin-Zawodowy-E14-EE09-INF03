@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salon kosmetyczny</title>
+    <link rel="stylesheet" href="styl7.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <section id="lewy1">
+        <h2>Nasza oferta</h2>
+        <ol>
+            <li><a href="twarz.html">Oczyszczanie twarzy</a>
+                <ol>
+                    <li>Peeling</li>
+                    <li>Maska</li>
+                </ol>
+            </li>
+            <li>Masaż</li>
+            <li>Makijaż</li>
+        </ol>
+        <a href="index.html">Strona głowna</a>
+    </section>
+    <section id="prawy1">
+        <h1>Usługi kosmetyczne</h1>
+    </section>
+    <section id="prawy2">
+        <h3>Kalkulator ceny wizyty</h3>
+        <form>
+            <label>Peeling
+                <input type="checkbox" id="peeling"><br />
+            </label>
+            <label>Maska
+                <input type="checkbox" id="maska"><br />
+            </label>
+            <label>Masaż
+                <input type="checkbox" id="masaz"><br />
+            </label>
+            <label>Makijaż
+                <input type="checkbox" id="makijaz"><br />
+            </label>
+            <button type="button" onclick="oblicz()">Oblicz cenę</button>
+        </form>
+        <p id="wynik"></p>
+    </section>
+    <section id="lewy2">
+        <img src="obraz1.jpg" alt="Personel">
+    </section>
+
+    <section id="stopka">
+        <p>Autor: Chriskyy</p>
+    </section>
+</body>
+
+</html>

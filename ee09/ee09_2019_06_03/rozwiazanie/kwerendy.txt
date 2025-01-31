@@ -1,0 +1,4 @@
+1. INSERT INTO zawody_wedkarskie VALUES (NULL, 2, 4, '2018-09-28', 'Tomasz Kowal');
+2. SELECT data_zawodow FROM zawody_wedkarskie WHERE sedzia = 'Jan Kowalewski';
+3. SELECT imie, nazwisko FROM karty_wedkarskie INNER JOIN zawody_wedkarskie ON karty_wedkarskie.id = zawody_wedkarskie.Karty_wedkarskie_id WHERE zawody_wedkarskie.id = 3;
+4. UPDATE karty_wedkarskie SET punkty = 10 WHERE id = 2;

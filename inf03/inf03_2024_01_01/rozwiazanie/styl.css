@@ -1,0 +1,56 @@
+body {
+	margin: 0;
+	background: #EEEEEE;
+	font-family: Helvetica;
+}
+
+#kontener {
+	width: 90%;
+	margin: auto;
+}
+
+#logo,
+#menu {
+	background: #DDDDDD;
+	height: 200px;
+	width: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: left;
+}
+
+#baner {
+	background: #DDDDDD;
+	height: 200px;
+	clear: both;
+}
+
+#glowny {
+	color: navy;
+	margin: 50px;
+	height: 400px;
+}
+
+#stopka {
+	text-align: right;
+	background-color: lightblue;
+	padding: 10px;
+}
+
+button {
+	background-color: lightblue;
+	color: navy;
+}
+
+#menu a {
+	color: navy;
+	font-size: 150%;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 10px;
+	padding: 5px;
+}
+
+#menu a:hover {
+	border: 1px solid navy
+}

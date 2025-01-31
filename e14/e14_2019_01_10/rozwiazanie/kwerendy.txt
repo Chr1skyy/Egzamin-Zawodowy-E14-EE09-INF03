@@ -1,0 +1,4 @@
+1. SELECT zwierzeta.id, zwierzeta.gatunek, zwierzeta.wystepowanie FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id WHERE odzywianie.rodzaj = 'wszystkozerny';
+2. SELECT zwierzeta.gatunek, odzywianie.rodzaj FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id;
+3. SELECT COUNT(*) FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id WHERE odzywianie.rodzaj = 'drapieznik';
+4. CREATE USER 'JanKowalski' IDENTIFIED BY 'J4nKow';

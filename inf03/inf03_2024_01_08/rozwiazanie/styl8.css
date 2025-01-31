@@ -1,0 +1,74 @@
+* {
+    font-family: Garamond;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+#lewy {
+    width: 72%;
+    display: flex;
+    flex-direction: column;
+}
+
+#lewy1 {
+    background-color: #795548;
+    font-size: 170%;
+}
+
+#lewy2 {
+    height: 400px;
+}
+
+#prawy {
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+}
+
+#prawy1,
+#prawy2 {
+    background-color: #BCAAA4;
+    color: #795548;
+    height: 400px;
+}
+
+#stopka {
+    background-color: #795548;
+    color: white;
+    padding: 20px;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    border: 1px solid #795548;
+}
+
+tr:hover {
+    background-color: sienna;
+    color: white;
+}
+
+h4 {
+    font-size: 200%;
+}
+
+img {
+    padding: 20px;
+    border-radius: 40px;
+}
+
+a {
+    color: white;
+}
+
+input[type="radio"] {
+    margin: 7px;
+}

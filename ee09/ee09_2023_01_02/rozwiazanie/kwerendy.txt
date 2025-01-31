@@ -1,0 +1,4 @@
+1. SELECT nazwa, pasmo FROM szczyty WHERE wysokosc > 1500
+2. SEKECT nazwa FROM szczyty ORDER BY wysokosc DESC LIMIT 1
+3. CREATE USER 'leon'@'localhost' IDENTIFIED BY 'Leon%Zawodowiec'
+4. GRANT SELECT, INSERT, UPDATE, DELETE ON gory.* TO 'leon'@'localhost';

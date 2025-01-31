@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<title>Firma IT</title>
+	<link rel="stylesheet" href="styl.css" />
+	<link rel="icon" href="logo.png" />
+	<script src="main.js"></script>
+</head>
+<body>
+	<section id="kontener">
+		<section id="logo">
+			<img src="logo.png" alt="logo firmy" />
+		</section>
+		<section id="menu">
+			<a href="index.html">Strona główna</a>
+			<a href="uslugi.html">Usługi</a>
+			<a href="kontakt.html">Kontakt</a>
+		</section>
+		<section id="baner">
+			<img src="animacja.gif" alt="Usługi informatyczne"/>
+		</section>
+		<section id="glowny">
+			<h2>Kontakt</h2>
+			<form>
+				<table>
+					<tr>
+						<td>Imię:</td>
+						<td><input type="text" id="imie" /></td>
+					</tr>
+					<tr>
+						<td>Nazwisko:</td>
+						<td><input type="text" id="nazwisko" /></td>
+					</tr>
+					<tr>
+						<td>E-mail:</td>
+						<td><input type="email" id="email" /></td>
+					</tr>
+					<tr>
+						<td>Zgłoszenie:</td>
+						<td><textarea id="zgloszenie" cols="40" rows="10"></textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="checkbox" id="check" />Zapoznałam/em się z regulaminem</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="reset">Resetuj</button><button type="button" onclick="formularz();">Prześlij</button></td>
+					</tr>
+				</table>
+			</form>
+			<hr/>
+			<p id="wynik"></p>
+		</section>
+		<section id="stopka">
+			<p>Autor strony: <strong>PESEL</strong></p>
+		</section>
+	</section>
+</body>
+</html>

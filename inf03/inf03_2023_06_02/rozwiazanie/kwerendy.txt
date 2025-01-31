@@ -1,0 +1,5 @@
+1. SELECT nazwa, cena FROM towary LIMIT 4;
+2. SELECT cena FROM towary WHERE nazwa = 'Ekierka';
+3. UPDATE dostawcy SET nazwa = "Artykuly szkolne" WHERE id = 2;
+4. SELECT promocja, COUNT(*) AS podsumowanie FROM towary GROUP BY
+promocja;

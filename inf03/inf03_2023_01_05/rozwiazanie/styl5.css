@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: Tahoma;
+}
+
+header {
+    display: flex;
+}
+
+#baner_1,
+#baner_2,
+#baner_3 {
+    background-color: #7DA453;
+    color: white;
+    height: 120px;
+}
+
+#baner_1,
+#baner_2 {
+    width: 40%;
+}
+
+#baner_3 {
+    width: 20%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.dzien {
+    background-color: #AED581;
+    width: 200px;
+    height: 100px;
+    margin: 7px;
+    border: 1px solid #7DA453;
+}
+
+.dzien:hover {
+    background-color: #7DA453;
+    color: white;
+}
+
+footer {
+    background-color: #7DA453;
+    color: white;
+    padding: 5px;
+}
+
+h5 {
+    text-align: center;
+}
+
+form {
+    padding-top: 50px;
+}

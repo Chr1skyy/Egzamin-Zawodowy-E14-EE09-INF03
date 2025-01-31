@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	font-family: Garamond;
+}
+#baner,
+#stopka {
+	background: #3CB371;
+	color: white;
+	padding: 10px;
+	font-size: 130%;
+	text-align: center;
+	clear: both;
+}
+#lewy {
+	background: #FAEBD7;
+	width: 55%;
+	height: 450px;
+	float: left;
+}
+#prawy {
+	background: #FAEBD7;
+	width: 45%;
+	height: 450px;
+	float: left;
+}
+img {
+	padding: 3px;
+	margin: 15px;
+	border: 2px dashed #3CB371;
+}

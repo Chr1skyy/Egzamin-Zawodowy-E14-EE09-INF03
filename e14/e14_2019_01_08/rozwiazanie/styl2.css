@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	font-family: Helvetica;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+}
+
+#lista,
+#logo {
+	background: #6FACE3;
+	color: blue;
+	height: 300px;
+	width: 30%;
+}
+
+#formularz {
+	background: #6FACE3;
+	color: blue;
+	height: 300px;
+	width: 40%;
+}
+
+main {
+	background: #4C93D2;
+	height: 350px;
+	padding: 20px;
+	text-align: center;
+}
+
+footer {
+	background: #2D77BA;
+	color: white;
+	height: 170px;
+	padding: 15px;
+}
+
+a {
+	background: LightSkyBlue;
+	margin: 5px;
+	padding: 10px;
+}
+
+a:visited {
+	background: LightSteelBlue;
+}

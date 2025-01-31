@@ -1,0 +1,59 @@
+* {
+	font-family: Tahoma;
+}
+body {
+	margin: 0;
+}
+header {
+	background-color: Tomato;
+	color: white;
+	padding: 10px;
+}
+main {
+	background-color: Seashell;
+	height: 500px;
+	overflow: auto;
+}
+footer {
+	display: flex;
+}
+#one,
+#two,
+#three,
+#four {
+	background-color: Tomato;
+	color: white;
+	width: 25%;
+	height: 160px;
+}
+.opinia {
+	background-color: white;
+	color: DimGray;
+	width: 60%;
+	height: 220px;
+	margin: 40px auto;
+	box-shadow: 0 0 10px 5px DimGray;
+}
+img {
+	float: left;
+	margin: 10px;
+	border-radius: 10px;
+}
+blockquote {
+	padding: 10px;
+	font-size: 150%;
+	font-style: italic;
+}
+h1,
+h2 {
+	text-align: center;
+}
+h4 {
+	text-align: right;
+	margin-right: 40px;
+	font-size: 150%;
+	font-style: italic;
+}
+a {
+	color: white;
+}

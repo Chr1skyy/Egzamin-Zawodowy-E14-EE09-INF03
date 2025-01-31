@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Zespoły ratownicze</title>
+	<link rel="stylesheet" href="styl3.css" />
+</head>
+<body>
+	<div id="baner1">
+		<h2>Dodanie zespołu ratowniczego</h2>
+	</div>
+	<div id="baner2">
+		<p>Kontakt:<br/>022 222 11 333</p>
+	</div>
+	<div id="baner3">
+		<img src="obraz.jpg" alt="Ratownicy" />
+	</div>
+	<div id="glowny">
+		<h3>Dodaj nowy zespół</h3>
+		<form action="dodanie.php" method="post">
+			<label>
+				Numer karetki:<br/>
+				<input type="number" name="nr" /><br/>
+			</label>
+			<label>
+				Imię i nazwisko pierwszego ratownika:<br/>
+				<input type="text" name="rat1" /><br/>
+			</label>
+			<label>
+				Imię i nazwisko drugiego ratownika:<br/>
+				<input type="text" name="rat2" /><br/>
+			</label>
+			<label>
+				Imię i nazwisko trzeciego ratownika:<br/>
+				<input type="text" name="rat3" /><br/>
+			</label>
+			<button type="reset">CZYŚĆ</button>
+			<button>DODAJ</button>
+		</form>
+	</div>
+	<div id="stopka1">
+		<a href="kwerendy.txt">Zobacz kwerendy</a>
+	</div>
+	<div id="stopka2">
+		<h5>Przypominamy numery alarmowe</h5>
+		<ol>
+			<li>112</li>
+			<li>999</li>
+		</ol>
+	</div>
+	<div id="stopka3">
+		<p>Autor: Chriskyy#0181</p>
+	</div>
+</body>
+</html>

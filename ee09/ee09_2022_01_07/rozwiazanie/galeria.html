@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Galeria</title>
+	<link rel="stylesheet" href="styl7.css" />
+	<script src="main.js"></script>
+</head>
+<body>
+	<div id="baner">
+		<h2>Galeria miejsc ciekawych</h2>
+	</div>
+	<div id="glowny">
+		<img src="lanzarotte.jpg" alt="galeria" id="zmiana" />
+	</div>
+	<div id="lewy">
+		<h3>Przeglądaj zdjęcia</h3>
+		<img src="lanzarotte.jpg" alt="lanzarotte" onclick="zmienImg('lanzarotte.jpg')" />
+		<img src="pekin.jpg" alt="pekin" onclick="zmienImg('pekin.jpg')" />
+		<img src="serengeti.jpg" alt="serengeti" onclick="zmienImg('serengeti.jpg')" />
+		<img src="wenecja.jpg" alt="wenecja" onclick="zmienImg('wenecja.jpg')" />
+		<img src="tajlandia.jpg" alt="tajlandia" onclick="zmienImg('tajlandia.jpg')" />
+	</div>
+	<div id="prawy">
+		<h3>Obrazy w naszej galerii</h3>
+		<table>
+			<tr>
+				<td>Europa</td>
+				<td>Azja</td>
+				<td>Afryka</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>2</td>
+				<td>1</td>
+			</tr>
+		</table>
+		<p>Polub nas<img src="icon-off.png" id="polub" onclick="polubZmien();"/></p>
+		<a href="https://pixabay.com" target="_blank">Odkryj więcej zdjęć</a>
+	</div>
+	<div id="stopka">
+		Autor: Chriskyy#0181
+	</div>
+</body>
+</html>

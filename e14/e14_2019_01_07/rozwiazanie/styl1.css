@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+	font-family: Verdana;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+}
+
+#logo {
+	background: #FF9F79;
+	height: 270px;
+	width: 30%;
+}
+
+#lista,
+#formularz {
+	background: #FF9F79;
+	color: green;
+	height: 270px;
+	width: 35%;
+}
+
+main {
+	background: #80CDAC;
+	height: 400px;
+	padding: 30px;
+	text-align: center;
+}
+
+footer {
+	background: #188256;
+	height: 150px;
+	padding: 10px;
+}
+
+a {
+	background: green;
+	margin: 10px;
+	padding: 10px;
+	border: 2px solid orange;
+}
+
+a:visited {
+	background: violet;
+}

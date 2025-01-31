@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Pomocnik CSS</title>
+	<link rel="stylesheet" href="styl2.css" />
+</head>
+<body>
+	<header>
+		<section id="left">
+			<h1>Pomocnik CSS</h1>
+		</section>
+		<section id="right">
+			<ul>
+				<li><a href="kolory.html">Kolory</a></li>
+				<li><a href="czcionki.html">Czcionki</a></li>
+				<li><a href="style.html">Style CSS</a></li>
+				<li><a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a></li>
+			</ul>
+		</section>
+	</header>
+	<main>
+		<h2>Podaj składową H koloru w kodzie HSL</h2>
+		<p>od 0 do 30 czerwienie, do 60 żółcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i purpura</p>
+		<img src="kolory.jpg" alt="Przestrzeń barw HSL" /><br/>
+		<input type="number" id="x" max="360" placeholder="0 - 360" />
+		<button onclick="skrypt()">Generuj paletę</button>
+		<table>
+			<tr>
+				<td id="d1" colspan="4">Kolor główny</td>
+			</tr>
+			<tr>
+				<td id="d2">kolor 2</td>
+				<td id="d3">kolor 3</td>
+				<td id="d4">kolor 4</td>
+				<td id="d5">kolor 5</td>
+			</tr>
+		</table>
+	</main>
+	<footer>
+		<p>Autor: Chriskyy#0181</p>
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>

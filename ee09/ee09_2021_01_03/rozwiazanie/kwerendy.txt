@@ -1,0 +1,4 @@
+1. SELECT informacja, wart_min, wart_max FROM bmi;
+2. INSERT INTO wynik VALUES (NULL, 3, '2020-05-10', 27);
+3. SELECT wynik.wynik, wynik.data_pomiaru, bmi.informacja FROM wynik INNER JOIN bmi ON wynik.bmi_id = bmi.id;
+4. SELECT wart_min, wart_max FROM bmi WHERE informacja = 'nadwaga';

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Nasza stacja paliw</title>
+	<link rel="stylesheet" href="styl4.css" />
+	<script src="main.js"></script>
+</head>
+<body>
+	<div id="baner">
+		<h2>Witamy na stacji paliw!</h2>
+	</div>
+	<div id="lewy">
+		<a href="index.html"><img src="home.png" /></a>
+		<a href="kalkulacja.html"><img src="znak.png" /></a>
+	</div>
+	<div id="prawy">
+		<img src="samochod.png" alt="grafika: samochód" />
+	</div>
+	<div id="glowny">
+		<h2>Oblicz, ile litrów musisz zatankować</h2>
+		<label>
+			dystans do przejechania w km:<br/>
+			<input type="number" id="dystans" /><br/>
+		</label>
+		<label>
+			spalanie samochodu w l/100lm:<br/>
+			<input type="number" id="spalanie" /><br/>
+		</label>
+		<button type="button" onclick="oblicz()">OBLICZ</button>
+		<p id="wynik"></p>
+	</div>
+	<div id="stopka1">
+		<p>Stronę opracował: Chriskyy#0181</p>
+	</div>
+	<div id="stopka2">
+		<a href="kwerendy.txt">Tu pobierzesz zapytania</a>
+	</div>
+</body>
+</html>

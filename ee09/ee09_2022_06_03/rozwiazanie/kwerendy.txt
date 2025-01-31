@@ -1,0 +1,4 @@
+1. SELECT imie, nazwisko, punkty FROM klienci ORDER BY punkty DESC LIMIT 3;
+2. SELECT typy.nazwa, COUNT(klienci.id) FROM typy, klienci WHERE typy.id = klienci.typy_id GROUP BY typy.nazwa;
+3. SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM klienci, opinie, typy WHERE klienci.id = opinie.klienci_id AND typy.id = klienci.typy_id AND typy.id IN (2,3);
+4. ALTER TABLE klienci ADD COLUMN adres VARCHAR(50)

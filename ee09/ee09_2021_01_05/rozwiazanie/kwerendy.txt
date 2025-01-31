@@ -1,0 +1,4 @@
+1. SELECT czas, kierunek, nr_rejsu, status_lotu FROM przyloty ORDER BY czas ASC;
+2. SELECT COUNT(*) FROM przyloty WHERE czas BETWEEN '10:00:00' AND '10:59:00';
+3. SELECT przyloty.nr_rejsu, samoloty.typ FROM przyloty INNER JOIN samoloty ON przyloty.samoloty_id = samoloty.id WHERE przyloty.kierunek = 'Warszawa';
+4. UPDATE odloty SET status_lotu = 'opoznienie 20 min' WHERE nr_rejsu = 'LX5673';

@@ -1,0 +1,3 @@
+1. SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto = 'Malbork';
+2. SELECT id_zam FROM zamowienia WHERE data = '07.01.2017';
+3. SELECT id_kwiaciarni, COUNT(*) FROM zamowienia GROUP BY id_kwiaciarni;

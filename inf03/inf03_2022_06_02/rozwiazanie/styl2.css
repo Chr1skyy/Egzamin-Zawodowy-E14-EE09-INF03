@@ -1,0 +1,55 @@
+* {
+	text-align: center;
+	font-family: Cambria;
+}
+body {
+	margin: 0;
+}
+header,
+footer {
+	background-color: rgb(120, 0, 46);
+	color: white;
+	padding: 5px;
+	font-size: 150%;
+	clear: both;
+}
+nav {
+	background-color: rgb(173, 20, 87);
+	text-align: left;
+}
+#lewy {
+	background-color: Snow;
+	color: OliveDrab;
+	width: 60%;
+	height: 322px;
+	text-align: left;
+	float: left;
+}
+#prawy {
+	background-color: rgb(173, 20, 87);
+	width: 40%;
+	height: 322px;
+	float: left;
+}
+#samochod {
+	margin: 40px;
+	padding: 10px;
+}
+#samochod:hover {
+	border: 1px dotted YellowGreen;
+}
+a {
+	padding: 0 50px;
+	color: YellowGreen;
+}
+table,
+td {
+	border: 1px solid OliveDrab;
+}
+table {
+	width: 90%;
+}
+#lewy h2,
+form {
+	text-align: left;
+}

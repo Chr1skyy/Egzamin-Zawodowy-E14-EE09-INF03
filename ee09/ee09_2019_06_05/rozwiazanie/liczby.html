@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Ciągi liczbowe</title>
+	<link rel="stylesheet" href="styl2.css" />
+	<script src="main.js"></script>
+</head>
+<body>
+	<div id="baner1">
+		<h2>Poznaj Ciągi Liczbowe</h2>
+	</div>
+	<div id="baner2">
+		<a href="liczby.html"><h5>Ciągi arytmetyczne</h5></a>
+	</div>
+	<div id="baner3">
+		<a href="fib.html"><h5>Ciąg Fibonacciego</h5></a>
+	</div>
+	<div id="baner4">
+		<img src="obraz1.png" alt="Fibonacci" />
+	</div>
+	<div id="lewy">
+		<ol>
+			<li>ciągi arytmetyczne</li>
+			<li>ciągi geometryczne</li>
+			<li>ciąg Fibonacciego</li>
+		</ol>
+	</div>
+	<div id="prawy">
+		<h2>Generowanie ciągu arytmetycznego</h2>
+		<label>
+			Pierwszy wyraz A1:
+			<input type="number" id="a" /><br/>
+		</label>
+		<label>
+			Różnica ciągu R:
+			<input type="number" id="r" /><br/>
+		</label>
+		<label>
+			Liczba wyrazów w ciągu N:
+			<input type="number" id="n" /><br/>
+		</label>
+		<button type="button" onclick="generuj()">Generuj Ciąg</button>
+		<p id="wynik"></p>
+	</div>
+	<div id="stopka">
+		<p>Autor: Chriskyy#0181</p>
+	</div>
+</body>
+</html>

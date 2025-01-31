@@ -1,0 +1,59 @@
+body {
+	margin: 0;
+	font-family: Helvetica;
+	display: flex;
+	flex-direction: column;
+}
+
+#kontener {
+	display: flex;
+}
+
+aside {
+	background: Navy;
+	color: white;
+	height: 700px;
+	width: 25%;
+}
+
+#kontener-prawy {
+	display: flex;
+	flex-direction: column;
+	width: 75%
+}
+
+header {
+	background: RoyalBlue;
+	height: 100px;
+	text-align: center;
+}
+
+#prawy-gora {
+	background: SteelBlue;
+	height: 300px;
+}
+
+#prawy-dol {
+	background: RoyalBlue;
+	height: 300px;
+	text-align: center;
+}
+
+footer {
+	background: SteelBlue;
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	letter-spacing: 5px;
+}
+
+form {
+	margin: 30px;
+	line-height: 3;
+}
+
+form:hover {
+	background: DeepSkyBlue;
+}

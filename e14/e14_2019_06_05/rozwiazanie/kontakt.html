@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Usługi informatyczne</title>
+	<link rel="stylesheet" href="styl.css" />
+	<link rel="icon" href="logo.png" />
+</head>
+
+<body>
+	<section id="kontener">
+		<section id="blok-gorny">
+			<section id="logo">
+				<img src="logo.png" alt="logo firmy" />
+			</section>
+			<nav>
+				<a href="index.html">O nas</a>
+				<a href="uslugi.html">Usługi</a>
+				<a href="kontakt.html">Kontakt</a>
+			</nav>
+		</section>
+		<header>
+			<img src="animacja.gif" />
+		</header>
+		<main>
+			<hr />
+			<h2>Kontakt</h2>
+			<form>
+				<table>
+					<tr>
+						<td>Imię:</td>
+						<td><input type="text" id="imie" /></td>
+					</tr>
+					<tr>
+						<td>Nazwisko:</td>
+						<td><input type="text" id="nazwisko" /></td>
+					</tr>
+					<tr>
+						<td>E-mail:</td>
+						<td><input type="text" id="email" /></td>
+					</tr>
+					<tr>
+						<td>Usługa:</td>
+						<td><textarea id="usluga"></textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="checkbox" id="check" />Zapoznałam/em się z regulaminem</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><button type="reset">Resetuj</button><button type="button"
+								onclick="przeslij();">Prześlij</button></td>
+					</tr>
+				</table>
+			</form>
+			<p id="wynik"></p>
+			<hr />
+		</main>
+		<footer>
+			<p>Autor strony: <b>Chr1skyy</b></p>
+		</footer>
+	</section>
+	<script src="main.js"></script>
+</body>
+
+</html>

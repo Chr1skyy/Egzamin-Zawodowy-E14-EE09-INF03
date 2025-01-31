@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	font-family: Verdana;
+	display: flex;
+	flex-direction: column;
+}
+
+#kontener {
+	display: flex;
+}
+
+nav {
+	background: SandyBrown;
+	height: 120px;
+	width: 60%;
+}
+
+header {
+	background: Sienna;
+	color: white;
+	text-align: center;
+	height: 120px;
+	width: 40%;
+}
+
+main {
+	display: flex;
+}
+
+#lewy {
+	background: Sienna;
+	color: white;
+	height: 700px;
+	width: 60%;
+}
+
+#prawy {
+	background: SandyBrown;
+	height: 700px;
+	width: 40%;
+}
+
+footer {
+	background: #4D1900;
+	color: white;
+	text-align: right;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+}
+
+nav a {
+	background: green;
+	color: yellow;
+	padding: 20px 50px 20px 50px;
+	margin-right: 5px;
+}
+
+nav a:hover {
+	background: yellow;
+	color: green;
+}

@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+header {
+    display: flex;
+}
+
+section#bannerOne {
+    background-color: #483D8B;
+    height: 150px;
+    width: 30%;
+}
+
+section#bannerTwo {
+    background-color: #483D8B;
+    color: white;
+    height: 150px;
+    width: 70%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dzien {
+    background-color: #AFEEEE;
+    width: 150px;
+    height: 100px;
+    margin: 3px;
+    border: 1px solid;
+}
+
+footer {
+    background-color: #483D8B;
+    color: white;
+    padding: 10px;
+}
+
+h5 {
+    text-align: center;
+}

@@ -1,0 +1,30 @@
+body {
+	margin: 0;
+	font-family: Verdana;
+}
+#baner,
+#stopka {
+	background: #4682B4;
+	color: white;
+	padding: 20px;
+	font-size: 120%;
+	text-align: center;
+	clear: both;
+}
+#lewy {
+	background: #40E0D0;
+	width: 40%;
+	height: 500px;
+	float: left;
+}
+#prawy {
+	background: #40E0D0;
+	width: 60%;
+	height: 500px;
+	float: left;
+}
+img {
+	padding: 5px;
+	margin: 10px;
+	border: 1px solid #000080;
+}

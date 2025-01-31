@@ -1,0 +1,45 @@
+body {
+	margin: 0;
+	font-family: Garamond;
+}
+#baner1 {
+	background: #00600F;
+	color: white;
+	text-align: center;
+	width: 75%;
+	height: 90px;
+	float: left;
+}
+#baner2 {
+	background: #00600F;
+	color: white;
+	width: 25%;
+	height: 90px;
+	float: left;
+}
+#glowny {
+	background: #C8E6C9;
+	height: 600px;
+	overflow: scroll;
+	clear: both;
+}
+#stopka {
+	background: #00600F;
+	color: white;
+}
+h5 {
+	background: #00600F;
+	color: white;
+	font-size: 200%;
+	text-align: center;
+	margin: 0;
+}
+h2 {
+	text-align: right;
+}
+.produkt {
+	margin: 10px;
+	border: 1px solid #00600F;
+	width: 300px;
+	float: left;
+}

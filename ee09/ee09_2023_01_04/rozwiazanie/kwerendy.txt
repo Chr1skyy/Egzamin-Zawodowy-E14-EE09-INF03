@@ -1,0 +1,4 @@
+1. SELECT id, imie, nazwisko, adres, miasto FROM pracownicy WHERE id = 1
+2. SELECT imie, nazwisko FROM pracownicy WHERE czyRODO = 0
+3. SELECT id, nazwisko FROM pracownicy WHERE czyBadania = 0 AND YEAR(dataUr) BETWEEN 1970 AND 1979
+4. ALTER TABLE pracownicy ADD COLUMN umiejetnosci TEXT

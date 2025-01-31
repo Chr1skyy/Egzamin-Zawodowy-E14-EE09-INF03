@@ -1,0 +1,55 @@
+body {
+	margin: 0;
+	font-family: Georgia;
+	display: flex;
+	flex-direction: column;
+}
+
+#kontener {
+	display: flex;
+}
+
+header,
+nav {
+	background: #63AC74;
+	color: Orange;
+	height: 140px;
+	width: 50%;
+	text-align: right;
+	font-size: 160%;
+}
+
+main {
+	background: #E3F6E7;
+	height: 500px;
+	padding: 20px;
+}
+
+footer {
+	display: flex;
+}
+
+footer section {
+	background: #63AC74;
+	height: 150px;
+	width: 25%;
+}
+
+a {
+	color: Orange;
+	margin: 15px;
+}
+
+table {
+	width: 100%;
+	border: 2px solid green;
+}
+
+th {
+	background: #63AC74;
+	color: white;
+}
+
+td:last-child {
+	text-align: right;
+}

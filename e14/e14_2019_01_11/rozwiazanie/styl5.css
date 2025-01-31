@@ -1,0 +1,69 @@
+body {
+	margin: 0;
+	font-family: Verdana;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: #9692B1;
+	color: white;
+	text-align: center;
+	height: 80px;
+}
+
+#kontener {
+	display: flex;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+
+aside {
+	background: #9692B1;
+	color: white;
+	width: 20%;
+	height: 750px;
+}
+
+#gorny {
+	background: #FFF4CC;
+	height: 300px;
+	text-align: center;
+}
+
+#dolny {
+	background: #DBCC93;
+	height: 450px;
+	text-align: center;
+}
+
+footer {
+	background: #9692B1;
+	color: white;
+	text-align: right;
+}
+
+a {
+	color: white;
+}
+
+#gorny img {
+	width: 15%;
+	margin: 20px;
+}
+
+#dolny img {
+	border: 4px solid #9692B1;
+}
+
+#gorny img:hover {
+	border-color: gray;
+}
+
+h1 {
+	margin: 0;
+}

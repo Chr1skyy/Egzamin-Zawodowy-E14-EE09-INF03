@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Nasze zdjęcia</title>
+	<link rel="stylesheet" href="styl6.css" />
+</head>
+
+<body>
+	<header>
+		<h2>Fotografie zwierząt</h2>
+	</header>
+	<section id="kontener">
+		<aside>
+			<h1>Wybierz</h1>
+			<ul>
+				<li><a href="psy.html">Psy</a></li>
+				<li><a href="koty.html">Koty</a></li>
+				<li>Konie</li>
+				<li>Rybki</li>
+				<li>Inne zdjęcia</li>
+			</ul>
+			<h5><a href="index.html">Do strony głównej</a></h5>
+		</aside>
+		<main>
+			<section id="gorny">
+				<h2>Kliknij na zdjęcie</h2>
+				<img src="pies1.jpg" alt="psy" id="pies1" onclick="clicked('pies1', 'pies1.jpg')"
+					onmouseover="over('pies1', 'pies1-odbicie.jpg')" onmouseout="out('pies1', 'pies1.jpg')" />
+				<img src="pies2.jpg" alt="psy" id="pies2" onclick="clicked('pies2', 'pies2.jpg')"
+					onmouseover="over('pies2', 'pies2-odbicie.jpg')" onmouseout="out('pies2', 'pies2.jpg')" />
+				<img src="pies3.jpg" alt="psy" id="pies3" onclick="clicked('pies3', 'pies3.jpg')"
+					onmouseover="over('pies3', 'pies3-odbicie.jpg')" onmouseout="out('pies3', 'pies3.jpg')" />
+			</section>
+			<section id="dolny">
+				<p><img src="pies2.jpg" alt="Wybrany pies" id="zmiana" /></p>
+			</section>
+		</main>
+	</section>
+	<footer>
+		Galerię zdjęć opracował: <b>Chr1skyy</b>
+	</footer>
+	<script src="main.js"></script>
+</body>
+
+</html>

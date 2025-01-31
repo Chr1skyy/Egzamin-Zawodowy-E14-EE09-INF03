@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	font-family: Helvetica;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: DarkCyan;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+#formularz {
+	background: LightSeaGreen;
+	text-align: center;
+	padding: 60px;
+}
+
+main {
+	display: flex;
+}
+
+#lewy,
+#srodkowy {
+	background: Teal;
+	color: white;
+	text-align: center;
+	height: 350px;
+	width: 25%;
+}
+
+#prawy {
+	background: Teal;
+	height: 350px;
+	width: 50%;
+}
+
+footer {
+	background: DarkCyan;
+	color: white;
+	padding: 40px;
+}
+
+ul {
+	border: 4px dotted rgb(127, 255, 212);
+	list-style-position: inside;
+}

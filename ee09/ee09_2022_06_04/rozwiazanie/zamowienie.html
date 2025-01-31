@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Zamówienia hurtowe</title>
+	<link rel="stylesheet" href="styl4.css" />
+</head>
+<body>
+	<header>
+		<h1>Sieci komputerowe</h1>
+	</header>
+	<main>
+		<section id="left">
+			<h2>Aktualizacja i zamówienia materiałów</h2>
+			<p>Do wewnętrznego użytku firmy</p>
+			<img src="obraz.png" alt="sieć komputerowa" />
+		</section>
+		<section id="right">
+			<table>
+				<tr>
+					<th>Produkt</th>
+					<th>Jednostka</th>
+					<th>Dostępna ilość</th>
+					<th>Aktualizacja</th>
+					<th>Zamówienie</th>
+				</tr>
+				<!-- Dla początkujących -->
+				<tr>
+					<td>Skrętka U/UTP drut</td>
+					<td>metr</td>
+					<td id="p1">20</td>
+					<td><button onclick="aktualizuj('p1')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Skrętka U/UTP drut')">Zamów</button></td>
+				</tr>
+				<tr>
+					<td>Skrętka U/UTP linka</td>
+					<td>metr</td>
+					<td id="p2">2</td>
+					<td><button onclick="aktualizuj('p2')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Skrętka U/UTP linka')">Zamów</button></td>
+				</tr>
+				<tr>
+					<td>Wtyki 8P8C</td>
+					<td>sztuki</td>
+					<td id="p3">10</td>
+					<td><button onclick="aktualizuj('p3')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Wtyki 8P8C')">Zamów</button></td>
+				</tr>
+				<tr>
+					<td>Moduły Keystone</td>
+					<td>sztuki</td>
+					<td id="p4">30</td>
+					<td><button onclick="aktualizuj('p4')">Aktualizuj</button></td>
+					<td><button onclick="zamow('Moduły Keystone')">Zamów</button></td>
+				</tr>
+				-->
+				<!-- Dla kumatych --
+				<tr>
+					<td class='produkt'>Skrętka U/UTP drut</td>
+					<td>metr</td>
+					<td class='ilosc'>20</td>
+					<td><button class='aktualizuj'>Aktualizuj</button></td>
+					<td><button class='zamow'>Zamów</button></td>
+				</tr>
+				<tr>
+					<td class='produkt'>Skrętka U/UTP linka</td>
+					<td>metr</td>
+					<td class='ilosc'>2</td>
+					<td><button class='aktualizuj'>Aktualizuj</button></td>
+					<td><button class='zamow'>Zamów</button></td></button></td>
+				</tr>
+				<tr>
+					<td class='produkt'>Wtyki 8P8C</td>
+					<td>sztuki</td>
+					<td class='ilosc'>10</td>
+					<td><button class='aktualizuj'>Aktualizuj</button></td>
+					<td><button class='zamow'>Zamów</button></td>
+				</tr>
+				<tr>
+					<td class='produkt'>Moduły Keystone</td>
+					<td>sztuki</td>
+					<td class='ilosc'>30</td>
+					<td><button class='aktualizuj'>Aktualizuj</button></td>
+					<td><button class='zamow'>Zamów</button></td>
+				</tr>
+				-->
+			</table>
+		</section>
+	</main>
+	<footer>
+		<a href="http://sieci.pl/" target="_blank">Nasza strona internetowa</a>
+		<p>Stronę przygotował: Chriskyy#0181</p>
+	</footer>
+	<script src="main.js"></script>
+</body>
+</html>

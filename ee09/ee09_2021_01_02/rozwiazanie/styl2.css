@@ -1,0 +1,46 @@
+body {
+	font-family: Verdana;
+	background: SeaGreen;
+}
+#baner {
+	color: white;
+	text-align: center;
+	height: 330px;
+}
+.blok {
+	color: white;
+	text-align: center;
+	width: 170px;
+	margin: 5px;
+	border: 1px solid white;
+	border-radius: 15px;
+}
+.blok:hover {
+	background: white;
+	color: black;
+}
+#glowny {
+	color: white;
+}
+#lewy {
+	background: WhiteSmoke;
+	width: 30%;
+	text-align: center;
+	height: 150px;
+	float: left;
+}
+#prawy {
+	background: WhiteSmoke;
+	width: 70%;
+	height: 150px;
+	float: left;
+}
+h3 {
+	text-align: center;
+	letter-spacing: 6px;
+	text-transform: capitalize;
+}
+#liga {
+	display: flex;
+	flex-flow: row wrap;
+}

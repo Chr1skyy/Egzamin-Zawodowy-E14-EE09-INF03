@@ -1,0 +1,46 @@
+* {
+	font-family: Garamond;
+}
+body {
+	margin: 0;
+}
+header {
+	background: linear-gradient(#97B498, #C8E6C9);
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+main {
+	display: flex;
+}
+#left {
+	background-color: #C8E6C9;
+	color: #005005;
+	width: 40%;
+	height: 600px;
+}
+#right {
+	color: #005005;
+	width: 60%;
+	height: 600px;
+	overflow: scroll;
+}
+footer {
+	background: linear-gradient(#C8E6C9, #97B498);	
+	color: white;
+	padding: 12px;
+}
+video {
+	width: 100%;
+}
+form {
+	padding: 10px 50px;
+}
+button {
+	background-color: #97B498;
+	color: white;
+}
+button:hover {
+	background-color: #FFFFFF;
+	color: #97B498;
+}

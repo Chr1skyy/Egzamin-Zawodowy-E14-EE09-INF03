@@ -1,0 +1,4 @@
+1. SELECT materialy.nazwa, materialy.ilosc, producenci.nazwaProd FROM materialy, producenci WHERE materialy.Producenci_id = producenci.id AND materialy.ilosc > 9;
+2. SELECT materialy.nazwa, producenci.nazwaProd, jednostki.nazwaJedn FROM materialy, producenci, jednostki WHERE materialy.Producenci_id = producenci.id AND jednostki.id = materialy.Jednostki_id;
+3. CREATE USER 'zaopatrzenie'@'localhost' IDENTIFIED BY 'Z@op@trzenie';
+4. GRANT SELECT, UPDATE, INSERT, DELETE ON firma.* TO 'zaopatrzenie'@'localhost';

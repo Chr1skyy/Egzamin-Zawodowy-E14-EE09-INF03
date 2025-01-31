@@ -1,0 +1,52 @@
+body {
+	font-family: Garamond;
+	background: rgb(30, 144, 255);
+	color: white;
+}
+#baner1,
+#baner3 {
+	width: 25%;
+	height: 200px;
+	float: left;
+}
+#baner2 {
+	text-align: center;
+	width: 50%;
+	height: 200px;
+	font-size: 250%;
+	float: left;
+}
+#glowny {
+	background: rgb(0, 0, 128);
+	padding: 60px;
+	text-transform: uppercase;
+	clear: both;
+}
+#stopka1 {
+	text-align: center;
+	width: 50%;
+	float: left;
+}
+#stopka2 {
+	text-align: right;
+	width: 50%;
+	padding-top: 100px;
+	float: left;
+}
+p {
+	padding: 20px;
+	font-size: 200%;
+	border: 1px solid rgb(192, 192, 192);
+}
+p:hover {
+	background: rgb(192, 192, 192);
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+td,
+th {
+	border: 1px solid rgb(192, 192, 192);
+	padding: 10px;
+}

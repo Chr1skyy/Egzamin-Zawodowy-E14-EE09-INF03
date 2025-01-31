@@ -1,0 +1,4 @@
+1. SELECT gatunek, wystepowanie FROM zwierzeta JOIN gromady ON zwierzeta.Gromady_id = gromady.id WHERE gromady.nazwa = 'ryby';
+2. SELECT zwierzeta.id, zwierzeta.gatunek, gromady.nazwa FROM zwierzeta JOIN gromady ON zwierzeta.Gromady_id = gromady.id;
+3. SELECT COUNT(*) FROM zwierzeta JOIN gromady ON zwierzeta.Gromady_id = gromady.id WHERE gromady.nazwa = 'ssaki';
+4. CREATE USER 'KatarzynaNowak' IDENTIFIED BY 'K4tNow';

@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  font-family: Georgia;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+#kontener {
+  display: flex;
+}
+
+#lewy,
+#srodkowy {
+  background: #A26475;
+  color: white;
+  width: 30%;
+  height: 300px;
+}
+
+#prawy {
+  background: #A26475;
+  color: white;
+  width: 40%;
+  height: 300px;
+  text-align: right;
+}
+
+#glowny {
+  background: #F0EAE2;
+  padding: 50px;
+}
+
+footer {
+  background: #824555;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+table,
+td,
+th {
+  border: 2px solid #69293A;
+  padding: 7px;
+  border-collapse: collapse;
+}
+
+#r {
+  background: red;
+  height: 15px;
+}
+
+#g {
+  background: green;
+  height: 15px
+}
+
+#b {
+  background: blue;
+  height: 15px;
+}
+
+ul {
+  list-style-type: square;
+}

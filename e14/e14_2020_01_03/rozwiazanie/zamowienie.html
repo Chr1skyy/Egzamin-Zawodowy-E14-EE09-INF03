@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Fabryka cukierków</title>
+	<link rel="stylesheet" href="styl10.css" />
+</head>
+
+<body>
+	<section id="kontener">
+		<section>
+			<a href="zamowienie.html">Zamów cukierki</a>
+		</section>
+		<section id="gorny2">
+			<a href="index.html"><img src="logotyp.png" alt="Nasze logo" /></a>
+		</section>
+	</section>
+	<header>
+		<h1>Słodka kraina</h1>
+	</header>
+	<main>
+		<section>
+			<label>
+				Numer kształtu:<br />
+				<input type="number" id="ksztalt" /><br />
+			</label>
+			skomponuj swój kolor, podaj RGB:<br />
+			<label>
+				R: <input type="number" id="r" />
+			</label>
+			<label>
+				G: <input type="number" id="g" />
+			</label>
+			<label>
+				B: <input type="number" id="b" /><br />
+			</label>
+			<button type="button" onclick="zamowienie()">Zamówienie</button>
+			<p id="wynik">Twoje zamówienie</p>
+			<button type="button" id="kolor">Kolor</button>
+		</section>
+		<section>
+			<h2>Nasza oferta</h2>
+			<table>
+				<tr>
+					<td>Kształty</td>
+					<td rowspan="2">Możesz zamówić<br />dowolny kolor cukierka</td>
+				</tr>
+				<tr>
+					<td>
+						<ol>
+							<li>cytryna</li>
+							<li>liść</li>
+							<li>banan</li>
+						</ol>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</main>
+	<footer>
+		Autor strony: <b>Chr1skyy</b>
+	</footer>
+	<script src="main.js"></script>
+</body>
+
+</html>

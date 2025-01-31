@@ -1,0 +1,4 @@
+1. INSERT INTO filmy(id, tytul, rok, ocena) VALUES (NULL,'Suburbicon',2017,5);
+2. SELECT filmy.tytul, gatunki.nazwa FROM filmy JOIN gatunki ON filmy.gatunki_id=gatunki.id WHERE ocena=6;
+3. SELECT tytul, rok FROM filmy JOIN gatunki ON filmy.gatunki_id=gatunki.id WHERE gatunki.nazwa = 'dramat' AND ocena = 5;
+4. CREATE TABLE aktorzy(id INT NOT NULL, imie TEXT, nazwisko TEXT, PRIMARY KEY(id));

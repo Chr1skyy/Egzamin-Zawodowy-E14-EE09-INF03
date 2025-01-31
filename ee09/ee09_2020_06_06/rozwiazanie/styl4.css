@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Tahoma;
+}
+
+header,
+footer {
+    background-color: rgb(107, 142, 35);
+    color: white;
+    text-align: center;
+    padding: 3px;
+}
+
+section#dane {
+    background-color: rgb(255, 218, 185);
+    padding: 3px;
+}
+
+main {
+    display: flex;
+}
+
+section#lewy,
+section#prawy {
+    background-color: rgb(255, 239, 213);
+    width: 27%;
+    height: 550px;
+}
+
+section#srodkowy {
+    background-color: rgb(255, 239, 213);
+    width: 46%;
+    height: 550px;
+}
+
+h3 {
+    text-align: center;
+}
+
+h3::first-letter {
+    color: green;
+}
+
+img {
+    height: 90px;
+    padding: 7px;
+}
+
+img:hover {
+    background-color: rgb(255, 218, 185);
+}

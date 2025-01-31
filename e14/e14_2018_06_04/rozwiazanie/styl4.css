@@ -1,0 +1,53 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: url("menu.jpg");
+	color: blue;
+	height: 200px;
+}
+
+main {
+	display: flex;
+}
+
+#lewy {
+	background: rgb(255, 218, 65);
+	text-align: center;
+	width: 40%;
+	height: 400px;
+}
+
+#srodkowy {
+	background: rgb(255, 226, 100);
+	text-align: center;
+	width: 30%;
+	height: 400px;
+}
+
+#prawy {
+	background: rgb(255, 233, 143);
+	text-align: center;
+	width: 30%;
+	height: 400px;
+}
+
+footer {
+	background: rgb(255, 218, 143);
+	color: blue;
+}
+
+a {
+	color: green;
+}
+
+p {
+	font-size: 130%;
+}
+
+h2 {
+	margin: 0;
+}

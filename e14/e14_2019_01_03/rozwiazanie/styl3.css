@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	font-family: Garamond;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+}
+
+header section {
+	background: #790DB5;
+	color: orange;
+	height: 200px;
+	width: 25%;
+	text-align: center;
+}
+
+main {
+	display: flex;
+}
+
+main section {
+	background: #FFE6A3;
+	height: 500px;
+	width: 50%;
+}
+
+footer {
+	background: #790DB5;
+	color: orange;
+	text-align: center;
+	padding: 30px;
+}
+
+form {
+	padding: 60px;
+}
+
+p {
+	font-size: 150%;
+}
+
+a {
+	color: yellow;
+}
+
+a:visited {
+	color: orange;
+}

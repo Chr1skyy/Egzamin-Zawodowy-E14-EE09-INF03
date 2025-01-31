@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	font-family: Tahoma;
+}
+#baner1,
+#baner2 {
+	background: #003d33;
+	color: white;
+	text-align: center;
+	height: 50px;
+}
+#baner1 {
+	width: 70%;
+	float: left;
+}
+#baner2 {
+	width: 30%;
+	float: left;
+}
+#lewy {
+	background: #26a69a;
+	height: 550px;
+	width: 30%;
+	float: left;
+}
+#prawy {
+	background: #26a69a;
+	height: 550px;
+	width: 70%;
+	float: left;
+}
+#stopka {
+	background: #003d33;
+	color: white;
+	clear: both;
+}
+.wizytowka {
+	width: 400px;
+	margin: 30px;
+	text-align: center;
+	border: 1px solid #003d33;
+}
+.wizytowka button {
+	background: #003d33;
+	color: white;
+	width: 100%;
+	height: 30px;
+	border: none;
+}
+.wizytowka button:hover {
+	background: #004c40;
+}

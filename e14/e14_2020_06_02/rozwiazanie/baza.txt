@@ -1,0 +1,8 @@
+1. CREATE TABLE pokoje (id INT UNSIGNED, nazwa VARCHAR(20), cena INT);
+2. ALTER TABLE pokoje ADD PRIMARY KEY(id);
+3. INSERT INTO pokoje VALUES (1, 'jednoosobowy', 100),(2, 'dwuosobowy', 170),(3, 'trzyosobowy', 210);
+4. ALTER TABLE rezerwacje ADD FOREIGN KEY(id_pok) REFERENCES pokoje(id);
+5. SELECT id_pok, SUM(liczba_dn) FROM rezerwacje GROUP BY id_pok;
+6. SELECT SUM(liczba_dn) FROM rezerwacje WHERE sezon = 'lato';
+7. UPDATE pokoje SET cena = cena * 1.15;
+8. CREATE USER 'najemca' IDENTIFIED BY 'n@JEM1@!';

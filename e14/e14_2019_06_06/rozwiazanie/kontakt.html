@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Pogotowie komputerowe</title>
+	<link rel="stylesheet" href="styl.css" />
+	<link rel="icon" href="favicon.png" />
+</head>
+
+<body>
+	<section id="kontener">
+		<header>
+			<img src="animacja.gif" />
+		</header>
+		<nav>
+			<a href="index.html">O nas</a>
+			<a href="kontakt.html">Kontakt</a>
+		</nav>
+		<main>
+			<section id="gorny"></section>
+			<section id="srodkowy">
+				<h3>Formularz kontaktowy</h3>
+				<form>
+					<table>
+						<tr>
+							<td>Imię:</td>
+							<td><input type="text" id="imie" /></td>
+						</tr>
+						<tr>
+							<td>Nazwisko:</td>
+							<td><input type="text" id="nazwisko" /></td>
+						</tr>
+						<tr>
+							<td>E-mail:</td>
+							<td><input type="text" id="email" /></td>
+						</tr>
+						<tr>
+							<td>Usługa:</td>
+							<td>
+								<select id="lista">
+									<option value="naprawa komputera">naprawa komputera</option>
+									<option value="odzyskiwanie danych">odzyskiwanie danych</option>
+									<option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+									<option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+									<option value="inne">inne</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="checkbox" id="check" checked />Wyślij kopię wiadomości</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><button type="reset">Resetuj</button><button type="button" onclick="przeslij();">Prześlij</button></td>
+						</tr>
+					</table>
+				</form>
+				<p id="wynik">
+			</section>
+			<section id="dolny"></section>
+		</main>
+		<footer>
+			<p>Autor strony: <b>Chr1skyy</b></p>
+		</footer>
+	</section>
+	<script src="main.js"></script>
+</body>
+
+</html>

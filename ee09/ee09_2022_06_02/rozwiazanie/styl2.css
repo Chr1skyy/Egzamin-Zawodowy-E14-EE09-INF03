@@ -1,0 +1,47 @@
+body {
+	font-family: Helvetica;
+	background-color: Linen;
+	color: #222;
+	margin: auto;
+	width: 90%;
+}
+header {
+	display: flex;
+}
+header #left,
+header #right {
+	background-color: black;
+	color: white;
+	width: 50%;
+	height: 100px;
+}
+main {
+	padding: 20px;
+}
+footer {
+	background-color: black;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+table {
+	margin: 40px;
+}
+td {
+	padding: 30px;
+	text-align: center;
+	font-weight: bold; 
+}
+a {
+	color: #aaa;
+	text-decoration: none;
+}
+a:hover {
+	color: white;
+}
+li {
+	display: inline-block;
+	padding: 5px;
+	margin: 10px;
+	border-bottom: 1px solid white;
+}

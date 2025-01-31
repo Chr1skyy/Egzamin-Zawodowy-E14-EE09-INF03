@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: Garamond;
+    text-align: center;
+}
+
+body {
+    background-color: Lavender;
+}
+
+header,
+footer {
+    background-color: #AF8EB5;
+    color: white;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+}
+
+#panelLewy,
+#panelSrodkowy,
+#panelPrawy {
+    background-color: #E1BEE7;
+    width: 30%;
+    height: 500px;
+    padding-top: 40px;
+    margin: 15px;
+    box-shadow: 10px 10px 10px DimGray;
+}
+
+a {
+    color: Indigo;
+    font-size: 150%;
+    padding: 10px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: Indigo;
+    color: white;
+}
+img,
+table {
+    border: 1px solid;
+    width: 80%;
+    margin: 40px auto;
+}

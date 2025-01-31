@@ -1,0 +1,44 @@
+body {
+	margin: 0;
+	font-family: Garamond;
+	color: white;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+header,
+footer {
+	background: ForestGreen;
+	padding: 10px;
+}
+
+main {
+	display: flex;
+}
+
+#lewy,
+#prawy {
+	background: ForestGreen;
+	height: 490px;
+	width: 25%;
+	font-size: 30px;
+}
+
+#srodkowy {
+	background: Chocolate;
+	height: 490px;
+	width: 50%;
+	font-size: 25px;
+}
+
+#srodkowy img {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%
+}
+
+input,
+button {
+	color: green;
+}

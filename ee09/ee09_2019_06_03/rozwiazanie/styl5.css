@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	font-family: Tahoma;
+}
+#lewy,
+#prawy {
+	background: RosyBrown;
+	color: white;
+	width: 30%;
+	height: 200px;
+	float: left;
+}
+#srodkowy {
+	background: RosyBrown;
+	color: white;
+	width: 40%;
+	height: 200px;
+	text-align: center;
+	float: left;
+}
+#glowny {
+	background: Wheat;
+	padding: 50px;
+	clear: both;
+}
+#stopka {
+	background: RosyBrown;
+	color: white;
+	padding: 5px;
+	text-align: center;
+}
+a {
+	border: 2px solid DarkRed;
+	background: Salmon;
+	color: DarkRed;
+	padding: 20px;
+	line-height: 200px;
+}

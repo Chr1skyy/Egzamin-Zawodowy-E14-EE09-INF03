@@ -1,0 +1,62 @@
+body {
+	background: #EEEEEE;
+}
+
+#kontener {
+	width: 1000px;
+	margin: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+#blok-gorny {
+	display: flex;
+}
+
+#logo,
+nav,
+footer {
+	background: #C0C0C0;
+	height: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#logo {
+	width: 400px;
+}
+
+nav {
+	width: 600px;
+}
+
+header {
+	background: #DDDDDD;
+	height: 200px;
+}
+
+main {
+	margin: 50px;
+}
+
+footer {
+	text-align: right;
+}
+
+nav a {
+	color: #555555;
+	margin: 50px;
+	font-size: 200%;
+	text-decoration: none;
+}
+
+hr {
+	background: #C0C0C0;
+	width: 70%;
+	height: 2px;
+}
+
+table {
+	text-align: left;
+}

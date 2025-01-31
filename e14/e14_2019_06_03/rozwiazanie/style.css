@@ -1,0 +1,64 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: #18FFA4;
+	height: 50px;
+}
+
+main {
+	display: flex;
+}
+
+#lewy {
+	background: #AEFFCF;
+	height: 550px;
+	width: 30%;
+}
+
+#srodkowy {
+	background: #DDFFCD;
+	height: 550px;
+	width: 40%;
+}
+
+#prawy {
+	background: #AEFFCF;
+	height: 550px;
+	width: 30%;
+}
+
+footer {
+	background: #18FFA4;
+	height: 50px;
+	text-align: center;
+}
+
+ul {
+	margin-left: 100px;
+}
+
+img {
+	margin: 100px;
+}
+
+form {
+	margin-left: 150px;
+}
+
+h4 {
+	margin-left: 100px;
+}
+
+h2,
+h3 {
+	text-align: center;
+}
+
+h2,
+p {
+	margin: 0;
+}

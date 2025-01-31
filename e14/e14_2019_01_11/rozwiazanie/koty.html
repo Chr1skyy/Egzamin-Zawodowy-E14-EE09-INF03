@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Galeria zdjęć</title>
+	<link rel="stylesheet" href="styl5.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Zdjęcia naszych pupilów</h1>
+	</header>
+	<section id="kontener">
+		<aside>
+			<h2>Kategorie</h2>
+			<ul>
+				<li><a href="psy.html">Psy</a></li>
+				<li><a href="koty.html">Koty</a></li>
+				<li>Gryzonie</li>
+				<li>Jaszczurki</li>
+				<li>Inne zdjęcia</li>
+			</ul>
+			<h4>Powrót do strony głównej</h4>
+		</aside>
+		<main>
+			<section id="gorny">
+				<h1>Wybierz zdjęcie</h1>
+				<img src="kot1.jpg" alt="kot1" id="kot1" onmouseover="over('kot1', 'kot1-szary.jpg')"
+					onmouseout="out('kot1', 'kot1.jpg')" onclick="clicked('kot1', 'kot1.jpg')" />
+			</section>
+			<section id="dolny">
+				<p><img id="zmiana" src="kot1.jpg" alt="kot-duży" /></p>
+			</section>
+		</main>
+	</section>
+	<footer>
+		Galerię zdjęć opracował: <i>Chr1skyy</i>
+	</footer>
+	<script src="main.js"></script>
+</body>
+
+</html>

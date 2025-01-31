@@ -1,0 +1,51 @@
+body {
+	margin: 0;
+	font-family: Tahoma;
+	display: flex;
+	flex-direction: column;
+}
+
+header,
+footer {
+	background: rgb(72, 209, 204);
+	color: white;
+	text-align: center;
+	padding: 5px;
+}
+
+main {
+	display: flex;
+}
+
+#ciasteczko {
+	background: rgb(139, 69, 19);
+	color: white;
+	padding: 10px;
+}
+
+#lewy {
+	background: rgb(175, 238, 238);
+	width: 70%;
+	height: 600px;
+}
+
+#prawy {
+	background: rgb(175, 238, 238);
+	width: 30%;
+	height: 600px;
+}
+
+p {
+	font-size: 150%;
+}
+
+img {
+	border: 1px solid gray;
+	height: 250px;
+	padding: 5px;
+}
+
+img:hover {
+	height: 300px;
+	border-color: black;
+}

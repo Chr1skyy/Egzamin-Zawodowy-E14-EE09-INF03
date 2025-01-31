@@ -1,0 +1,49 @@
+body {
+	margin: 0;
+	font-family: Garamond;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: RosyBrown;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+#formularz {
+	background: DarkSalmon;
+	text-align: center;
+	padding: 40px;
+}
+
+main {
+	display: flex;
+}
+
+#lewy,
+#prawy {
+	background: LightSalmon;
+	height: 300px;
+	width: 30%;
+}
+
+#srodkowy {
+	background: LightSalmon;
+	height: 300px;
+	width: 40%;
+}
+
+footer {
+	background: RosyBrown;
+	color: white;
+	text-align: center;
+	padding: 30px;
+}
+
+ol {
+	border: 2px solid rgb(205, 92, 92);
+	font-size: 150%;
+	list-style-position: inside;
+}

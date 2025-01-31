@@ -1,0 +1,52 @@
+* {
+	font-family: Verdana;
+}
+body {
+	margin: 0;
+}
+header {
+	display: flex;
+}
+#lewy,
+#prawy {
+	background-color: SeaGreen;
+	color: white;
+	line-height: 150px;
+	height: 260px;
+	font-size: 160%;
+}
+#lewy {
+	width: 75%;
+}
+#prawy {
+	width: 25%;
+}
+main {
+	background-color: MintCream;
+	padding: 80px;
+}
+footer {
+	background-color: SeaGreen;
+	color: white;
+	height: 70px;
+	text-align: center;
+	display: flex;
+}
+#footer_one,
+#footer_two {
+	width: 50%;
+}
+input,
+button {
+	margin-bottom: 20px;
+}
+img {
+	box-shadow: 15px 15px 10px DimGray;
+}
+a {
+	text-decoration: none;
+	background-color: MintCream;
+	color: SeaGreen;
+	padding: 15px;
+	line-height: 70px;
+}

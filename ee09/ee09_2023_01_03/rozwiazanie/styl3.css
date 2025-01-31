@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Georgia;
+    background-color: aliceblue;
+}
+
+header {
+    background-color: #A00037;
+    color: white;
+    text-align: center;
+    font-size: 150%;
+    padding: 3px;
+}
+
+main {
+    width: 70%;
+    float: left;
+}
+
+button {
+    background-color: #D81B60;
+    color: white;
+    padding: 15px;
+    margin: 20px;
+    width: 100%;
+}
+
+#artykul_1,
+#artykul_2,
+#artykul_3,
+#artykul_4 {
+    display: none;
+}
+
+footer {
+    background-color: #D81B60;
+    color: white;
+    width: 20%;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: 15px 15px 12px dimgray;
+    float: right;
+}
+
+h5,
+blockquote {
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+table {
+    margin: auto;
+    width: 95%;
+    border: 1px solid aliceblue;
+}

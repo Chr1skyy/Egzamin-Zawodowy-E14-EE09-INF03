@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+}
+
+* {
+    font-family: Helvetica;
+}
+
+header,
+footer {
+    background-color: #B3BC6D;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+#dane {
+    background-color: #FFFFCE;
+    color: olive;
+    padding: 10px 150px;
+}
+
+main {
+    display: flex;
+}
+
+#lewy,
+#prawy {
+    background-color: #E6EE9C;
+    width: 25%;
+    height: 450px;
+    text-align: center;
+}
+
+#srodkowy {
+    background-color: #FFFFCE;
+    width: 50%;
+    height: 450px;
+}
+
+table {
+    border: 1px solid olive;
+    margin: auto;
+    width: 70%;
+}
+
+h2 {
+    text-align: center;
+}
+
+h2::first-letter {
+    font-size: 150%;
+    color: olive;
+}
+
+img {
+    height: 100px;
+    padding: 7px;
+}
+
+img:hover {
+    background-color: #B3BC6D;
+}

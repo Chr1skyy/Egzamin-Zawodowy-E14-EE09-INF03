@@ -1,0 +1,4 @@
+1. SELECT gatunek, obraz FROM zwierzeta WHERE Gromady_id = 4;
+2. SELECT id, Gromady_id, gatunek, wystepowanie FROM zwierzeta WHERE Gromady_id IN (4, 5);
+3. SELECT zwierzeta.gatunek, odzywianie.id, odzywianie.rodzaj FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id;
+4. ALTER TABLE odzywianie DROP COLUMN informacja;
