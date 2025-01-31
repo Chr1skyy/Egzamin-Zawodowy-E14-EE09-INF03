@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Biuro turystyczne</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <header>
+        <h1>Zwiedzamy Polskę</h1>
+    </header>
+    <main>
+        <section id="lewy">
+            <button onclick="poprzednieZdjecie()">&lt;</button>
+        </section>
+        <section id="srodkowy">
+            <img src="1.jpg" alt="Aktywne zdjęcie" id="aktywne_zdjecie">
+        </section>
+        <section id="prawy">
+            <button onclick="nastepneZdjecie()">&gt;</button>
+        </section>
+        <section id="miniatury">
+            <img src="1.jpg" alt="Gdańsk">
+            <img src="2.jpg" alt="Kraków">
+            <img src="3.jpg" alt="Niedzica">
+            <img src="4.jpg" alt="Pieniny">
+            <img src="5.jpg" alt="Szklarska Poręba">
+            <img src="6.jpg" alt="Tatry">
+            <img src="7.jpg" alt="Wrocław">
+        </section>
+    </main>
+    <footer>
+        <h3>Autorem galerii jest:</h3>
+        <p>Chriskyy</p>
+        <a href="http://pixabay.com" target="_blank">Więcej zdjęć</a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

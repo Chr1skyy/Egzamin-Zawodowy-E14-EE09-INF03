@@ -1,0 +1,54 @@
+* {
+    font-family: Century, serif;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: Indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 50%;
+    height: 470px;
+}
+
+img {
+    padding: 3px;
+    margin: 10px;
+    border: 2px dashed SlateBlue;
+}
+
+a {
+    color: white;
+}
+
+button {
+    background-color: SlateBlue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: Indigo;
+}
+
+input[type="range"] {
+    width: 80%;
+}
