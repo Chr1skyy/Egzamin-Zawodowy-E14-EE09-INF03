@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.container > .image-card img {
+  width: 100%;
+  aspect-ratio: 14/ 8;
+  object-fit: cover;
+}
