@@ -1,0 +1,95 @@
+
+
+body {
+
+    font-family: Cambria;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.banera, .stopka {
+
+    background-color: rgb(120, 0, 46);
+    color: white;
+    padding: 5px;
+    font-size: 150%;
+
+}
+
+.menu {
+
+    background-color: rgb(172, 20, 87);
+    text-align: left;
+
+}
+
+.lewy {
+
+    background-color: snow;
+    color: olivedrab;
+    width: 60%;
+    height: 322px;
+    text-align: left;
+    float: left;
+
+}
+
+.prawy {
+
+    background-color: rgb(173, 20, 87);
+    width: 40%;
+    height: 322px;
+    float: left;
+
+}
+
+#samochow {
+
+    margin: 40px;
+    padding: 10px;
+
+}
+
+#samochod:hover {
+
+    border: 1px yellowgreen dotted;
+
+}
+
+a {
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: yellowgreen;
+
+}
+
+table, th, td, tr {
+
+    border: solid 1px olivedrab;
+    text-align: center;
+
+}
+
+table {
+
+    width: 90%;
+    text-align: center;
+
+}
+
+#home, #znak {
+
+    width: 80px;
+
+}
+
+.lewy > #h2_center {
+
+    text-align: center;
+
+}

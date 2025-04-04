@@ -1,0 +1,9 @@
+kw1 - SELECT marka, rocznik FROM samochody where samochody.kolor = "niebieski";
+
+kw2
+
+kw3 - UPDATE `samochody` SET `stan`='dobry' WHERE rocznik < "2004";
+
+kw4 - CREATE USER jan identified by 'janKowalski1@';
+
+kw5 - GRANT SELECT, INSERT, UPDATE ON samochody to 'jan'@'localhost';

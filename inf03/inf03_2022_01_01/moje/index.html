@@ -1,0 +1,44 @@
+<!Doctype html>
+<html>
+<head>
+
+    <link href="style_1.css" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <title>Restauracja Wszystkie Smaki</title> 
+
+</head>
+<body>
+    <section class="baner">
+        <h1>Witamy  wrestauracji „Wszystkie Smaki”</h1>   
+    </section>
+    <section class="panel_Lewy">
+        <img src="menu.jpg" alt="Nasze danie">
+    </section>
+    <section class="panel_Prawy">
+        <h4>U nas dobrze zjesz!</h4>
+        <ol>
+            <li>Obiady od 40zł</li>
+            <li>Przekąski od 10zł</li>
+            <li>Kolacje od 20zł</li>
+        </ol>
+    </section>
+    <section class="panel_Dolny">
+        <h2>Zarezerwuj stolik on-line</h2>
+        <form action="rejestracja.php" method="post">
+            <label for="data">Data(format rrrr-mm-dd):</label><br>
+            <input type="text" name="data"><br>
+            <label for="ile_os">Ile osób?:</label><br>
+            <input type="text" name="ile_os"><br>
+            <label for="nr_tel">Twój numer telefonu:</label><br>
+            <input type="text" name="nr_tel"><br>
+            <input type="checkbox" id="przetwarzanie_danych">Zgadzam  się  na  przetwarzanie moich danych osobowych</input><br>
+            <input class="fbutton" type="button" value="WYCZYŚĆ"> <!-- czyszczenie formularzu -->
+            <input class="fbutton" type="submit" value="REZERWUJ">
+        </form>
+    </section>
+    <section class="stopka">
+        <i>Stronę internetową opracował: Maksym Knasiecki</i>
+    </section>
+
+</body>
+</html>

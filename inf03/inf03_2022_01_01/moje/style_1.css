@@ -1,0 +1,63 @@
+body {
+
+    background-color: #F6E5DC;
+    font-family: Verdana;
+
+}
+
+.baner {
+
+    background-color: #2F180C;
+    text-align: center;
+    color: khaki;
+    height: 60px;
+
+}
+
+.panel_Lewy {
+
+    width: 60%;
+    display: inline-block;
+
+}
+
+.panel_Prawy {
+    
+    height: 100px;
+    font-size: 150%;
+    padding: 70px;
+    display: inline-block;
+    position: absolute;
+
+}
+
+.panel_Dolny {
+
+    background-color: #D0B6A8;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.stopka {
+
+    background-color: #2F180C;
+    color: khaki;
+    height: 60px;
+
+}
+
+img {
+
+    height: 350px;
+
+}
+
+.fbutton {
+
+    margin: 10px;
+    padding: 5px;
+    background-color: #2F180C;
+    color: khaki;
+
+}

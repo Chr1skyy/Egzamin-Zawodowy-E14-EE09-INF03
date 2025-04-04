@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma IT</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+</head>
+<script>
+
+    function submit() {
+
+        var name = document.getElementById("name");
+        name = name.value.toLowerCase();
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+
+        var surname = document.getElementById("surname");
+        surname = surname.value.toLowerCase();
+        surname = surname.charAt(0).toUpperCase() + surname.slice(1);
+
+        var email = document.getElementById("email");
+        var content = (document.getElementById("content")).value;
+        var checkb = document.getElementById("checkb");
+        var par = document.getElementById("output");
+
+        if (checkb.checked == false) {
+
+            par.innerHTML = "Musisz zapoznać się z regulaminem"
+            par.attribute = 'style="color:red;"'
+
+        } else {
+
+            par.innerHTML = name + " " + surname + "<br>" + "Treść Twojej sprawy" + content
+            par.attribute = 'style="color:Navy;",'
+
+        }
+    }
+
+</script>
+<body>
+    <section class="container">
+
+        <section class="logo">
+            <img src="logo.png" alt="firma it">
+        </section>
+
+        <section class="menu">
+            <a href="index.html">Strona Główna</a>
+            <a href="uslugi.html">Usługi</a>
+            <a href="kontakt.html">Kontakt</a>
+        </section>
+
+        <section class="baner">
+            <img src="animacja.gif" alt="Usługi informatyczne">
+        </section>
+
+        <section class="main">
+            <h2>Kontakt</h2>
+            <table>
+                <tr>
+                    <td>Imię: </td>
+                    <td><input type="text" name="" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko: </td>
+                    <td><input type="text" name="" id="surname"></td>
+                </tr>
+                <tr>
+                    <td>E-mail: </td>
+                    <td><input type="email" name="" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Zgłoszenie: </td>
+                    <td><textarea name="" id="content" cols="40" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="" id="checkb">Zapoznałem się z regulaminem</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button type="reset" onclick="reset()">Resetuj</button>
+                        <button type="submit" onclick="submit()">Prześlij</button>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <p id="output"></p>
+        </section>
+
+        <section class="footer">
+            Autor Strony: <strong>Maksym Knasiecki</strong>
+        </section>
+
+    </section>
+</body>
+</html>
