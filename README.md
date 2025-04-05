@@ -434,7 +434,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](inf03/inf03_2022_06_01/pliki1.zip) \
 				[Rozwiązanie](inf03/inf03_2022_06_01/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2022_06_01/rozwiazanie.zip)
-					[W trakcie]
+					[Zrobione]
   - 02 (**JS**) - Stacja paliw [INF.03-02-22.06-SG](inf03/inf03_2022_06_02) \
 				[Arkusz](inf03/inf03_2022_06_02/inf_03_2022_06_02_SG.pdf) 
 				[Zasady oceny](inf03/inf03_2022_06_02/inf_03_2022_06_02_SG_zo.xlsx) 
