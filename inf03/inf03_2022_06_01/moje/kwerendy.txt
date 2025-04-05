@@ -1,0 +1,11 @@
+kw1
+SELECT id, nazwa, wystepowanie FROM `ryby` WHERE styl_zycia = 1;
+
+kw2
+SELECT Ryby_id, wymiar_ochronny FROM `okres_ochronny` WHERE wymiar_ochronny < 30;
+
+kw3
+SELECT r.nazwa, l.akwen, l.wojewodztwo FROM `ryby` r JOIN lowisko l ON l.Ryby_id = r.id WHERE r.wystepowanie LIKE "%rzeki%";
+
+kw4
+ALTER TABLE ryby ADD dobowy_limit int(255);
