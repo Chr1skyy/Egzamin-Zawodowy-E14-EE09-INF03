@@ -28,6 +28,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](e14/e14_2018_06_01/zad1.zip) \
 				[Rozwiązanie](e14/e14_2018_06_01/rozwiazanie)
 				[RozwiązanieZIP](e14/e14_2018_06_01/rozwiazanie.zip)
+  				[Zrobione]
   - 04 (**PHP**) - Restauracja Kulinaria [E.14-04-18.06](e14/e14_2018_06_04) \
 				[Arkusz](e14/e14_2018_06_04/e14_2018_06_04.pdf) 
 				[Baza](e14/e14_2018_06_04/zad4.zip) \
@@ -425,6 +426,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](inf03/inf03_2022_01_01/zad1.zip) \
 				[Rozwiązanie](inf03/inf03_2022_01_01/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2022_01_01/rozwiazanie.zip)
+    				[Zrobione]
 - Czerwiec - podobne do sesji ee09_2019_06
   - 01 (**PHP**) - Portal dla wędkarzy [INF.03-01-22.06-SG](inf03/inf03_2022_06_01) \
 				[Arkusz](inf03/inf03_2022_06_01/inf_03_2022_06_01_SG.pdf) 
@@ -438,12 +440,14 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](inf03/inf03_2022_06_02/pliki2.zip) \
 				[Rozwiązanie](inf03/inf03_2022_06_02/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2022_06_02/rozwiazanie.zip)
+  				[Zrobione]
   - 03 (**PHP**) - Zawody wędkarskie [INF.03-02-22.06-SG](inf03/inf03_2022_06_03) \
 				[Arkusz](inf03/inf03_2022_06_03/inf_03_2022_06_03_SG.pdf) 
 				[Zasady oceny](inf03/inf03_2022_06_03/inf_03_2022_06_03_SG_zo.xlsx) 
 				[Baza](inf03/inf03_2022_06_03/pliki3.zip) \
 				[Rozwiązanie](inf03/inf03_2022_06_03/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2022_06_03/rozwiazanie.zip)
+    				[Zrobione]
 ### 2023
 - Styczeń - podobne do sesji e14_2020_06 oraz ee09_2020_06 \
 	(5 arkuszy, kolejność - 123-123-451-234)
@@ -512,12 +516,15 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](inf03/inf03_2024_01_01/materialy1.zip) \
 				[Rozwiązanie](inf03/inf03_2024_01_01/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2024_01_01/rozwiazanie.zip)
+    				[Zrobione]
   - 02 (**JS**) - Komputery [INF.03-02-24.01-SG](inf03/inf03_2024_01_02) \
 				[Arkusz](inf03/inf03_2024_01_02/inf_03_2024_01_02_SG.pdf) 
 				[Zasady oceny](inf03/inf03_2024_01_02/INF_03_2024_01_02_SG_zo.pdf)
 				[Baza](inf03/inf03_2024_01_02/materialy2.zip) \
 				[Rozwiązanie](inf03/inf03_2024_01_02/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2024_01_02/rozwiazanie.zip)
+  - 03 (**JS**) - Usługi Informatyczne [INF.03-03-24.01-SG](inf03/inf03_2024_01_03) \
+				[Arkusz](inf03/inf03_2024_01_03/inf_03_2024_01_03_SG.pdf) 
   - 04 (**PHP**) - Terminarz [INF.03-04-24.01-SG](inf03/inf03_2024_01_04) \
 				[Arkusz](inf03/inf03_2024_01_04/inf_03_2024_01_04_SG.pdf) 
 				[Zasady oceny](inf03/inf03_2024_01_04/INF_03_2024_01_04_SG_zo.pdf)
