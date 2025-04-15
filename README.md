@@ -634,3 +634,4 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](inf03/inf03_2024_06_12/pliki12.zip) \
 				[Rozwiązanie](inf03/inf03_2024_06_12/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2024_06_12/rozwiazanie.zip)
+					[In progress]

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<script>
+    // JS do nauki bo nie ogarniam za nic
+
+    function img1() {
+
+        var img = document.querySelector("img[src='pszczola.jpg']")
+        var effect = document.querySelector("input[name='effect']:checked")
+
+        switch (effect.value) {
+
+            case "1":
+                img.style.filter = "blur(5px)";
+                break;
+            case "2":
+                img.style.filter = "sepia(100%)";
+                break;
+            case "3":
+                img.style.filter = "invert(100%)";
+                break;
+        }
+    }
+
+    function img2_color() {
+
+        var img = document.querySelector("img[src='pomarancza.jpg']")
+        img.style.filter = "none";
+        
+    }
+
+    function img2_bw() {
+
+        var img = document.querySelector("img[src='pomarancza.jpg']")
+        img.style.filter = "grayscale(100%)";
+            
+    }
+
+    function img3() {
+
+        var img = document.querySelector("img[src='owoce.jpg']")
+        var slider = document.querySelector(".lower_left input[type='range']")
+        var value = slider.value
+
+        img.style.filter = "opacity(" + value + "%)";
+            
+    }
+
+    function img4() {
+
+        var img = document.querySelector("img[src='zolw.jpg']")
+        var slider = document.querySelector(".lower_right input[type='range']")
+        var value = slider.value
+
+        img.style.filter = "brightness(" + value +"%)"
+            
+    }
+
+</script>
+<body>
+    <section class="baner">
+
+        <h2>Efekty na obrazach</h2>
+
+    </section>
+    <section class="upper_left">
+
+        <img src="pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
+        <form>
+            <!-- lista tylko jedno na raz -->
+                <!-- by to działało input radio musi mieć ten sam 'name' -->
+            <label>
+                <input type="radio" name="effect" value="1">Blur
+            </label><br>
+            <label>
+                <input type="radio" name="effect" value="2">Sepia
+            </label><br>
+            <label>
+                <input type="radio" name="effect" value="3">Negatyw
+            </label><br>
+        </form>
+        <button onclick="img1()">Zastosuj</button>
+
+    </section>
+    <section class="upper_right">
+        <img src="pomarancza.jpg" alt="drzewo pomarańczy"><br>
+        <button onclick="img2_color()">Kolorowy</button>
+        <button onclick="img2_bw()">Czarno-biały</button>
+
+    </section>
+    <section class="lower_left">
+        <img src="owoce.jpg" alt="Kosz pełen owoców">
+        <br>
+        <!-- styl suwaka jest zależny od przeglądarki  -->
+        <input type="range" min="0" max="100" value="100">
+        <br>
+        <button onclick="img3()">Zastosuj</button>
+
+    </section>
+    <section class="lower_right">
+        <img src="zolw.jpg" alt="Żółw w wodzie">
+        <br>
+        <!-- styl suwaka jest zależny od przeglądarki -->
+        <input type="range" min="0" max="250">
+        <br>
+        <button onclick="img4()">Zastosuj</button>
+
+    </section>
+    <section class="footer">
+
+        <!-- otwiera się w nowej karcie -->
+            <!--!!! target="_blank" !!!-->
+
+        <p>
+            <a id="link" target="_blank"href="http://www.css.com/"><br>Zobacz  inne  efekty obrazu</a>
+        </p>
+        <p>Stronę wykonał: Maksym Knasiecki</p>
+
+    </section>
+    
+</body>
+</html>
