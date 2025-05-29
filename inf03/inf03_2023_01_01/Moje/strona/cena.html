@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>malarz</title>
+    <link rel="stylesheet" href="styl_1.css">
+</head>
+<script lang="JavaScript">
+    function Calculate() {
+
+        let area = document.getElementById("area").value;
+        let output = document.getElementById("output");
+        let paint_needed = Math.ceil(area/4);
+        output.innerHTML = "Liczba potrzebnych puszek: " + paint_needed;
+    }
+</script>
+<body>
+    <section class="Baner">
+        <h1>Malowanie pokoi i biur</h1>
+    </section>
+    <section class="Left">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="mieszamy.html">Mieszamy</a></li>
+            <li><a href="cena.html">Wyceniamy</a></li>
+        </ul>
+    </section>
+    <section class="Center">
+        <h2>Zapotrezbowanie na farbę</h2>
+        <label for="area">Powierzchnia malowania (m<sup>2</sup>):</label>
+        <input type="number" id="area" name="area">
+        <button onclick="Calculate()">Policz</button>
+        <p id="output"></p>
+    </section>
+    <section class="Right">
+        <img src="obraz.png" alt="Próbki farb">
+    </section>
+    <section class="Footer">
+        <h3>MALARZ</h3>
+        <p>Stronę Opracował: Maksym Knasiecki</p>
+    </section>
+</body>
+</html>

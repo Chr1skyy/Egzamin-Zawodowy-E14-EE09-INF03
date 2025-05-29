@@ -1,0 +1,58 @@
+* {
+
+    font-family: Cambria;
+
+}
+.Baner, .Footer {
+
+    background: #829EB9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%
+}
+.Left, .Right {
+
+    background-color: #B3C6D9;
+    height: 400px;
+    width: 25%;
+    padding-top: 100px;
+    float: left;
+
+}
+.Center {
+
+    background-color: #E0E9F1;
+    height: 400px;
+    width: 50%;
+    text-align: center;
+    padding-top: 100px;
+    float: left;
+
+}
+Table {
+
+    border: solid 1px DimGray;
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+
+}
+td, th {
+
+    border: solid 1px dimgray;
+    border-collapse: collapse;
+
+}
+td:hover {
+
+    background-color: steelblue;
+    color: white;
+
+}
+img {
+
+    width: 100%;
+    border-radius: 20px;
+
+}

@@ -458,6 +458,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 				[Baza](inf03/inf03_2023_01_01/zad1.zip) \
 				[Rozwiązanie](inf03/inf03_2023_01_01/rozwiazanie)
 				[RozwiązanieZIP](inf03/inf03_2023_01_01/rozwiazanie.zip)
+					[Zrobione]
   - 02 (**PHP**) - Wynajem pokoi [INF.03-02-23.01-SG](inf03/inf03_2023_01_02) \
 				[Arkusz](inf03/inf03_2023_01_02/inf_03_2023_01_02_SG.pdf) 
 				[Zasady oceny](inf03/inf03_2023_01_02/INF_03_2023_01_02_SG_zo.xlsx)
