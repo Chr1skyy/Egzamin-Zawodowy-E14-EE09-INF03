@@ -1,0 +1,4 @@
+1. SELECT kolor, material FROM produkt WHERE wysokosc_buta > 10;
+2. SELECT nazwa, cena, nazwa_kat FROM buty JOIN kategorie ON buty.id_kat = kategorie.id_kat;
+3. CREATE USER 'Marek'@'localhost' IDENTIFIED BY 'M@reK';
+4. GRANT SELECT, UPDATE ON obuwie.produkt TO 'Marek'@'localhost';
