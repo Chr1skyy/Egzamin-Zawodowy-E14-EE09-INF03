@@ -21,6 +21,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 
 
 ### Formuła 2012 - E.14
+
 <details>
 <summary><b>2018</b></summary>
 <ul>
@@ -1036,7 +1037,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_01">INF.03-01-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_01/inf_03_2025_01_01_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_01/INF_03_2025_01_01_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_01/pliki10.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_01/pliki10.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_01/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_01/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1045,7 +1046,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_02">INF.03-02-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_02/inf_03_2025_01_02_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_02/INF_03_2025_01_02_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_02/pliki12.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_02/pliki12.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_02/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_02/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1054,7 +1055,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_03">INF.03-03-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_03/inf_03_2025_01_03_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_03/INF_03_2025_01_03_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_03/pliki13.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_03/pliki13.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_03/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_03/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1063,7 +1064,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_04">INF.03-04-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_04/inf_03_2025_01_04_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_04/INF_03_2025_01_04_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_04/pliki9.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_04/pliki9.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_04/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_04/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1072,7 +1073,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_05">INF.03-05-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_05/inf_03_2025_01_05_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_05/INF_03_2025_01_05_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_05/pliki8.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_05/pliki8.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_05/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_05/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1081,7 +1082,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_06">INF.03-06-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_06/inf_03_2025_01_06_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_06/INF_03_2025_01_06_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_06/pliki14.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_06/pliki14.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_06/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_06/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1090,7 +1091,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_07">INF.03-07-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_07/inf_03_2025_01_07_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_07/INF_03_2025_01_07_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_07/pliki11.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_07/pliki11.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_07/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_07/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1099,7 +1100,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_08">INF.03-08-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_08/inf_03_2025_01_08_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_08/INF_03_2025_01_08_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_08/pliki7.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_08/pliki7.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_08/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_08/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1108,7 +1109,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_09">INF.03-09-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_09/inf_03_2025_01_09_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_09/INF_03_2025_01_09_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_09/pliki4.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_09/pliki4.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_09/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_09/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1117,7 +1118,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_10">INF.03-10-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_10/inf_03_2025_01_10_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_10/INF_03_2025_01_10_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_10/pliki3.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_10/pliki3.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_10/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_10/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1126,7 +1127,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_11">INF.03-11-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_11/inf_03_2025_01_11_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_11/INF_03_2025_01_11_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_11/pliki2.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_11/pliki2.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_11/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_11/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
@@ -1135,7 +1136,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         [<a href="inf03/inf03_2025_01_12">INF.03-12-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_12/inf_03_2025_01_12_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_12/INF_03_2025_01_12_SG_zo.pdf">Zasady oceny</a> |
-        <a href="inf03/inf03_2025_01_12/pliki1.zip">Baza</a> |
+        <a href="inf03/inf03_2025_01_12/pliki1.7z">Baza</a> |
         <a href="inf03/inf03_2025_01_12/rozwiazanie">Rozwiązanie</a> |
         <a href="inf03/inf03_2025_01_12/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
