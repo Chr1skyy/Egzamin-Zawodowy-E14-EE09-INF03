@@ -1051,7 +1051,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_02/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        03 (<b>PHP</b>) - X
+        03 (<b>PHP</b>) - Kalendarz
         [<a href="inf03/inf03_2025_01_03">INF.03-03-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_03/inf_03_2025_01_03_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_03/INF_03_2025_01_03_SG_zo.pdf">Zasady oceny</a> |
@@ -1060,7 +1060,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_03/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        04 (<b>PHP</b>) - X
+        04 (<b>PHP</b>) - Obuwie męskie
         [<a href="inf03/inf03_2025_01_04">INF.03-04-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_04/inf_03_2025_01_04_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_04/INF_03_2025_01_04_SG_zo.pdf">Zasady oceny</a> |
@@ -1069,7 +1069,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_04/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        05 (<b>PHP</b>) - X
+        05 (<b>PHP</b>) - Firma szkoleniowa
         [<a href="inf03/inf03_2025_01_05">INF.03-05-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_05/inf_03_2025_01_05_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_05/INF_03_2025_01_05_SG_zo.pdf">Zasady oceny</a> |

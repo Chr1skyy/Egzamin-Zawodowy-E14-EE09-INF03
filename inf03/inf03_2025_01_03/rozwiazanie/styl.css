@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Bookman, Serif;
+}
+
+header,
+footer {
+    background-color: indigo;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+#napis {
+    background-color: blueviolet;
+    padding: 10px;
+    text-align: right;
+}
+
+#lewy,
+#prawy {
+    background-color: lavender;
+    height: 500px;
+}
+
+#lewy {
+    width: 25%;
+}
+
+#prawy {
+    width: 35%;
+}
+
+#srodek {
+    background-color: ghostwhite;
+    text-align: center;
+    height: 500px;
+    width: 40%;
+}
+
+img {
+    float: right;
+    width: 50%;
+    padding: 10px;
+}
+
+p {
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+}
+
+table,
+form {
+    margin: 30px;
+}
+
+table,
+td {
+    border-collapse: collapse;
+    border: 1px solid indigo;
+}
+
+td,
+th {
+    padding: 3px;
+}
