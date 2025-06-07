@@ -1132,7 +1132,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_11/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        12 (<b>PHP</b>) - X
+        12 (<b>PHP</b>) - Piekarnia
         [<a href="inf03/inf03_2025_01_12">INF.03-12-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_12/inf_03_2025_01_12_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_12/INF_03_2025_01_12_SG_zo.pdf">Zasady oceny</a> |
