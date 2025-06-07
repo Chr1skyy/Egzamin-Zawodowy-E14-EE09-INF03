@@ -1114,7 +1114,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_09/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        10 (<b>PHP</b>) - X
+        10 (<b>PHP</b>) - Koło szachowe gambit piona
         [<a href="inf03/inf03_2025_01_10">INF.03-10-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_10/inf_03_2025_01_10_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_10/INF_03_2025_01_10_SG_zo.pdf">Zasady oceny</a> |
@@ -1123,7 +1123,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_10/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        11 (<b>PHP</b>) - X
+        11 (<b>PHP</b>) - Konkurs - wolontariat szkolny
         [<a href="inf03/inf03_2025_01_11">INF.03-11-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_11/inf_03_2025_01_11_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_11/INF_03_2025_01_11_SG_zo.pdf">Zasady oceny</a> |
