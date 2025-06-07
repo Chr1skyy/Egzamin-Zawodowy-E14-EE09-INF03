@@ -1087,7 +1087,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_06/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        07 (<b>PHP</b>) - X
+        07 (<b>PHP</b>) - Wyszukiwarka miast
         [<a href="inf03/inf03_2025_01_07">INF.03-07-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_07/inf_03_2025_01_07_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_07/INF_03_2025_01_07_SG_zo.pdf">Zasady oceny</a> |
@@ -1096,7 +1096,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_07/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        08 (<b>PHP</b>) - X
+        08 (<b>PHP</b>) - Mieszalnia farb
         [<a href="inf03/inf03_2025_01_08">INF.03-08-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_08/inf_03_2025_01_08_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_08/INF_03_2025_01_08_SG_zo.pdf">Zasady oceny</a> |
@@ -1105,7 +1105,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
         <a href="inf03/inf03_2025_01_08/rozwiazanie.zip">RozwiązanieZIP</a>
       </li>
       <li>
-        09 (<b>PHP</b>) - X
+        09 (<b>PHP</b>) - Klub zdobywców gór polskich
         [<a href="inf03/inf03_2025_01_09">INF.03-09-25.01-SG</a>]<br>
         <a href="inf03/inf03_2025_01_09/inf_03_2025_01_09_SG.pdf">Arkusz</a> |
         <a href="inf03/inf03_2025_01_09/INF_03_2025_01_09_SG_zo.pdf">Zasady oceny</a> |
