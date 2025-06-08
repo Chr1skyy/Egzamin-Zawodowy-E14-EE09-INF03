@@ -20,8 +20,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 - **JS** - Galeria [EE.09-02-23.01-SG](ee09/ee09_2023_01_02)
 
 
-### Formuła 2012 - E.14
-
+## Formuła 2012 - E.14
 <details>
 <summary><b>2018</b></summary>
 <ul>
@@ -300,7 +299,8 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 </ul>
 </details>
 
-### Formuła 2017 - EE.09
+
+## Formuła 2017 - EE.09
 <details open>
 <summary><b>2019</b></summary>
 <ul>
@@ -705,7 +705,8 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 </ul>
 </details>
 
-### Formuła 2019 - INF.03
+
+## Formuła 2019 - INF.03
 <details open>
 <summary><b>2022</b></summary>
 <ul>
@@ -759,7 +760,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 <details open>
 <summary><b>2023</b></summary>
 <ul>
-  <li><b>Styczeń</b>
+  <li><b>Styczeń</b> - podobne do sesji e14_2020_06 oraz ee09_2020_06
     <ul>
       <li>
         01 (<b>JS</b>) - Malarz
@@ -808,7 +809,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
       </li>
     </ul>
   </li>
-  <li><b>Czerwiec</b>
+  <li><b>Czerwiec</b> - podobne do sesji e14_2019_06 (12 arkuszy - 4 różne)
     <ul>
       <li>
         01 (<b>PHP</b>) - Sklep dla uczniów
@@ -854,7 +855,7 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 <details open>
 <summary><b>2024</b></summary>
 <ul>
-  <li><b>Styczeń</b>
+  <li><b>Styczeń</b> - podobne do sesji e14_2019_06 oraz ee09_2020_06 (12 arkuszy - 6 różnych)
     <ul>
       <li>
         01 (<b>JS</b>) - Firma IT
@@ -1143,6 +1144,4 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
     </ul>
   </li>
 </ul>
-</details>
-
 </details>
