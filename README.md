@@ -19,6 +19,16 @@ Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 - **Większy JS** - Zamówienia hurtowe [EE.09-04-22.06-SG](ee09/ee09_2022_06_04)
 - **JS** - Galeria [EE.09-02-23.01-SG](ee09/ee09_2023_01_02)
 
+# Wyszukiwarka Egzaminów
+
+Prosta aplikacja webowa pozwalająca na wyszukiwanie egzaminów po różnych kryteriach, takich jak formuła, rok, nazwa kodowa, tytuł czy tagi. Dane egzaminów są pobierane z pliku JSON i wyświetlane dynamicznie na stronie.
+
+Wyszukiwarka obsługuje filtrowanie wielowyrazowe oraz wyróżnia poziom trudności egzaminów za pomocą kolorów. Dodatkowo, dla każdego egzaminu dostępne są linki do arkusza, rozwiązania i innych materiałów.
+
+Na ten moment dostępne są tylko arkusze INF.03, ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatkowe tagi lub funkcjonalności, zapraszam do kontaktu lub uzupełniania pliku exams.json.
+
+[Strona z wyszukiwarką](https://chr1skyy.github.io/EgzaminZawodowyINF03-Wyszukiwarka/)
+
 
 ## Formuła 2012 - E.14
 <details>
