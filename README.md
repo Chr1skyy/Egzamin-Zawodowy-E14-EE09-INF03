@@ -1130,6 +1130,14 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
         <a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_05/rozwiazanie">Rozwiązanie</a> | 
         RozwiązanieZIP
       </li>
+      <li>
+        06 (<b>PHP</b>) - Biblioteka miejska
+        [<a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_06">INF.03-06-25.06-SG</a>]<br>
+        Arkusz | 
+        Baza | 
+        <a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_06/rozwiazanie">Rozwiązanie</a> | 
+        RozwiązanieZIP
+      </li>
     </ul>
   </li>
 </ul>

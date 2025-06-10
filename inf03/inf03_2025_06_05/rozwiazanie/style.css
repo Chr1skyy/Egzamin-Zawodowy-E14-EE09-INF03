@@ -23,6 +23,7 @@ main {
 }
 
 #container {
+    width: 50%;
     display: flex;
     flex-direction: column;
 }
@@ -37,12 +38,10 @@ main {
 }
 
 nav {
-    width: 50%;
     height: 50px;
 }
 
 #prawy {
-    width: 50%;
     height: 420px;
     overflow: auto;
 }
@@ -50,10 +49,6 @@ nav {
 input,
 button {
     margin-top: 20px;
-}
-
-ul {
-    display: flex;
 }
 
 li {

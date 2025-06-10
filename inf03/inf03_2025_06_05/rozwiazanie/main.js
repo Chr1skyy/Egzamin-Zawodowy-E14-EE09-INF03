@@ -1,7 +1,7 @@
 function addToCart() {
-    const file = document.getElementById('file').files[0].name
+    const file = document.getElementById('file').files[0]
     const numberOfCopy = +document.getElementById('numberOfCopy').value
-    const typeOfPaper = document.querySelector('input[type=radio]').value
+    const typeOfPaper = document.querySelector('input[type=radio]:checked').value
     let price = 0
     if (typeOfPaper == "błyszczący") {
         price = numberOfCopy * 1.5
@@ -10,7 +10,7 @@ function addToCart() {
         price = numberOfCopy * 2
     }
     const newImg = document.createElement("img")
-    newImg.src = file
+    newImg.src = file.name
     const newP1 = document.createElement("p")
     newP1.innerHTML = `Liczba kopii: ${numberOfCopy}`
     const newP2 = document.createElement("p")
