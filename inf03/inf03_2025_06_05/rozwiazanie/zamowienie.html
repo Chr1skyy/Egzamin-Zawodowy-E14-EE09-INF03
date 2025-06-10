@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Fotografia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Fotografia artystyczna</h1>
+    </header>
+    <section>
+        <img src="1.jpg" alt="obrazy do sprzedaży" title="1.jpg">
+        <img src="2.jpg" alt="obrazy do sprzedaży" title="2.jpg">
+        <img src="3.jpg" alt="obrazy do sprzedaży" title="3.jpg">
+        <img src="4.jpg" alt="obrazy do sprzedaży" title="4.jpg">
+        <img src="5.jpg" alt="obrazy do sprzedaży" title="5.jpg">
+        <img src="6.jpg" alt="obrazy do sprzedaży" title="6.jpg">
+        <img src="7.jpg" alt="obrazy do sprzedaży" title="7.jpg">
+        <img src="8.jpg" alt="obrazy do sprzedaży" title="8.jpg">
+        <img src="9.jpg" alt="obrazy do sprzedaży" title="9.jpg">
+        <img src="10.jpg" alt="obrazy do sprzedaży" title="10.jpg">
+    </section>
+    <main>
+        <section id="lewy">
+            <h3>Zamówienie</h3>
+            <label>
+                Wybierz obraz: <input type="file" id="file" accept="image/jpeg">
+            </label>
+            <br>
+            <label>
+                Liczba kopii: <input type="number" id="numberOfCopy">
+            </label>
+            <br>
+            <label>
+                <input type="radio" value="błyszczący" name="typeOfPaper" checked>Papier błyszczący
+            </label>
+            <br>
+            <label>
+                <input type="radio" value="matowy" name="typeOfPaper">Papier matowy<br>
+            </label>
+            <button onclick="addToCart()">Dodaj do koszyka</button>
+        </section>
+        <div id="container">
+            <nav>
+                <ul>
+                    <li><a href="regulamin.html">Regulamin</a></li>
+                    <li><a href="uslugi.html">Usługi</a></li>
+                    <li><a href="https://pixabay.com">Zdjęcia</a></li>
+                </ul>
+            </nav>
+            <section id="prawy">
+                <h3>Koszyk</h3>
+                <section id="cart"></section>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Autor strony: <em>Chr1skyy</em></p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    background-color: #ffcc99;
+    font-family: Garamond;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    background-color: darkgreen;
+    color: white;
+    padding: 30px;
+    font-size: 140%;
+}
+
+nav {
+    background-color: mediumseagreen;
+    word-spacing: 90px;
+    padding: 20px;
+}
+
+main {
+    display: flex;
+}
+
+#lewa {
+    width: 70%;
+    height: 500px;
+}
+
+#prawa {
+    background-color: mediumseagreen;
+    width: 30%;
+    height: 500px;
+    text-align: left;
+}
+
+table {
+    border: 1px dashed darkgreen;
+    margin: 30px auto;
+}
+
+td,
+th {
+    padding: 5px;
+}
+
+a {
+    color: white;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+tr:hover {
+    background-color: darkgreen;
+    color: white
+}
