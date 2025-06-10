@@ -110,7 +110,7 @@
         </section>
     </div>
     <footer>
-        <p>Autor: Chr1skyy</p>
+        <p>Autor: <strong>Chr1skyy</strong></p>
     </footer>
 </body>
 
