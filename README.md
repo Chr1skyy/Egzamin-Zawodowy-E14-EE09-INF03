@@ -311,7 +311,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 
 ## EE.09
 
-<details>
+<details open>
 <summary><b>2019</b></summary>
 <ul>
   <li><b>Czerwiec</b>
@@ -369,7 +369,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2020</b></summary>
 <ul>
   <li><b>Styczeń</b>
@@ -455,7 +455,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2021</b></summary>
 <ul>
   <li><b>Styczeń</b>
@@ -549,7 +549,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2022</b></summary>
 <ul>
   <li><b>Styczeń</b>
@@ -651,7 +651,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2023</b></summary>
 <ul>
   <li><b>Styczeń</b>
@@ -695,7 +695,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 
 ## INF.03
 
-<details>
+<details open>
 <summary><b>2022</b></summary>
 <ul>
   <li><b>Styczeń</b>
@@ -741,7 +741,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2023</b></summary>
 <ul>
   <li><b>Styczeń</b> - podobne do sesji e14_2020_06 oraz ee09_2020_06
@@ -827,7 +827,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2024</b></summary>
 <ul>
   <li><b>Styczeń</b> - podobne do sesji e14_2019_06 oraz ee09_2020_06 (12 arkuszy - 6 różnych)
@@ -985,7 +985,7 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
 </ul>
 </details>
 
-<details>
+<details open>
 <summary><b>2025</b></summary>
 <ul>
   <li><b>Styczeń</b>
