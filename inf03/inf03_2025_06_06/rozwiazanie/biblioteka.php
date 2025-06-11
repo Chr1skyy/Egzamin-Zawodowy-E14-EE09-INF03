@@ -33,7 +33,7 @@
             <button name="rezerwujLiryka">Rezerwuj</button>
             <?php
             if (isset($_POST["rezerwujLiryka"])) {
-                $id = $_POST["dramat"];
+                $id = $_POST["liryka"];
                 $query2 = "SELECT tytul FROM ksiazka WHERE id = $id;";
                 $result2 = mysqli_query($connect, $query2);
                 $row = mysqli_fetch_array($result2);
@@ -110,7 +110,7 @@
         </section>
     </div>
     <footer>
-        <p>Autor: Chr1skyy</p>
+        <p><strong>Autor: Chr1skyy</strong></p>
     </footer>
 </body>
 
