@@ -1155,6 +1155,22 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
         <a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_08/rozwiazanie">Rozwiązanie</a> | 
         RozwiązanieZIP
       </li>
+      <li>
+        09 (<b>?</b>) - ?
+        [INF.03-09-25.06-SG]<br>
+        Arkusz | 
+        Baza | 
+        Rozwiązanie | 
+        RozwiązanieZIP
+      </li>
+      <li>
+        10 (<b>PHP</b>) - Szkolenia i kursy
+        [<a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_10">INF.03-10-25.06-SG</a>]<br>
+        Arkusz | 
+        Baza | 
+        <a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_10/rozwiazanie">Rozwiązanie</a> | 
+        RozwiązanieZIP
+      </li>
     </ul>
   </li>
 </ul>
