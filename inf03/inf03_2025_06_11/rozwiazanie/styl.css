@@ -1,0 +1,66 @@
+* {
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    background-color: #c5cae9;
+    width: 40%;
+    height: 600px;
+    overflow: auto;
+}
+
+#container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    height: 300px;
+}
+
+section#gora {
+    background-color: #9fa8da;
+}
+
+section#dol {
+    background-color: #7986cb;
+}
+
+footer {
+    background-color: #283593;
+    color: white;
+    padding: 20px;
+}
+
+.opona {
+    background-color: #9fa8da;
+    margin: 40px;
+    border: 2px dotted #283593;
+    border-radius: 30px;
+}
+
+img {
+    float: left;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+}
+
+h3 {
+    background-color: #7986cb;
+    color: white;
+    font-size: 140%;
+}
