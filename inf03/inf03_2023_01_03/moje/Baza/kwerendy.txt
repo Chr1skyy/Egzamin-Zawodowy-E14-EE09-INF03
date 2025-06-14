@@ -1,0 +1,16 @@
+kw1
+SELECT k.nazwa, k.ulica from kwiaciarnie k where k.miasto = "Malbork";
+
+kw2
+SELECT z.id_kwiaciarni, COUNT(z.id_zam) from zamowienia z GROUP BY z.id_kwiaciarni;
+
+kw3
+SELECT k.nazwa, k.miasto, z.kwiaty from kwiaciarnie k JOIN zamowienia z ON z.id_kwiaciarni = k.id_kwiaciarni WHERE data = "2017-01-07";
+
+kw4
+CREATE TABLE `klienci` (
+  `id` int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `imie` varchar(15),
+  `nazwisko` varchar(15),
+  `rabat` int UNSIGNED
+)
