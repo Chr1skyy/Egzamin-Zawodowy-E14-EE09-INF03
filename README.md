@@ -1,6 +1,10 @@
 ## Egzamin zawodowy E.14/EE.09/INF.03
 Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 
+# Do Zapamiętania
+- Znaczniki **Sekcji**|**Semantyczne** to <header>, <nav>, <main>, <section>, <footer>, <article>, <aside>
+- Wykorzystywać **komendy z dołu arkusza** do kodu PHP np. mysqli_query() zamiast query() - ujemne punkty
+
 ### Kontakt
 - **Discord:** Chriskyy
 
