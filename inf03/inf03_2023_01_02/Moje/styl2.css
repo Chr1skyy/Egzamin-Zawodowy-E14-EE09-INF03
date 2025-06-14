@@ -1,0 +1,55 @@
+* {
+
+    font-family: Garamond;
+    text-align: center;
+}
+
+body {
+
+    background-color: lavender;
+}
+
+.baner, .stopka {
+
+    background-color: #AF8EB5;
+    color: white;
+    padding: 10px;
+    clear: both;
+}
+
+.b_lewy, .b_srod, .b_prawy {
+
+    background-color: #E1BEE7;
+    width: 30%;
+    height: 500px;
+    padding-top: 40px;
+    margin: 15px;
+    box-shadow: 10px 10px 10px dimgray;
+    display: inline-block;
+    vertical-align: top;
+}
+
+a {
+
+    color: indigo;
+    font-size: 150%;
+    padding: 10px;
+    font-weight: bold;
+    margin: auto;
+}
+
+a:hover {
+
+    background-color: indigo;
+    color: white;
+}
+
+img, table {
+
+    border: 1px solid;
+    width: 80%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
