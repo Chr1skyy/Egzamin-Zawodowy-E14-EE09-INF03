@@ -1180,6 +1180,14 @@ Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatko
         <a href="https://github.com/Chr1skyy/Egzamin-Zawodowy-E14-EE09-INF03/tree/main/inf03/inf03_2025_06_11/rozwiazanie">Rozwiązanie</a> | 
         RozwiązanieZIP
       </li>
+      <li>
+        12 (<b>?</b>) - ?
+        [INF.03-12-25.06-SG]<br>
+        Arkusz | 
+        Baza | 
+        Rozwiązanie | 
+        RozwiązanieZIP
+      </li>
     </ul>
   </li>
 </ul>
