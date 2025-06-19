@@ -1,33 +1,19 @@
 ## Egzamin zawodowy E.14/EE.09/INF.03
 Arkusze z plikami wraz z rozwiązaniami napisanymi przeze mnie.
 
+## Wyszukiwarka Egzaminów
+
+Prosta aplikacja webowa pozwalająca na wyszukiwanie egzaminów po różnych kryteriach, takich jak formuła, rok, nazwa kodowa, tytuł czy tagi. Dane egzaminów są pobierane z pliku JSON i wyświetlane dynamicznie na stronie. Dla każdego egzaminu dostępne są linki do arkusza, rozwiązania i innych materiałów.
+
+Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatkowe tagi lub funkcjonalności to zapraszam do kontaktu.
+[Strona z wyszukiwarką](https://chr1skyy.github.io/EgzaminZawodowyINF03-Wyszukiwarka/)
+
 ### Kontakt
 - **Discord:** Chriskyy
 
 ### Donate
 - [Revolut - @chriskyy](https://revolut.me/chriskyy)
 - [Tipply.pl - @chriskyy](https://tipply.pl/@chriskyy)
-
-### Wybrane szczególne arkusze:
-- **JS** - Pomocnik matematyczny [EE.09-04-19.06](ee09/ee09_2019_06_04)
-- **JS** - Ciągi liczbowe [EE.09-05-19.06](ee09/ee09_2019_06_05)
-- **Cookies PHP** - Przyloty samolotów [EE.09-05-21.01-SG](ee09/ee09_2021_01_05)
-- **Wyświetlanie wielu bloków PHP** - Warzywniak [EE.09-02-21.06-SG](ee09/ee09_2021_06_02)
-- **Wyświetlanie wielu bloków PHP** - Wypożyczalnia filmów [EE.09-03-21.06-SG](ee09/ee09_2021_06_03)
-- **Panel logowania PHP** - Portal społecznościowy [EE.09-05-22.01-SG](ee09/ee09_2022_01_05)
-- **JS** - Konfigurator stylu [EE.09-06-22.01-SG](ee09/ee09_2022_01_06)
-- **Większy JS** - Zamówienia hurtowe [EE.09-04-22.06-SG](ee09/ee09_2022_06_04)
-- **JS** - Galeria [EE.09-02-23.01-SG](ee09/ee09_2023_01_02)
-
-## Wyszukiwarka Egzaminów
-
-Prosta aplikacja webowa pozwalająca na wyszukiwanie egzaminów po różnych kryteriach, takich jak formuła, rok, nazwa kodowa, tytuł czy tagi. Dane egzaminów są pobierane z pliku JSON i wyświetlane dynamicznie na stronie.
-
-Wyszukiwarka obsługuje filtrowanie wielowyrazowe oraz wyróżnia poziom trudności egzaminów za pomocą kolorów. Dodatkowo, dla każdego egzaminu dostępne są linki do arkusza, rozwiązania i innych materiałów.
-
-Arkusze są ocenione według mojego uznania. Jeśli ktoś ma pomysły na dodatkowe tagi lub funkcjonalności to zapraszam do kontaktu.
-
-[Strona z wyszukiwarką](https://chr1skyy.github.io/EgzaminZawodowyINF03-Wyszukiwarka/)
 
 ## E.14
 
