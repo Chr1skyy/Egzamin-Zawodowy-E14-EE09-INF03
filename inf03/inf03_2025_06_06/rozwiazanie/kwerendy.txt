@@ -1,0 +1,5 @@
+1. SELECT id, tytul FROM ksiazka WHERE gatunek = 'liryka';
+2. SELECT tytul, id_cz, data_odd FROM ksiazka JOIN wypozyczenia ON ksiazka.id = wypozyczenia.id_ks ORDER BY data_odd ASC LIMIT 15;
+3. ALTER TABLE ksiazka ADD COLUMN rezerwacja TINYINT(1) DEFAULT 0;
+4. UPDATE ksiazka SET rezerwacja = 1 WHERE id = 1;
+5. SELECT tytul FROM ksiazka WHERE id = 4;

@@ -1,0 +1,18 @@
+2021-09-20 Podstawy języka C++
+2021-09-30 Photoshop dla zaawansowanych
+2021-10-01 Podstawy języka Python
+2021-10-02 Systemy operacyjne
+2021-10-07 Aplikacje Webowe
+2021-10-15 Python dla zaawansowanych
+2021-10-21 Techologia druku 3D
+2021-10-22 PHP - poziom podstawowy
+2021-11-10 Animacje komputerowe
+2021-11-15 Administracja systemem Linux
+2021-11-21 PHP - poziom średniozaawansowany
+2021-11-28 HTML i CSS dla zaawansowanych
+2021-11-30 Programowanie obiektowe w C++
+2021-12-06 Windows Serwer - usługi
+2021-12-07 PHP - poziom zaawansowany
+2021-12-10 C++ dla zaawansowanych
+2021-12-15 Obsługa drukarek 3D
+2021-12-16 Obsługa programu GIMP

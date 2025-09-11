@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Planer zadań</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <aside>
+        <img src="obraz.jpg" alt="notatki">
+    </aside>
+    <section id="container">
+        <header>
+            <h2>Moje zadania</h2>
+        </header>
+        <nav>
+            <input type="text" placeholder="Dodaj zadanie..." id="zadanie">
+            <button type="button" onclick="dodajZadanie()">Dodaj</button>
+        </nav>
+        <main>
+            <ul>
+                <li>Wyprowadzić psa<button type="button" onclick="zaznaczWykonane(this)">Wykonane</button></li>
+                <li>Gimnastyka<button type="button" onclick="zaznaczWykonane(this)">Wykonane</button></li>
+                <li>Zakupy<button type="button" onclick="zaznaczWykonane(this)">Wykonane</button></li>
+                <li>Spacer z kumplem<button type="button" onclick="zaznaczWykonane(this)">Wykonane</button></li>
+                <li>Odrabianie lekcji z młodszą siostrą<button type="button"
+                        onclick="zaznaczWykonane(this)">Wykonane</button></li>
+                <li>Projekt na geografię<button type="button" onclick="zaznaczWykonane(this)">Wykonane</button></li>
+            </ul>
+        </main>
+        <footer>
+            <h3>Notatki: Chr1skyy</h3>
+        </footer>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

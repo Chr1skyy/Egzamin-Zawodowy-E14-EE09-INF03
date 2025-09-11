@@ -1,0 +1,70 @@
+* {
+    font-family: 'Century Gothic', 'Arial';
+}
+
+body {
+    margin: 0;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    background-color: sienna;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 130%;
+}
+
+main {
+    display: flex;
+}
+
+#container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#lewy {
+    background-color: navajowhite;
+    margin: 10px;
+    padding: 20px;
+    width: 35%;
+    height: 400px;
+    box-shadow: 5px 5px 10px dimgray;
+}
+
+nav {
+    height: 50px;
+}
+
+#prawy {
+    height: 420px;
+    overflow: auto;
+}
+
+input,
+button {
+    margin-top: 20px;
+}
+
+li {
+    display: inline-block;
+}
+
+img {
+    width: 10%;
+    float: left;
+}
+
+a {
+    color: sienna;
+    margin-right: 30px;
+}
+
+a:hover {
+    color: #4C1900;
+}

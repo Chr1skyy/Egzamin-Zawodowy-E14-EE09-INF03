@@ -1,0 +1,4 @@
+1. SELECT kod, nazwa, cena FROM kursy ORDER BY cena ASC;
+2. SELECT nazwa FROM kursy;
+3. INSERT INTO uczestnicy VALUES (NULL, 'Tadeusz', 'Wysocki', 36);
+4. SELECT nazwa, COUNT(id_uczestnika) AS 'Zapisanych' FROM kursy LEFT JOIN kursy_uczestnicy ON kursy.kod = kursy_uczestnicy.kod_kursu GROUP BY kod;

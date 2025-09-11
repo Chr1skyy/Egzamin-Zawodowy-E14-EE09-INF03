@@ -19,6 +19,7 @@
 		while($tab = mysqli_fetch_row($res)) {
 			echo "<li>$tab[0], występowanie: $tab[1]</li>";
 		}
+		mysqli_close($con);
 		?>
 		</ul>
 	</div>

@@ -1,0 +1,65 @@
+* {
+    text-align: center;
+    font-family: Georgia;
+}
+
+body {
+    margin: 0;
+}
+
+header,
+footer {
+    background-color: tomato;
+    color: mistyrose;
+    padding: 10px;
+}
+
+#container {
+    display: flex;
+}
+
+nav {
+    width: 20%;
+}
+
+nav div {
+    background-color: #ffaea5;
+    height: 170px;
+    font-size: 200%;
+}
+
+#blokBaza {
+    background-color: mistyrose;
+}
+
+main {
+    background-color: mistyrose;
+    width: 80%;
+    height: 510px;
+    overflow: auto;
+}
+
+section#opisy,
+section#galeria {
+    display: none;
+}
+
+table {
+    margin: auto;
+    width: 60%;
+    border: 1px dashed indigo;
+}
+
+select,
+button {
+    margin: 20px;
+}
+
+dt {
+    font-weight: bold;
+    font-style: italic;
+}
+
+dt:hover {
+    font-size: 180%;
+}

@@ -1,0 +1,4 @@
+1. SELECT id, nazwa, zdjecie FROM gry;
+2. SELECT nazwa, LEFT(opis, 100) AS opis, punkty, cena FROM gry WHERE id = 1;
+3. SELECT nazwa, punkty FROM gry ORDER BY punkty DESC LIMIT 5;
+4. INSERT INTO gry VALUES (NULL, 'Zamczysko', 'Na odludziu stoi opuszczone zamczysko, w którym znajduje się skarb strzeżony przez złowrogie demony i duchy', 200, 50, 'zamczysko.jpg');

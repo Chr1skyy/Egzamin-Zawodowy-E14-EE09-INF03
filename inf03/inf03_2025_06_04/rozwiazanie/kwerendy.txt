@@ -1,0 +1,4 @@
+1. SELECT id_zadania, zadanie, data FROM zadania;
+2. INSERT INTO zadania VALUES (NULL, 'spotkanie firmowe', '2024-05-10', 1);
+3. DELETE FROM zadania WHERE id_zadania = 2;
+4. SELECT imie, nazwisko, telefon, zadanie, data FROM osoby JOIN zadania ON osoby.id_osoba = zadania.osoba_id;

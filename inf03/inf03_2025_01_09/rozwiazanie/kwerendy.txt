@@ -1,0 +1,4 @@
+1. SELECT pasmo, nazwa_gory, wysokosc FROM gory ORDER BY wysokosc DESC LIMIT 10;
+2. SELECT nazwisko, imie, funkcja, email FROM osoby;
+3. INSERT INTO osiagniecia VALUES (NULL, 182, 4, '2024-06-08');
+4. INSERT INTO osoby VALUES (NULL, 'M.', 'Miłosz', 'uczestnik', 'm.milosz@zdobywcyxyz.pl');
