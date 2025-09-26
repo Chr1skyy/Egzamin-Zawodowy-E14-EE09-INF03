@@ -1,4 +1,4 @@
 1. SELECT plik, nr_klienta, liczba_odbitek FROM zamowienia WHERE rodzaj = 'matowy' AND liczba_odbitek > 100
-2. SELECT SUM(liczba_odbitek * cena) AS 'Do zapłaty' FROM zamowienia JOIN zdjecia ON zamowienia.rodzaj = zdjecia.rodzaj WHERE zamowienia.nr_klienta = 3
-3. SELECT SUM(liczba_odbitek) FROM zamowienia WHERE rodzaj = 'blyszczacy' GROUP BY rodzaj
-4. CREATE USER 'anna'@'localhost' IDENTIFIED BY '@NNa'
+2. SELECT (liczba_odbitek * cena) AS 'Do zapłaty' FROM zamowienia JOIN zdjecia ON zamowienia.rodzaj = zdjecia.rodzaj WHERE zamowienia.nr_klienta = 3
+3. SELECT SUM(liczba_odbitek) FROM zamowienia WHERE rodzaj = 'blyszczacy'
+4. CREATE USER 'Anna'@'localhost' IDENTIFIED BY '@NNa'

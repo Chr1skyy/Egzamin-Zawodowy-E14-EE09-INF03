@@ -1,0 +1,4 @@
+1. SELECT nazwisko, imie, klasa, data_wypozyczenia FROM uczniowie WHERE data_wypozyczenia > '2020-03-02';
+2. SELECT nazwisko, imie, data_wypozyczenia, autor, kod FROM uczniowie JOIN ksiazki ON uczniowie.id_ksiazki = ksiazki.id;
+3. DELETE FROM ksiazki WHERE autor = '0';
+4. SELECT autor, tytul, kod FROM ksiazki ORDER BY RAND() LIMIT 5;
