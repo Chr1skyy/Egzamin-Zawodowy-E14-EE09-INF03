@@ -12,6 +12,11 @@ aside {
     height: 610px;
 }
 
+img {
+    width: 100%;
+    height: 610px;
+}
+
 #container {
     width: 80%;
     display: flex;

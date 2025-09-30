@@ -34,7 +34,7 @@
             $query = "SELECT id, nazwa, zdjecie FROM gry;";
             $result = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_array($result)) {
-                echo "<div>
+                echo "<div class='gra'>
                         <img src='{$row['zdjecie']}' alt='{$row['nazwa']}' title='{$row['id']}'>
                         <p>{$row['nazwa']}</p>
                     </div>";
