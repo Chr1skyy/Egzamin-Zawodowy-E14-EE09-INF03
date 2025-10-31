@@ -60,7 +60,7 @@
                 $query = "SELECT cena FROM miejsca WHERE nazwa = '$miejsceWycieczki';";
                 $result = mysqli_query($connect, $query);
                 $row = mysqli_fetch_array($result);
-                $cena = $row["cena"] * ($ileDoroslych + $ileDzieci / 2);
+                $cena = $row["cena"] * ($ileDoroslych + ($ileDzieci / 2));
                 echo "<p>W dniu $termin</p>
                     <p>$cena złotych</p>";
             }
@@ -73,7 +73,7 @@
             $result = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_array($result)) {
                 echo "<div class='wycieczka'>
-                        <img src='{$row['link_obraz']} alt='zdjęcie z wycieczki'>
+                        <img src='{$row['link_obraz']}' alt='zdjęcie z wycieczki'>
                         <h2>{$row['nazwa']}</h2>
                         <p>{$row['cena']}</p>
                     </div>";

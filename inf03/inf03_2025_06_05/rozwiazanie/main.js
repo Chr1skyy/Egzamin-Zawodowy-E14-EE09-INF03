@@ -1,6 +1,6 @@
 function addToCart() {
     const file = document.getElementById('file').files[0]
-    const numberOfCopy = +document.getElementById('numberOfCopy').value
+    const numberOfCopy = +document.getElementById('numberOfCopies').value
     const typeOfPaper = document.querySelector('input[type=radio]:checked').value
     let price = 0
     if (typeOfPaper == "błyszczący") {

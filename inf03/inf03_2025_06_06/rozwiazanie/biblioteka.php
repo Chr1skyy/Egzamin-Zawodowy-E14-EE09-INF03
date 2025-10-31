@@ -29,8 +29,8 @@
                     }
                     ?>
                 </select>
+                <button name="rezerwujLiryka">Rezerwuj</button>
             </form>
-            <button name="rezerwujLiryka">Rezerwuj</button>
             <?php
             if (isset($_POST["rezerwujLiryka"])) {
                 $id = $_POST["liryka"];

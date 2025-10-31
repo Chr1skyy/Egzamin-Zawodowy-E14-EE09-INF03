@@ -18,7 +18,7 @@ header("refresh: 10;");
             $query1 = "SELECT * FROM opony ORDER BY cena ASC LIMIT 10;";
             $result1 = mysqli_query($connect, $query1);
             while ($row = mysqli_fetch_array($result1)) {
-                $opona = '';
+                $obraz = '';
                 if ($row['sezon'] == 'letnia') {
                     $obraz = 'lato.png';
                 }

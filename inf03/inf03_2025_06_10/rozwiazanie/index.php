@@ -20,16 +20,16 @@
                     <th>Cena</th>
                 </tr>
                 <?php
-                // $connect = mysqli_connect("localhost", "root", "", "szkolenia");
-                // $query = "SELECT kod, nazwa, cena FROM kursy ORDER BY cena ASC;";
-                // $result = mysqli_query($connect, $query);
-                // while ($row = mysqli_fetch_array($result)) {
-                //     echo "<tr>
-                //             <td><img src='{$row['kod']}.jpg' alt='kurs'</td>
-                //             <td>{$row['nazwa']}</td>
-                //             <td>{$row['cena']}</td>
-                //         </tr>";
-                // }
+                $connect = mysqli_connect("localhost", "root", "", "szkolenia");
+                $query = "SELECT kod, nazwa, cena FROM kursy ORDER BY cena ASC;";
+                $result = mysqli_query($connect, $query);
+                while ($row = mysqli_fetch_array($result)) {
+                    echo "<tr>
+                            <td><img src='{$row['kod']}.jpg' alt='kurs'</td>
+                            <td>{$row['nazwa']}</td>
+                            <td>{$row['cena']}</td>
+                        </tr>";
+                }
                 ?>
             </table>
         </section>
@@ -52,11 +52,11 @@
                 <br>
                 <select id="rodzajKursu" name="rodzajKursu">
                     <?php
-                    // $query = "SELECT nazwa FROM kursy;";
-                    // $result = mysqli_query($connect, $query);
-                    // while ($row = mysqli_fetch_array($result)) {
-                    //     echo "<option value='{$row['nazwa']}>{$row['nazwa']}</option>";
-                    // }
+                    $query = "SELECT nazwa FROM kursy;";
+                    $result = mysqli_query($connect, $query);
+                    while ($row = mysqli_fetch_array($result)) {
+                        echo "<option value='{$row['nazwa']}>{$row['nazwa']}</option>";
+                    }
                     ?>
                 </select>
                 <button name="submit">Dodaj dane</button>
@@ -70,10 +70,11 @@
                     $query = "INSERT INTO uczestnicy VALUES (NULL, '$imie', '$nazwisko', $wiek);";
                     mysqli_query($connect, $query);
                     echo "<p>Dane uczestnika $imie $nazwisko zostały dodane<p>";
+                } else {
+                    echo "<p>Wprowadź wszystkie dane<p>";
                 }
-                echo "<p>Wprowadź wszystkie dane<p>";
             }
-            // mysqli_close($connect);
+            mysqli_close($connect);
             ?>
         </section>
     </main>

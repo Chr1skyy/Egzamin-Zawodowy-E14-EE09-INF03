@@ -60,11 +60,15 @@
                 <h3>Opisy smoków</h3>
                 <dl>
                     <dt>Smok czerwony</dt>
-                    <dd>Opis</dd>
-                    <dt>Smok czerwielkiwony</dt>
-                    <dd>Opis</dd>
-                    <dt>Skrzydlaty łaciaty</dt>
-                    <dd>Opis</dd>
+                    <dd>Pochodzi z Chin. Ma 1000 lat. Żywi się mniejszymi zwierzętami. Posiada łuski cenne na rynkach
+                        wschodnich do wyrabiania lekarstw. Jest dziki i groźny.</dd>
+                    <dt>Smok zielony</dt>
+                    <dd>Pochodzi z Bułgarii. Ma 10000 lat. Żywi się mniejszymi zwierzętami, ale tylko w kolorze
+                        zielonym. Jest kosmaty. Z sierści zgubionej przez niego, tka się najdroższe materiały.</dd>
+                    <dt>Smok niebieski</dt>
+                    <dd>Pochodzi z Francji. Ma 100 lat. Żywi się owocami morza. Jest natchnieniem dla najlepszych
+                        malarzy. Często im pozuje. Smok ten jest przyjacielem ludzi i czasami im pomaga. Jest jednak
+                        próżny i nie lubi się przepracowywać.</dd>
                 </dl>
             </section>
             <section id="galeria">
