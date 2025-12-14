@@ -2,4 +2,4 @@
 2. SELECT cena FROM miejsca WHERE nazwa = 'Malbork';
 3. SELECT nazwa, cena, link_obraz FROM miejsca WHERE link_obraz LIKE '0%';
 4. SELECT nazwa, ROUND(AVG(liczba_doroslych)) AS 'Średnia liczba' FROM miejsca JOIN wycieczki ON miejsca.id_miejsca = wycieczki.id_miejsca GROUP BY nazwa;
-5. CREATE TABLE klienci(id_klienta UNSIGNED INT PRIMARY KEY AUTO_INCREMENT NOT NULL, imie VARCHAR(20), nazwisko VARCHAR(40), data_ur DATE);
+5. CREATE TABLE klienci(id_klienta INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL, imie VARCHAR(20), nazwisko VARCHAR(40), data_ur DATE);
