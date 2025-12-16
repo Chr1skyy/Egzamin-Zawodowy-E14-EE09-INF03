@@ -1,7 +1,7 @@
 function oblicz() {
     let cena = 0;
     let ile_rat = +document.getElementById("raty").value;
-    let miasto = +document.getElementById("miasto").value;
+    let miasto = document.getElementById("miasto").value;
     const checkBoxReact = document.getElementById("react");
     const checkBoxJavaScript = document.getElementById("javascript");
     const wynik = document.getElementById("wynik");
