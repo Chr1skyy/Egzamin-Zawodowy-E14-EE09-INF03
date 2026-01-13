@@ -24,6 +24,8 @@ main {
 
 article {
     width: 98%;
+    padding-top: 40px;
+    margin: 1%;
 }
 
 @media (min-width: 800px) {
@@ -32,8 +34,6 @@ article {
     }
 
     article {
-        padding-top: 40px;
-        margin: 1%;
         width: 30%;
     }
 }
