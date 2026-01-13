@@ -38,7 +38,7 @@ main {
 }
 
 table {
-    margin: 10px;
+    margin-left: 10px;
     width: 90%;
     border: 1px solid #90caf9;
 }
