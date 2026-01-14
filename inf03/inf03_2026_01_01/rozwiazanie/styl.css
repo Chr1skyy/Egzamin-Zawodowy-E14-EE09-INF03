@@ -1,0 +1,59 @@
+* {
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: flex;
+}
+
+header, nav, footer {
+    color: white;
+    padding: 2px;
+}
+
+header, footer {
+    background-color: darkgreen;
+
+}
+
+nav {
+    background-color: forestgreen;
+}
+
+section {
+    background-color: lightgreen;
+    width: 33.3%;
+    height: 550px;
+    padding-top: 10px;
+    overflow: auto;
+}
+
+h2 {
+    width: 33%;
+    display: inline-block;
+}
+
+table, td, th {
+    border: 1px solid darkgreen;
+}
+
+table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+#middle img {
+    width: 95%;
+    border-radius: 8px;
+}
+
+#left tr:hover {
+    background-color: forestgreen;
+}
