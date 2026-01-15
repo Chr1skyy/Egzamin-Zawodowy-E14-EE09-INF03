@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stylizacja paznokci</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <aside>
+        <img src="manicure.jpg" alt="Stylizacja paznokci">
+    </aside>
+    <div id="container-column">
+        <main>
+            <header>
+                <h1>Twoje wymarzone paznokcie</h1>
+            </header>
+            <nav>
+                <button id="przyciskKolor" onmouseover="changeSection('sekcjaKolor')">Kolor</button>
+                <button id="przyciskKsztalt" onmouseover="changeSection('sekcjaKsztalt')">Kształt</button>
+                <button id="przyciskWzor" onmouseover="changeSection('sekcjaWzor')">Wzór</button>
+            </nav>
+            <section id="sekcjaKolor">
+                <h2>Kolor</h2>
+                <img src="kolory.png" alt="Kolory paznokci">
+                <br>
+                <input type="color" name="kolor" value="#ff0000">
+            </section>
+            <section id="sekcjaKsztalt">
+                <h2>Kształt</h2>
+                <img src="ksztalt.png" alt="Kształty paznokci">
+                <br>
+                <select name="ksztalt">
+                    <option value="migdał">migdał</option>
+                    <option value="zaokrąglony">zaokrąglony</option>
+                    <option value="kwadratowy">kwadratowy</option>
+                    <option value="balerina">balerina</option>
+                    <option value="zaokrąglony kwadrat">zaokrąglony kwadrat</option>
+                </select>
+            </section>
+            <section id="sekcjaWzor">
+                <h2>Wzór</h2>
+                <script>
+                    for (let i = 1; i <= 10; i++) {
+                        document.write(`<img class='wzory' src='${i}.jpg' title='${i}'> `);
+                    }
+                </script>
+                <br>
+                <input type="number" id="numerWzoru" min="1" max="10">
+            </section>
+        </main>
+        <footer>
+            <p>Autor strony: <em>Chr1skyy</em></p>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
