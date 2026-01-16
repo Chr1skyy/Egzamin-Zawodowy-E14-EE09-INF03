@@ -1,19 +1,19 @@
 @font-face {
     font-family: 'Lato';
-    src: url('lato-bold.woff2') format('woff2'),
-         url('lato-bold.woff') format('woff');
+    src: url('font/lato-bold.woff2') format('woff2'),
+        url('font/lato-bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
-	font-display: swap;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Lato';
-    src: url('lato-regular.woff2') format('woff2'),
-         url('lato-regular.woff') format('woff');
+    src: url('font/lato-regular.woff2') format('woff2'),
+        url('font/lato-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-	font-display: swap;
+    font-display: swap;
 }
 
 * {
@@ -28,7 +28,8 @@ body {
     margin: 0;
 }
 
-header, footer {
+header,
+footer {
     height: 100px;
 }
 
