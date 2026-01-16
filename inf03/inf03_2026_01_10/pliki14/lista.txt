@@ -1,0 +1,19 @@
+Treść odnośników wraz z wartościami id w bloku bocznym:
+
+?id=1 Sernik
+?id=2 Sałatka
+?id=3 Pankejki
+?id=4 Nugetsy
+?id=5 Łosoś
+?id=6 Kociołek
+?id=7 Jagnięcina
+?id=8 Hamburgery
+?id=9 Eklerki
+?id=10 Churros
+
+Elementy listy w bloku głównym:
+
+Lorem 1 kg
+Ipsum 2 szt.
+Dolor 200 g
+Sit amet (szczypta)
