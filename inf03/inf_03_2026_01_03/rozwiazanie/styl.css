@@ -1,0 +1,42 @@
+* {
+ font-family: Garamond, serif;   
+}
+header, footer {
+    background-color: navy;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    letter-spacing: 3px;
+    clear: both;
+}
+nav, section, aside {
+    height: 500px;
+    float: left;
+}
+nav, aside {
+    background-color: dodgerblue;
+    width: 35%;
+}
+section {
+    background-color: skyblue;
+    width: 30%;
+    text-align: center;
+}
+input, button {
+    margin: 10px;
+}
+h3 {
+    text-align: center;
+}
+h3:first-letter {
+    font-size: 200%;
+}
+p {
+    font-size: 150%;
+}
+.choice {
+    box-shadow: 5px 5px 10px dimgray;
+    border-radius: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
