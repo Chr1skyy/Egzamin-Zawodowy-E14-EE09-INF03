@@ -17,7 +17,7 @@
 }
 
 * {
-    font-family: Lato, sans-serif;
+    font-family: 'Lato', sans-serif;
     text-align: center;
     color: #333;
 }
@@ -68,50 +68,32 @@ span {
     padding-left: 30px;
 }
 
-span:nth-child(2) {
-    font-size: 200%;
-}
-
+span:nth-child(2),
 span:nth-child(11) {
     font-size: 200%;
 }
 
-span:nth-child(3) {
-    font-size: 150%;
-}
-
+span:nth-child(3),
 span:nth-child(15) {
     font-size: 150%;
 }
 
-span:nth-child(4) {
-    font-size: 120%;
-}
-
+span:nth-child(4),
 span:nth-child(17) {
     font-size: 120%;
 }
 
-span:nth-child(5) {
-    font-size: 170%;
-}
-
+span:nth-child(5),
 span:nth-child(21) {
     font-size: 170%;
 }
 
-span:nth-child(7) {
-    font-size: 130%;
-}
-
+span:nth-child(7),
 span:nth-child(27) {
     font-size: 130%;
 }
 
-span:nth-child(9) {
-    font-size: 160%;
-}
-
+span:nth-child(9),
 span:nth-child(25) {
     font-size: 160%;
 }

@@ -13,8 +13,8 @@
     </header>
     <div id="container-row">
         <aside>
-            <img src="ma.jpg" alt="Matura">
-            <img src="tu.jpg" alt="Matura">
+            <img src="ma.jpg" alt="Matura"><br>
+            <img src="tu.jpg" alt="Matura"><br>
             <img src="ra.jpg" alt="Matura">
         </aside>
         <div id="container-column">

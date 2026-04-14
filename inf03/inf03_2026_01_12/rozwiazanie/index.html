@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tatuaże</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <div class="container-row">
+        <div class="container-column-left">
+            <header id="logo">
+                <img src="logo.png" alt="salon">
+            </header>
+            <aside>
+                <h3>Dodaj wzór</h3>
+                <form>
+                    <label for="patternFile">Wzór:</label><br>
+                    <input type="file" id="patternFile" accept=".png"><br><br>
+                    <label for="color">Kolor:</label><br>
+                    <select id="color">
+                        <option value="Czarny">Czarny</option>
+                        <option value="Czerwony">Czerwony</option>
+                        <option value="Zielony">Zielony</option>
+                        <option value="Niebieski">Niebieski</option>
+                    </select><br>
+                    <label for="price">Cena:</label><br>
+                    <input type="number" id="price"><br>
+                    <button type="button" onclick="addPattern()">Dodaj Wzór</button>
+                </form>
+            </aside>
+        </div>
+        <div class="container-column-right">
+            <header id="title">
+                <h1>Studio Tatuażu</h1>
+            </header>
+            <section id="gallery">
+                <h2>Galeria</h2>
+                <img src="smok.png" alt="smok" class="miniatury">
+                <img src="koliber.png" alt="koliber" class="miniatury">
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>Autor strony: Chr1skyy</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

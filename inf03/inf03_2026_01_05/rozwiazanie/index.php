@@ -15,7 +15,7 @@
         <section id="left">
             <h2>Personel</h2>
             <?php
-            if(isset($_POST['status'])) {
+            if (isset($_POST['status'])) {
                 $status = $_POST['status'];
             } else {
                 $status = 'policjant';
@@ -34,7 +34,7 @@
             <table>
                 <tr>
                     <th>Id</th>
-                    <th>Imie</th>
+                    <th>Imię</th>
                     <th>Nazwisko</th>
                 </tr>
                 <?php
@@ -52,7 +52,7 @@
             </table>
         </section>
         <section id="right">
-            <h2>Nowe zgłoszenia</h2>
+            <h2>Nowe zgłoszenie</h2>
             <ol>
                 <?php
                 $query3 = "SELECT personel.id, personel.nazwisko FROM personel LEFT JOIN rejestr ON personel.id = rejestr.id_personel WHERE id_personel IS NULL";
@@ -73,13 +73,13 @@
                 $query4 = "INSERT INTO rejestr VALUES (NULL, CURDATE(), $id_personel, 14)";
                 mysqli_query($connect, $query4);
             }
-            mysqli_close($connect);
             ?>
         </section>
     </main>
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
+    <?php mysqli_close($connect); ?>
 </body>
 
 </html>

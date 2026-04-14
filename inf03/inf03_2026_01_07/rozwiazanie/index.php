@@ -72,13 +72,13 @@
                 $row = mysqli_fetch_array($result);
                 echo "<h3>{$row[0]} stopni</h3>";
             }
-            mysqli_close($connect);
             ?>
         </section>
     </main>
     <footer>
         <p>Numer zdającego: Chr1skyy</p>
     </footer>
+    <?php mysqli_close($connect); ?>
 </body>
 
 </html>

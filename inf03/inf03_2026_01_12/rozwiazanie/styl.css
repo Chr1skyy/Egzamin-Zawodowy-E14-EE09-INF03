@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('./czcionki/DancingScript-Regular.woff2') format('woff2'),
+        url('./czcionki/DancingScript-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Dancing Script', serif;
+    font-size: 120%;
+    text-align: center;
+    margin: 0;
+}
+
+.container-row {
+    display: flex;
+}
+
+.container-column-left {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.container-column-right {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+header#logo,
+aside {
+    background-color: RosyBrown;
+}
+
+aside {
+    height: 350px;
+    text-align: left;
+}
+
+header#title {
+    background-color: RosyBrown;
+    height: 100px;
+}
+
+section {
+    height: 550px;
+    overflow: scroll;
+}
+
+label {
+    line-height: 50px;
+}
+
+.miniatury {
+    width: 150px;
+}
+
+.miniatury:hover {
+    background-color: Bisque;
+    width: 200px;
+    transition: 1s;
+}

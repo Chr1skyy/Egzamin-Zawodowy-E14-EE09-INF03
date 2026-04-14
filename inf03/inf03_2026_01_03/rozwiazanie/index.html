@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pola figur</title>
     <link rel="stylesheet" href="styl.css">
 </head>
+
 <body>
     <header>
         <h2>Pola figur płaskich</h2>
@@ -19,49 +20,24 @@
             </ul>
         </nav>
         <section>
-            <img src="1d.bmp" alt="Figura" id="big"><br>
-            <img src="1m.bmp" alt="Wybierz trójkąt" class="choice" onclick="Choice(1)"><img src="2m.bmp" alt="Wybierz prostokąt" class="choice" onclick="Choice(2)">
-            <!-- SKRYPT 1 -->
-            <script>
-            function Choice(n) {
-                let img = document.getElementById("big");
-
-                if (n == 1) {
-                    img.src = "1d.bmp";
-                } else if (n == 2) {
-                    img.src = "2d.bmp";
-                }
-            }
-            </script>
+            <img src="1d.bmp" alt="Figura" id="choiceImg"><br>
+            <img src="1m.bmp" alt="Wybierz trójkąt" class="choiceImg" onclick="choiceImg('1m.bmp')">
+            <img src="2m.bmp" alt="Wybierz prostokąt" class="choiceImg" onclick="choiceImg('2m.bmp')">
         </section>
         <aside>
-            <h3>Pole prostokąta / podstawa trójkąta:</h3><br>
-            <label for="first">Bok prostokąta / podstawa trójkąta:</label><br>
-            <input type="text" name="first" id="first"><br>
-            <label for="second">Drugi bok prostokąta / wysokość trójkąta:</label><br>
-            <input type="text" name="second" id="second"><br>
-            <input type="button" value="Oblicz" onclick="Calc()">
+            <h3>Pole prostokąta / pole trójkąta:</h3><br>
+            <label for="valueA">Bok prostokąta / podstawa trójkąta:</label><br>
+            <input type="text" name="valueA" id="valueA"><br>
+            <label for="valueB">Drugi bok prostokąta / wysokość trójkąta:</label><br>
+            <input type="text" name="valueB" id="valueB"><br>
+            <input type="button" value="Oblicz" onclick="calculate()">
             <p id="result"></p>
-            <!-- SKRYPT 2 -->
-            <script>
-            function Calc() {
-                let first = document.getElementById("first").value;
-                let second = document.getElementById("second").value;
-                let img = document.getElementById("big");
-                let result = document.getElementById("result");
-                let pole;
-
-                if (img.src.includes("2d.bmp")) {
-                    pole = first * second;
-                } else {
-                    pole = (first * second) / 2;
-                }
-
-                result.innerHTML = pole;
-            }
-            </script>
         </aside>
     </main>
-    <footer><p>Autor: 3limssmile</p></footer>
+    <footer>
+        <p>Autor: Chr1skyy</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
+
 </html>

@@ -33,7 +33,6 @@
         while ($row = mysqli_fetch_array($result)) {
             echo "<img class='miniatura' src='{$row['plik']}' alt='{$row['nazwa']}'>";
         }
-        mysqli_close($connect);
         ?>
     </section>
     <div class="container-row">
@@ -48,6 +47,7 @@
             <h3>&copy Wykonane przez: Chr1skyy</h3>
         </footer>
     </div>
+    <?php mysqli_close($connect); ?>
 </body>
 
 </html>

@@ -13,13 +13,13 @@
     </header>
     <div id="container-row">
         <aside>
-            <img src="ma.jpg" alt="Matura">
-            <img src="tu.jpg" alt="Matura">
+            <img src="ma.jpg" alt="Matura"><br>
+            <img src="tu.jpg" alt="Matura"><br>
             <img src="ra.jpg" alt="Matura">
         </aside>
         <div id="container-column">
             <section>
-                <h3>Wybierz ucznia z listy</h3>
+                <h3>Wybierz ucznia z listy:</h3>
                 <?php
                 $connect = mysqli_connect('localhost', 'root', '', 'matura');
                 $query1 = "SELECT id, imie, nazwisko FROM maturzysta WHERE szkola = 'T3' ORDER BY nazwisko ASC;";
@@ -36,7 +36,7 @@
                     $query2 = "SELECT DISTINCT przedmiot FROM arkusz;";
                     $result = mysqli_query($connect, $query2);
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "{$row['przedmiot']}<br>";
+                        echo "{$row['przedmiot']} ";
                     }
                     ?>
                 </div>
@@ -66,7 +66,6 @@
                     $result = mysqli_query($connect, $query4);
                     $row = mysqli_fetch_array($result);
                     echo "{$row['Wynik']}%";
-                    mysqli_close($connect);
                     ?>
                 </div>
             </section>
@@ -75,6 +74,7 @@
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
+    <?php mysqli_close($connect); ?>
 </body>
 
 </html>
