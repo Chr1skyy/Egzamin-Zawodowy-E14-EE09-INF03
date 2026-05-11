@@ -1,0 +1,4 @@
+1. SELECT nazwa, miasto, ulica, numer FROM lokale;
+2. SELECT nazwa, cena FROM dania WHERE typ = 2;
+3. SELECT AVG(cena) FROM dania WHERE typ = 1;
+4. UPDATE pracownicy SET stanowisko = 2 WHERE id = 6;

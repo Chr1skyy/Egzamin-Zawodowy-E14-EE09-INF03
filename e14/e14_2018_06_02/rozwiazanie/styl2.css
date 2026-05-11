@@ -1,0 +1,47 @@
+body {
+	margin: 0;
+	background-color: #AEF1F4;
+	font-family: Georgia;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background-color: #0EA2A9;
+	text-align: center;
+	color: white;
+	height: 80px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+}
+
+#container-row {
+	display: flex;
+}
+
+#lewy {
+	width: 40%;
+	font-size: 150%;
+}
+
+#dol {
+	background: #4FCDD4;
+	padding: 30px;
+}
+
+footer {
+	background: #0EA2A9;
+	color: white;
+	height: 80px;
+}
+
+img {
+	height: 300px;
+}
+
+table {
+	border: 1px solid red;
+}

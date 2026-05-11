@@ -1,0 +1,52 @@
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	background: rgb(0, 190, 113);
+	text-align: center;
+	color: white;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	display: flex;
+}
+
+#lewy {
+	background-color: rgb(79, 207, 155);
+	text-align: center;
+	width: 35%;
+	height: 600px;
+}
+
+#srodkowy {
+	background-color: rgb(41, 195, 133);
+	text-align: center;
+	width: 35%;
+	height: 600px;
+}
+
+#prawy {
+	background-image: url("menu.jpg");
+	width: 30%;
+	height: 600px;
+}
+
+footer {
+	background: rgb(0, 117, 70);
+	color: white;
+}
+
+img {
+	width: 100px;
+}
+
+p {
+	font-size: 150%;
+}
