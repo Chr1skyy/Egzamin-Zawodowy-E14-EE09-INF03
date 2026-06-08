@@ -24,10 +24,12 @@
             $query3 = "SELECT * FROM aktorzy ORDER BY nazwisko, imie ASC";
             $result = mysqli_query($connect, $query3);
             while ($row = mysqli_fetch_array($result)) {
-                echo "<div class='actor-index'>
-                    <img src='img/{$row['plik_awatara']}' alt='{$row['imie']} {$row['nazwisko']}' title='{$row['imie']} {$row['nazwisko']}'>
-                    <p><a href='aktor.php?id={$row['id_aktora']}'>{$row['imie']} {$row['nazwisko']}</a></p>
-                </div>";
+                echo "<a href='aktor.php?id={$row['id_aktora']}'>
+                        <div class='actor-index'>
+                            <img src='img/{$row['plik_awatara']}' alt='{$row['imie']} {$row['nazwisko']}' title='{$row['imie']} {$row['nazwisko']}'>
+                            <p>{$row['imie']} {$row['nazwisko']}</p>
+                        </div>
+                    </a>";
             }
             ?>
         </div>
