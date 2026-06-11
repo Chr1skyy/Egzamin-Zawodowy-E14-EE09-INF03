@@ -1,0 +1,4 @@
+1. SELECT idObiekt, plik, nazwa FROM obiekty;
+2. SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING (idRodzaj) WHERE idObiekt = 46;
+3. SELECT nazwa FROM obiekty WHERE idRodzaj = 10;
+4. SELECT rodzaj, COUNT(idObiekt) AS 'Liczba rodzajów' FROM rodzaje JOIN obiekty USING (idRodzaj);

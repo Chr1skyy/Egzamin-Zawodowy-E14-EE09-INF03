@@ -1,0 +1,5 @@
+1. SELECT idKontynent, nazwa FROM kontynenty;
+2. SELECT
+3. SELECT idObiekt, panstwo, nazwa, wysokosc WHERE idKontynent = $idKontynent;
+4. INSERT INTO osiagnienia VALUES (NULL, ?, ?);
+5. SELECT idTurysta, nick FROM turysci;

@@ -1,0 +1,68 @@
+* {
+    font-family: 'Bookman Old Style';
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+}
+
+.container-row {
+    display: flex;
+}
+
+#container-column {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+header, footer {
+    background-color: skyblue;
+    text-align: center;
+    padding: 1px;
+    border-radius: 15px;
+}
+
+nav {
+    width: 90%;
+    text-align: center;
+}
+
+section {
+    width: 50%;
+    height: 640px;
+}
+
+aside {
+    width: 10%;
+    height: 700px;
+    overflow: hidden;
+}
+
+aside img {
+    width: 100%;
+}
+
+span {
+    font-size: 200%;
+    cursor: pointer;
+}
+
+button {
+    background-color: skyblue;
+    width: 45%;
+    border-radius: 15px;
+    padding: 15px 40px;
+    margin: 3px 2%;
+}
+
+input, select {
+    margin: 3px;
+}
+
+#uczestnikBtn {
+    background-color: dodgerblue;
+}

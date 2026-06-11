@@ -1,0 +1,53 @@
+* {
+    font-family: Garamond, serif;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+header, footer {
+    background-color: skyblue;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+aside {
+    width: 30%;
+}
+
+section {
+    width: 70%;
+    height: 300px;
+    overflow: auto;
+}
+
+img {
+    background-color: aliceblue;
+    float: left;
+}
+
+table {
+    width: 90%;
+    border: 1px dotted black;
+}
+
+a {
+    display: block;
+    background-color: dodgerblue;
+    color: white;
+    width: 65%;
+    font-size: 130%;
+    margin: 10px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: royalblue;
+}
