@@ -1,0 +1,4 @@
+1. SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 1;
+2. INSERT INTO zakupy VALUES (NULL, 1, 6, 1);
+3. SELECT nazwa, cena FROM meble JOIN zakupy USING (idMeble) WHERE idKlienci = 1;
+4. SELECT nazwa, imie, nazwisko FROM meble JOIN zakupy USING (idMeble) JOIN klienci USING (idKlienci);

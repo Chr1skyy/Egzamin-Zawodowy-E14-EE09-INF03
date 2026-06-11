@@ -1,0 +1,71 @@
+* {
+    font-family: Georgia;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: mistyrose;
+}
+
+main {
+    display: flex;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+section {
+    width: 70%;
+    height: 700px;
+    overflow: auto;
+}
+
+aside {
+    width: 30%;
+}
+
+img {
+    width: 90%;
+    text-align: center;
+}
+
+.mebel {
+    margin: 5px;
+    padding: 10px;
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.obraz {
+    width: 30%;
+    float: left;
+}
+
+.opis {
+    clear: both;
+}
+
+button {
+    margin-left: 30px;
+    padding: 20px;
+    background-color: lightcoral;
+    border: 2px dotted maroon;
+    border-radius: 10px;
+}
+
+h2,
+h4 {
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+}
+
+.mebel:hover {
+    background-color: coral;
+}
