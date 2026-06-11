@@ -16,17 +16,12 @@
             <h2>- Sofy -</h2>
             <?php
             $connect = mysqli_connect('localhost', 'root', '', 'antyki');
-            $kategoria = 1;
-            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = $kategoria;";
+            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 1;";
             $result = mysqli_query($connect, $query1);
             while ($row = mysqli_fetch_array($result)) {
-                $sciezka = '';
-                if ($kategoria == 1) $sciezka = './sofy';
-                if ($kategoria == 2) $sciezka = './fotele';
-                if ($kategoria == 3) $sciezka = './komody';
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='$sciezka/{$row['plik']}' alt='mebel'>
+                            <img src='sofy/{$row['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
@@ -44,17 +39,12 @@
             ?>
             <h2>- Fotele -</h2>
             <?php
-            $kategoria = 2;
-            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = $kategoria;";
+            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 2;";
             $result = mysqli_query($connect, $query1);
             while ($row = mysqli_fetch_array($result)) {
-                $sciezka = '';
-                if ($kategoria == 1) $sciezka = './sofy';
-                if ($kategoria == 2) $sciezka = './fotele';
-                if ($kategoria == 3) $sciezka = './komody';
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='$sciezka/{$row['plik']}' alt='mebel'>
+                            <img src='fotele/{$row['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
@@ -72,17 +62,12 @@
             ?>
             <h2>- Komody -</h2>
             <?php
-            $kategoria = 3;
-            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = $kategoria;";
+            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 3;";
             $result = mysqli_query($connect, $query1);
             while ($row = mysqli_fetch_array($result)) {
-                $sciezka = '';
-                if ($kategoria == 1) $sciezka = './sofy';
-                if ($kategoria == 2) $sciezka = './fotele';
-                if ($kategoria == 3) $sciezka = './komody';
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='$sciezka/{$row['plik']}' alt='mebel'>
+                            <img src='komody/{$row['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
