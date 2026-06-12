@@ -4,6 +4,8 @@
 
 body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #container-column {
@@ -15,13 +17,14 @@ body {
 #container-row {
     display: flex;
     justify-content: space-between;
-    flex-grow: 1;
 }
 
 header,
 main {
+    width: 100%;
     text-align: center;
 }
+
 
 header,
 aside {
