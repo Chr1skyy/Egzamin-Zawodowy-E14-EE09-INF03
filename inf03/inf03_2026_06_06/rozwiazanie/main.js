@@ -17,33 +17,16 @@ const recepty = [
 const sekcjaPrawy2 = document.getElementById('prawy2');
 
 recepty.forEach(recepta => {
-    const blok = document.createElement('div');
-    blok.className = 'recepty';
+    let leki = '';
+    if (recepta.lek1 != "") leki += `<li>${recepta.lek1}</li>`;
+    if (recepta.lek2 != "") leki += `<li>${recepta.lek2}</li>`;
+    if (recepta.lek3 != "") leki += `<li>${recepta.lek3}</li>`;
 
-    const paragrafData = document.createElement('p');
-    paragrafData.innerHTML = `Data wystawienia: ${recepta.data}`;
-    blok.appendChild(paragrafData);
-
-    const lista = document.createElement('ol');
-    if (recepta.lek1.trim() != "") {
-        const li = document.createElement('li');
-        li.innerHTML = recepta.lek1;
-        lista.appendChild(li);
-    }
-    if (recepta.lek2.trim() != "") {
-        const li = document.createElement('li');
-        li.innerHTML = recepta.lek2;
-        lista.appendChild(li);
-    }
-    if (recepta.lek3.trim() != "") {
-        const li = document.createElement('li');
-        li.innerHTML = recepta.lek3;
-        lista.appendChild(li);
-    }
-    blok.appendChild(lista);
-
-    const kod = document.createElement('h4');
-    kod.innerHTML = `Kod: ${recepta.kod}`;
-    blok.appendChild(kod);
-    sekcjaPrawy2.appendChild(blok);
+    sekcjaPrawy2.innerHTML += `
+        <div class="recepty">
+            <p>Data wystawienia: ${recepta.data}</p>
+            <ol>${leki}</ol>
+            <h4>kod: ${recepta.kod}</h4>
+        </div>
+    `;
 });
