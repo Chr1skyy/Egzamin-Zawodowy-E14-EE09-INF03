@@ -37,11 +37,13 @@ main {
 }
 
 #prawy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #72A37D;
   text-align: center;
   width: 30%;
   height: 300px;
-  list-style-position: inside;
 }
 
 #dolny {
