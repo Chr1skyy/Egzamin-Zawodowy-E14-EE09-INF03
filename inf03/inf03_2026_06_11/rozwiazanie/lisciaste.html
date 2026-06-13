@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styl.css">
+    <title>Atlas drzew</title>
+</head>
+
+<body>
+    <header>
+        <h1>Atlas drzew</h1>
+    </header>
+    <div id="container-row">
+        <aside>
+            <h3>Wybierz drzewo, aby przeczytać o nim informacje</h3>
+            <div id="obrazy">
+                <img src="buk.jpg" alt="buk" onclick="wybierz(0)"><br>
+                <img src="lipa.jpg" alt="lipa" onclick="wybierz(1)"><br>
+                <img src="wierzba.jpg" alt="wierzba" onclick="wybierz(2)"><br>
+                <img src="brzoza.jpg" alt="brzoza" onclick="wybierz(3)"><br>
+                <img src="dab.jpg" alt="dab" onclick="wybierz(4)"><br>
+                <img src="kasztanowiec.jpg" alt="kasztanowiec" onclick="wybierz(5)"><br>
+                <img src="jarzebina.jpg" alt="jarzebina" onclick="wybierz(6)"><br>
+                <img src="klon.jpg" alt="klon" onclick="wybierz(7)"><br>
+                <img src="magnolia.jpg" alt="magnolia" onclick="wybierz(8)">
+            </div>
+            <input type="text" id="wyszukajDrzewo" placeholder="Wyszukaj drzewo...">
+            <button type="button" onclick="szukaj()">Szukaj</button>
+        </aside>
+        <div id="container-column">
+            <nav>
+                <ul>
+                    <li><a href="lisciaste.html">drzewa liściaste</a></li>
+                    <li><a href="iglaste.png">drzewa iglaste</a></li>
+                    <li><a href="owocowe.png">drzewa owocowe</a></li>
+                </ul>
+            </nav>
+            <main>
+                <p class="opis">Witamy w naszym <strong>"Atlasie drzew"</strong>, miejsca stworzonego dla miłośników
+                    przyrody, badaczy i wszystkich, którzy chcą zgłębić tajemnice drzew. Drzewa to majestatyczne i
+                    różnorodne elementy naszej planety, pełnią kluczową rolę w ekosystemach na całym świecie. Od
+                    pradawnych lasów deszczowych po miejskie parki, drzewa dostarczają nam nie tylko tlenu, ale także
+                    inspiracji piękna i zrozumienia natury.</p>
+            </main>
+        </div>
+    </div>
+    <footer>
+        <p>Autor: Chr1skyy</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>
