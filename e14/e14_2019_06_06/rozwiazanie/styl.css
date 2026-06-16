@@ -21,6 +21,10 @@ nav {
 	padding-bottom: 20px;
 }
 
+main {
+	display: flex;
+}
+
 #gorny,
 #srodkowy,
 #dolny {
