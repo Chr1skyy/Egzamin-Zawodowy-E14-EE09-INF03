@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    background-color: #d4f1f4;
+    color: #05445E;
+}
+
+main#loginPage {
+    width: 50em;
+    margin: auto;
+    padding: 20px;
+}
+
+footer {
+    text-align: right;
+}
+
+header {
+    margin: 40px;
+}
+
+div {
+    margin: 40px;
+    padding: 20px;
+}
+
+main#loginPage, header, div {
+    background-color: #75e6da;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px lightblue;
+}
+
+h1, h2, form {
+    text-align: center;
+}
+
+form {
+    margin: 10px;
+}
+
+button {
+    width: 14em;
+}
+
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+
+table, tr {
+    border: 1px solid #189ab4;
+}
+
+th, td {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+tr:hover {
+    background-color: white;
+    opacity: 0.8;
+}
