@@ -13,13 +13,13 @@
             <img src="./logo1.png" alt="Mój kalendarz">
         </section>
         <section id="bannerTwo">
-            <h2>KALENDARZ</h2>
+            <h1>KALENDARZ</h1>
             <?php
             $con = mysqli_connect('localhost', 'root', '', 'egzamin5');
             $q = "SELECT miesiac, rok FROM zadania WHERE dataZadania = '2020-07-01';";
             $res = mysqli_query($con, $q);
             while ($row = mysqli_fetch_array($res)) {
-                echo "<h1>miesiąc: $row[0], rok: $row[1]</h1>";
+                echo "<h3>miesiąc: $row[0], rok: $row[1]</h3>";
             }
             ?>
         </section>
@@ -52,7 +52,7 @@
         }
         mysqli_close($con);
         ?>
-        <p>Stronę wykonał: Chriskyy#0181</p>
+        <p>Stronę wykonał: Chr1skyy</p>
     </footer>
 </body>
 

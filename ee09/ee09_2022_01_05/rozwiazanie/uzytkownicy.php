@@ -52,11 +52,11 @@
 						$res = mysqli_query($con, $kw);
 						while($tab = mysqli_fetch_row($res)) {
 							echo "<div class='wizytowka'>";
-							echo "<img src='$tab[4]' alt='osoba' />";
+							echo "<img src='img/$tab[4]' alt='osoba' />";
 							$wiek = DATE("Y") - $tab[1];
 							echo "<h4>$tab[0] ($wiek)</h4>";
 							echo "<p>hobby: $tab[3]</p>";
-							echo "<h1><img src='icon-on.png' /> $tab[2]</h1>";
+							echo "<h1><img src='img/icon-on.png' /> $tab[2]</h1>";
 							echo "<a href='dane.html'><button type='button'>Więcej informacji</button></a>";
 							echo "</div>";
 						}
@@ -69,7 +69,7 @@
 		?>
 	</div>
 	<div id="stopka">
-		Stronę wykonał: Chriskyy#0181
+		Stronę wykonał: Chr1skyy
 	</div>
 </body>
 </html>

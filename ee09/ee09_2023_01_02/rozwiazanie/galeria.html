@@ -13,7 +13,7 @@
     </header>
     <main>
         <section id="panelLewy">
-            <img src="zdjecie.jpg" alt="zdjęcie dnia" />
+            <img src="img/zdjecie.jpg" alt="zdjęcie dnia" />
             <h3>Zdjęcia opublikowali</h3>
             <table>
                 <tr>
@@ -31,20 +31,22 @@
             </table>
         </section>
         <section id="panelPrawy">
-            <button type="button" onclick="prev()">prev</button>
-            <img id="glowne" src="1.jpg" alt="galeria" />
-            <button type="button" onclick="next()">next</button>
+            <div id="galeria">
+                <button type="button" onclick="prev()">prev</button>
+                <img id="glowne" src="img/1.jpg" alt="galeria" />
+                <button type="button" onclick="next()">next</button>
+            </div>
             <hr />
-            <img src="1.jpg" alt="miniatura" onclick="zamiana('1.jpg',1)" />
-            <img src="2.jpg" alt="miniatura" onclick="zamiana('2.jpg',2)" />
-            <img src="3.jpg" alt="miniatura" onclick="zamiana('3.jpg',3)" />
-            <img src="4.jpg" alt="miniatura" onclick="zamiana('4.jpg',4)" />
-            <img src="5.jpg" alt="miniatura" onclick="zamiana('5.jpg',5)" />
+                <img src="img/1.jpg" alt="miniatura" onclick="zamiana('img/1.jpg',1)" />
+                <img src="img/2.jpg" alt="miniatura" onclick="zamiana('img/2.jpg',2)" />
+                <img src="img/3.jpg" alt="miniatura" onclick="zamiana('img/3.jpg',3)" />
+                <img src="img/4.jpg" alt="miniatura" onclick="zamiana('img/4.jpg',4)" />
+                <img src="img/5.jpg" alt="miniatura" onclick="zamiana('img/5.jpg',5)" />
         </section>
     </main>
     <footer>
         <a href="https://pixabay.com" target="_blank">Więcej obrazów</a>
-        <p>Galerię wykonał: Chriskyy#0181</p>
+        <p>Galerię wykonał: Chr1skyy</p>
     </footer>
     <script src="main.js"></script>
 </body>

@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8" />
 	<title>Warzywniak</title>
 	<link rel="stylesheet" href="styl2.css" />
 </head>
+
 <body>
 	<div id="baner1">
 		<h1>Internetowy sklep z eko-warzywami</h1>
@@ -17,20 +19,20 @@
 		</ol>
 	</div>
 	<div id="glowny">
-	<?php
-	$con = mysqli_connect('localhost', 'root', '', 'dane2');
-	$kw1 = "SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2);";
-	$res1 = mysqli_query($con, $kw1);
-	while($tab = mysqli_fetch_row($res1)) {
-		echo "<div class='produkt'>
-		<img src='$tab[4]' alt='warzywniak' />
+		<?php
+		$con = mysqli_connect('localhost', 'root', '', 'dane2');
+		$kw1 = "SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2);";
+		$res1 = mysqli_query($con, $kw1);
+		while ($tab = mysqli_fetch_row($res1)) {
+			echo "<div class='produkt'>
+		<img src='img/$tab[4]' alt='warzywniak' />
 		<h5>$tab[0]</h5>
 		<p>opis: $tab[2]</p>
 		<p>na stanie: $tab[1]</p>
 		<h2>$tab[3] zł</h2>
 		</div>";
-	}
-	?>
+		}
+		?>
 	</div>
 	<div id="stopka">
 		<form action="sklep.php" method="post">
@@ -53,7 +55,8 @@
 		}
 		mysqli_close($con);
 		?>
-		Stronę wykonał: Chriskyy#0181
+		Stronę wykonał: Chr1skyy
 	</div>
 </body>
+
 </html>

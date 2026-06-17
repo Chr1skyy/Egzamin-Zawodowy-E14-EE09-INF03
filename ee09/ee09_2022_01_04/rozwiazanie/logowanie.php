@@ -80,7 +80,7 @@
 		<a href="regulamin.html">Przeczytaj regulamin forum</a>
 	</div>
 	<div id="stopka">
-		Stronę wykonał: Chriskyy#0181
+		Stronę wykonał: Chr1skyy
 	</div>
 </body>
 </html>

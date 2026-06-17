@@ -17,7 +17,7 @@
 		$res = mysqli_query($con, $q);
 		while($row = mysqli_fetch_array($res)) {
 			echo "<div class='opinia'>
-					<img src='$row[0]' alt='klient' />
+					<img src='img/$row[0]' alt='klient' />
 					<blockquote>$row[2]</blockquote>
 					<h4>$row[1]</h4>
 				</div>";
@@ -36,7 +36,7 @@
 				$q = "SELECT imie, nazwisko, punkty FROM klienci ORDER BY punkty DESC LIMIT 3;";
 				$res = mysqli_query($con, $q);
 				while($row = mysqli_fetch_array($res)) {
-					echo "<li>$row[0] $row[1], $row[2]</li>";
+					echo "<li>$row[0] $row[1], $row[2] pkt.</li>";
 				}
 				?>
 			</ol>

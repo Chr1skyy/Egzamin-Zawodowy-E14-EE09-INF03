@@ -49,7 +49,7 @@
 	</div>
 	<div id="prawy">
 		<img src="zad1.png" alt="piłkarz" />
-		<p>Autor: Chriskyy#0181</p>
+		<p>Autor: Chr1skyy</p>
 	</div>
 </body>
 </html>

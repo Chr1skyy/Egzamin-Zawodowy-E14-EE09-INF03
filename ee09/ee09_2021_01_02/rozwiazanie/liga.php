@@ -21,7 +21,7 @@
 			<button>Zobacz</button>
 		</form>
 		<img src="zad2.png" alt="piłka" />
-		<p>Autor: Chriskyy#0181</p>
+		<p>Autor: Chr1skyy</p>
 	</div>
 	<div id="prawy">
 		<ol>

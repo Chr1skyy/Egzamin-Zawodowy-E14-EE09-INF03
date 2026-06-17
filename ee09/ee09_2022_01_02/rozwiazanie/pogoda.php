@@ -42,7 +42,7 @@
 		<a href="kwerendy.txt">Pobierz kwerendy</a>
 	</div>
 	<div id="stopka">
-		<p>Stronę wykonał: Chriskyy#0181</p>
+		<p>Stronę wykonał: Chr1skyy</p>
 	</div>
 </body>
 </html>

@@ -22,7 +22,7 @@
         $q = "SELECT id, imie, nazwisko, adres, miasto FROM pracownicy WHERE id = $nr";
         $res = mysqli_query($con, $q);
         while ($row = mysqli_fetch_array($res)) {
-            echo "<img src='$row[0].jpg' alt='pracownik'/>
+            echo "<img src='img/$row[0].jpg' alt='pracownik'/>
                 <h2>$row[1] $row[2]</h2>
                 <h4>Adres:</h4>
                 <p>$row[3], $row[4]</p>";
@@ -31,10 +31,10 @@
     </main>
     <footer>
         <section id="lewy">
-            <img src="obraz.jpg" alt="pracownicy firmy" />
+            <img src="img/obraz.jpg" alt="pracownicy firmy" />
         </section>
         <section id="srodkowy">
-            <p>Autorem wizytownika jest: Chriskyy#0181</p>
+            <p>Autorem wizytownika jest: Chr1skyy</p>
             <a href="http://agencjareklamowa543.pl/" target="_blank">Zobacz nasze realizacje</a>
         </section>
         <section id="prawy">

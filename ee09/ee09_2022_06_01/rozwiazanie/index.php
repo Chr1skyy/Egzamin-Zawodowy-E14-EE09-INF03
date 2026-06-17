@@ -50,7 +50,7 @@
 		</section>
 	</main>
 	<footer>
-		Autor: Chriskyy#0181 <a href="http://mojestrony.pl/" target="_blank">Zobacz nasze realizacje</a>
+		Autor: Chr1skyy <a href="http://mojestrony.pl/" target="_blank">Zobacz nasze realizacje</a>
 	</footer>
 	<?php
 	mysqli_close($con);

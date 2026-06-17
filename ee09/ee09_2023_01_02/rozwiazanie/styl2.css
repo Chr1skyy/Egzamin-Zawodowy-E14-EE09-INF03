@@ -1,15 +1,18 @@
 body {
     margin: 0;
 }
+
 * {
     font-family: Garamond;
     background-color: MistyRose;
     color: rgb(62, 39, 35);
     text-align: center;
 }
+
 main {
     display: flex;
 }
+
 #panelLewy {
     width: 20%;
     height: 600px;
@@ -18,13 +21,27 @@ main {
     overflow: auto;
 }
 
-img {
+#panelLewy img {
     width: 100%;
 }
 
 #panelPrawy {
     width: 65%;
     height: 600px;
+}
+
+div#galeria {
+    float: left;
+}
+
+hr {
+    clear: both;
+}
+
+#glowne {
+    width: 500px;
+    margin: 30px;
+    box-shadow: 15px 15px 10px dimgray;
 }
 
 img[alt="miniatura"] {
@@ -42,6 +59,7 @@ img[alt="miniatura"]:hover {
     margin: 30px;
     box-shadow: 15px 15px 10px DimGray;
 }
+
 table {
     border: 1px dashed black;
     width: 100%;

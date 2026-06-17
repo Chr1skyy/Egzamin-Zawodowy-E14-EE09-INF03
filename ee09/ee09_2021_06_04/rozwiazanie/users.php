@@ -36,7 +36,7 @@
 			$res2 = mysqli_query($con, $kw2);
 			while($tab = mysqli_fetch_row($res2)) {
 				echo "<h2>$nr. $tab[0] $tab[1]</h2>
-				<img src='$tab[4]' alt='$nr' />
+				<img src='img/$tab[4]' alt='$nr' />
 				<p>Rok urodzenia: $tab[2]</p>
 				<p>Opis: $tab[3]</p>
 				<p>Hobby: $tab[5]</p>";
@@ -46,7 +46,7 @@
 		?>
 	</div>
 	<div id="stopka">
-		Stronę wykonał: Chriskyy#0181
+		Stronę wykonał: Chr1skyy
 	</div>
 </body>
 </html>

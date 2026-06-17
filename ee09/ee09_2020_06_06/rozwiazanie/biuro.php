@@ -46,7 +46,7 @@
             $q = "SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis DESC;";
             $res = mysqli_query($con, $q);
             while ($row = mysqli_fetch_array($res)) {
-                echo "<img src='$row[0]' alt='$row[1]' />";
+                echo "<img src='img/$row[0]' alt='$row[1]' />";
             }
             mysqli_close($con);
             ?>
@@ -59,7 +59,7 @@
     </main>
 
     <footer>
-        <p>Stronę wykonał: Chriskyy#0181</p>
+        <p>Stronę wykonał: Chr1skyy</p>
     </footer>
 </body>
 

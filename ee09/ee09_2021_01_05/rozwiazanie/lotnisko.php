@@ -46,7 +46,7 @@
 	?>
 	</div>
 	<div id="stopka2">
-		Autor: Chriskyy#0181
+		Autor: Chr1skyy
 	</div>
 </body>
 </html>

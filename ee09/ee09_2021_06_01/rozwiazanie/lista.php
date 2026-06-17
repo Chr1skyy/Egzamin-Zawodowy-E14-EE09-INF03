@@ -23,7 +23,7 @@
 		$res = mysqli_query($con, $kw);
 		while($tab = mysqli_fetch_row($res)) {
 			echo "<div class='zdjecie'>
-			<img src='$tab[3]' alt='przyjaciel' />
+			<img src='img/$tab[3]' alt='przyjaciel' />
 			</div>
 			<div class='opis'>
 			<h3>$tab[0] $tab[1]</h3>
@@ -37,7 +37,7 @@
 		?>
 	</div>
 	<div id="stopka1">
-		Stronę wykonał: Chriskyy#0181
+		Stronę wykonał: Chr1skyy
 	</div>
 	<div id="stopka2">
 		<a href="mailto:ja@portal.pl">napisz do mnie</a>

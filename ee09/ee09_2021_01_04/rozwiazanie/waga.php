@@ -63,7 +63,7 @@
 		</table>
 	</div>
 	<div id="stopka">
-		Autor: Chriskyy#0181
+		Autor: Chr1skyy
 		<a href="kw2.jpg">Wynik działania kwerendy 2</a>
 	</div>
 </body>

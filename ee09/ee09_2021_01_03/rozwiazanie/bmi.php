@@ -63,7 +63,7 @@
 		<img src="rys1.png" alt="ćwiczenia" />
 	</div>
 	<div id="stopka">
-		Autor: Chriskyy#0181 
+		Autor: Chr1skyy 
 		<a href="kwerendy.txt">Zobacz kwerendy</a>
 	</div>
 </body>

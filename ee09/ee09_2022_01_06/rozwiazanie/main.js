@@ -10,14 +10,13 @@ function kolorFont() {
 function rozmiarFont() {
 	let prawy = document.getElementById("prawy");
 	let rozmiar = document.getElementById("rozmiar").value;
-	prawy.style = "font-size: " + rozmiar + "%";
+	prawy.style.fontSize = rozmiar + "%";
 }
 function ramka() {
 	let obraz = document.getElementById("obraz");
 	let czyRamka = document.getElementById("ramka").checked;
-	if(czyRamka) {
-		obraz.style.border = "1px solid white";
-	} else obraz.style.border = "none";
+	if(czyRamka) obraz.style.border = "1px solid white";
+	else obraz.style.border = "none";
 }
 function punktor(typ) {
 	let lista = document.getElementById("lista");
