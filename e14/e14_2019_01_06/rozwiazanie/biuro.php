@@ -25,12 +25,12 @@
 		<section id="lewy">
 			<table>
 				<tr>
-					<td><img src="polska.jpg" alt="zwiedzanie Krakowa" /></td>
-					<td><img src="wlochy.jpg" alt="Wenecja i nie tylko" /></td>
+					<td><img src="img/polska.jpg" alt="zwiedzanie Krakowa" /></td>
+					<td><img src="img/wlochy.jpg" alt="Wenecja i nie tylko" /></td>
 				</tr>
 				<tr>
-					<td><img src="grecja.jpg" alt="gorące Greckie wyspy" /></td>
-					<td><img src="hiszpania.jpg" alt="Słoneczna Barcelona" /></td>
+					<td><img src="img/grecja.jpg" alt="gorące Greckie wyspy" /></td>
+					<td><img src="img/hiszpania.jpg" alt="Słoneczna Barcelona" /></td>
 				</tr>
 			</table>
 		</section>

@@ -18,12 +18,12 @@
             <br />
             <a href="./znajdz.php">Znajdź kwiaciarnię</a>
             <br />
-            <img src="./gozdzik.jpg" alt="Goździk">
+            <img src="img/gozdzik.jpg" alt="Goździk">
         </section>
         <section id="panelPrawy">
-            <img src="./gerbera.jpg" alt="gerbera">
-            <img src="./gozdzik.jpg" alt="goździk">
-            <img src="./roza.jpg" alt="róża">
+            <img src="img/gerbera.jpg" alt="gerbera">
+            <img src="img/gozdzik.jpg" alt="goździk">
+            <img src="img/roza.jpg" alt="róża">
             <p>Podaj miejscowość, w której poszukujesz kwiaciarni:</p>
             <form action="znajdz.php" method="POST">
                 <input type="text" name="miasto">

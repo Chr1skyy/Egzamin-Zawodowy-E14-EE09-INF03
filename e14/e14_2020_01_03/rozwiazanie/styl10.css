@@ -36,7 +36,7 @@ main section {
 }
 
 #kontener section:nth-child(1) a {
-	background: url("cukierki1.jpg");
+	background: url("img/cukierki1.jpg");
 	padding-right: 30px;
 	padding-bottom: 120px;
 	font-size: 150%;

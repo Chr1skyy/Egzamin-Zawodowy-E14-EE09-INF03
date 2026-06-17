@@ -10,7 +10,7 @@
 <body>
 	<header>
 		<section id="miniatura">
-			<a href="borowik.jpg"><img src="borowik-miniatura.jpg" alt="Grzybobranie" /></a>
+			<a href="img/borowik.jpg"><img src="img/borowik-miniatura.jpg" alt="Grzybobranie" /></a>
 		</section>
 		<section id="tytulowy">
 			<h1>Idziemy na grzyby</h1>
@@ -23,7 +23,7 @@
 			$query1 = "SELECT nazwa_pliku, potoczna FROM grzyby;";
 			$result1 = mysqli_query($connect, $query1);
 			while ($row = mysqli_fetch_array($result1)) {
-				echo "<img src='{$row['nazwa_pliku']}' title='{$row['potoczna']}' />";
+				echo "<img src='img/{$row['nazwa_pliku']}' title='{$row['potoczna']}' />";
 			}
 			?>
 		</section>

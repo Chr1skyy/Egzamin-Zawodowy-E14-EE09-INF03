@@ -42,12 +42,12 @@
 				$query2 = "SELECT gatunek, obraz FROM zwierzeta WHERE Gromady_id = 4;";
 				$result2 = mysqli_query($connect, $query2);
 				while ($row = mysqli_fetch_array($result2)) {
-					echo "<li><a href='{$row['obraz']}'>{$row['gatunek']}</a></li>";
+					echo "<li><a href='img/{$row['obraz']}'>{$row['gatunek']}</a></li>";
 				}
 				mysqli_close($connect);
 				?>
 			</ol>
-			<img src="sroka.jpg" alt="Sroka zwyczajna, gromada ptaki" />
+			<img src="img/sroka.jpg" alt="Sroka zwyczajna, gromada ptaki" />
 		</section>
 	</main>
 	<footer>

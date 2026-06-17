@@ -47,7 +47,7 @@
 			?>
 		</section>
 		<section id="prawy">
-			<img src="animacja.gif" />
+			<img src="img/animacja.gif" />
 		</section>
 	</main>
 	<footer>
