@@ -6,7 +6,7 @@ body {
     margin: 0;
 }
 
-img[src="motor.png"] {
+img[src="img/motor.png"] {
     position: absolute;
     left: 15%;
     width: 70%;

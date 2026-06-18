@@ -31,7 +31,7 @@
             </ol>
         </aside>
         <section>
-            <img src="peruwianka.jpg" alt="Świnka morska rasy peruwianka">
+            <img src="img/peruwianka.jpg" alt="Świnka morska rasy peruwianka">
             <?php
             $query2 = "SELECT DISTINCT data_ur, miot, rasa FROM swinki JOIN rasy ON swinki.rasy_id = rasy.id WHERE rasy_id = 6";
             $result2 = mysqli_query($connect, $query2);

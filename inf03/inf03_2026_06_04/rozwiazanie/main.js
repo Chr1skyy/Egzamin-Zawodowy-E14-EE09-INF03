@@ -26,9 +26,9 @@ function zmienSekcje(wybranaSekcja) {
 }
 
 const wycieczki = [
-    { obraz: "1.jpg", miejsce: "Barcelona" },
-    { obraz: "2.jpg", miejsce: "Rzym" },
-    { obraz: "3.jpg", miejsce: "Londyn" }
+    { obraz: "img/1.jpg", miejsce: "Barcelona" },
+    { obraz: "img/2.jpg", miejsce: "Rzym" },
+    { obraz: "img/3.jpg", miejsce: "Londyn" }
 ];
 let numerWycieczki = 0
 

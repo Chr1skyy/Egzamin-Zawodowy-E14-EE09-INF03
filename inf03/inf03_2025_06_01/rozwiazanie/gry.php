@@ -35,7 +35,7 @@
             $result = mysqli_query($connect, $query);
             while ($row = mysqli_fetch_array($result)) {
                 echo "<div class='gra'>
-                        <img src='{$row['zdjecie']}' alt='{$row['nazwa']}' title='{$row['id']}'>
+                        <img src='img/{$row['zdjecie']}' alt='{$row['nazwa']}' title='{$row['id']}'>
                         <p>{$row['nazwa']}</p>
                     </div>";
             }

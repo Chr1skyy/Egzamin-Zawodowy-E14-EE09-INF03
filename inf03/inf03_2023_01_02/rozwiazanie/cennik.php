@@ -14,7 +14,7 @@
     <main>
         <section id="panelLewy">
             <a href="index.html">GŁÓWNA</a>
-            <img src="1.jpg" alt="pokoje" />
+            <img src="img/1.jpg" alt="pokoje" />
         </section>
         <section id="panelSrodkowy">
             <a href="cennik.php">CENNIK</a>
@@ -36,10 +36,10 @@
         </section>
         <section id="panelPrawy">
             <a href="kalkulator.html">KALKULATOR</a>
-            <img src="3.jpg" alt="pokoje" /></section>
+            <img src="img/3.jpg" alt="pokoje" /></section>
     </main>
     <footer>
-        <p>Stronę opracował: Chriskyy#0181</p>
+        <p>Stronę opracował: Chr1skyy</p>
     </footer>
 </body>
 

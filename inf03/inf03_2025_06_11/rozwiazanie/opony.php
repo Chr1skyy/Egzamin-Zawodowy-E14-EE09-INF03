@@ -20,13 +20,13 @@ header("refresh: 10;");
             while ($row = mysqli_fetch_array($result1)) {
                 $obraz = '';
                 if ($row['sezon'] == 'letnia') {
-                    $obraz = 'lato.png';
+                    $obraz = 'img/lato.png';
                 }
                 if ($row['sezon'] == 'zimowa') {
-                    $obraz = 'zima.png';
+                    $obraz = 'img/zima.png';
                 }
                 if ($row['sezon'] == 'uniwersalna') {
-                    $obraz = 'uniwer.png';
+                    $obraz = 'img/uniwer.png';
                 }
                 echo "<div class='opona'>
                         <img src='$obraz'>
@@ -39,7 +39,7 @@ header("refresh: 10;");
         </aside>
         <div id="container">
             <section id="gora">
-                <img src="opona.png" alt="Opona">
+                <img src="img/opona.png" alt="Opona">
                 <h2>Opona dnia</h2>
                 <?php
                 $query2 = "SELECT producent, model, sezon, cena FROM opony WHERE nr_kat = 9;";

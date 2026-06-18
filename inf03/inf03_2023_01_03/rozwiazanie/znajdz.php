@@ -50,7 +50,7 @@
         </section>
     </main>
     <footer>
-        <p>Stronę opracował: Chriskyy#0181</p>
+        <p>Stronę opracował: Chr1skyy</p>
     </footer>
 </body>
 

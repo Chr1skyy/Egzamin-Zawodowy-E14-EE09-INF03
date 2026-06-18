@@ -36,15 +36,15 @@
     </section>
     <main>
         <article>
-            <img src="ksiazka1.jpg" alt="okładka książki">
+            <img src="img/ksiazka1.jpg" alt="okładka książki">
             <p>Według różnych podań najpaskudniejsza ropucha nosi w głowie piękny, cenny klejnot.</p>
         </article>
         <article>
-            <img src="ksiazka2.jpg" alt="okładka książki">
+            <img src="img/ksiazka2.jpg" alt="okładka książki">
             <p>Panna Stefcia i Maryla nie są to zbyt grzeczne damy, nawet nie słuchają mamy...</p>
         </article>
         <article>
-            <img src="ksiazka3.jpg" alt="okładka książki">
+            <img src="img/ksiazka3.jpg" alt="okładka książki">
             <p>Ratuj mnie, przyjacielu, w ostatniej potrzebie: Kocham piękną Irenę. Rodzice i ona...</p>
         </article>
     </main>

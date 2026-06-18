@@ -17,7 +17,7 @@ footer {
 }
 
 article {
-    background: url("obraz1.jpg");
+    background: url("img/obraz1.jpg");
     color: dimgray;
     font-size: 150%;
     height: 350px;
@@ -55,5 +55,5 @@ h3 {
 }
 
 li {
-    list-style-image: url("obraz3.png");
+    list-style-image: url("img/obraz3.png");
 }

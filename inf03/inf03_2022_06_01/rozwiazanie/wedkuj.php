@@ -48,7 +48,7 @@
 		</section>
 	</main>
 	<footer>
-		<p>Stronę wykonał: Chriskyy#0181
+		<p>Stronę wykonał: Chr1skyy
 	</footer>
 </body>
 </html>

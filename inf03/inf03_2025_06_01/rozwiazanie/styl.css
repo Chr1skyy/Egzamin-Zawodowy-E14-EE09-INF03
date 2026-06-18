@@ -66,7 +66,7 @@ li {
     padding: 3px;
 }
 
-input {
+input, button {
     margin: 10px;
     color: indigo;
 }

@@ -29,7 +29,7 @@
             $result1 = mysqli_query($connect, $query1);
             while ($row = mysqli_fetch_array($result1)) {
                 echo "<div class='blok'>";
-                echo "<img src='$row[0]' alt='zdjęcie'>";
+                echo "<img src='img/$row[0]' alt='zdjęcie'>";
                 echo "<h3>$row[1]</h3>";
                 if ($row['polubienia'] > 40) {
                     echo "<p>Autor: $row[3] $row[4].</br>Wiele osób polubiło ten obraz.</p>";
@@ -47,7 +47,7 @@
             $query2 = "SELECT tytul, plik FROM zdjecia WHERE polubienia >= 100";
             $result2 = mysqli_query($connect, $query2);
             while ($row = mysqli_fetch_array($result2)) {
-                echo "<img src='$row[1]' alt='$row[0]'>";
+                echo "<img src='img/$row[1]' alt='$row[0]'>";
             }
 
             mysqli_close($connect);

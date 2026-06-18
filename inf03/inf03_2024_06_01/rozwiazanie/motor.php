@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <img src="motor.png" alt="motocykl">
+    <img src="img/motor.png" alt="motocykl">
     <header>
         <h1>Motocykle - moja pasja</h1>
     </header>

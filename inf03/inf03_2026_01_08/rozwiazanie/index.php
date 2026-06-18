@@ -10,7 +10,7 @@
 <body>
     <div class="container-row">
         <header class="left">
-            <img src="logo.png" alt="Logo">
+            <img src="img/logo.png" alt="Logo">
         </header>
         <header class="right">
             <h1>Korona Gór Polskich</h1>
@@ -31,7 +31,7 @@
         $query2 = "SELECT nazwa, plik FROM szczyty LIMIT 10";
         $result = mysqli_query($connect, $query2);
         while ($row = mysqli_fetch_array($result)) {
-            echo "<img class='miniatura' src='{$row['plik']}' alt='{$row['nazwa']}'>";
+            echo "<img class='miniatura' src='img/{$row['plik']}' alt='{$row['nazwa']}'>";
         }
         ?>
     </section>

@@ -3,9 +3,9 @@ $sekcja = isset($_GET['sekcja']) ? $_GET['sekcja'] : 'uczestnik';
 $numerWycieczki = isset($_GET['numerWycieczki']) ? (int)$_GET['numerWycieczki'] : 0;
 
 $wycieczki = [
-    ["obraz" => "1.jpg", "miejsce" => "Barcelona"],
-    ["obraz" => "2.jpg", "miejsce" => "Rzym"],
-    ["obraz" => "3.jpg", "miejsce" => "Londyn"]
+    ["obraz" => "img/1.jpg", "miejsce" => "Barcelona"],
+    ["obraz" => "img/2.jpg", "miejsce" => "Rzym"],
+    ["obraz" => "img/3.jpg", "miejsce" => "Londyn"]
 ];
 
 $aktualnaWycieczka = $wycieczki[$numerWycieczki];
@@ -59,7 +59,7 @@ if ($sekcja == 'uczestnik') {
                 <div class="container-row">
                     <section>
                         <h2>Dane Klienta</h2>
-                        <img src="osoba.png" alt="Klient">
+                        <img src="img/osoba.png" alt="Klient">
                         <br>
                         <label for="imie">Imię</label>
                         <input type="text" id="imie" <?= $blokadaUczestnika; ?>>
@@ -95,15 +95,15 @@ if ($sekcja == 'uczestnik') {
                 </div>
             </div>
             <aside>
-                <img src="1.jpg" alt="wycieczki">
-                <img src="2.jpg" alt="wycieczki">
-                <img src="3.jpg" alt="wycieczki">
-                <img src="1.jpg" alt="wycieczki">
-                <img src="2.jpg" alt="wycieczki">
-                <img src="3.jpg" alt="wycieczki">
-                <img src="1.jpg" alt="wycieczki">
-                <img src="2.jpg" alt="wycieczki">
-                <img src="3.jpg" alt="wycieczki">
+                <img src="img/1.jpg" alt="wycieczki">
+                <img src="img/2.jpg" alt="wycieczki">
+                <img src="img/3.jpg" alt="wycieczki">
+                <img src="img/1.jpg" alt="wycieczki">
+                <img src="img/2.jpg" alt="wycieczki">
+                <img src="img/3.jpg" alt="wycieczki">
+                <img src="img/1.jpg" alt="wycieczki">
+                <img src="img/2.jpg" alt="wycieczki">
+                <img src="img/3.jpg" alt="wycieczki">
             </aside>
         </div>
     </main>

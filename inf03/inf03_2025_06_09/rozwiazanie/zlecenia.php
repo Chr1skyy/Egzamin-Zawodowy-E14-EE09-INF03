@@ -77,9 +77,9 @@
             </div>
         </div>
         <aside>
-            <img src="tapeta_lewa.png" alt="usługi">
-            <img src="tapeta_prawa.png" alt="usługi">
-            <img src="tapeta_lewa.png" alt="usługi">
+            <img src="img/tapeta_lewa.png" alt="usługi">
+            <img src="img/tapeta_prawa.png" alt="usługi">
+            <img src="img/tapeta_lewa.png" alt="usługi">
         </aside>
     </main>
     <footer>

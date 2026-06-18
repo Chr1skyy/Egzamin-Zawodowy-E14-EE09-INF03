@@ -17,13 +17,13 @@
         $query1 = "SELECT nazwa, plik FROM towar LIMIT 10;";
         $result = mysqli_query($connect, $query1);
         while ($row = mysqli_fetch_array($result)) {
-            echo "<img src='{$row['plik']}' alt='{$row['nazwa']}'>";
+            echo "<img src='img/{$row['plik']}' alt='{$row['nazwa']}'>";
         }
         ?>
     </nav>
     <main>
         <aside>
-            <img src="market.png" alt="bazarek">
+            <img src="img/market.png" alt="bazarek">
         </aside>
         <section>
             <p>Wybierz owoc lub warzywo i podaj jego wagę:</p>

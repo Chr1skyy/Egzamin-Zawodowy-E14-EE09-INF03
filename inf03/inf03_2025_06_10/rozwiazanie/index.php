@@ -25,7 +25,7 @@
                 $result = mysqli_query($connect, $query);
                 while ($row = mysqli_fetch_array($result)) {
                     echo "<tr>
-                            <td><img src='{$row['kod']}.jpg' alt='kurs'</td>
+                            <td><img src='img/{$row['kod']}.jpg' alt='kurs'</td>
                             <td>{$row['nazwa']}</td>
                             <td>{$row['cena']}</td>
                         </tr>";

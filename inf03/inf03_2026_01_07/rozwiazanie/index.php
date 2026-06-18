@@ -10,7 +10,7 @@
 <body>
     <div id="header-row">
         <header id="left">
-            <img src="slonce.png" alt="Słonecznie">
+            <img src="img/slonce.png" alt="Słonecznie">
         </header>
         <header id="right">
             <h1>Pogoda w Europie</h1>
@@ -33,11 +33,11 @@
                 while ($row = mysqli_fetch_array($result)) {
                     $weatherImage = "";
                     if ($row['temperatura'] > 30) {
-                        $weatherImage = "<img src='slonce.png'>";
+                        $weatherImage = "<img src='img/slonce.png'>";
                     } elseif ($row['temperatura'] < 26) {
-                        $weatherImage = "<img src='deszcz.png'>";
+                        $weatherImage = "<img src='img/deszcz.png'>";
                     } else {
-                        $weatherImage = "<img src='chmury.png'>";
+                        $weatherImage = "<img src='img/chmury.png'>";
                     }
                     echo "<tr>
                             <td>{$row['nazwa']}</td>

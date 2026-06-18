@@ -31,18 +31,18 @@
         $query2 = "SELECT potrawy.nazwa, rodzaje.rodzaj FROM potrawy JOIN rodzaje ON potrawy.idRodzaje = rodzaje.idRodzaje WHERE potrawy.idPotrawy = $id;";
         $result = mysqli_query($connect, $query2);
         $row = mysqli_fetch_array($result);
-        echo "<h2>{$row['rodzaj']}</h2>";
+        echo "<h1>{$row['rodzaj']}</h1>";
 
         $query1 = "SELECT nazwa, trudnosc, kalorie FROM potrawy WHERE idPotrawy = $id;";
         $result = mysqli_query($connect, $query1);
         $row = mysqli_fetch_array($result);
-        echo "<h3>" . strtoupper($row['nazwa']) . "</h3>";
+        echo "<h2>{$row['nazwa']}</h2>";
         if ($row['trudnosc'] == 1) $diff = 'łatwe';
         elseif ($row['trudnosc'] == 2) $diff = 'średnie';
         else $diff = 'trudne';
         echo "<p>Trudność: $diff, Kalorie: {$row['kalorie']}</p>";
         ?>
-        <img src="separator.png" alt="przepis">
+        <img src="img/separator.png" alt="przepis">
         <p>Alergeny:
             <?php
             $query3 = "SELECT alergeny.alergen FROM potrawy JOIN lista_alergenow ON potrawy.idPotrawy = lista_alergenow.idPotrawy JOIN alergeny ON lista_alergenow.idAlergeny = alergeny.idAlergeny WHERE potrawy.idPotrawy = $id;";
@@ -53,6 +53,12 @@
             ?>
         </p>
         <h3>SKŁADNIKI</h3>
+        <ul>
+            <li>Lorem 1 kg</li>
+            <li>Ipsum 2 szt.</li>
+            <li>Dolor 200 g</li>
+            <li>Sit amet (szczypta)</li>
+        </ul>
         <?php
         $query4 = "SELECT przepis, plik FROM potrawy WHERE idPotrawy = $id;";
         $result = mysqli_query($connect, $query4);
@@ -60,7 +66,7 @@
         ?>
         <p><?php echo $row_f['przepis']; ?></p>
     </main>
-    <section style="background-image: url('<?= $row_f['plik'] ?>')">
+    <section style="background-image: url('img/<?= $row_f['plik'] ?>')">
         <h1>Blog Kulinarny</h1>
     </section>
     <?php mysqli_close($connect); ?>

@@ -70,3 +70,7 @@ tr:hover {
 #prawy img {
     width: 90%;
 }
+
+p {
+    margin-top: 0;
+}

@@ -8,7 +8,7 @@ function addPattern() {
     alert(`Wzór: ${filename}, kolor ${color} w cenie ${price} zł`);
 
     const img = document.createElement('img');
-    img.src = filename;
+    img.src = "img/" + filename;
     img.alt = filename;
     img.className = 'miniatury';
 

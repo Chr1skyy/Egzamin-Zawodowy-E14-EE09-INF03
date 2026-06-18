@@ -38,7 +38,7 @@
         $query2 = "SELECT buty.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty JOIN produkt ON buty.model = produkt.model;";
         $result2 = mysqli_query($connect, $query2);
         while ($row = mysqli_fetch_array($result2)) {
-            echo "<div class='buty'><img src='{$row['nazwa_pliku']}' alt='but męski'><h2>{$row['nazwa']}</h2><h5>Model: {$row['model']}</h5><h4>Cena: {$row['cena']}</h4></div>";
+            echo "<div class='buty'><img src='img/{$row['nazwa_pliku']}' alt='but męski'><h2>{$row['nazwa']}</h2><h5>Model: {$row['model']}</h5><h4>Cena: {$row['cena']}</h4></div>";
         }
         mysqli_close($connect);
         ?>

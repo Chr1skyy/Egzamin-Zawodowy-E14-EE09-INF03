@@ -13,9 +13,9 @@
     </header>
     <div id="container-row">
         <aside>
-            <img src="ma.jpg" alt="Matura"><br>
-            <img src="tu.jpg" alt="Matura"><br>
-            <img src="ra.jpg" alt="Matura">
+            <img src="img/ma.jpg" alt="Matura"><br>
+            <img src="img/tu.jpg" alt="Matura"><br>
+            <img src="img/ra.jpg" alt="Matura">
         </aside>
         <div id="container-column">
             <section>

@@ -36,7 +36,7 @@
             $q = "SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis ASC;";
             $res = mysqli_query($con, $q);
             while ($row = mysqli_fetch_array($res)) {
-                echo "<img src='$row[0]' alt='$row[1]' title='$row[1]'>";
+                echo "<img src='img/$row[0]' alt='$row[1]' title='$row[1]'>";
             }
             ?>
         </section>

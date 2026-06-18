@@ -26,7 +26,7 @@
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
                             <h4>styl {$row['styl']}</h4>
-                            <h3>CENA: {$row['cena']}</h3>
+                            <h3>CENA: {$row['cena']} zł</h3>
                             <form action='index.php' method='post'>
                             <button type='submit' name='submit' value='{$row['idMeble']}'>KUP</button>
                             </form>
@@ -49,7 +49,7 @@
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
                             <h4>styl {$row['styl']}</h4>
-                            <h3>CENA: {$row['cena']}</h3>
+                            <h3>CENA: {$row['cena']} zł</h3>
                             <form action='index.php' method='post'>
                             <button type='submit' name='submit' value='{$row['idMeble']}'>KUP</button>
                             </form>
@@ -72,7 +72,7 @@
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
                             <h4>styl {$row['styl']}</h4>
-                            <h3>CENA: {$row['cena']}</h3>
+                            <h3>CENA: {$row['cena']} zł</h3>
                             <form action='index.php' method='post'>
                             <button type='submit' name='submit' value='{$row['idMeble']}'>KUP</button>
                             </form>

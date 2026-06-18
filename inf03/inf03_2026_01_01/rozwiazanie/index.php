@@ -49,7 +49,7 @@
                 $vehicle2 = mysqli_fetch_array($result);
                 ?>
                 <tr>
-                    <td colspan="3"><img src="a1.jpg" alt="Konfiguracja 1"></td>
+                    <td colspan="3"><img src="img/a1.jpg" alt="Konfiguracja 1"></td>
                 </tr>
                 <tr>
                     <td>Marka</td>
@@ -61,7 +61,7 @@
                     <td><?= $vehicle1['model']; ?></td>
                 </tr>
                 <tr>
-                    <td colspan="3"><img src="a2.jpg" alt="Konfiguracja 2"></td>
+                    <td colspan="3"><img src="img/a2.jpg" alt="Konfiguracja 2"></td>
                 </tr>
                 <tr>
                     <td>Marka</td>
@@ -76,7 +76,7 @@
         </section>
         <section id="right">
             <h3>111 222 444</h3>
-            <img src="a3.png" alt="Samochód">
+            <img src="img/a3.png" alt="Samochód">
         </section>
     </main>
     <footer>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Przychodnia Medica</title>
-    <link rel="shortcut icon" href="obraz2.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/obraz2.png" type="image/x-icon">
     <link rel="stylesheet" href="styl.css">
 </head>
 
@@ -64,7 +64,7 @@
         </section>
     </main>
     <footer>
-        <p><img src="obraz2.png" alt="przychodnia">Stronę przygotował: Chr1skyy</p>
+        <p><img src="img/obraz2.png" alt="przychodnia">Stronę przygotował: Chr1skyy</p>
     </footer>
 </body>
 

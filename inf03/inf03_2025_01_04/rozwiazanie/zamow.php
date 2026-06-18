@@ -22,7 +22,7 @@
             $query = "SELECT buty.nazwa, buty.cena, produkt.kolor, produkt.kod_produktu, produkt.material, produkt.nazwa_pliku FROM buty JOIN produkt ON buty.model = produkt.model WHERE buty.model = '{$model}';";
             $result = mysqli_query($connect, $query);
             $row = mysqli_fetch_array($result);
-            echo "<img src='{$row['nazwa_pliku']}' alt='but męski'>";
+            echo "<img src='img/{$row['nazwa_pliku']}' alt='but męski'>";
             echo "<h2>{$row['nazwa']}</h2>";
             $wartosc = $pary * $row['cena'];
             echo "<p>cena za {$pary} par: {$wartosc} zł</p>";

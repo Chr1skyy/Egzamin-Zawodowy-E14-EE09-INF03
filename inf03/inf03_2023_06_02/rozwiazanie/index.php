@@ -57,8 +57,8 @@
         </section>
         <section class="right">
             <h2>Kontakt</h2>
-            <p>e-mail: <a href="mailto:hurt@poczta2.pl">hurt@poczta2.pl</a></p>
             <img src="zakupy.png" alt="hurtownia">
+            <p>e-mail: <a href="mailto:hurt@poczta2.pl">hurt@poczta2.pl</a></p>
         </section>
     </main>
     <footer>

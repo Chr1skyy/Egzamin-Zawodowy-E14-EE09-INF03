@@ -63,3 +63,7 @@ label {
     width: 200px;
     transition: 1s;
 }
+
+footer p {
+    margin-top: 0;
+}

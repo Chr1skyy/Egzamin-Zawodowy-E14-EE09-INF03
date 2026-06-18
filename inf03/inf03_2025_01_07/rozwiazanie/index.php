@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <title>Wyszukiwarka miast</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="fav.png">
+    <link rel="icon" href="img/fav.png">
 </head>
 
 <body>
     <section id="kontener">
         <header>
-            <img src="baner.jpg" alt="Polska" />
+            <img src="img/baner.jpg" alt="Polska" />
         </header>
         <main>
             <section id="lewy">

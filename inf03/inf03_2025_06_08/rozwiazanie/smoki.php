@@ -73,9 +73,9 @@
             </section>
             <section id="galeria">
                 <h3>Galeria</h3>
-                <img src="smok1.jpg" alt="Smok czerwony">
-                <img src="smok2.jpg" alt="Smok wielki">
-                <img src="smok3.jpg" alt="Skrzydlaty łaciaty">
+                <img src="img/smok1.JPG" alt="Smok czerwony">
+                <img src="img/smok2.JPG" alt="Smok wielki">
+                <img src="img/smok3.JPG" alt="Skrzydlaty łaciaty">
             </section>
         </main>
     </div>
