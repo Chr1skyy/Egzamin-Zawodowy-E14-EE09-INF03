@@ -13,7 +13,7 @@
 		<h2>Opinie naszych klientów</h2>
 		<?php
 		$con = mysqli_connect('localhost', 'root', '', 'hurtownia');
-		$q = "SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM klienci, opinie, typy WHERE klienci.id = opinie.klienci_id AND typy.id = klienci.typy_id AND typy.id IN (2,3);";
+		$q = "SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM klienci JOIN opinie ON klienci.id = opinie.klienci_id AND Typy_id IN (2,3);";
 		$res = mysqli_query($con, $q);
 		while($row = mysqli_fetch_array($res)) {
 			echo "<div class='opinia'>

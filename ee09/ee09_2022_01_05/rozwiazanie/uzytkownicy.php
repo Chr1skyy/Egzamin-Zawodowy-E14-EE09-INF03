@@ -48,7 +48,7 @@
 				while($tab = mysqli_fetch_row($res)) {
 					$szyfr = sha1($haslo);
 					if($szyfr == $tab[0]) {
-						$kw = "SELECT u.login, d.rok_urodz, d.przyjaciol, d.hobby, d.zdjecie FROM uzytkownicy u INNER JOIN dane d ON u.id = d.id WHERE u.login = '$login';";
+						$kw = "SELECT login, rok_urodz, przyjaciol, hobby, zdjecie FROM uzytkownicy INNER JOIN dane ON uzytkownicy.id = dane.id WHERE uzytkownicy.login = '$login';";
 						$res = mysqli_query($con, $kw);
 						while($tab = mysqli_fetch_row($res)) {
 							echo "<div class='wizytowka'>";
