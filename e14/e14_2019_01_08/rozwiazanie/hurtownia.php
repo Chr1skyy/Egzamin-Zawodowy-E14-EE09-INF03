@@ -43,24 +43,11 @@
 	<main>
 		<h2>Podzespoły wybranego producenta</h2>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'sklep');
-		if (!empty($_POST['producent'])) {
-			$producent = $_POST['producent'];
-			$kw = "SELECT podzespoly.nazwa, podzespoly.dostepnosc, podzespoly.cena FROM podzespoly, producenci WHERE podzespoly.producenci_id = producenci.id AND producenci.id = $producent;";
-			$res = mysqli_query($con, $kw);
-			while ($tab = mysqli_fetch_row($res)) {
-				$dostepnosc = "NIEDOSTĘPNY";
-				if ($tab[1] == '1')
-					$dostepnosc = "DOSTĘPNY";
-				echo "<p>$tab[0] CENA: $tab[2] $dostepnosc</p>";
-			}
-		}
-		mysqli_close($con);
 		$connect = mysqli_connect('localhost', 'root', '', 'sklep');
 		if (isset($_POST['submit'])) {
 			$producent = $_POST['producent'];
-			if (!empty($kategoria)) {
-				$query = "SELECT podzespoly.nazwa, podzespoly.dostepnosc, podzespoly.cena FROM podzespoly JOIN producenci ON podzespoly.producenci_id = producenci.id WHERE producenci.id = $producent;";
+			if (!empty($producent)) {
+				$query = "SELECT nazwa, dostepnosc, cena FROM podzespoly WHERE producenci_id = $producent;";
 				$result = mysqli_query($connect, $query);
 				while ($row = mysqli_fetch_array($result)) {
 					$dostepnosc = "NIEDOSTĘPNY";

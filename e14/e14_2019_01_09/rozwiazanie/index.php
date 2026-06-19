@@ -48,7 +48,7 @@
 						$wybor = "PTAKI";
 					if ($nr == 5)
 						$wybor = "SSAKI";
-					$query1 = "SELECT gatunek, wystepowanie FROM zwierzeta JOIN gromady ON zwierzeta.Gromady_id = gromady.id WHERE gromady.id = $nr;";
+					$query1 = "SELECT gatunek, wystepowanie FROM zwierzeta WHERE Gromady_id = $nr;";
 					$result1 = mysqli_query($connect, $query1);
 					echo "<h2>$wybor</h2>";
 					while ($row = mysqli_fetch_array($result1)) {

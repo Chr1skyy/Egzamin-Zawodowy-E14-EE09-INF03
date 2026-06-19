@@ -51,7 +51,7 @@
 						$wybor = "Padlinożerne";
 					if ($nr == 4)
 						$wybor = "Wszystkożerne";
-					$query2 = "SELECT zwierzeta.id, zwierzeta.gatunek, zwierzeta.wystepowanie FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id WHERE odzywianie.id = $nr;";
+					$query2 = "SELECT id, gatunek, wystepowanie FROM zwierzeta WHERE Odzywianie_id = $nr;";
 					echo "<h3>$wybor</h3>";
 					$result2 = mysqli_query($connect, $query2);
 					while ($row = mysqli_fetch_array($result2)) {

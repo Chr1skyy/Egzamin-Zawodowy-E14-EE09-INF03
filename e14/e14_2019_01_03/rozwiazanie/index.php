@@ -18,11 +18,11 @@
 		<section>
 			<form action="index.php" method="post">
 				<select name="wybor">
-					<option value="Sci-Fi">Sci-Fi</option>
-					<option value="animacja">animacja</option>
-					<option value="dramat">dramat</option>
-					<option value="horror">horror</option>
-					<option value="komedia">komedia</option>
+					<option value="1">Sci-Fi</option>
+					<option value="2">animacja</option>
+					<option value="3">dramat</option>
+					<option value="4">horror</option>
+					<option value="5">komedia</option>
 				</select>
 				<button type="submit" name="submit">Filmy</button>
 			</form>
@@ -38,7 +38,7 @@
 			$connect = mysqli_connect('localhost', 'root', '', 'dane');
 			if (isset($_POST['submit'])) {
 				$wybor = $_POST['wybor'];
-				$query1 = "SELECT tytul, rok, ocena FROM filmy JOIN gatunki ON filmy.gatunki_id = gatunki.id WHERE gatunki.nazwa = '$wybor';";
+				$query1 = "SELECT tytul, rok, ocena FROM filmy WHERE gatunki_id = $wybor";
 				$result1 = mysqli_query($connect, $query1);
 				while ($row = mysqli_fetch_array($result1)) {
 					echo "<p>Tytuł: {$row['tytul']}, Rok produkcji: {$row['rok']}, Ocena: {$row['ocena']}</p>";

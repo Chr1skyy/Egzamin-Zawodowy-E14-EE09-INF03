@@ -45,7 +45,7 @@
 		if (isset($_POST['submit'])) {
 			$kategoria = $_POST['kategoria'];
 			if (!empty($kategoria)) {
-				$query = "SELECT podzespoly.nazwa, podzespoly.opis, podzespoly.cena FROM podzespoly JOIN typy ON podzespoly.typy_id = typy.id WHERE typy.id = $kategoria;";
+				$query = "SELECT nazwa, opis, cena FROM podzespoly WHERE typy_id = $kategoria;";
 				$result = mysqli_query($connect, $query);
 				while ($row = mysqli_fetch_array($result)) {
 					echo "<p>{$row['nazwa']} {$row['opis']} CENA: {$row['cena']}</p>";

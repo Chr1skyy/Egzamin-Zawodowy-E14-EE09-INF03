@@ -39,7 +39,7 @@
 			<h2>Polecamy do sosów</h2>
 			<ol>
 				<?php
-				$query3 = "SELECT grzyby.nazwa, grzyby.potoczna, rodzina.nazwa AS rodzina FROM grzyby JOIN rodzina ON grzyby.rodzina_id = rodzina.id JOIN potrawy ON grzyby.potrawy_id = potrawy.id WHERE potrawy.nazwa = 'sos';";
+				$query3 = "SELECT grzyby.nazwa, grzyby.potoczna, rodzina.nazwa FROM grzyby JOIN rodzina ON grzyby.rodzina_id = rodzina.id WHERE potrawy_id = 1;";
 				$result3 = mysqli_query($connect, $query3);
 				while ($row = mysqli_fetch_array($result3)) {
 					echo "<li>{$row['nazwa']} ({$row['potoczna']}), rodzina: {$row['rodzina']}</li>";

@@ -1,4 +1,4 @@
 1. INSERT INTO pracownicy VALUES (NULL, 'Joanna', 'Dobrowolska', 2);
 2. SELECT imie, nazwisko FROM pracownicy WHERE stanowisko = 3;
-3. SELECT id, nazwa dania FROM dania WHERE typ = 1 AND cena < 25;
+3. SELECT id, nazwa FROM dania WHERE typ = 1 AND cena < 25;
 4. UPDATE dania SET cena = cena + 1 WHERE typ = 4;
