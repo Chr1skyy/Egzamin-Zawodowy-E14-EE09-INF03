@@ -2,4 +2,4 @@
 2. SELECT DISTINCT przedmiot FROM arkusz;
 3. SELECT MIN(rok), MAX(rok) FROM arkusz;
 4. SELECT maturzysta_id, AVG(punkty) AS 'Wynik' FROM wynik GROUP BY maturzysta_id ORDER BY Wynik DESC LIMIT 1;
-5. SELECT arkusz.rok, arkusz.sesja, arkusz.przedmiot, wynik.punkty FROM arkusz JOIN wynik USING symbol WHERE wynik.maturzysta_id = 31;
+5. SELECT arkusz.rok, arkusz.sesja, arkusz.przedmiot, wynik.punkty FROM arkusz JOIN wynik USING (symbol) WHERE wynik.maturzysta_id = 31;
