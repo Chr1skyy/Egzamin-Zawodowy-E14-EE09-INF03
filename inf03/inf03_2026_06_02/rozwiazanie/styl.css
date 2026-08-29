@@ -28,8 +28,16 @@ section {
     overflow: auto;
 }
 
-img {
+article {
     background-color: aliceblue;
+    height: 280px;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+img {
+    margin: 4px;
     float: left;
 }
 

@@ -1,5 +1,5 @@
 1. SELECT idKontynent, nazwa FROM kontynenty;
 2. SELECT nazwa, wartoscCechy, plik FROM obiekty WHERE idRodzaj = 10 AND panstwo = 'Polska';
 3. SELECT idObiekt, panstwo, nazwa, wartoscCechy FROM obiekty WHERE idRodzaj = 10 AND idKontynent = 6;
-4. INSERT INTO osiagniecia VALUES (NULL, 34, 2); 
+4. INSERT INTO osiagniecia VALUES (NULL, 34, 2);
 5. SELECT idTurysta, nick FROM turysci;

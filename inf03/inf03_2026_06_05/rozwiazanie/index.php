@@ -21,7 +21,7 @@
             while ($row = mysqli_fetch_array($result)) {
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='sofy/{$row['plik']}' alt='mebel'>
+                            <img src='img/sofy/{$row['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
@@ -44,7 +44,7 @@
             while ($row = mysqli_fetch_array($result)) {
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='fotele/{$row['plik']}' alt='mebel'>
+                            <img src='img/fotele/{$row['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
@@ -67,7 +67,7 @@
             while ($row = mysqli_fetch_array($result)) {
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='komody/{$row['plik']}' alt='mebel'>
+                            <img src='img/komody/{$row['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
                             <h3>{$row['nazwa']}</h3>
@@ -112,7 +112,6 @@
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
-    <script src="main.js"></script>
     <?php mysqli_close($connect); ?>
 </body>
 

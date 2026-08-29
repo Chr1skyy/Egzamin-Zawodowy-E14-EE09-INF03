@@ -15,7 +15,7 @@
         <aside>
             <?php
             $connect = mysqli_connect('localhost', 'root', '', 'wodospady');
-            $query1 = "SELECT idKontynent, nazwa FROM kontynenty";
+            $query1 = "SELECT idKontynent, nazwa FROM kontynenty;";
             $result = mysqli_query($connect, $query1);
             while ($row = mysqli_fetch_array($result)) {
                 echo "<a href='index.php?idKontynent={$row['idKontynent']}'> {$row['nazwa']}</a>";
@@ -31,16 +31,16 @@
                     <th>Wysokość</th>
                 </tr>
                 <?php
-                if(isset($_GET['idKontynent'])) {
+                if (isset($_GET['idKontynent'])) {
                     $idKontynent = $_GET['idKontynent'];
-                    $query3 = "SELECT idObiekt, panstwo, nazwa, wysokosc WHERE idKontynent = $idKontynent";
+                    $query3 = "SELECT idObiekt, panstwo, nazwa, wartoscCechy FROM obiekty WHERE idRodzaj = 10 AND idKontynent = $idKontynent;";
                     $result = mysqli_query($connect, $query3);
                     while ($row = mysqli_fetch_array($result)) {
                         echo "<tr>
                                 <td>{$row['idObiekt']}</td>
                                 <td>{$row['panstwo']}</td>
                                 <td>{$row['nazwa']}</td>
-                                <td>{$row['wysokosc']}</td>
+                                <td>{$row['wartoscCechy']}</td>
                             </tr>";
                     }
                 }
@@ -74,6 +74,10 @@
     </main>
     <article>
         <h3>Wodospady w Polsce</h3>
+        <img src="img/kamienczyk.jpg" alt="wodospad">
+        <img src="img/siklawica.jpg" alt="wodospad">
+        <img src="img/siklawa.jpg" alt="wodospad">
+        <img src="img/wilczki.jpg" alt="wodospad">
     </article>
     <footer>
         <p>Autor: Chr1skyy</p>

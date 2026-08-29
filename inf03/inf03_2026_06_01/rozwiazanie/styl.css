@@ -16,7 +16,7 @@ body {
 
 #container-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 header,
@@ -62,6 +62,7 @@ section {
     padding: 10px;
     opacity: 0.8;
     transition: 1s;
+    float: left;
 }
 
 .miniatury:hover {

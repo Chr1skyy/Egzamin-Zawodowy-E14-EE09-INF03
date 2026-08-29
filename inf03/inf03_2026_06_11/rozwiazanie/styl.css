@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-image: url('naglowek.png');
+    background-image: url('img/naglowek.png');
     height: 170px;
 }
 
@@ -67,7 +67,6 @@ aside img {
 }
 
 aside img:hover {
-    border-color: teal;
     border-color: teal;
 }
 

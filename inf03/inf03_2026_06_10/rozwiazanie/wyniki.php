@@ -44,7 +44,7 @@ if (!isset($_SESSION['username'])) {
                 while ($row = mysqli_fetch_array($result)) {
                     $wynik = '';
                     if (!empty($row['plik'])) {
-                        $wynik = "<a href='{$row['plik']}' target='_blank'>wynik</a>";
+                        $wynik = "<a href='files/{$row['plik']}' target='_blank'>wynik</a>";
                     }
                     echo "<tr>
                             <td>{$row['imie']}</td>

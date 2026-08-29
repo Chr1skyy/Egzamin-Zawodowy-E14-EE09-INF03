@@ -18,10 +18,10 @@
                 <section>
                     <?php
                     $connect = mysqli_connect('localhost', 'root', '', 'islandia');
-                    $query1 = "SELECT idObiekt, plik, nazwa FROM obiekty;";
+                    $query1 = "SELECT idObiekt, plik, nazwa FROM obiekty WHERE panstwo = 'Islandia';";
                     $result = mysqli_query($connect, $query1);
                     while ($row = mysqli_fetch_array($result)) {
-                        echo "<a href='obiekty.php?idObiekt={$row['idObiekt']}'><img class='miniatury' src='{$row['plik']}' alt='{$row['nazwa']}' title='{$row['nazwa']}'></a>";
+                        echo "<a href='obiekty.php?idObiekt={$row['idObiekt']}'><img class='miniatury' src='img/{$row['plik']}' alt='{$row['nazwa']}' title='{$row['nazwa']}'></a>";
                     }
                     ?>
                 </section>
@@ -34,7 +34,7 @@
                 <li>Wodospady:
                     <ol>
                         <?php
-                        $query3 = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING (idRodzaj) WHERE idObiekt = 46;";
+                        $query3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 10;";
                         $result = mysqli_query($connect, $query3);
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<li>{$row['nazwa']}</li>";
@@ -45,7 +45,7 @@
                 <li>Siedliska zwierząt:
                     <ol>
                         <?php
-                        $query3modified = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING (idRodzaj) WHERE idRodzaj = 14;";
+                        $query3modified = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 14;";
                         $result = mysqli_query($connect, $query3modified);
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<li>{$row['nazwa']}</li>";

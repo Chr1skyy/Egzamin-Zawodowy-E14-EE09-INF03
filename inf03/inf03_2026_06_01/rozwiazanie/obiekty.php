@@ -20,10 +20,10 @@
                     $connect = mysqli_connect('localhost', 'root', '', 'islandia');
                     if (isset($_GET['idObiekt'])) {
                         $idObiekt = $_GET['idObiekt'];
-                        $query2modified = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING (idRodzaj) WHERE idObiekt = $idObiekt;";
+                        $query2modified = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING(idRodzaj) WHERE idObiekt = $idObiekt;";
                         $result = mysqli_query($connect, $query2modified);
                         $row = mysqli_fetch_array($result);
-                        echo "<img src='{$row['plik']}' alt='{$row['nazwa']}'>";
+                        echo "<img src='img/{$row['plik']}' alt='{$row['nazwa']}'>";
                         echo "<h2>{$row['nazwa']}</h2>";
                         echo "<h3>{$row['rodzaj']}</h3>";
                         echo "<p>{$row['nazwaCechy']}: {$row['wartoscCechy']}</p>";
@@ -41,7 +41,7 @@
                 <li>Wodospady:
                     <ol>
                         <?php
-                        $query3 = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING (idRodzaj) WHERE idObiekt = 46";
+                        $query3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 10";
                         $result = mysqli_query($connect, $query3);
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<li>{$row['nazwa']}</li>";
@@ -53,7 +53,7 @@
                 <li>Siedliska zwierząt:
                     <ol>
                         <?php
-                        $query3modified = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING (idRodzaj) WHERE idRodzaj = 14";
+                        $query3modified = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 14";
                         $result = mysqli_query($connect, $query3modified);
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<li>{$row['nazwa']}</li>";
