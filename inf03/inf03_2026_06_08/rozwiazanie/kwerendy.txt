@@ -1,0 +1,4 @@
+1. SELECT tytul, gatunek FROM gry WHERE data_wydania BETWEEN '2018-%' AND '2023-%' AND gatunek LIKE '%Niezależne%';
+2. SELECT nazwa, COUNT(gry.id_gry) AS 'liczba_gier' FROM producenci LEFT JOIN gry USING(id_producenta) GROUP BY nazwa;
+3. SELECT id_gry, tytul, producenci.nazwa AS producent, wydawcy.nazwa AS 'wydawca' FROM gry JOIN producenci USING(id_producenta) JOIN wydawcy USING(id_wydawcy);
+4. ALTER TABLE gry ADD COLUMN ocena INT NOT NULL DEFAULT 5;
