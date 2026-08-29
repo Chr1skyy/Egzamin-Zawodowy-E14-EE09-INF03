@@ -31,8 +31,7 @@
                     $imie = $_POST['imie'];
                     $nazwisko = $_POST['nazwisko'];
                     $symbol = $_POST['symbol'];
-                    $q = "INSERT INTO czytelnicy(imie, nazwisko, kod) VALUES ('$imie',
-                    '$nazwisko', '$symbol');";
+                    $q = "INSERT INTO czytelnicy(imie, nazwisko, kod) VALUES ('$imie', '$nazwisko', '$symbol');";
                     mysqli_query($con, $q);
                     echo "Dodano czytelnika $imie $nazwisko";
                 }
