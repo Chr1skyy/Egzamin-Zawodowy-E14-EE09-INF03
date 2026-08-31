@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PL">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Salon rowerowy</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/1.jpg" alt="rower">
+        <img src="img/2.jpg" alt="rower">
+        <img src="img/3.jpg" alt="rower">
+        <img src="img/4.jpg" alt="rower">
+        <img src="img/5.jpg" alt="rower">
+    </header>
+    <div class="container-row">
+        <main>
+            <h1>Dobierz rozmiar ramy roweru do wzrostu</h1>
+            <h2>Wybierz rodzaj roweru</h2>
+            <input type="radio" name="rodzajRoweru" id="gorski" value="gorski" checked>
+            <label class="klasa_etykiety" for="gorski" title="górski z kołami 29">górski z kołami 29"</label>
+            <input type="radio" name="rodzajRoweru" id="szosa" value="szosa">
+            <label class="klasa_etykiety" for="szosa" title="szosa">szosa</label>
+            <input type="radio" name="rodzajRoweru" id="trekking" value="trekking">
+            <label class="klasa_etykiety" for="trekking" title="trekking">trekking</label>
+            <h2>Podaj swój wzrost</h2>
+            <input type="range" min="100" max="220" value="150" step="1" oninput="aktualizujPole()">
+            <input type="number" value="150">
+            <br>
+            <button type="button" class="klasa_etykiety" onclick="obliczRozmiarRamy()">Sprawdź</button>
+            <p id="wynik"></p>
+        </main>
+        <aside>
+            <h1>Polecane firmy</h1>
+            <p class="logo1 prawa">cup</p>
+            <p class="logo2">glass</p>
+            <p class="logo1 srodek">spoon</p>
+            <p class="logo2 prawa">teaspoon</p>
+            <p class="logo1">fork</p>
+        </aside>
+    </div>
+    <div class="container-row">
+        <footer>
+            <h4>Oferowane typy rowerów</h4>
+            <ul>
+                <li>górskie
+                    <ul>
+                        <li>koła 29 cali</li>
+                        <li>koła 26 cali</li>
+                    </ul>
+                </li>
+                <li>szosowe</li>
+                <li>miejskie</li>
+            </ul>
+        </footer>
+        <footer>
+            <h4>Informacje</h4>
+            <table>
+                <tr>
+                    <td>Autor: </td>
+                    <td>Chr1skyy</td>
+                </tr>
+                <tr>
+                    <td>Aktualna data: </td>
+                    <td id="komorkaDaty"></td>
+                </tr>
+            </table>
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

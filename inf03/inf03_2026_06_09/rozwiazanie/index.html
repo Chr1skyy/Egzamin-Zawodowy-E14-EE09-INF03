@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restauracja Marchewka</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+
+<body>
+    <header>
+        <section>
+            <h1>Restauracja Marchewka</h1>
+            <h3>Twoje wegetariańskie miejsce na mapie miasta</h3>
+        </section>
+        <section><img src="img/logo.png" alt="logo"></section>
+    </header>
+    <main>
+        <section>
+            <h4>Twoje zamówienie</h4>
+            <ul></ul>
+            <button type="button" onclick="wyczyscZamowienie()">Wyczyść</button>
+            <button type="button" onclick="zatwierdzZamowienie()">Zatwierdź</button>
+        </section>
+        <section>
+            <div class="potrawa" onclick="dodajDoZamowienia('Naleśniki')">
+                <img src="img/nalesniki.webp" alt="Naleśniki">
+                <br>
+                <p>Naleśniki</p>
+            </div>
+            <div class="potrawa" onclick="dodajDoZamowienia('Lasagne szpinakowa')">
+                <img src="img/lasagne.webp" alt="Lasagne szpinakowa">
+                <br>
+                <p>Lasagne szpinakowa</p>
+            </div>
+            <div class="potrawa" onclick="dodajDoZamowienia('Pieczona marchewka')">
+                <img src="img/marchewka.webp" alt="Pieczona marchewka">
+                <br>
+                <p>Pieczona marchewka</p>
+            </div>
+            <div class="potrawa" onclick="dodajDoZamowienia('Wege rosół')">
+                <img src="img/rosol.webp" alt="Wege rosół">
+                <br>
+                <p>Wege rosół</p>
+            </div>
+            <div class="potrawa" onclick="dodajDoZamowienia('Tarta szparagowa')">
+                <img src="img/tarta.webp" alt="Tarta szparagowa">
+                <br>
+                <p>Tarta szparagowa</p>
+            </div>
+            <div class="potrawa" onclick="dodajDoZamowienia('Kompot')">
+                <img src="img/kompot.webp" alt="Kompot">
+                <br>
+                <p>Kompot</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Wykonał: Chr1skyy</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

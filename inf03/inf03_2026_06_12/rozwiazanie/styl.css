@@ -1,0 +1,85 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 80%;
+}
+
+.container-row {
+    display: flex;
+}
+
+main {
+    width: 60%;
+    height: 650px;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 200px;
+}
+
+aside {
+    width: 20%;
+    height: 650px;
+    box-shadow: 0 0 100px #02220a;
+    margin-top: 200px;
+}
+
+footer {
+    width: 50%;
+    height: 170px;
+    background-color: #02220a;
+    color: white;
+}
+
+img {
+    width: 16%;
+    margin: 8px;
+    padding: 3px;
+    border-radius: 50%;
+}
+
+.klasa_etykiety {
+    width: 18%;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    background-color: #02220a;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+.klasa_etykiety:hover {
+    background-color: forestgreen;
+}
+
+.logo1 {
+    font-size: 50px;
+    text-transform:uppercase;
+    font-style: italic;
+}
+
+.logo2 {
+    font-size: 30px;
+    text-decoration: underline;
+    font-family: Impact;
+}
+
+.prawa {
+    text-align: right;
+}
+
+.srodek {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}

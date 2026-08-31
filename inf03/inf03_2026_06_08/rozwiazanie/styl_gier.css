@@ -1,0 +1,52 @@
+* {
+    font-family: 'Segoe UI', Tahoma;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+}
+
+header:nth-of-type(1) {
+    width: 40%;
+}
+
+header:nth-of-type(2) {
+    width: 60%;
+    justify-items: right;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+}
+
+a {
+    text-decoration: none;
+    color: #0077a2;
+}
+
+li a {
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 20em;
+    margin: 1em;
+}
+
+img:hover {
+    outline: 3px dashed #e30613;
+}
