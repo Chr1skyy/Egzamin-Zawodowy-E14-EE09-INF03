@@ -42,7 +42,8 @@ img {
     border-radius: 50%;
 }
 
-.actor p {
+.actor p,
+.actor-index p {
     font-size: 125%;
 }
 

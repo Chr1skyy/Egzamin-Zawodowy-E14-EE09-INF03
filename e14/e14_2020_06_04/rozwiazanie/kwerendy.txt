@@ -2,4 +2,4 @@
 2. ALTER TABLE zamowienia ADD PRIMARY KEY(id);
 3. CREATE USER 'klient' IDENTIFIED BY 'klient123';
 4. GRANT INSERT ON sklep.* TO klient;
-5. INSERT INTO zamowienia(imie, nazwisko, adres_email) VALUES ('Jan', 'Kowalski', 'jKowalski@poczta.pl');
+5. INSERT INTO zamowienia(id, imie, nazwisko, adres_email) VALUES (1, 'Jan', 'Kowalski', 'jKowalski@poczta.pl');
