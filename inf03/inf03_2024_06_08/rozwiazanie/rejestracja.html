@@ -37,23 +37,23 @@
         </section>
         <section id="blok1">
             <p>Imię</p>
-            <input id="imie" type="text" placeholder="Wpisz dane...">
+            <input id="imie" onblur="aktualizujPasek()" type="text" placeholder="Wpisz dane...">
             <p>Nazwisko</p>
-            <input id="nazwisko" type="text">
+            <input id="nazwisko" onblur="aktualizujPasek()" type="text">
             <p>Data urodzenia</p>
-            <input id="dataUrodzenia" type="date">
+            <input id="dataUrodzenia" onblur="aktualizujPasek()" type="date">
         </section>
         <section id="blok2">
             <p>Ulica</p>
-            <input id="ulica" type="text">
+            <input id="ulica" onblur="aktualizujPasek()" type="text">
             <p>Numer</p>
-            <input id="numer" type="number">
+            <input id="numer" onblur="aktualizujPasek()" type="number">
             <p>Miasto</p>
-            <input id="miasto" type="text">
+            <input id="miasto" onblur="aktualizujPasek()" type="text">
         </section>
         <section id="blok3">
             <p>Numer komórkowy</p>
-            <input id="numerTelefonu" type="tel">
+            <input id="numerTelefonu" onblur="aktualizujPasek()" type="tel">
             <br>
             <label>
                 <input type="checkbox" id="rodo">

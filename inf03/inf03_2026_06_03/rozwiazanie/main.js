@@ -1,17 +1,14 @@
-function podmienObraz(nowyObraz) {
-    const obrazGlowny = document.querySelector(".obraz")
-    obrazGlowny.src = `img/${nowyObraz}`
+function podmienObraz(plik) {
+    document.querySelector(".obraz").src = "img/" + plik;
 }
 
 function otworzOkno() {
-    const obrazGlowny = document.querySelector(".obraz")
-    const okno = document.querySelector(".okno")
-    const obrazOkno = document.querySelector(".obrazOkno")
-    okno.style.display = "block"
-    obrazOkno.src = obrazGlowny.src
+    let obrazGlowny = document.querySelector(".obraz");
+    let obrazOkno = document.querySelector(".obrazOkno");
+    obrazOkno.src = obrazGlowny.src;
+    document.querySelector(".okno").style.display = "block";
 }
 
 function zamknijOkno() {
-    const okno = document.querySelector(".okno")
-    okno.style.display = "none"
+    document.querySelector(".okno").style.display = "none";
 }

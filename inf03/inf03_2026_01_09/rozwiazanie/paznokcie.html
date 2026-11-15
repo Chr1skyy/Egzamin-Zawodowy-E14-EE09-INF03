@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styl.css">
 </head>
 
-<body>
+<body onload="pokazWzory()">
     <aside>
         <img src="img/manicure.jpg" alt="Stylizacja paznokci">
     </aside>
@@ -17,9 +17,9 @@
                 <h1>Twoje wymarzone paznokcie</h1>
             </header>
             <nav>
-                <button id="przyciskKolor" onmouseover="changeSection('sekcjaKolor')">Kolor</button>
-                <button id="przyciskKsztalt" onmouseover="changeSection('sekcjaKsztalt')">Kształt</button>
-                <button id="przyciskWzor" onmouseover="changeSection('sekcjaWzor')">Wzór</button>
+                <button id="przyciskKolor" onmouseover="zmienSekcje('przyciskKolor', 'sekcjaKolor')">Kolor</button>
+                <button id="przyciskKsztalt" onmouseover="zmienSekcje('przyciskKsztalt', 'sekcjaKsztalt')">Kształt</button>
+                <button id="przyciskWzor" onmouseover="zmienSekcje('przyciskWzor', 'sekcjaWzor')">Wzór</button>
             </nav>
             <section id="sekcjaKolor">
                 <h2>Kolor</h2>
@@ -41,12 +41,7 @@
             </section>
             <section id="sekcjaWzor">
                 <h2>Wzór</h2>
-                <script>
-                    for (let i = 1; i <= 10; i++) {
-                        document.write(`<img class='wzory' src='${i}.jpg' title='${i}'> `);
-                    }
-                </script>
-                <br>
+                <div id="wzory"></div>
                 <input type="number" id="numerWzoru" min="1" max="10">
             </section>
         </main>

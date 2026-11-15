@@ -48,20 +48,20 @@
                 <button name="submit">REKRUTUJ</button>
             </form>
             <?php
-            $connect = mysqli_connect('localhost', 'root', '', 'baza');
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'baza');
             if (isset($_POST["submit"])) {
                 $imie = $_POST["imie"];
                 $nazwisko = $_POST["nazwisko"];
                 $stanowisko = $_POST["stanowisko"];
-                $query = "INSERT INTO pracownicy VALUES (NULL, '$imie', '$nazwisko', $stanowisko);";
-                mysqli_query($connect, $query);
+                $zapytanie = "INSERT INTO pracownicy VALUES (NULL, '$imie', '$nazwisko', $stanowisko);";
+                mysqli_query($polaczenie, $zapytanie);
                 echo "Dodano dane rekrutacyjne do bazy";
             }
             ?>
         </section>
     </main>
     <footer>Stronę internetową opracował: <b>Chr1skyy</b></footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

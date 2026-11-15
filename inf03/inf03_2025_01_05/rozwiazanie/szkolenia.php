@@ -21,16 +21,16 @@
             </nav>
             <main>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'firma');
-                $query = "SELECT Data, Temat FROM szkolenia ORDER BY Data ASC;";
-                $result = mysqli_query($connect, $query);
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'firma');
+                $zapytanie = "SELECT Data, Temat FROM szkolenia ORDER BY Data ASC;";
+                $wynik = mysqli_query($polaczenie, $zapytanie);
                 $plik = fopen('harmonogram.txt', 'w');
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<p>{$row['Data']} {$row['Temat']}</p>";
-                    fwrite($plik, "{$row['Data']} {$row['Temat']}\n");
+                while ($wiersz = mysqli_fetch_array($wynik)) {
+                    echo "<p>{$wiersz['Data']} {$wiersz['Temat']}</p>";
+                    fwrite($plik, "{$wiersz['Data']} {$wiersz['Temat']}\n");
                 }
                 fclose($plik);
-                mysqli_close($connect);
+                mysqli_close($polaczenie);
                 ?>
             </main>
         </section>

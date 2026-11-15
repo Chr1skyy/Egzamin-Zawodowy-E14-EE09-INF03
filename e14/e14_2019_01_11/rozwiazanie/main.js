@@ -1,11 +1,12 @@
-function over(id, img) {
-	document.getElementById(id).src = img;
+function najedz(id, plik) {
+    document.getElementById(id).src = plik;
 }
-function out(id, img) {
-	document.getElementById(id).src = img;
-}
-function clicked(id, img) {
-	over(id, img);
-	document.getElementById("zmiana").src = img;
 
+function opusc(id, plik) {
+    document.getElementById(id).src = plik;
+}
+
+function kliknij(id, plik) {
+    document.getElementById(id).src = plik;
+    document.getElementById("zmiana").src = plik;
 }

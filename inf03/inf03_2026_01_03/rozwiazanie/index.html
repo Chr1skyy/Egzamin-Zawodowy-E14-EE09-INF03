@@ -20,18 +20,18 @@
             </ul>
         </nav>
         <section>
-            <img src="img/1d.bmp" alt="Figura" id="choiceImg"><br>
-            <img src="img/1m.bmp" alt="Wybierz trójkąt" class="choiceImg" onclick="choiceImg('img/1m.bmp')">
-            <img src="img/2m.bmp" alt="Wybierz prostokąt" class="choiceImg" onclick="choiceImg('img/2m.bmp')">
+            <img src="img/1d.bmp" alt="Figura" id="figura"><br>
+            <img src="img/1m.bmp" alt="Wybierz trójkąt" class="choiceImg" onclick="wybierzFigure('img/1d.bmp')">
+            <img src="img/2m.bmp" alt="Wybierz prostokąt" class="choiceImg" onclick="wybierzFigure('img/2d.bmp')">
         </section>
         <aside>
             <h3>Pole prostokąta / pole trójkąta:</h3><br>
-            <label for="valueA">Bok prostokąta / podstawa trójkąta:</label><br>
-            <input type="text" name="valueA" id="valueA"><br>
-            <label for="valueB">Drugi bok prostokąta / wysokość trójkąta:</label><br>
-            <input type="text" name="valueB" id="valueB"><br>
-            <input type="button" value="Oblicz" onclick="calculate()">
-            <p id="result"></p>
+            <label for="bokA">Bok prostokąta / podstawa trójkąta:</label><br>
+            <input type="text" name="bokA" id="bokA"><br>
+            <label for="bokB">Drugi bok prostokąta / wysokość trójkąta:</label><br>
+            <input type="text" name="bokB" id="bokB"><br>
+            <input type="button" value="Oblicz" onclick="oblicz()">
+            <p id="wynik"></p>
         </aside>
     </main>
     <footer>

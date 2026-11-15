@@ -1,35 +1,28 @@
+let szerokoscPaska = 4;
+
 function pokazBlok(blok) {
-    const bloki = ["blok1", "blok2", "blok3"]
-    bloki.forEach(id => {
-        document.getElementById(id).style.display = "none"
-    })
-    const wybranyBlok = document.getElementById(blok)
-    wybranyBlok.style.display = "block";
+    document.getElementById("blok1").style.display = "none";
+    document.getElementById("blok2").style.display = "none";
+    document.getElementById("blok3").style.display = "none";
+    document.getElementById(blok).style.display = "block";
 }
 
-let width = 4
-function zaaktualizujPasek() {
-    const pasek = document.getElementById("pasek")
-    width += 12
-    if (width > 100) {
-        width = 100
+function aktualizujPasek() {
+    szerokoscPaska = szerokoscPaska + 12;
+    if (szerokoscPaska > 100) {
+        szerokoscPaska = 100;
     }
-    pasek.style.width = width + "%"
+    document.getElementById("pasek").style.width = szerokoscPaska + "%";
 }
-
-document.querySelectorAll('input').forEach(input => {
-    input.addEventListener('blur', zaaktualizujPasek)
-})
 
 function zatwierdz() {
-    const imie = document.getElementById('imie').value
-    const nazwisko = document.getElementById('nazwisko').value
-    const dataUrodzenia = document.getElementById('dataUrodzenia').value
-    const ulica = document.getElementById('ulica').value
-    const numer = document.getElementById('numer').value
-    const miasto = document.getElementById('miasto').value
-    const numerTelefonu = document.getElementById('numerTelefonu').value
-    const rodoAccepted = document.getElementById('rodo').checked
-
-    console.log(imie + ", " + nazwisko + ", " + dataUrodzenia + ", " + ulica + ", " + numer + ", " + miasto + ", " + numerTelefonu + ", " + rodoAccepted);
+    let imie = document.getElementById("imie").value;
+    let nazwisko = document.getElementById("nazwisko").value;
+    let dataUrodzenia = document.getElementById("dataUrodzenia").value;
+    let ulica = document.getElementById("ulica").value;
+    let numer = document.getElementById("numer").value;
+    let miasto = document.getElementById("miasto").value;
+    let numerTelefonu = document.getElementById("numerTelefonu").value;
+    let rodo = document.getElementById("rodo").checked;
+    console.log(imie + ", " + nazwisko + ", " + dataUrodzenia + ", " + ulica + ", " + numer + ", " + miasto + ", " + numerTelefonu + ", " + rodo);
 }

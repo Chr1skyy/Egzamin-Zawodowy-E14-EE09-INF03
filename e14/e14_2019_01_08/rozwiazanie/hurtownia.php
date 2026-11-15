@@ -43,21 +43,22 @@
 	<main>
 		<h2>Podzespoły wybranego producenta</h2>
 		<?php
-		$connect = mysqli_connect('localhost', 'root', '', 'sklep');
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
 		if (isset($_POST['submit'])) {
 			$producent = $_POST['producent'];
 			if (!empty($producent)) {
-				$query = "SELECT nazwa, dostepnosc, cena FROM podzespoly WHERE producenci_id = $producent;";
-				$result = mysqli_query($connect, $query);
-				while ($row = mysqli_fetch_array($result)) {
+				$zapytanie = "SELECT nazwa, dostepnosc, cena FROM podzespoly WHERE producenci_id = $producent;";
+				$wynik = mysqli_query($polaczenie, $zapytanie);
+				while ($wiersz = mysqli_fetch_array($wynik)) {
 					$dostepnosc = "NIEDOSTĘPNY";
-					if ($row['dostepnosc'] == '1')
+					if ($wiersz['dostepnosc'] == '1') {
 						$dostepnosc = "DOSTĘPNY";
-					echo "<p>{$row['nazwa']} CENA: {$row['cena']} $dostepnosc</p>";
+					}
+					echo "<p>{$wiersz['nazwa']} CENA: {$wiersz['cena']} $dostepnosc</p>";
 				}
 			}
 		}
-		mysqli_close($connect);
+		mysqli_close($polaczenie);
 		?>
 	</main>
 	<footer>

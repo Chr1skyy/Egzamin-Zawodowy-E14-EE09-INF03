@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="style.css">
     <title>Biblioteka publiczna</title>
 </head>
 
@@ -16,11 +16,12 @@
             <h3>Polecamy dzieła autorów:</h3>
             <ol>
                 <?php
-                $con = mysqli_connect('localhost', 'root', '', 'biblioteka');
-                $q = 'SELECT imie, nazwisko FROM autorzy ORDER BY nazwisko;';
-                $result = mysqli_query($con, $q);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<li>$row[0] $row[1]</li>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'biblioteka');
+                $zapytanie1 = "SELECT imie, nazwisko FROM autorzy ORDER BY nazwisko;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
+                    echo "<li>{$wiersz['imie']} {$wiersz['nazwisko']}</li>";
                 }
                 ?>
             </ol>
@@ -33,7 +34,7 @@
         <section class="right">
             <section class="right_top">
                 <h3>Dodaj czytelnika</h3>
-                <form action="index.php" method="post">
+                <form action="biblioteka.php" method="post">
                     <label>imie:
                         <input type="text" name="imie"><br />
                     </label>
@@ -47,16 +48,16 @@
             </section>
             <section class="right_bottom">
                 <?php
+                // Skrypt 2
                 if (isset($_POST["submit"])) {
                     $imie = $_POST['imie'];
                     $nazwisko = $_POST['nazwisko'];
                     $symbol = $_POST['symbol'];
-                    $q = "INSERT INTO czytelnicy(imie, nazwisko, kod) VALUES ('$imie',
-                    '$nazwisko', '$symbol');";
-                    mysqli_query($con, $q);
-                    echo "Czytelnik: $imie $nazwisko został(a) dodany do bazy danych";
+                    $zapytanie2 = "INSERT INTO czytelnicy(imie, nazwisko, kod) VALUES ('$imie', '$nazwisko', '$symbol');";
+                    mysqli_query($polaczenie, $zapytanie2);
+                    echo "Czytelnik $imie $nazwisko został(a) dodany do bazy danych";
                 }
-                mysqli_close($con);
+                mysqli_close($polaczenie);
                 ?>
             </section>
         </section>

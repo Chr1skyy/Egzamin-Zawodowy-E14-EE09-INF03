@@ -45,42 +45,29 @@
                     <th>Aktualny</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'rzeki');
-
-                if (!isset($_POST['pokaz'])) {
-                    $query = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05'";
-                    $result = mysqli_query($connect, $query);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>$row[0]</td>";
-                        echo "<td>$row[1]</td>";
-                        echo "<td>$row[2]</td>";
-                        echo "<td>$row[3]</td>";
-                        echo "<td>$row[4]</td>";
-                        echo "</tr>";
-                    }
+                // skrypt skojarzony z formularzem
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'rzeki');
+                $poziom = "wszystkie";
+                if (isset($_POST['poziom'])) {
+                    $poziom = $_POST['poziom'];
+                }
+                // zapytanie 3 dla stanu ostrzegawczego, zmienione zapytanie 3 dla alarmowego, zapytanie 2 dla wszystkich
+                if ($poziom == 'ostrzegawczy') {
+                    $zapytanie = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05' AND stanWody > stanOstrzegawczy;";
+                } else if ($poziom == 'alarmowy') {
+                    $zapytanie = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05' AND stanWody > stanAlarmowy";
                 } else {
-                    switch ($_POST['poziom']) {
-                        case 'ostrzegawczy':
-                            $query = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05' AND stanWody > stanOstrzegawczy;";
-                            break;
-                        case 'alarmowy':
-                            $query = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05' AND stanWody > stanAlarmowy";
-                            break;
-                        default:
-                            $query = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05'";
-                            break;
-                    }
-                    $result = mysqli_query($connect, $query);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<tr>";
-                        echo "<td>$row[0]</td>";
-                        echo "<td>$row[1]</td>";
-                        echo "<td>$row[2]</td>";
-                        echo "<td>$row[3]</td>";
-                        echo "<td>$row[4]</td>";
-                        echo "</tr>";
-                    }
+                    $zapytanie = "SELECT nazwa, rzeka, stanOstrzegawczy, stanAlarmowy, stanWody FROM wodowskazy JOIN pomiary ON wodowskazy.id = pomiary.wodowskazy_id WHERE dataPomiaru='2022-05-05'";
+                }
+                $wynik = mysqli_query($polaczenie, $zapytanie);
+                while ($wiersz = mysqli_fetch_array($wynik)) {
+                    echo "<tr>";
+                    echo "<td>{$wiersz['nazwa']}</td>";
+                    echo "<td>{$wiersz['rzeka']}</td>";
+                    echo "<td>{$wiersz['stanOstrzegawczy']}</td>";
+                    echo "<td>{$wiersz['stanAlarmowy']}</td>";
+                    echo "<td>{$wiersz['stanWody']}</td>";
+                    echo "</tr>";
                 }
                 ?>
             </table>
@@ -96,13 +83,13 @@
             <h3>Średnie stany wód</h3>
             <p>
                 <?php
-                $query2 = "SELECT dataPomiaru, AVG(stanWody) AS srednia FROM pomiary GROUP BY dataPomiaru";
-                $result2 = mysqli_query($connect, $query2);
-                while ($row = mysqli_fetch_array($result2)) {
-                    echo "<p>$row[0]: $row[1]</p>";
+                // Skrypt 2
+                $zapytanie4 = "SELECT dataPomiaru, AVG(stanWody) AS srednia FROM pomiary GROUP BY dataPomiaru";
+                $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                while ($wiersz = mysqli_fetch_array($wynik4)) {
+                    echo "<p>{$wiersz['dataPomiaru']}: {$wiersz['srednia']}</p>";
                 }
-
-                mysqli_close($connect);
+                mysqli_close($polaczenie);
                 ?>
             </p>
             <a href="https://komunikaty.pl">Dowiedz się więcej</a>

@@ -16,11 +16,12 @@
             <h2>Nasze ceny</h2>
             <table>
                 <?php
-                $con = mysqli_connect('localhost', 'root', '', 'sklep');
-                $q = 'SELECT nazwa, cena FROM towary LIMIT 4;';
-                $result = mysqli_query($con, $q);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<tr><td>$row[0]</td></tr>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
+                $zapytanie1 = "SELECT nazwa, cena FROM towary LIMIT 4;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
+                    echo "<tr><td>{$wiersz['nazwa']}</td><td>{$wiersz['cena']}</td></tr>";
                 }
                 ?>
             </table>
@@ -41,17 +42,18 @@
             </form>
             <p class="result">
                 <?php
+                // Skrypt 2
                 if (isset($_POST['submit'])) {
                     $produkt = $_POST['list'];
                     $ilosc = $_POST['ilosc'];
-                    $q = "SELECT cena FROM towary WHERE nazwa = '$produkt';";
-                    $res = mysqli_query($con, $q);
-                    while ($row = mysqli_fetch_array($res)) {
-                        $cena = $row[0] * $ilosc;
+                    $zapytanie2 = "SELECT cena FROM towary WHERE nazwa = '$produkt';";
+                    $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                    while ($wiersz = mysqli_fetch_array($wynik2)) {
+                        $cena = $wiersz['cena'] * $ilosc;
                         echo "wartość zakupów: $cena";
                     }
                 }
-                mysqli_close($con);
+                mysqli_close($polaczenie);
                 ?>
             </p>
         </section>

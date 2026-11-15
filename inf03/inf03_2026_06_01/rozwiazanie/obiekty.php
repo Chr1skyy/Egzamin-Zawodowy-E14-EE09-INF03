@@ -17,20 +17,19 @@
                 <h2>Opis miejsca</h2>
                 <section>
                     <?php
-                    $connect = mysqli_connect('localhost', 'root', '', 'islandia');
+                    // Skrypt 4
+                    $polaczenie = mysqli_connect('localhost', 'root', '', 'islandia');
                     if (isset($_GET['idObiekt'])) {
                         $idObiekt = $_GET['idObiekt'];
-                        $query2modified = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING(idRodzaj) WHERE idObiekt = $idObiekt;";
-                        $result = mysqli_query($connect, $query2modified);
-                        $row = mysqli_fetch_array($result);
-                        echo "<img src='img/{$row['plik']}' alt='{$row['nazwa']}'>";
-                        echo "<h2>{$row['nazwa']}</h2>";
-                        echo "<h3>{$row['rodzaj']}</h3>";
-                        echo "<p>{$row['nazwaCechy']}: {$row['wartoscCechy']}</p>";
-                        echo "<p>{$row['opis']}</p>";
+                        $zapytanie2 = "SELECT plik, nazwa, nazwaCechy, wartoscCechy, opis, rodzaj FROM obiekty JOIN rodzaje USING(idRodzaj) WHERE idObiekt = $idObiekt;";
+                        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                        $wiersz = mysqli_fetch_array($wynik2);
+                        echo "<img src='img/{$wiersz['plik']}' alt='{$wiersz['nazwa']}'>";
+                        echo "<h2>{$wiersz['nazwa']}</h2>";
+                        echo "<h3>{$wiersz['rodzaj']}</h3>";
+                        echo "<p>{$wiersz['nazwaCechy']}: {$wiersz['wartoscCechy']}</p>";
+                        echo "<p>{$wiersz['opis']}</p>";
                     }
-
-
                     ?>
                 </section>
             </main>
@@ -41,10 +40,11 @@
                 <li>Wodospady:
                     <ol>
                         <?php
-                        $query3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 10";
-                        $result = mysqli_query($connect, $query3);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<li>{$row['nazwa']}</li>";
+                        // Skrypt 1
+                        $zapytanie3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 10";
+                        $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                        while ($wiersz = mysqli_fetch_array($wynik3)) {
+                            echo "<li>{$wiersz['nazwa']}</li>";
                         }
                         ?>
 
@@ -53,10 +53,11 @@
                 <li>Siedliska zwierząt:
                     <ol>
                         <?php
-                        $query3modified = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 14";
-                        $result = mysqli_query($connect, $query3modified);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<li>{$row['nazwa']}</li>";
+                        // Skrypt 2
+                        $zapytanie3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 14";
+                        $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                        while ($wiersz = mysqli_fetch_array($wynik3)) {
+                            echo "<li>{$wiersz['nazwa']}</li>";
                         }
                         ?>
                     </ol>
@@ -68,7 +69,7 @@
         <hr>
         <p>Autor: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

@@ -1,31 +1,28 @@
 function zastosujEfekt() {
-    const zdjecie = document.querySelector("img[src='img/pszczola.jpg']")
-    const efekty = document.querySelectorAll("input[name='efekt']")
-    efekty.forEach((e) => {
-        if (e.checked) {
-			zdjecie.style.filter = e.value
-        }
-    });
+    let obraz = document.getElementById("obraz1");
+    if (document.getElementById("blur").checked) {
+        obraz.style.filter = "blur(6px)";
+    } else if (document.getElementById("sepia").checked) {
+        obraz.style.filter = "sepia(100%)";
+    } else if (document.getElementById("negatyw").checked) {
+        obraz.style.filter = "invert(100%)";
+    }
 }
 
 function kolor() {
-    const zdjecie = document.querySelector("img[src='img/pomarancza.jpg']")
-    zdjecie.style.filter = "none"
+    document.getElementById("obraz2").style.filter = "grayscale(0%)";
 }
 
 function czarnoBialy() {
-    const zdjecie = document.querySelector("img[src='img/pomarancza.jpg']")
-    zdjecie.style.filter = "grayscale(100%)"
+    document.getElementById("obraz2").style.filter = "grayscale(100%)";
 }
 
 function zastosujPrzezroczystosc() {
-    const zdjecie = document.querySelector("img[src='img/owoce.jpg']")
-    const wartosc = document.getElementById("przezroczystosc")
-    zdjecie.style.filter = "opacity(" + wartosc.value + "%)"
+    let wartosc = document.getElementById("przezroczystosc").value;
+    document.getElementById("obraz3").style.filter = "opacity(" + wartosc + "%)";
 }
 
 function zastosujJasnosc() {
-    const zdjecie = document.querySelector("img[src='img/zolw.jpg']")
-    const wartosc = document.getElementById("jasnosc")
-    zdjecie.style.filter = "brightness(" + wartosc.value + "%)"
+    let wartosc = document.getElementById("jasnosc").value;
+    document.getElementById("obraz4").style.filter = "brightness(" + wartosc + "%)";
 }

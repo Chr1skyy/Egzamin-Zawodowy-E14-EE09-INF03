@@ -27,22 +27,22 @@
         <section id="lewy">
             <h3>Zamówienie</h3>
             <label>
-                Wybierz obraz: <input type="file" id="file" accept="image/jpeg">
+                Wybierz obraz: <input type="file" id="plik" accept="image/jpeg">
             </label>
             <br>
             <label>
-                Liczba kopii: <input type="number" id="numberOfCopies">
+                Liczba kopii: <input type="number" id="liczbaKopii">
             </label>
             <br>
             <label>
-                <input type="radio" value="błyszczący" name="typeOfPaper" checked>Papier błyszczący
+                <input type="radio" name="rodzajPapieru" id="blyszczacy" checked>Papier błyszczący
             </label>
             <br>
             <label>
-                <input type="radio" value="matowy" name="typeOfPaper">Papier matowy
+                <input type="radio" name="rodzajPapieru" id="matowy">Papier matowy
             </label>
             <br>
-            <button onclick="addToCart()">Dodaj do koszyka</button>
+            <button onclick="dodajDoKoszyka()">Dodaj do koszyka</button>
         </section>
         <div id="container">
             <nav>
@@ -54,7 +54,7 @@
             </nav>
             <section id="prawy">
                 <h3>Koszyk</h3>
-                <div id="cart"></div>
+                <div id="koszyk"></div>
             </section>
         </div>
     </main>

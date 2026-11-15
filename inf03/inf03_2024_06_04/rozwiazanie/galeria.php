@@ -24,19 +24,20 @@
         </section>
         <section id="srodkowy">
             <?php
-            $connect = mysqli_connect('localhost', 'root', '', 'galeria');
-            $query1 = "SELECT plik, tytul, polubienia, imie, nazwisko FROM zdjecia JOIN autorzy ON zdjecia.autorzy_id = autorzy.id ORDER BY nazwisko;";
-            $result1 = mysqli_query($connect, $query1);
-            while ($row = mysqli_fetch_array($result1)) {
+            // Skrypt 1
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'galeria');
+            $zapytanie2 = "SELECT plik, tytul, polubienia, imie, nazwisko FROM zdjecia JOIN autorzy ON zdjecia.autorzy_id = autorzy.id ORDER BY nazwisko;";
+            $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+            while ($wiersz = mysqli_fetch_array($wynik2)) {
                 echo "<div class='blok'>";
-                echo "<img src='img/$row[0]' alt='zdjęcie'>";
-                echo "<h3>$row[1]</h3>";
-                if ($row['polubienia'] > 40) {
-                    echo "<p>Autor: $row[3] $row[4].</br>Wiele osób polubiło ten obraz.</p>";
+                echo "<img src='img/{$wiersz['plik']}' alt='zdjęcie'>";
+                echo "<h3>{$wiersz['tytul']}</h3>";
+                if ($wiersz['polubienia'] > 40) {
+                    echo "<p>Autor: {$wiersz['imie']} {$wiersz['nazwisko']}.<br>Wiele osób polubiło ten obraz.</p>";
                 } else {
-                    echo "<p>Autor: $row[3] $row[4].</p>";
+                    echo "<p>Autor: {$wiersz['imie']} {$wiersz['nazwisko']}.</p>";
                 }
-                echo "<a href='$row[0]' download>Pobierz</a>";
+                echo "<a href='img/{$wiersz['plik']}' download>Pobierz</a>";
                 echo "</div>";
             }
             ?>
@@ -44,13 +45,13 @@
         <section id="prawy">
             <h2>Najbardziej lubiane</h2>
             <?php
-            $query2 = "SELECT tytul, plik FROM zdjecia WHERE polubienia >= 100";
-            $result2 = mysqli_query($connect, $query2);
-            while ($row = mysqli_fetch_array($result2)) {
-                echo "<img src='img/$row[1]' alt='$row[0]'>";
+            // Skrypt 2
+            $zapytanie1 = "SELECT tytul, plik FROM zdjecia WHERE polubienia >= 100";
+            $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+            while ($wiersz = mysqli_fetch_array($wynik1)) {
+                echo "<img src='img/{$wiersz['plik']}' alt='{$wiersz['tytul']}'>";
             }
-
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
             <strong>Zobacz wszystkie nasze zdjęcia</strong>
         </section>

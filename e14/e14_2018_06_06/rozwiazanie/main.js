@@ -1,12 +1,11 @@
 function oblicz() {
-  let jestemZZielonejGory = document.getElementById("zielonaGora").checked;
-  let km = document.getElementById("km").value;
-  let wynik = document.getElementById("wynik");
-  let koszt = 0;
-  if (jestemZZielonejGory) {
-    wynik.innerHTML = "Dowieziemy Twoją pizzę za darmo";
-  } else {
-    koszt = km * 2;
-    wynik.innerHTML = "Dowóz bedzie Cię kosztował " + koszt + " złotych";
-  }
+    let zZielonejGory = document.getElementById("zielonaGora").checked;
+    let km = Number(document.getElementById("km").value);
+    let wynik = document.getElementById("wynik");
+    if (zZielonejGory) {
+        wynik.innerHTML = "Dowieziemy Twoją pizzę za darmo";
+    } else {
+        let koszt = km * 2;
+        wynik.innerHTML = "Dowóz będzie Cię kosztował " + koszt + " złotych";
+    }
 }

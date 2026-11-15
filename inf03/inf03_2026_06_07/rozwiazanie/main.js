@@ -1,19 +1,17 @@
-let gracz = 'kolko'
-
-const sekcjaLewa = document.querySelector('#lewa')
-const sekcjaPrawa = document.querySelector('#prawa')
+let gracz = "kolko";
 
 function zaznaczPole(pole) {
-    if (!pole.src.includes("img/nic.png")) return;
-    if (gracz == 'kolko') {
-        pole.src = 'img/o.png'
-        sekcjaLewa.style.visibility = 'hidden'
-        sekcjaPrawa.style.visibility = 'visible'
-        gracz = 'krzyzyk'
-    } else {
-        pole.src = 'img/x.png'
-        sekcjaLewa.style.visibility = 'visible'
-        sekcjaPrawa.style.visibility = 'hidden'
-        gracz = 'kolko'
+    if (pole.src.includes("nic.png")) {
+        if (gracz == "kolko") {
+            pole.src = "img/o.png";
+            document.getElementById("lewa").style.visibility = "hidden";
+            document.getElementById("prawa").style.visibility = "visible";
+            gracz = "krzyzyk";
+        } else {
+            pole.src = "img/x.png";
+            document.getElementById("lewa").style.visibility = "visible";
+            document.getElementById("prawa").style.visibility = "hidden";
+            gracz = "kolko";
+        }
     }
 }

@@ -34,27 +34,28 @@
                 <th>Data odbioru</th>
             </tr>
             <?php
-            $connect = mysqli_connect('localhost', 'root', '', 'mieszalnia');
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'mieszalnia');
             if (!empty($_POST["dataOd"]) && !empty($_POST["dataDo"])) {
                 $dataOd = $_POST["dataOd"];
                 $dataDo = $_POST["dataDo"];
-                $query = "SELECT nazwisko, imie, zamowienia.id, kod_koloru, pojemnosc, data_odbioru FROM klienci JOIN zamowienia ON klienci.id = id_klienta WHERE data_odbioru >= '$dataOd' AND data_odbioru <= '$dataDo' ORDER BY data_odbioru ASC;";
-                $result = mysqli_query($connect, $query);
+                // zapytanie 3 z datami z formularza
+                $zapytanie = "SELECT nazwisko, imie, zamowienia.id, kod_koloru, pojemnosc, data_odbioru FROM klienci JOIN zamowienia ON klienci.id = id_klienta WHERE data_odbioru >= '$dataOd' AND data_odbioru <= '$dataDo' ORDER BY data_odbioru ASC;";
             } else {
-                $query = "SELECT nazwisko, imie, zamowienia.id, kod_koloru, pojemnosc, data_odbioru FROM klienci JOIN zamowienia ON klienci.id = zamowienia.id_klienta ORDER BY data_odbioru;";
-                $result = mysqli_query($connect, $query);
+                // zapytanie 2
+                $zapytanie = "SELECT nazwisko, imie, zamowienia.id, kod_koloru, pojemnosc, data_odbioru FROM klienci JOIN zamowienia ON klienci.id = zamowienia.id_klienta ORDER BY data_odbioru;";
             }
-            while ($row = mysqli_fetch_array($result)) {
+            $wynik = mysqli_query($polaczenie, $zapytanie);
+            while ($wiersz = mysqli_fetch_array($wynik)) {
                 echo "<tr>
-                            <td>{$row[2]}</td>
-                            <td>{$row['nazwisko']}</td>
-                            <td>{$row['imie']}</td>
-                            <td style='background-color: #{$row['kod_koloru']}'>{$row['kod_koloru']}</td>
-                            <td>{$row['pojemnosc']}</td>
-                            <td>{$row['data_odbioru']}</td>
+                            <td>{$wiersz['id']}</td>
+                            <td>{$wiersz['nazwisko']}</td>
+                            <td>{$wiersz['imie']}</td>
+                            <td style='background-color: #{$wiersz['kod_koloru']}'>{$wiersz['kod_koloru']}</td>
+                            <td>{$wiersz['pojemnosc']}</td>
+                            <td>{$wiersz['data_odbioru']}</td>
                         </tr>";
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
         </table>
     </main>

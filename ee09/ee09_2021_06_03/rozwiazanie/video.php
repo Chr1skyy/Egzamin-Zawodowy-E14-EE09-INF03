@@ -28,14 +28,15 @@
 	<div id="lista1">
 		<h3>Polecamy</h3>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'dane3');
-		$kw1 = "SELECT id, nazwa, opis, zdjecie FROM produkty WHERE id IN (18, 22, 23, 25);";
-		$res1 = mysqli_query($con, $kw1);
-		while ($tab = mysqli_fetch_row($res1)) {
+		// Skrypt 1
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'dane3');
+		$zapytanie1 = "SELECT id, nazwa, opis, zdjecie FROM produkty WHERE id IN (18, 22, 23, 25);";
+		$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+		while ($wiersz = mysqli_fetch_array($wynik1)) {
 			echo "<div class='film'>
-			<h4>$tab[0]. $tab[1]</h4>
-			<img src='img/$tab[3]' alt='film' />
-			<p>$tab[2]</p>
+			<h4>{$wiersz['id']}. {$wiersz['nazwa']}</h4>
+			<img src='img/{$wiersz['zdjecie']}' alt='film' />
+			<p>{$wiersz['opis']}</p>
 			</div>";
 		}
 		?>
@@ -43,13 +44,14 @@
 	<div id="lista2">
 		<h3>Filmy fantastyczne</h3>
 		<?php
-		$kw2 = "SELECT id, nazwa, opis, zdjecie FROM produkty WHERE Rodzaje_id = 12;";
-		$res2 = mysqli_query($con, $kw2);
-		while ($tab = mysqli_fetch_row($res2)) {
+		// Skrypt 2
+		$zapytanie2 = "SELECT id, nazwa, opis, zdjecie FROM produkty WHERE Rodzaje_id = 12;";
+		$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+		while ($wiersz = mysqli_fetch_array($wynik2)) {
 			echo "<div class='film'>
-			<h4>$tab[0]. $tab[1]</h4>
-			<img src='img/$tab[3]' alt='film' />
-			<p>$tab[2]</p>
+			<h4>{$wiersz['id']}. {$wiersz['nazwa']}</h4>
+			<img src='img/{$wiersz['zdjecie']}' alt='film' />
+			<p>{$wiersz['opis']}</p>
 			</div>";
 		}
 		?>
@@ -63,12 +65,13 @@
 			<button>Usuń film</button>
 		</form>
 		<?php
+		// Skrypt 3
 		if (!empty($_POST['nr'])) {
 			$nr = $_POST['nr'];
-			$kw3 = "DELETE FROM produkty WHERE id = $nr;";
-			mysqli_query($con, $kw3);
+			$zapytanie4 = "DELETE FROM produkty WHERE id = $nr;";
+			mysqli_query($polaczenie, $zapytanie4);
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 		Stronę wykonał: <a href="mailto:ja@poczta.com">Chr1skyy</a>
 	</div>

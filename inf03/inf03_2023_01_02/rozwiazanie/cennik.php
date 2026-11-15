@@ -20,17 +20,17 @@
             <a href="cennik.php">CENNIK</a>
             <table>
                 <?php
-                $con = mysqli_connect('localhost', 'root', '', 'wynajem');
-                $q = "SELECT * FROM pokoje;";
-                $res = mysqli_query($con, $q);
-                while ($row = mysqli_fetch_array($res)) {
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'wynajem');
+                $zapytanie = "SELECT * FROM pokoje;";
+                $wynik = mysqli_query($polaczenie, $zapytanie);
+                while ($wiersz = mysqli_fetch_array($wynik)) {
                     echo "<tr>
-                            <td>$row[0]</td>
-                            <td>$row[1]</td>
-                            <td>$row[2]</td>
+                            <td>{$wiersz['id']}</td>
+                            <td>{$wiersz['nazwa']}</td>
+                            <td>{$wiersz['cena']}</td>
                         </tr>";
                 }
-                mysqli_close($con);
+                mysqli_close($polaczenie);
                 ?>
             </table>
         </section>

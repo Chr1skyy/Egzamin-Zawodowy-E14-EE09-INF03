@@ -1,3 +1,12 @@
+<?php
+// Skrypt 2
+if (isset($_COOKIE['ciasteczko'])) {
+	$komunikat = "<p><i>Witaj ponownie na stronie lotniska</i></p>";
+} else {
+	setcookie("ciasteczko", 1, time() + 7200);
+	$komunikat = "<p><b>Dzień dobry! Strona lotniska używa ciasteczek</b></p>";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,25 +34,19 @@
 				<th>status</th>
 			</tr>
 			<?php
-			$con = mysqli_connect('localhost', 'root', '', 'egzamin');
-			$kw1 = "SELECT czas, kierunek, nr_rejsu, status_lotu FROM przyloty ORDER BY czas ASC;";
-			$res1 = mysqli_query($con, $kw1);
-			while($tab = mysqli_fetch_row($res1)) {
-				echo "<tr><td>$tab[0]</td><td>$tab[1]</td><td>$tab[2]</td><td>$tab[3]</td></tr>";
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'egzamin');
+			$zapytanie = "SELECT czas, kierunek, nr_rejsu, status_lotu FROM przyloty ORDER BY czas ASC;";
+			$wynik = mysqli_query($polaczenie, $zapytanie);
+			while ($wiersz = mysqli_fetch_array($wynik)) {
+				echo "<tr><td>{$wiersz['czas']}</td><td>{$wiersz['kierunek']}</td><td>{$wiersz['nr_rejsu']}</td><td>{$wiersz['status_lotu']}</td></tr>";
 			}
-			mysqli_close($con);
+			mysqli_close($polaczenie);
 			?>
 		</table>
 	</div>
 	<div id="stopka1">
-	<?php
-	if(isset($_COOKIE['ciasteczko'])) {
-		echo "<p><i>Witaj ponownie na stronie lotniska</i></p>";
-	} else {
-		setcookie("ciasteczko", 1, TIME() + 7200);
-		echo "<p><b>Dzień dobry! Strona lotniska używa ciasteczek</b></p>";
-	}
-	?>
+	<?php echo $komunikat; ?>
 	</div>
 	<div id="stopka2">
 		Autor: Chr1skyy

@@ -21,11 +21,12 @@
             <h2>Choroby zakaźne</h2>
             <ol>
                 <?php
-                $connect = mysqli_connect("localhost", "root", "", "choroby");
-                $query1 = "SELECT nazwa FROM choroby WHERE zakazna = 'T' ORDER BY nazwa;";
-                $result = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<li>{$row['nazwa']}</li>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect("localhost", "root", "", "choroby");
+                $zapytanie1 = "SELECT nazwa FROM choroby WHERE zakazna = 'T' ORDER BY nazwa;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
+                    echo "<li>{$wiersz['nazwa']}</li>";
                 }
                 ?>
             </ol>
@@ -35,10 +36,11 @@
             <form action="zdrowie.php" method="POST">
                 <select name="choroba">
                     <?php
-                    $query2 = "SELECT id, nazwa FROM choroby;";
-                    $result = mysqli_query($connect, $query2);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<option value='{$row['id']}'>{$row['nazwa']}</option>";
+                    // Skrypt 2
+                    $zapytanie2 = "SELECT id, nazwa FROM choroby;";
+                    $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                    while ($wiersz = mysqli_fetch_array($wynik2)) {
+                        echo "<option value='{$wiersz['id']}'>{$wiersz['nazwa']}</option>";
                     }
                     ?>
                 </select>
@@ -46,12 +48,13 @@
             </form>
             <div id="result">
                 <?php
+                // Skrypt 3
                 if (isset($_POST['submit'])) {
                     $id = $_POST['choroba'];
-                    $query3 = "SELECT objawy.nazwa FROM objawy JOIN choroby_objawy ON objawy.id = choroby_objawy.id_objawy WHERE choroby_objawy.id_choroby = $id;";
-                    $result = mysqli_query($connect, $query3);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<span>{$row['nazwa']} </span>";
+                    $zapytanie3 = "SELECT objawy.nazwa FROM objawy JOIN choroby_objawy ON objawy.id = choroby_objawy.id_objawy WHERE choroby_objawy.id_choroby = $id;";
+                    $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                    while ($wiersz = mysqli_fetch_array($wynik3)) {
+                        echo "<span>{$wiersz['nazwa']} </span>";
                     }
                 }
                 ?>
@@ -62,7 +65,7 @@
         <p>Stronę opracował: Chr1skyy</p>
     </footer>
     <img src="zdrowia.png" alt="Życzymy zdrowia!">
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

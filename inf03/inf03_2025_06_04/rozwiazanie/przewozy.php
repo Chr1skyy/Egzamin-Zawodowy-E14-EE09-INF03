@@ -1,9 +1,28 @@
+<?php
+// zmiany w bazie są wykonywane przed wypisaniem strony, żeby tabela od razu pokazywała aktualne zadania
+$polaczenie = mysqli_connect("localhost", "root", "", "przewozy");
+// Skrypt 1: odnośnik Usuń
+if (isset($_GET["id_zadania"])) {
+    $idZadania = $_GET["id_zadania"];
+    $zapytanie3 = "DELETE FROM zadania WHERE id_zadania = $idZadania;";
+    mysqli_query($polaczenie, $zapytanie3);
+}
+// Skrypt 2
+if (isset($_POST["submit"])) {
+    $zadanie = $_POST["zadanie"];
+    $data = $_POST["data"];
+    if (!empty($zadanie) && !empty($data)) {
+        $zapytanie2 = "INSERT INTO zadania VALUES (NULL, '$zadanie', '$data', 1);";
+        mysqli_query($polaczenie, $zapytanie2);
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
 <head>
     <meta charset="UTF-8">
-    <title>Firma przewozowa</title>
+    <title>Firma Przewozowa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -27,14 +46,14 @@
                     <th>Akcja</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect("localhost", "root", "", "przewozy");
-                $query = "SELECT id_zadania, zadanie, data FROM zadania;";
-                $result = mysqli_query($connect, $query);
-                while ($row = mysqli_fetch_array($result)) {
+                // Skrypt 1
+                $zapytanie1 = "SELECT id_zadania, zadanie, data FROM zadania;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
                     echo "<tr>
-                            <td>{$row['zadanie']}</td>
-                            <td>{$row['data']}</td>
-                            <td><a href='przewozy.php?id_zadania={$row['id_zadania']}'>Usuń</a></td>
+                            <td>{$wiersz['zadanie']}</td>
+                            <td>{$wiersz['data']}</td>
+                            <td><a href='przewozy.php?id_zadania={$wiersz['id_zadania']}'>Usuń</a></td>
                         </tr>";
                 }
                 ?>
@@ -50,22 +69,7 @@
                 <br>
                 <button name="submit">Dodaj</button>
             </form>
-            <?php
-            if (isset($_GET["id_zadania"])) {
-                $id_zadania = $_GET["id_zadania"];
-                $query = "DELETE FROM zadania WHERE id_zadania = $id_zadania;";
-                mysqli_query($connect, $query);
-                header("location: przewozy.php");
-            }
-            if (isset($_POST["submit"])) {
-                $zadanie = $_POST["zadanie"];
-                $data = $_POST["data"];
-                $query = "INSERT INTO zadania VALUES (NULL, '$zadanie', '$data', 1);";
-                mysqli_query($connect, $query);
-                header("location: przewozy.php");
-            }
-            mysqli_close($connect);
-            ?>
+            <?php mysqli_close($polaczenie); ?>
         </section>
         <section id="prawa">
             <img src="auto.png" alt="auto firmowe">

@@ -20,11 +20,12 @@
 				<th>Wartość maksymalna</th>
 			</tr>
 			<?php
-			$con = mysqli_connect('localhost', 'root', '', 'egzamin');
-			$kw1 = "SELECT informacja, wart_min, wart_max FROM bmi;";
-			$res1 = mysqli_query($con, $kw1);
-			while($tab = mysqli_fetch_row($res1)) {
-				echo "<tr><td>$tab[0]</td><td>$tab[1]</td><td>$tab[2]</td></tr>";
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'egzamin');
+			$zapytanie1 = "SELECT informacja, wart_min, wart_max FROM bmi;";
+			$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+			while($wiersz = mysqli_fetch_array($wynik1)) {
+				echo "<tr><td>{$wiersz['informacja']}</td><td>{$wiersz['wart_min']}</td><td>{$wiersz['wart_max']}</td></tr>";
 			}
 			?>
 		</table>
@@ -43,20 +44,26 @@
 			<button>Oblicz i zapamiętaj wynik</button>
 		</form>
 		<?php
-		if(!empty($_POST['waga']) && !empty($_POST['wzrost'])) {
+		// Skrypt 2
+		if (!empty($_POST['waga']) && !empty($_POST['wzrost'])) {
 			$waga = $_POST['waga'];
 			$wzrost = $_POST['wzrost'];
 			$bmi = $waga / ($wzrost * $wzrost) * 10000;
 			echo "Twoja waga: $waga, Twój wzrost: $wzrost<br/>BMI wynosi: $bmi";
-			if($bmi > 0 && $bmi < 19) $przedzial = 1;
-			if($bmi > 19 && $bmi < 26) $przedzial = 2;
-			if($bmi > 26 && $bmi < 31) $przedzial = 3;
-			if($bmi > 31 && $bmi < 100) $przedzial = 4;
-			$data = DATE('Y-m-d');
-			$kw2 = "INSERT INTO wynik VALUES (NULL, $przedzial, '$data', $bmi);";
-			mysqli_query($con, $kw2);
+			if ($bmi < 19) {
+				$przedzial = 1;
+			} else if ($bmi < 26) {
+				$przedzial = 2;
+			} else if ($bmi < 31) {
+				$przedzial = 3;
+			} else {
+				$przedzial = 4;
+			}
+			$data = date('Y-m-d');
+			$zapytanie2 = "INSERT INTO wynik VALUES (NULL, $przedzial, '$data', $bmi);";
+			mysqli_query($polaczenie, $zapytanie2);
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 	</div>
 	<div id="prawy">

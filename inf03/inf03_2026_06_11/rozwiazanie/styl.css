@@ -25,6 +25,10 @@ aside {
     width: 55%;
 }
 
+nav {
+    height: 90px;
+}
+
 main {
     padding: 22px;
     margin-left: 3%;

@@ -9,18 +9,19 @@
 
 <body>
     <header>
-        <h1>Dziesiejsze promocje naszego sklepu</h1>
+        <h1>Dzisiejsze promocje naszego sklepu</h1>
     </header>
     <main>
         <section class="left">
             <h2>Taniej o 30%</h2>
             <ol>
                 <?php
-                $con = mysqli_connect('localhost', 'root', '', 'sklep');
-                $q = 'SELECT nazwa FROM towary WHERE promocja = 1;';
-                $result = mysqli_query($con, $q);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<li>$row[0]</li>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
+                $zapytanie1 = "SELECT nazwa FROM towary WHERE promocja = 1;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
+                    echo "<li>{$wiersz['nazwa']}</li>";
                 }
                 ?>
             </ol>
@@ -38,17 +39,18 @@
             </form>
             <section class="result">
                 <?php
+                // Skrypt 2
                 if (isset($_POST['submit'])) {
                     $produkt = $_POST['list'];
-                    $q = "SELECT cena FROM towary WHERE nazwa = '$produkt';";
-                    $res = mysqli_query($con, $q);
-                    while ($row = mysqli_fetch_array($res)) {
-                        echo "cena regularna: $row[0]</br>";
-                        $cena = ROUND($row[0] * 0.7, 2);
+                    $zapytanie2 = "SELECT cena FROM towary WHERE nazwa = '$produkt';";
+                    $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                    while ($wiersz = mysqli_fetch_array($wynik2)) {
+                        echo "cena regularna: {$wiersz['cena']}<br>";
+                        $cena = round($wiersz['cena'] * 0.7, 2);
                         echo "cena w promocji 30%: $cena";
                     }
                 }
-                mysqli_close($con);
+                mysqli_close($polaczenie);
                 ?>
             </section>
 

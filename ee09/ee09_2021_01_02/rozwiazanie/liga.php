@@ -26,13 +26,14 @@
 	<div id="prawy">
 		<ol>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'egzamin');
-		if(!empty($_POST['pozycje'])) {
+		// Skrypt 1
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'egzamin');
+		if (!empty($_POST['pozycje'])) {
 			$pozycja = $_POST['pozycje'];
-			$kw1 = "SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = $pozycja;";
-			$res1 = mysqli_query($con, $kw1);
-			while($tab = mysqli_fetch_row($res1)) {
-				echo "<li><p>$tab[0] $tab[1]</p></li>";
+			$zapytanie1 = "SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = $pozycja;";
+			$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+			while($wiersz = mysqli_fetch_array($wynik1)) {
+				echo "<li><p>{$wiersz['imie']} {$wiersz['nazwisko']}</p></li>";
 			}
 		}
 		?>
@@ -43,16 +44,17 @@
 	</div>
 	<div id="liga">
 	<?php
-	$kw2 = "SELECT zespol, punkty, grupa FROM liga ORDER BY punkty DESC;";
-	$res2 = mysqli_query($con, $kw2);
-	while($tab = mysqli_fetch_row($res2)) {
+	// Skrypt 2
+	$zapytanie2 = "SELECT zespol, punkty, grupa FROM liga ORDER BY punkty DESC;";
+	$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+	while($wiersz = mysqli_fetch_array($wynik2)) {
 		echo "<div class='blok'>
-		<h2>$tab[0]</h2>
-		<h1>$tab[1]</h1>
-		<p>grupa: $tab[2]</p>
+		<h2>{$wiersz['zespol']}</h2>
+		<h1>{$wiersz['punkty']}</h1>
+		<p>grupa: {$wiersz['grupa']}</p>
 		</div>";
 	}
-	mysqli_close($con);
+	mysqli_close($polaczenie);
 	?>
 	</div>
 </body>

@@ -1,8 +1,8 @@
 function formularz() {
-	let imie = document.getElementById("imie");
-	let nazwisko = document.getElementById("nazwisko");
-	let email = document.getElementById("email").value.toLowerCase();
-	let lista = document.getElementById("lista");
-	let wynik = document.getElementById("wynik");
-	wynik.innerHTML = imie.value + " " + nazwisko.value + "<br/>" + email + "<br/>" + "Usługa: " + lista.value;
+    let imie = document.getElementById("imie").value;
+    let nazwisko = document.getElementById("nazwisko").value;
+    let email = document.getElementById("email").value.toLowerCase();
+    let usluga = document.getElementById("lista").value;
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = imie + " " + nazwisko + "<br>" + email + "<br>Usługa: " + usluga;
 }

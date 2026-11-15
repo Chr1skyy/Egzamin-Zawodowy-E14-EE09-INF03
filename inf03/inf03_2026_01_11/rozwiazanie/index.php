@@ -20,14 +20,15 @@
         <h1>Najlepsi aktorzy tylko w naszym kinie</h1>
         <div id="allActors">
             <?php
-            $connect = mysqli_connect("localhost", "root", "", "kino");
-            $query3 = "SELECT * FROM aktorzy ORDER BY nazwisko, imie ASC";
-            $result = mysqli_query($connect, $query3);
-            while ($row = mysqli_fetch_array($result)) {
-                echo "<a href='aktor.php?id={$row['id_aktora']}'>
+            // Skrypt 1
+            $polaczenie = mysqli_connect("localhost", "root", "", "kino");
+            $zapytanie3 = "SELECT * FROM aktorzy ORDER BY nazwisko, imie ASC";
+            $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+            while ($wiersz = mysqli_fetch_array($wynik3)) {
+                echo "<a href='aktor.php?id={$wiersz['id_aktora']}'>
                         <div class='actor-index'>
-                            <img src='img/{$row['plik_awatara']}' alt='{$row['imie']} {$row['nazwisko']}' title='{$row['imie']} {$row['nazwisko']}'>
-                            <p>{$row['imie']} {$row['nazwisko']}</p>
+                            <img src='img/{$wiersz['plik_awatara']}' alt='{$wiersz['imie']} {$wiersz['nazwisko']}' title='{$wiersz['imie']} {$wiersz['nazwisko']}'>
+                            <p>{$wiersz['imie']} {$wiersz['nazwisko']}</p>
                         </div>
                     </a>";
             }
@@ -37,7 +38,7 @@
     <footer>
         <p>Autor: <strong>Chr1skyy</strong></p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

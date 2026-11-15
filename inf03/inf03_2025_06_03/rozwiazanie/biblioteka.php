@@ -20,17 +20,17 @@
                 <th>Katalog</th>
             </tr>
             <?php
-            $connect = mysqli_connect("localhost", "root", "", "biblioteka");
-            $query = "SELECT autor, tytul, kod FROM ksiazki ORDER BY RAND() LIMIT 5;";
-            $result = mysqli_query($connect, $query);
-            while ($row = mysqli_fetch_array($result)) {
+            $polaczenie = mysqli_connect("localhost", "root", "", "biblioteka");
+            $zapytanie = "SELECT autor, tytul, kod FROM ksiazki ORDER BY RAND() LIMIT 5;";
+            $wynik = mysqli_query($polaczenie, $zapytanie);
+            while ($wiersz = mysqli_fetch_array($wynik)) {
                 echo "<tr>
-                        <td>{$row['autor']}</td>
-                        <td>{$row['tytul']}</td>
-                        <td>{$row['kod']}</td>
+                        <td>{$wiersz['autor']}</td>
+                        <td>{$wiersz['tytul']}</td>
+                        <td>{$wiersz['kod']}</td>
                 </tr>";
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
         </table>
     </section>

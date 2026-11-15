@@ -32,12 +32,13 @@
             <?php
             if (isset($_POST['wyslij'])) {
                 $miasto = $_POST['miasto'];
-                $connect = mysqli_connect('localhost', 'root', '', 'kwiaciarnia');
-                $query = "SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto = '$miasto';";
-                $result = mysqli_query($connect, $query);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "{$row['nazwa']}, {$row['ulica']}";
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'kwiaciarnia');
+                $zapytanie = "SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto = '$miasto';";
+                $wynik = mysqli_query($polaczenie, $zapytanie);
+                while ($wiersz = mysqli_fetch_array($wynik)) {
+                    echo "{$wiersz['nazwa']}, {$wiersz['ulica']}";
                 }
+                mysqli_close($polaczenie);
             }
             ?>
         </section>

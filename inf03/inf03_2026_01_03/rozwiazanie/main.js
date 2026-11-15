@@ -1,22 +1,17 @@
-function choiceImg(imgSrc) {
-    let img = document.getElementById("choiceImg");
-    if (imgSrc == "img/1m.bmp") {
-        img.src = "img/1d.bmp";
-    } else {
-        img.src = "img/2d.bmp";
-    }
+function wybierzFigure(plik) {
+    document.getElementById("figura").src = plik;
 }
 
-function calculate() {
-    let valueA = document.getElementById("valueA").value;
-    let valueB = document.getElementById("valueB").value;
-    let img = document.getElementById("choiceImg");
-    let result = document.getElementById("result");
+function oblicz() {
+    let bokA = Number(document.getElementById("bokA").value);
+    let bokB = Number(document.getElementById("bokB").value);
+    let figura = document.getElementById("figura");
     let pole;
-    if (img.src.includes("img/1d.bmp")) {
-        pole = (valueA * valueB) / 2;
+    if (figura.src.includes("1d.bmp")) {
+        pole = bokA * bokB / 2;
     } else {
-        pole = valueA * valueB;
+        pole = bokA * bokB;
     }
-    result.innerHTML = pole;
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = pole;
 }

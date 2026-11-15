@@ -32,13 +32,15 @@
 				<th>CIŚNIENIE [hPa]</th>
 			</tr>
 			<?php
-			$con = mysqli_connect('localhost', 'root', '', 'prognoza');
-			$kw = "SELECT * FROM pogoda WHERE miasta_id = 2 ORDER BY data_prognozy DESC;";
-			$res = mysqli_query($con, $kw);
-			while($tab = mysqli_fetch_row($res)) {
-				echo "<tr><td>$tab[0]</td><td>$tab[2]</td><td>$tab[3]</td><td>$tab[4]</td><td>$tab[5]</td><td>$tab[6]</td></tr>";
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'prognoza');
+			$zapytanie = "SELECT * FROM pogoda WHERE miasta_id = 2 ORDER BY data_prognozy DESC;";
+			$wynik = mysqli_query($polaczenie, $zapytanie);
+			$lp = 1;
+			while ($wiersz = mysqli_fetch_array($wynik)) {
+				echo "<tr><td>$lp</td><td>{$wiersz['data_prognozy']}</td><td>{$wiersz['temperatura_noc']}</td><td>{$wiersz['temperatura_dzien']}</td><td>{$wiersz['opady']}</td><td>{$wiersz['cisnienie']}</td></tr>";
+				$lp++;
 			}
-			mysqli_close($con);
+			mysqli_close($polaczenie);
 			?>
 		</table>
 	</div>

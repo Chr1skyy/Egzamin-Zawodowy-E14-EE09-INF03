@@ -18,20 +18,22 @@
     </div>
     <main>
         <?php
-        $connect = mysqli_connect('localhost', 'root', '', 'korona');
-        $query1 = "SELECT id, nazwa FROM szczyty ORDER BY wysokosc DESC";
-        $result = mysqli_query($connect, $query1);
-        while ($row = mysqli_fetch_array($result)) {
-            echo "<span><a href='szczyty.php?id={$row['id']}'>{$row['nazwa']}</a></span>";
+        // Skrypt 1
+        $polaczenie = mysqli_connect('localhost', 'root', '', 'korona');
+        $zapytanie1 = "SELECT id, nazwa FROM szczyty ORDER BY wysokosc DESC";
+        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+        while ($wiersz = mysqli_fetch_array($wynik1)) {
+            echo "<span><a href='szczyty.php?id={$wiersz['id']}'>{$wiersz['nazwa']}</a></span>";
         }
         ?>
     </main>
     <section>
         <?php
-        $query2 = "SELECT nazwa, plik FROM szczyty LIMIT 10";
-        $result = mysqli_query($connect, $query2);
-        while ($row = mysqli_fetch_array($result)) {
-            echo "<img class='miniatura' src='img/{$row['plik']}' alt='{$row['nazwa']}'>";
+        // Skrypt 2
+        $zapytanie2 = "SELECT nazwa, plik FROM szczyty LIMIT 10";
+        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+        while ($wiersz = mysqli_fetch_array($wynik2)) {
+            echo "<img class='miniatura' src='img/{$wiersz['plik']}' alt='{$wiersz['nazwa']}'>";
         }
         ?>
     </section>
@@ -47,7 +49,7 @@
             <h3>&copy Wykonane przez: Chr1skyy</h3>
         </footer>
     </div>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

@@ -14,12 +14,12 @@
 			<h3>Ryby zamieszkujące rzeki</h3>
 			<ol>
 				<?php
-				$con = mysqli_connect('localhost', 'root', '', 'wedkowanie');
-				
-				$q1 = "SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby INNER JOIN lowisko ON ryby.id = lowisko.Ryby_id WHERE lowisko.rodzaj = 3;";
-				$res1 = mysqli_query($con, $q1);
-				while ($row = mysqli_fetch_array($res1)) {
-					echo "<li>$row[0] pływa w rzece $row[1], $row[2]</li>";
+				// Skrypt 1
+				$polaczenie = mysqli_connect('localhost', 'root', '', 'wedkowanie');
+				$zapytanie3 = "SELECT ryby.nazwa, lowisko.akwen, lowisko.wojewodztwo FROM ryby INNER JOIN lowisko ON ryby.id = lowisko.Ryby_id WHERE lowisko.rodzaj = 3;";
+				$wynik3 = mysqli_query($polaczenie, $zapytanie3);
+				while ($wiersz = mysqli_fetch_array($wynik3)) {
+					echo "<li>{$wiersz['nazwa']} pływa w rzece {$wiersz['akwen']}, {$wiersz['wojewodztwo']}</li>";
 				}
 				?>
 			</ol>
@@ -37,12 +37,13 @@
 					<th>Występowanie</th>
 				</tr>
 				<?php
-				$q2 = "SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia = 1;";
-				$res2 = mysqli_query($con, $q2);
-				while ($row = mysqli_fetch_array($res2)) {
-					echo "<tr><td>$row[0]</td><td>$row[1]</td><td>$row[2]</td></tr>";
+				// Skrypt 2
+				$zapytanie1 = "SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia = 1;";
+				$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+				while ($wiersz = mysqli_fetch_array($wynik1)) {
+					echo "<tr><td>{$wiersz['id']}</td><td>{$wiersz['nazwa']}</td><td>{$wiersz['wystepowanie']}</td></tr>";
 				}
-				mysqli_close($con);
+				mysqli_close($polaczenie);
 				?>
 			</table>
 		</section>

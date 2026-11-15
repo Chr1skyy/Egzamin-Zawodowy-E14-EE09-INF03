@@ -15,11 +15,12 @@
 		<section id="lewy">
 			<p>Dania mięsne zamówiesz już od
 				<?php
-				$connect = mysqli_connect('localhost', 'root', '', 'baza');
-				$query1 = "SELECT MIN(cena) AS MinCena FROM dania WHERE typ = 2";
-				$result1 = mysqli_query($connect, $query1);
-				while ($row = mysqli_fetch_array($result1))
-					echo $row['MinCena'];
+				// Skrypt 1
+				$polaczenie = mysqli_connect('localhost', 'root', '', 'baza');
+				$zapytanie3 = "SELECT MIN(cena) AS MinCena FROM dania WHERE typ = 2";
+				$wynik3 = mysqli_query($polaczenie, $zapytanie3);
+				$wiersz = mysqli_fetch_array($wynik3);
+				echo $wiersz['MinCena'];
 				?>
 				złotych
 			</p>
@@ -30,22 +31,24 @@
 		<section id="srodkowy">
 			<h3>Przekąski</h3>
 			<?php
-			$query2 = "SELECT id, nazwa, cena FROM dania WHERE typ = 3";
-			$result2 = mysqli_query($connect, $query2);
-			while ($row = mysqli_fetch_array($result2)) {
-				echo "<p>{$row['id']} {$row['nazwa']} {$row['cena']}</p>";
+			// Skrypt 2
+			$zapytanie2 = "SELECT id, nazwa, cena FROM dania WHERE typ = 3";
+			$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+			while ($wiersz = mysqli_fetch_array($wynik2)) {
+				echo "<p>{$wiersz['id']} {$wiersz['nazwa']} {$wiersz['cena']}</p>";
 			}
 			?>
 		</section>
 		<section id="prawy">
 			<h3>Napoje</h3>
 			<?php
-			$query3 = "SELECT id, nazwa, cena FROM dania WHERE typ = 4";
-			$result3 = mysqli_query($connect, $query3);
-			while ($row = mysqli_fetch_array($result3)) {
-				echo "<p>{$row['id']} {$row['nazwa']} {$row['cena']}</p>";
+			// Skrypt 3
+			$zapytanie2 = "SELECT id, nazwa, cena FROM dania WHERE typ = 4";
+			$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+			while ($wiersz = mysqli_fetch_array($wynik2)) {
+				echo "<p>{$wiersz['id']} {$wiersz['nazwa']} {$wiersz['cena']}</p>";
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</section>
 	</main>

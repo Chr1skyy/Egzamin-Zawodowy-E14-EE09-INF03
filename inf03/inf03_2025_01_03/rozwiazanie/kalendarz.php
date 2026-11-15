@@ -13,34 +13,17 @@
     </header>
     <section id="napis">
         <?php
-        $connect = mysqli_connect('localhost', 'root', '', 'kalendarz');
-        $today = date('m-d');
-        $query = mysqli_query($connect, "SELECT imiona FROM imieniny WHERE data = '$today';");
-        $day = date('w');
-        if ($day == 0) {
-            $weekDay = "niedziela";
-        }
-        if ($day == 1) {
-            $weekDay = "poniedziałek";
-        }
-        if ($day == 2) {
-            $weekDay = "wtorek";
-        }
-        if ($day == 3) {
-            $weekDay = "środa";
-        }
-        if ($day == 4) {
-            $weekDay = "czwartek";
-        }
-        if ($day == 5) {
-            $weekDay = "piątek";
-        }
-        if ($day == 6) {
-            $weekDay = "sobota";
-        }
-        $result = mysqli_fetch_array($query);
-        $fullDate = date('d-m-Y');
-        echo "<p>Dzisiaj jest {$weekDay}, {$fullDate}, imieniny: {$result['imiona']}</p>";
+        // Skrypt 1
+        $polaczenie = mysqli_connect('localhost', 'root', '', 'kalendarz');
+        $data = date('m-d');
+        $dataPelna = date('d-m-Y');
+        // date('w') zwraca numer dnia tygodnia: 0 to niedziela
+        $dniTygodnia = ["niedziela", "poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota"];
+        $dzienTygodnia = $dniTygodnia[date('w')];
+        $zapytanie2 = "SELECT imiona FROM imieniny WHERE data = '$data';";
+        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+        $wiersz = mysqli_fetch_array($wynik2);
+        echo "<p>Dzisiaj jest {$dzienTygodnia}, {$dataPelna}, imieniny: {$wiersz['imiona']}</p>";
         ?>
     </section>
     <main>
@@ -98,14 +81,16 @@
                 <button name="submit">wyślij</button>
             </form>
             <?php
+            // Skrypt 2
             if (isset($_POST["submit"])) {
-                $date = $_POST["date"];
-                $monthAndDay = date('m-d', strtotime($date));
-                $query2 = mysqli_query($connect, "SELECT imiona FROM imieniny WHERE data = '$monthAndDay';");
-                $result2 = mysqli_fetch_array($query2);
-                echo "Dnia {$date} są imieniny: {$result2['imiona']}";
+                $dzien = $_POST["date"];
+                $dataDoZapytania = date('m-d', strtotime($dzien));
+                $zapytanie2 = "SELECT imiona FROM imieniny WHERE data = '$dataDoZapytania';";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                $wiersz = mysqli_fetch_array($wynik2);
+                echo "Dnia {$dzien} są imieniny: {$wiersz['imiona']}";
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
         </section>
         <section id="prawy">

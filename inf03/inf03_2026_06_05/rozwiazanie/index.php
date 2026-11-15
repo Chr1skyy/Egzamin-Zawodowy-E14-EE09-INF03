@@ -15,80 +15,83 @@
         <section>
             <h2>- Sofy -</h2>
             <?php
-            $connect = mysqli_connect('localhost', 'root', '', 'antyki');
-            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 1;";
-            $result = mysqli_query($connect, $query1);
-            while ($row = mysqli_fetch_array($result)) {
+            // Skrypt 1a
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'antyki');
+            $zapytanie1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 1;";
+            $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+            while ($wiersz = mysqli_fetch_array($wynik1)) {
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='img/sofy/{$row['plik']}' alt='mebel'>
+                            <img src='img/sofy/{$wiersz['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
-                            <h3>{$row['nazwa']}</h3>
-                            <h4>styl {$row['styl']}</h4>
-                            <h3>CENA: {$row['cena']} zł</h3>
+                            <h3>{$wiersz['nazwa']}</h3>
+                            <h4>styl {$wiersz['styl']}</h4>
+                            <h3>CENA: {$wiersz['cena']} zł</h3>
                             <form action='index.php' method='post'>
-                            <button type='submit' name='submit' value='{$row['idMeble']}'>KUP</button>
+                            <button type='submit' name='submit' value='{$wiersz['idMeble']}'>KUP</button>
                             </form>
                         </div>
                         <div class='opis'>
-                            {$row['opis']}
+                            {$wiersz['opis']}
                         </div>
                     </div>";
             }
             ?>
             <h2>- Fotele -</h2>
             <?php
-            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 2;";
-            $result = mysqli_query($connect, $query1);
-            while ($row = mysqli_fetch_array($result)) {
+            // Skrypt 1b
+            $zapytanie1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 2;";
+            $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+            while ($wiersz = mysqli_fetch_array($wynik1)) {
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='img/fotele/{$row['plik']}' alt='mebel'>
+                            <img src='img/fotele/{$wiersz['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
-                            <h3>{$row['nazwa']}</h3>
-                            <h4>styl {$row['styl']}</h4>
-                            <h3>CENA: {$row['cena']} zł</h3>
+                            <h3>{$wiersz['nazwa']}</h3>
+                            <h4>styl {$wiersz['styl']}</h4>
+                            <h3>CENA: {$wiersz['cena']} zł</h3>
                             <form action='index.php' method='post'>
-                            <button type='submit' name='submit' value='{$row['idMeble']}'>KUP</button>
+                            <button type='submit' name='submit' value='{$wiersz['idMeble']}'>KUP</button>
                             </form>
                         </div>
                         <div class='opis'>
-                            {$row['opis']}
+                            {$wiersz['opis']}
                         </div>
                     </div>";
             }
             ?>
             <h2>- Komody -</h2>
             <?php
-            $query1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 3;";
-            $result = mysqli_query($connect, $query1);
-            while ($row = mysqli_fetch_array($result)) {
+            // Skrypt 1c
+            $zapytanie1 = "SELECT idMeble, nazwa, plik, styl, cena, opis FROM meble WHERE kategoria = 3;";
+            $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+            while ($wiersz = mysqli_fetch_array($wynik1)) {
                 echo "<div class='mebel'>
                         <div class='obraz'>
-                            <img src='img/komody/{$row['plik']}' alt='mebel'>
+                            <img src='img/komody/{$wiersz['plik']}' alt='mebel'>
                         </div>
                         <div class='informacje'>
-                            <h3>{$row['nazwa']}</h3>
-                            <h4>styl {$row['styl']}</h4>
-                            <h3>CENA: {$row['cena']} zł</h3>
+                            <h3>{$wiersz['nazwa']}</h3>
+                            <h4>styl {$wiersz['styl']}</h4>
+                            <h3>CENA: {$wiersz['cena']} zł</h3>
                             <form action='index.php' method='post'>
-                            <button type='submit' name='submit' value='{$row['idMeble']}'>KUP</button>
+                            <button type='submit' name='submit' value='{$wiersz['idMeble']}'>KUP</button>
                             </form>
                         </div>
                         <div class='opis'>
-                            {$row['opis']}
+                            {$wiersz['opis']}
                         </div>
                     </div>";
             }
             ?>
             <?php
+            // Skrypt 2
             if (isset($_POST['submit'])) {
-                $mebel = $_POST['submit'];
-                $query2modified = "INSERT INTO zakupy VALUES (NULL, 1, $mebel, 1);";
-                mysqli_query($connect, $query2modified);
-                header('location: index.php');
+                $idMebla = $_POST['submit'];
+                $zapytanie2 = "INSERT INTO zakupy VALUES (NULL, 1, $idMebla, 1);";
+                mysqli_query($polaczenie, $zapytanie2);
             }
             ?>
         </section>
@@ -96,13 +99,14 @@
             <h2>Kontakt</h2>
             <p>Zalogowano: Anna Kowalska</p>
             <?php
-            $query3 = "SELECT nazwa, cena FROM meble JOIN zakupy USING (idMeble) WHERE idKlienci = 1;";
-            $result = mysqli_query($connect, $query3);
+            // Skrypt 3
+            $zapytanie3 = "SELECT nazwa, cena FROM meble JOIN zakupy USING (idMeble) WHERE idKlienci = 1;";
+            $wynik3 = mysqli_query($polaczenie, $zapytanie3);
             $kosztKoszyka = 0;
             echo "<ol>";
-            while ($row = mysqli_fetch_array($result)) {
-                $kosztKoszyka += $row['cena'];
-                echo "<li>{$row['nazwa']}, cena: {$row['cena']}</li>";
+            while ($wiersz = mysqli_fetch_array($wynik3)) {
+                $kosztKoszyka = $kosztKoszyka + $wiersz['cena'];
+                echo "<li>{$wiersz['nazwa']}, cena: {$wiersz['cena']}</li>";
             }
             echo "</ol>";
             echo "Koszt całkowity: $kosztKoszyka";
@@ -112,7 +116,7 @@
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

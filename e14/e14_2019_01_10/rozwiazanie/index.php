@@ -28,38 +28,41 @@
 			<h3>Lista zwierząt</h3>
 			<ul>
 				<?php
-				$connect = mysqli_connect('localhost', 'root', '', 'baza');
-				$query1 = "SELECT zwierzeta.gatunek, odzywianie.rodzaj FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id;";
-				$result1 = mysqli_query($connect, $query1);
-				while ($row = mysqli_fetch_array($result1)) {
-					echo "<li>{$row['gatunek']} -> {$row['rodzaj']}</li>";
+				// Skrypt 1
+				$polaczenie = mysqli_connect('localhost', 'root', '', 'baza');
+				$zapytanie2 = "SELECT zwierzeta.gatunek, odzywianie.rodzaj FROM zwierzeta JOIN odzywianie ON zwierzeta.Odzywianie_id = odzywianie.id;";
+				$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+				while ($wiersz = mysqli_fetch_array($wynik2)) {
+					echo "<li>{$wiersz['gatunek']} -> {$wiersz['rodzaj']}</li>";
 				}
 				?>
 			</ul>
 		</section>
 		<section id="srodkowy">
 			<?php
+			// Skrypt 2
 			if (isset($_POST['submit'])) {
 				$nr = $_POST['lista'];
 				if (!empty($nr)) {
 					$wybor = "";
-					if ($nr == 1)
+					if ($nr == 1) {
 						$wybor = "Drapieżniki";
-					if ($nr == 2)
+					} else if ($nr == 2) {
 						$wybor = "Roślinożerne";
-					if ($nr == 3)
+					} else if ($nr == 3) {
 						$wybor = "Padlinożerne";
-					if ($nr == 4)
+					} else if ($nr == 4) {
 						$wybor = "Wszystkożerne";
-					$query2 = "SELECT id, gatunek, wystepowanie FROM zwierzeta WHERE Odzywianie_id = $nr;";
+					}
+					$zapytanie1 = "SELECT id, gatunek, wystepowanie FROM zwierzeta WHERE Odzywianie_id = $nr;";
 					echo "<h3>$wybor</h3>";
-					$result2 = mysqli_query($connect, $query2);
-					while ($row = mysqli_fetch_array($result2)) {
-						echo "{$row['id']}. {$row['gatunek']}, {$row['wystepowanie']}<br/>";
+					$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+					while ($wiersz = mysqli_fetch_array($wynik1)) {
+						echo "{$wiersz['id']}. {$wiersz['gatunek']}, {$wiersz['wystepowanie']}<br/>";
 					}
 				}
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</section>
 		<section id="prawy">

@@ -1,13 +1,10 @@
 function oblicz() {
-  let goscie = document.getElementById("goscie").value;
-  let poprawiny = document.getElementById("poprawiny").checked;
-  let wynik = document.getElementById("wynik");
-  let koszt = 0;
-  if (poprawiny) {
-    koszt = goscie * 100;
-    koszt = koszt * 1.3;
-  } else {
-    koszt = goscie * 100;
-  }
-  wynik.innerHTML = "Koszt Twojego wesela to " + koszt + " złotych ";
+    let goscie = Number(document.getElementById("goscie").value);
+    let poprawiny = document.getElementById("poprawiny").checked;
+    let koszt = goscie * 100;
+    if (poprawiny) {
+        koszt = koszt * 1.3;
+    }
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = "Koszt Twojego wesela to " + koszt + " złotych";
 }

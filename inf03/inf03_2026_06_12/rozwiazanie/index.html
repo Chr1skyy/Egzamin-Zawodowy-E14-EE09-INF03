@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styl.css">
 </head>
 
-<body>
+<body onload="aktualnaData()">
     <header>
         <img src="img/1.jpg" alt="rower">
         <img src="img/2.jpg" alt="rower">
@@ -27,8 +27,8 @@
                 <input type="radio" name="rodzajRoweru" id="trekking" value="trekking">
                 <label class="klasa_etykiety" for="trekking" title="trekking">trekking</label>
                 <h2>Podaj swój wzrost</h2>
-                <input type="range" min="100" max="220" value="150" step="1" oninput="aktualizujPole()">
-                <input type="number" value="150">
+                <input type="range" id="suwak" min="100" max="220" value="150" step="1" oninput="aktualizujPole()">
+                <input type="number" id="wzrost" value="150">
                 <br>
                 <button type="button" class="klasa_etykiety" onclick="obliczRozmiarRamy()">Sprawdź</button>
                 <p id="wynik"></p>

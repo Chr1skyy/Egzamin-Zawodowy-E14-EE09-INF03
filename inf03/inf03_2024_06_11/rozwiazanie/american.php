@@ -21,11 +21,12 @@
             <h3>Poznaj wszystkie rasy świnek morskich</h3>
             <ol>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'hodowla');
-                $query1 = "SELECT rasa FROM rasy";
-                $result1 = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result1)) {
-                    echo "<li>$row[0]</li>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'hodowla');
+                $zapytanie4 = "SELECT rasa FROM rasy";
+                $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                while ($wiersz = mysqli_fetch_array($wynik4)) {
+                    echo "<li>{$wiersz['rasa']}</li>";
                 }
                 ?>
             </ol>
@@ -33,24 +34,26 @@
         <section>
             <img src="img/peruwianka.jpg" alt="Świnka morska rasy peruwianka">
             <?php
-            $query2 = "SELECT DISTINCT data_ur, miot, rasa FROM swinki JOIN rasy ON swinki.rasy_id = rasy.id WHERE rasy_id = 6";
-            $result2 = mysqli_query($connect, $query2);
-            while ($row = mysqli_fetch_array($result2)) {
-                echo "<h2>Rasa: $row[2]</h2>";
-                echo "<p>Data urodzenia: $row[0]</p>";
-                echo "<p>Oznaczenie miotu: $row[1]</p>";
+            // Skrypt 2
+            $zapytanie2 = "SELECT DISTINCT data_ur, miot, rasa FROM swinki JOIN rasy ON swinki.rasy_id = rasy.id WHERE rasy_id = 6";
+            $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+            while ($wiersz = mysqli_fetch_array($wynik2)) {
+                echo "<h2>Rasa: {$wiersz['rasa']}</h2>";
+                echo "<p>Data urodzenia: {$wiersz['data_ur']}</p>";
+                echo "<p>Oznaczenie miotu: {$wiersz['miot']}</p>";
             }
             ?>
             <hr>
             <h2>Świnki w tym miocie</h2>
             <?php
-            $query3 = "SELECT imie, cena, opis FROM swinki WHERE rasy_id = 6";
-            $result3 = mysqli_query($connect, $query3);
-            while ($row = mysqli_fetch_array($result3)) {
-                echo "<h3>$row[0] - $row[1] zł</h3>";
-                echo "<p>$row[2]</p>";
+            // Skrypt 3
+            $zapytanie3 = "SELECT imie, cena, opis FROM swinki WHERE rasy_id = 6";
+            $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+            while ($wiersz = mysqli_fetch_array($wynik3)) {
+                echo "<h3>{$wiersz['imie']} - {$wiersz['cena']} zł</h3>";
+                echo "<p>{$wiersz['opis']}</p>";
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
         </section>
     </main>

@@ -23,11 +23,12 @@
                     Miejsce wycieczki:<br>
                     <select name="miejsceWycieczki">
                         <?php
-                        $connect = mysqli_connect("localhost", "root", "", "wyprawy");
-                        $query = "SELECT nazwa FROM miejsca ORDER BY nazwa ASC;";
-                        $result = mysqli_query($connect, $query);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<option value='{$row['nazwa']}'>{$row['nazwa']}</option>";
+                        // Skrypt 1
+                        $polaczenie = mysqli_connect("localhost", "root", "", "wyprawy");
+                        $zapytanie1 = "SELECT nazwa FROM miejsca ORDER BY nazwa ASC;";
+                        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                        while ($wiersz = mysqli_fetch_array($wynik1)) {
+                            echo "<option value='{$wiersz['nazwa']}'>{$wiersz['nazwa']}</option>";
                         }
                         ?>
                     </select>
@@ -52,15 +53,16 @@
             </form>
             <h4>Koszt wycieczki</h4>
             <?php
+            // Skrypt 2
             if (isset($_POST["submit"])) {
                 $miejsceWycieczki = $_POST["miejsceWycieczki"];
                 $ileDoroslych = $_POST["ileDoroslych"];
                 $ileDzieci = $_POST["ileDzieci"];
                 $termin = $_POST["termin"];
-                $query = "SELECT cena FROM miejsca WHERE nazwa = '$miejsceWycieczki';";
-                $result = mysqli_query($connect, $query);
-                $row = mysqli_fetch_array($result);
-                $cena = $row["cena"] * ($ileDoroslych + ($ileDzieci / 2));
+                $zapytanie2 = "SELECT cena FROM miejsca WHERE nazwa = '$miejsceWycieczki';";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                $wiersz = mysqli_fetch_array($wynik2);
+                $cena = $wiersz["cena"] * ($ileDoroslych + ($ileDzieci / 2));
                 echo "<p>W dniu $termin</p>
                     <p>$cena złotych</p>";
             }
@@ -69,16 +71,17 @@
         <section>
             <h3>Wyczieczki</h3>
             <?php
-            $query = "SELECT nazwa, cena, link_obraz FROM miejsca WHERE link_obraz LIKE '0%';";
-            $result = mysqli_query($connect, $query);
-            while ($row = mysqli_fetch_array($result)) {
+            // Skrypt 3
+            $zapytanie3 = "SELECT nazwa, cena, link_obraz FROM miejsca WHERE link_obraz LIKE '0%';";
+            $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+            while ($wiersz = mysqli_fetch_array($wynik3)) {
                 echo "<div class='wycieczka'>
-                        <img src='img/{$row['link_obraz']}' alt='zdjęcie z wycieczki'>
-                        <h2>{$row['nazwa']}</h2>
-                        <p>{$row['cena']}</p>
+                        <img src='img/{$wiersz['link_obraz']}' alt='zdjęcie z wycieczki'>
+                        <h2>{$wiersz['nazwa']}</h2>
+                        <p>{$wiersz['cena']}</p>
                     </div>";
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
         </section>
     </main>

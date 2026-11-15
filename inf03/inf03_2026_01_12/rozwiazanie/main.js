@@ -1,16 +1,13 @@
-function addPattern() {
-    const patternFile = document.getElementById('patternFile');
-    const color = document.getElementById('color').value;
-    const price = document.getElementById('price').value;
+function dodajWzor() {
+    let sciezka = document.getElementById("plikWzoru").value;
+    let nazwaPliku = sciezka.substr(sciezka.lastIndexOf("\\") + 1);
+    let kolor = document.getElementById("kolor").value;
+    let cena = document.getElementById("cena").value;
+    alert("Wzór: " + nazwaPliku + ", kolor " + kolor + " w cenie " + cena + " zł");
 
-    let filename = patternFile.value.split('\\').pop();
-
-    alert(`Wzór: ${filename}, kolor ${color} w cenie ${price} zł`);
-
-    const img = document.createElement('img');
-    img.src = "img/" + filename;
-    img.alt = filename;
-    img.className = 'miniatury';
-
-    document.getElementById('gallery').appendChild(img);
-}   
+    let obraz = document.createElement("img");
+    obraz.src = "img/" + nazwaPliku;
+    obraz.alt = nazwaPliku;
+    obraz.className = "miniatury";
+    document.getElementById("galeria").appendChild(obraz);
+}

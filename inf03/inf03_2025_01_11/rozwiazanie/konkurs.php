@@ -25,20 +25,20 @@
                     <th>Wartość</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'konkurs');
-                $query = "SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;";
-                $result = mysqli_query($connect, $query);
-                $i = 1;
-                while ($row = mysqli_fetch_array($result)) {
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'konkurs');
+                $zapytanie = "SELECT nazwa, opis, cena FROM nagrody ORDER BY RAND() LIMIT 5;";
+                $wynik = mysqli_query($polaczenie, $zapytanie);
+                $lp = 1;
+                while ($wiersz = mysqli_fetch_array($wynik)) {
                     echo "<tr>
-                            <td>$i</td>
-                            <td>{$row['nazwa']}</td>
-                            <td>{$row['opis']}</td>
-                            <td>{$row['cena']}</td>
-                        <tr/>";
-                    $i++;
+                            <td>$lp</td>
+                            <td>{$wiersz['nazwa']}</td>
+                            <td>{$wiersz['opis']}</td>
+                            <td>{$wiersz['cena']}</td>
+                        </tr>";
+                    $lp++;
                 }
-                mysqli_close($connect);
+                mysqli_close($polaczenie);
                 ?>
             </table>
         </section>

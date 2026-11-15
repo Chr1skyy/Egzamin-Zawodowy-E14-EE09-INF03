@@ -1,22 +1,23 @@
-function addToCart() {
-    const file = document.getElementById('file').files[0]
-    const numberOfCopy = +document.getElementById('numberOfCopies').value
-    const typeOfPaper = document.querySelector('input[type=radio]:checked').value
-    let price = 0
-    if (typeOfPaper == "błyszczący") {
-        price = numberOfCopy * 1.5
+function dodajDoKoszyka() {
+    let sciezka = document.getElementById("plik").value;
+    let nazwaPliku = sciezka.substr(sciezka.lastIndexOf("\\") + 1);
+    let liczbaKopii = Number(document.getElementById("liczbaKopii").value);
+    let cena = 0;
+    if (document.getElementById("blyszczacy").checked) {
+        cena = liczbaKopii * 1.5;
+    } else if (document.getElementById("matowy").checked) {
+        cena = liczbaKopii * 2;
     }
-    if (typeOfPaper == "matowy") {
-        price = numberOfCopy * 2
-    }
-    const newImg = document.createElement("img")
-    newImg.src = file.name
-    const newP1 = document.createElement("p")
-    newP1.innerHTML = `Liczba kopii: ${numberOfCopy}`
-    const newP2 = document.createElement("p")
-    newP2.innerHTML = `Cena: ${price}`
-    const cart = document.getElementById("cart")
-    cart.appendChild(newImg)
-    cart.appendChild(newP1)
-    cart.appendChild(newP2)
+
+    let obraz = document.createElement("img");
+    obraz.src = "img/" + nazwaPliku;
+    let akapitKopie = document.createElement("p");
+    akapitKopie.innerHTML = "Liczba kopii: " + liczbaKopii;
+    let akapitCena = document.createElement("p");
+    akapitCena.innerHTML = "Cena: " + cena;
+
+    let koszyk = document.getElementById("koszyk");
+    koszyk.appendChild(obraz);
+    koszyk.appendChild(akapitKopie);
+    koszyk.appendChild(akapitCena);
 }

@@ -1,15 +1,17 @@
-let aktualneZdjecie = 1;
+let numerZdjecia = 1;
 
 function poprzednieZdjecie() {
-    aktualneZdjecie -= 1;
-    if (aktualneZdjecie < 1) aktualneZdjecie = 7
-    const aktywneZdjecie = document.getElementById('aktywne_zdjecie');
-    aktywneZdjecie.src = "img/" + aktualneZdjecie + ".jpg"
+    numerZdjecia--;
+    if (numerZdjecia < 1) {
+        numerZdjecia = 7;
+    }
+    document.getElementById("aktywne_zdjecie").src = "img/" + numerZdjecia + ".jpg";
 }
 
 function nastepneZdjecie() {
-    aktualneZdjecie += 1;
-    if (aktualneZdjecie > 7) aktualneZdjecie = 1
-    const aktywneZdjecie = document.getElementById('aktywne_zdjecie');
-    aktywneZdjecie.src = "img/" + aktualneZdjecie + ".jpg"
+    numerZdjecia++;
+    if (numerZdjecia > 7) {
+        numerZdjecia = 1;
+    }
+    document.getElementById("aktywne_zdjecie").src = "img/" + numerZdjecia + ".jpg";
 }

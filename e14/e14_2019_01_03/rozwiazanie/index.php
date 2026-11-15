@@ -35,13 +35,14 @@
 		<section>
 			<h2>Wybrano filmy:</h2>
 			<?php
-			$connect = mysqli_connect('localhost', 'root', '', 'dane');
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'dane');
 			if (isset($_POST['submit'])) {
 				$wybor = $_POST['wybor'];
-				$query1 = "SELECT tytul, rok, ocena FROM filmy WHERE gatunki_id = $wybor";
-				$result1 = mysqli_query($connect, $query1);
-				while ($row = mysqli_fetch_array($result1)) {
-					echo "<p>Tytuł: {$row['tytul']}, Rok produkcji: {$row['rok']}, Ocena: {$row['ocena']}</p>";
+				$zapytanie1 = "SELECT tytul, rok, ocena FROM filmy WHERE gatunki_id = $wybor";
+				$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+				while ($wiersz = mysqli_fetch_array($wynik1)) {
+					echo "<p>Tytuł: {$wiersz['tytul']}, Rok produkcji: {$wiersz['rok']}, Ocena: {$wiersz['ocena']}</p>";
 				}
 			}
 			?>
@@ -49,12 +50,13 @@
 		<section>
 			<h2>Wybrano filmy:</h2>
 			<?php
-			$query2 = "SELECT filmy.id, tytul, imie, nazwisko FROM filmy JOIN rezyserzy ON filmy.rezyserzy_id = rezyserzy.id;";
-			$result2 = mysqli_query($connect, $query2);
-			while ($row = mysqli_fetch_array($result2)) {
-				echo "<p>{$row['id']}.{$row['tytul']}, reżyseria: {$row['imie']} {$row['nazwisko']}</p>";
+			// Skrypt 2
+			$zapytanie2 = "SELECT filmy.id, tytul, imie, nazwisko FROM filmy JOIN rezyserzy ON filmy.rezyserzy_id = rezyserzy.id;";
+			$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+			while ($wiersz = mysqli_fetch_array($wynik2)) {
+				echo "<p>{$wiersz['id']}. {$wiersz['tytul']}, reżyseria: {$wiersz['imie']} {$wiersz['nazwisko']}</p>";
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</section>
 	</main>

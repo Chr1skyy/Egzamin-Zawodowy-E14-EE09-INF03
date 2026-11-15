@@ -13,13 +13,13 @@
 		<h2>Ryby drapieżne naszych wód</h2>
 		<ul>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'wedkowanie');
-		$kw = "SELECT nazwa, wystepowanie FROM Ryby WHERE styl_zycia = 1;";
-		$res = mysqli_query($con, $kw);
-		while($tab = mysqli_fetch_row($res)) {
-			echo "<li>$tab[0], występowanie: $tab[1]</li>";
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'wedkowanie');
+		$zapytanie = "SELECT nazwa, wystepowanie FROM ryby WHERE styl_zycia = 1;";
+		$wynik = mysqli_query($polaczenie, $zapytanie);
+		while ($wiersz = mysqli_fetch_array($wynik)) {
+			echo "<li>{$wiersz['nazwa']}, występowanie: {$wiersz['wystepowanie']}</li>";
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 		</ul>
 	</div>

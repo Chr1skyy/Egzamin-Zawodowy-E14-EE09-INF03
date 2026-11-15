@@ -1,5 +1,13 @@
 <?php
+// Skrypt 1: przekierowanie trzeba wysłać, zanim strona wyśle jakikolwiek HTML
 session_start();
+if (isset($_POST['submit'])) {
+    if ($_POST['login'] == 'admin' && $_POST['haslo'] == 'TajneHaslo321*') {
+        $_SESSION['username'] = 'admin';
+        header('location: wyniki.php');
+        exit();
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -25,15 +33,6 @@ session_start();
             <br>
             <button type="submit" name="submit">Zaloguj</button>
         </form>
-        <?php
-        if (isset($_POST['submit'])) {
-            if ($_POST['login'] == 'admin' && $_POST['haslo'] == 'TajneHaslo321*') {
-                $_SESSION['username'] = 'admin';
-                header('location: wyniki.php');
-                exit();
-            }
-        }
-        ?>
     </main>
     <footer>Wykonał: Chr1skyy</footer>
 </body>

@@ -12,12 +12,13 @@
 	<div id="lewy">
 		<h4>Użytkownicy</h4>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'dane4');
-		$kw1 = "SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM osoby LIMIT 30;";
-		$res1 = mysqli_query($con, $kw1);
-		while($tab = mysqli_fetch_row($res1)) {
-			$wiek = DATE("Y") - $tab[3];
-			echo "$tab[0]. $tab[1] $tab[2], $wiek<br/>";
+		// Skrypt 1
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'dane4');
+		$zapytanie1 = "SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM osoby LIMIT 30;";
+		$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+		while($wiersz = mysqli_fetch_array($wynik1)) {
+			$wiek = date("Y") - $wiersz['rok_urodzenia'];
+			echo "{$wiersz['id']}. {$wiersz['imie']} {$wiersz['nazwisko']}, $wiek<br/>";
 		}
 		?>
 		<a href="settings.html">Inne ustawienia</a>
@@ -30,19 +31,20 @@
 		</form>
 		<hr/>
 		<?php
-		if(!empty($_POST['nr'])) {
+		// Skrypt 2
+		if (!empty($_POST['nr'])) {
 			$nr = $_POST['nr'];
-			$kw2 = "SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa FROM osoby INNER JOIN hobby ON osoby.Hobby_id = hobby.id WHERE osoby.id = $nr;";
-			$res2 = mysqli_query($con, $kw2);
-			while($tab = mysqli_fetch_row($res2)) {
-				echo "<h2>$nr. $tab[0] $tab[1]</h2>
-				<img src='img/$tab[4]' alt='$nr' />
-				<p>Rok urodzenia: $tab[2]</p>
-				<p>Opis: $tab[3]</p>
-				<p>Hobby: $tab[5]</p>";
+			$zapytanie2 = "SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa FROM osoby INNER JOIN hobby ON osoby.Hobby_id = hobby.id WHERE osoby.id = $nr;";
+			$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+			while($wiersz = mysqli_fetch_array($wynik2)) {
+				echo "<h2>$nr. {$wiersz['imie']} {$wiersz['nazwisko']}</h2>
+				<img src='img/{$wiersz['zdjecie']}' alt='$nr' />
+				<p>Rok urodzenia: {$wiersz['rok_urodzenia']}</p>
+				<p>Opis: {$wiersz['opis']}</p>
+				<p>Hobby: {$wiersz['nazwa']}</p>";
 			}
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 	</div>
 	<div id="stopka">

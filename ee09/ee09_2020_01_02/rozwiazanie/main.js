@@ -1,7 +1,7 @@
 function oblicz() {
-	let dystans = parseInt(document.getElementById("dystans").value);
-	let spalanie = parseInt(document.getElementById("spalanie").value);
-	let wynik = document.getElementById("wynik");
-	let paliwo = spalanie / 100 * dystans;
-	wynik.innerHTML = "Potrzebujesz: " + Math.round(paliwo) + " litrów paliwa";
+    let droga = Number(document.getElementById("dystans").value);
+    let spalanie = Number(document.getElementById("spalanie").value);
+    let paliwo = droga * spalanie / 100;
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = "Potrzebujesz: " + paliwo + " litrów paliwa";
 }

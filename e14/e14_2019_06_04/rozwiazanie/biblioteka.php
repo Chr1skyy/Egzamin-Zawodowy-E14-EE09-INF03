@@ -27,17 +27,20 @@
 				<button type="submit" name="submit">DODAJ</button>
 			</form>
 			<?php
-			$connect = mysqli_connect('localhost', 'root', '', 'biblioteka');
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'biblioteka');
 			if (isset($_POST['submit'])) {
 				$imie = $_POST['imie'];
 				$nazwisko = $_POST['nazwisko'];
 				$rok = $_POST['rok'];
 				if (!empty($imie) && !empty($nazwisko) && !empty($rok)) {
-					$kod = "{$imie[0]}{$imie[1]}{$rok[-2]}{$rok[-1]}{$nazwisko[0]}{$nazwisko[1]}";
-					$kod = strtolower($kod);
-					$query1 = "INSERT INTO czytelnicy VALUES (NULL, '$imie', '$nazwisko', '$kod');";
-					mysqli_query($connect, $query1);
-					echo "Czytelnik: $imie $nazwisko został dodany do bazy danych";
+					$literyImienia = substr($imie, 0, 2);
+					$cyfryRoku = substr($rok, -2);
+					$literyNazwiska = substr($nazwisko, 0, 2);
+					$kod = strtolower("{$literyImienia}{$cyfryRoku}{$literyNazwiska}");
+					$zapytanie1 = "INSERT INTO czytelnicy VALUES (NULL, '$imie', '$nazwisko', '$kod');";
+					mysqli_query($polaczenie, $zapytanie1);
+					echo "Czytelnik: $nazwisko został dodany do bazy danych";
 				}
 			}
 			?>
@@ -55,12 +58,13 @@
 			<h3>Nasi czytelnicy</h3>
 			<ul>
 				<?php
-				$query2 = "SELECT imie, nazwisko FROM czytelnicy;";
-				$result2 = mysqli_query($connect, $query2);
-				while ($row = mysqli_fetch_array($result2)) {
-					echo "<li>{$row['imie']} {$row['nazwisko']}</li>";
+				// Skrypt 2
+				$zapytanie2 = "SELECT imie, nazwisko FROM czytelnicy;";
+				$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+				while ($wiersz = mysqli_fetch_array($wynik2)) {
+					echo "<li>{$wiersz['imie']} {$wiersz['nazwisko']}</li>";
 				}
-				mysqli_close($connect);
+				mysqli_close($polaczenie);
 				?>
 			</ul>
 		</section>

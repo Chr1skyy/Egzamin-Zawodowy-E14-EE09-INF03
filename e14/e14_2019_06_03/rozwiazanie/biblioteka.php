@@ -16,11 +16,12 @@
 			<h3>W naszych zbiorach znajdziesz dzieła następujących autorów:</h3>
 			<ul>
 				<?php
-				$connect = mysqli_connect('localhost', 'root', '', 'biblioteka');
-				$query1 = "SELECT imie, nazwisko FROM autorzy;";
-				$result1 = mysqli_query($connect, $query1);
-				while ($row = mysqli_fetch_array($result1)) {
-					echo "<li>{$row['imie']} {$row['nazwisko']}</li>";
+				// Skrypt 1
+				$polaczenie = mysqli_connect('localhost', 'root', '', 'biblioteka');
+				$zapytanie1 = "SELECT imie, nazwisko FROM autorzy;";
+				$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+				while ($wiersz = mysqli_fetch_array($wynik1)) {
+					echo "<li>{$wiersz['imie']} {$wiersz['nazwisko']}</li>";
 				}
 				?>
 			</ul>
@@ -43,20 +44,22 @@
 				<button type="submit" name="submit">DODAJ</button>
 			</form>
 			<?php
+			// Skrypt 2
 			if (isset($_POST['submit'])) {
 				$imie = $_POST['imie'];
 				$nazwisko = $_POST['nazwisko'];
 				$rok = $_POST['rok'];
 				if (!empty($imie) && !empty($nazwisko) && !empty($rok)) {
-					$kod = "{$imie[0]}{$imie[1]}{$nazwisko[0]}{$nazwisko[1]}";
-					$kod = strtoupper($kod);
-					$kod = "{$kod}{$rok[-2]}{$rok[-1]}";
-					$query2 = "INSERT INTO czytelnicy VALUES (NULL, '$imie', '$nazwisko', '$kod');";
-					mysqli_query($connect, $query2);
+					$literyImienia = substr($imie, 0, 2);
+					$literyNazwiska = substr($nazwisko, 0, 2);
+					$cyfryRoku = substr($rok, -2);
+					$kod = strtoupper("{$literyImienia}{$literyNazwiska}{$cyfryRoku}");
+					$zapytanie2 = "INSERT INTO czytelnicy VALUES (NULL, '$imie', '$nazwisko', '$kod');";
+					mysqli_query($polaczenie, $zapytanie2);
 					echo "Czytelnik: $imie $nazwisko został dodany do bazy danych";
 				}
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</section>
 		<section id="prawy">

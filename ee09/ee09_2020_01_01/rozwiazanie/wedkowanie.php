@@ -15,13 +15,13 @@
 	<div id="prawy">
 		<h3>Ryby spokojnego żeru (białe)</h3>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'wedkowanie');
-		$kw = "SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia = 2;";
-		$res = mysqli_query($con, $kw);
-		while($tab = mysqli_fetch_row($res)) {
-			echo "$tab[0]. $tab[1], wystepuje w: $tab[2]<br/>";
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'wedkowanie');
+		$zapytanie = "SELECT id, nazwa, wystepowanie FROM ryby WHERE styl_zycia = 2;";
+		$wynik = mysqli_query($polaczenie, $zapytanie);
+		while ($wiersz = mysqli_fetch_array($wynik)) {
+			echo "{$wiersz['id']}. {$wiersz['nazwa']}, występuje w: {$wiersz['wystepowanie']}<br/>";
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 		<ol>
 			<li><a href="https://wedkuje.pl/" target="_blank">Odwiedź także</a></li>

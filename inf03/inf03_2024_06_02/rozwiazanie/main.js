@@ -1,34 +1,30 @@
-const replies = [
-    "Hej, świetnie!",
-    "Nie mogę się doczekać!",
-    "Co jeszcze planujemy?",
-    "Może później?",
-    "Dobra decyzja!",
-    "Zgadza się.",
-    "Brzmi dobrze.",
-    "Ciekawy pomysł!",
-    "Spróbujmy!"
+let odpowiedzi = [
+    "Świetnie!",
+    "Kto gra główną rolę?",
+    "Lubisz filmy Tego reżysera?",
+    "Będę 10 minut wcześniej",
+    "Może kupimy sobie popcorn?",
+    "Ja wolę Colę",
+    "Zaproszę jeszcze Grześka",
+    "Tydzień temu też byłem w kinie na Diunie",
+    "Ja funduję bilety"
 ];
 
-function sendMessage() {
-    const messageInput = document.getElementById('messageInput');
-    const messageText = messageInput.value;
-    const chat = document.querySelector('#chat');
-    const newMessage = document.createElement('div');
-    newMessage.classList.add('message', 'jolanta');
-    newMessage.innerHTML = "<img src='Jolka.jpg' alt='Jolanta Nowak'><p>" + messageText + "</p>";
-    chat.appendChild(newMessage);
-    newMessage.scrollIntoView();
-    messageInput.value = '';
+function wyslijWiadomosc() {
+    let pole = document.getElementById("wiadomosc");
+    let wypowiedz = document.createElement("div");
+    wypowiedz.className = "message jolanta";
+    wypowiedz.innerHTML = "<img src='Jolka.jpg' alt='Jolanta Nowak'><p>" + pole.value + "</p>";
+    document.getElementById("chat").appendChild(wypowiedz);
+    wypowiedz.scrollIntoView();
+    pole.value = "";
 }
 
-function generateRandomReply() {
-    const randomIndex = Math.floor(Math.random() * replies.length);
-    const replyText = replies[randomIndex];
-    const chat = document.querySelector('#chat');
-    const newMessage = document.createElement('div');
-    newMessage.classList.add('message', 'krzysztof');
-    newMessage.innerHTML = "<img src='Krzysiek.jpg' alt='Krzysztof Łukasiński'><p>" + replyText + "</p>";
-    chat.appendChild(newMessage);
-    newMessage.scrollIntoView();
+function losujOdpowiedz() {
+    let indeks = Math.floor(Math.random() * 9);
+    let wypowiedz = document.createElement("div");
+    wypowiedz.className = "message krzysztof";
+    wypowiedz.innerHTML = "<img src='Krzysiek.jpg' alt='Krzysztof Łukasiński'><p>" + odpowiedzi[indeks] + "</p>";
+    document.getElementById("chat").appendChild(wypowiedz);
+    wypowiedz.scrollIntoView();
 }

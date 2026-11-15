@@ -1,3 +1,15 @@
+<?php
+// Skrypt 4: formularz jest obsługiwany przed wypisaniem strony, żeby nowa gra od razu była na liście
+$polaczenie = mysqli_connect("localhost", "root", "", "gry");
+if (isset($_POST["dodaj"]) && !empty($_POST["nazwa"])) {
+    $nazwa = $_POST["nazwa"];
+    $opis = $_POST["opis"];
+    $cena = $_POST["cena"];
+    $zdjecie = $_POST["zdjecie"];
+    $zapytanie4 = "INSERT INTO gry VALUES (NULL, '$nazwa', '$opis', 0, $cena, '$zdjecie');";
+    mysqli_query($polaczenie, $zapytanie4);
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -16,11 +28,11 @@
             <h3>Top 5 gier w tym miesiącu</h3>
             <ul>
                 <?php
-                $connect = mysqli_connect("localhost", "root", "", "gry");
-                $query = "SELECT nazwa, punkty FROM gry ORDER BY punkty DESC LIMIT 5;";
-                $result = mysqli_query($connect, $query);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<li>{$row['nazwa']} <span class='punkty'>{$row['punkty']}</span></li>";
+                // Skrypt 1
+                $zapytanie3 = "SELECT nazwa, punkty FROM gry ORDER BY punkty DESC LIMIT 5;";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    echo "<li>{$wiersz['nazwa']} <span class='punkty'>{$wiersz['punkty']}</span></li>";
                 }
                 ?>
             </ul>
@@ -31,12 +43,13 @@
         </section>
         <section id="srodkowy">
             <?php
-            $query = "SELECT id, nazwa, zdjecie FROM gry;";
-            $result = mysqli_query($connect, $query);
-            while ($row = mysqli_fetch_array($result)) {
+            // Skrypt 2
+            $zapytanie1 = "SELECT id, nazwa, zdjecie FROM gry;";
+            $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+            while ($wiersz = mysqli_fetch_array($wynik1)) {
                 echo "<div class='gra'>
-                        <img src='img/{$row['zdjecie']}' alt='{$row['nazwa']}' title='{$row['id']}'>
-                        <p>{$row['nazwa']}</p>
+                        <img src='img/{$wiersz['zdjecie']}' alt='{$wiersz['nazwa']}' title='{$wiersz['id']}'>
+                        <p>{$wiersz['nazwa']}</p>
                     </div>";
             }
             ?>
@@ -62,17 +75,6 @@
                 </label>
                 <button type="submit" name="dodaj">DODAJ</button>
             </form>
-            <?php
-            if (isset($_POST["dodaj"]) && !empty($_POST["nazwa"])) {
-                $nazwa = $_POST["nazwa"];
-                $opis = $_POST["opis"];
-                $cena = $_POST["cena"];
-                $zdjecie = $_POST["zdjecie"];
-                $query = "INSERT INTO gry VALUES (NULL, '$nazwa', '$opis', 0, $cena, '$zdjecie');";
-                mysqli_query($connect, $query);
-                header("location: gry.php");
-            }
-            ?>
         </section>
     </main>
     <footer>
@@ -83,15 +85,17 @@
             <button type="submit" name="pokaz">Pokaż opis</button>
         </form>
         <?php
+        // Skrypt 3
         if (isset($_POST["pokaz"]) && !empty($_POST["id"])) {
-            $query = "SELECT nazwa, LEFT(opis, 100) AS opis, punkty, cena FROM gry WHERE id = {$_POST['id']};";
-            $result = mysqli_query($connect, $query);
-            while ($row = mysqli_fetch_array($result)) {
-                echo "<h2>{$row['nazwa']}, {$row['punkty']} punktów, {$row['cena']} zł</h2>
-                <p>{$row['opis']}</p>";
+            $id = $_POST["id"];
+            $zapytanie2 = "SELECT nazwa, LEFT(opis, 100) AS opis, punkty, cena FROM gry WHERE id = $id;";
+            $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+            while ($wiersz = mysqli_fetch_array($wynik2)) {
+                echo "<h2>{$wiersz['nazwa']}, {$wiersz['punkty']} punktów, {$wiersz['cena']} zł</h2>
+                <p>{$wiersz['opis']}</p>";
             }
         }
-        mysqli_close($connect);
+        mysqli_close($polaczenie);
         ?>
         <h2></h2>
     </footer>

@@ -27,11 +27,12 @@
         <form method="POST">
             <select name="rodzaj">
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'piekarnia');
-                $query = "SELECT DISTINCT Rodzaj FROM wyroby ORDER BY Rodzaj DESC;";
-                $result = mysqli_query($connect, $query);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<option>{$row['Rodzaj']}</option>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'piekarnia');
+                $zapytanie2 = "SELECT DISTINCT Rodzaj FROM wyroby ORDER BY Rodzaj DESC;";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                while ($wiersz = mysqli_fetch_array($wynik2)) {
+                    echo "<option>{$wiersz['Rodzaj']}</option>";
                 }
                 ?>
             </select>
@@ -45,20 +46,21 @@
                 <th>Cena</th>
             </tr>
             <?php
+            // Skrypt 2
             if (isset($_POST["submit"])) {
                 $rodzaj = $_POST["rodzaj"];
-                $query = "SELECT Rodzaj, Nazwa, Gramatura, Cena FROM wyroby WHERE Rodzaj = '$rodzaj';";
-                $result = mysqli_query($connect, $query);
-                while ($row = mysqli_fetch_array($result)) {
+                $zapytanie1 = "SELECT Rodzaj, Nazwa, Gramatura, Cena FROM wyroby WHERE Rodzaj = '$rodzaj';";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
                     echo "<tr>
-                            <td>{$row[0]}</td>
-                            <td>{$row[1]}</td>
-                            <td>{$row[2]}</td>
-                            <td>{$row[3]}</td>
+                            <td>{$wiersz['Rodzaj']}</td>
+                            <td>{$wiersz['Nazwa']}</td>
+                            <td>{$wiersz['Gramatura']}</td>
+                            <td>{$wiersz['Cena']}</td>
                         </tr>";
                 }
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
         </table>
     </main>

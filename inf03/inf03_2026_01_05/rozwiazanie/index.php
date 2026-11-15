@@ -15,16 +15,15 @@
         <section id="left">
             <h2>Personel</h2>
             <?php
+            $status = 'policjant';
             if (isset($_POST['status'])) {
                 $status = $_POST['status'];
-            } else {
-                $status = 'policjant';
             }
             ?>
             <form action="index.php" method="POST">
-                <input type="radio" name="status" value="policjant" id="policjant" <?php echo ($status == 'policjant') ? 'checked' : ''; ?>>
+                <input type="radio" name="status" value="policjant" id="policjant" <?php if ($status == 'policjant') { echo 'checked'; } ?>>
                 <label for="policjant">Policjant</label>
-                <input type="radio" name="status" value="ratownik" id="ratownik" <?php echo ($status == 'ratownik') ? 'checked' : ''; ?>>
+                <input type="radio" name="status" value="ratownik" id="ratownik" <?php if ($status == 'ratownik') { echo 'checked'; } ?>>
                 <label for="ratownik">Ratownik</label>
                 <button>Pokaż</button>
             </form>
@@ -38,14 +37,15 @@
                     <th>Nazwisko</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'zgloszenia');
-                $query1 = "SELECT id, imie, nazwisko FROM personel WHERE status = '$status'";
-                $result = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result)) {
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'zgloszenia');
+                $zapytanie1 = "SELECT id, imie, nazwisko FROM personel WHERE status = '$status'";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
                     echo "<tr>
-                            <td>{$row['id']}</td>
-                            <td>{$row['imie']}</td>
-                            <td>{$row['nazwisko']}</td>
+                            <td>{$wiersz['id']}</td>
+                            <td>{$wiersz['imie']}</td>
+                            <td>{$wiersz['nazwisko']}</td>
                           </tr>";
                 }
                 ?>
@@ -55,10 +55,11 @@
             <h2>Nowe zgłoszenie</h2>
             <ol>
                 <?php
-                $query3 = "SELECT personel.id, personel.nazwisko FROM personel LEFT JOIN rejestr ON personel.id = rejestr.id_personel WHERE id_personel IS NULL";
-                $result = mysqli_query($connect, $query3);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<li>{$row['id']} {$row['nazwisko']}</li>";
+                // Skrypt 2
+                $zapytanie3 = "SELECT personel.id, personel.nazwisko FROM personel LEFT JOIN rejestr ON personel.id = rejestr.id_personel WHERE id_personel IS NULL";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    echo "<li>{$wiersz['id']} {$wiersz['nazwisko']}</li>";
                 }
                 ?>
             </ol>
@@ -68,10 +69,11 @@
                 <button name="submit">Dodaj zgłoszenie</button>
             </form>
             <?php
+            // Skrypt 3
             if (isset($_POST['submit'])) {
-                $id_personel = $_POST['id_personel'];
-                $query4 = "INSERT INTO rejestr VALUES (NULL, CURDATE(), $id_personel, 14)";
-                mysqli_query($connect, $query4);
+                $idPersonelu = $_POST['id_personel'];
+                $zapytanie4 = "INSERT INTO rejestr VALUES (NULL, CURDATE(), $idPersonelu, 14)";
+                mysqli_query($polaczenie, $zapytanie4);
             }
             ?>
         </section>
@@ -79,7 +81,7 @@
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

@@ -30,43 +30,43 @@
 			<button>Zapisz</button>
 		</form>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'psy');
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'psy');
 		
-		if(isset($_POST['login']) && isset($_POST['haslo']) && isset($_POST['powhaslo'])) {
+		if (isset($_POST['login'])) {
 			$login = $_POST['login'];
 			$haslo = $_POST['haslo'];
-			$powhaslo = $_POST['powhaslo'];
+			$powtorzoneHaslo = $_POST['powhaslo'];
 			
-			$blad = FALSE;
+			$blad = false;
 			
-			if($login == '' || $haslo == '' || $powhaslo == '') {
+			if ($login == '' || $haslo == '' || $powtorzoneHaslo == '') {
 				echo "<p>wypełnij wszystkie pola</p>";
-				$blad = TRUE;
+				$blad = true;
 			}
 			
-			$kw = "SELECT login FROM uzytkownicy;";
-			$res = mysqli_query($con, $kw);
-			while($tab = mysqli_fetch_row($res)) {
-				if($login == $tab[0]) {
+			$zapytanie3 = "SELECT login FROM uzytkownicy;";
+			$wynik3 = mysqli_query($polaczenie, $zapytanie3);
+			while ($wiersz = mysqli_fetch_array($wynik3)) {
+				if ($login == $wiersz['login']) {
 					echo "<p>login występuje w bazie danych, konto nie zostało dodane</p>";
-					$blad = TRUE;
+					$blad = true;
 					break;
 				}
-			} 
-			
-			if($haslo != $powhaslo) {
-				echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";
-				$blad = TRUE;
 			}
 			
-			if($blad == FALSE) {
-				$szyfr = sha1($haslo);
-				$kw = "INSERT INTO uzytkownicy VALUES (NULL, '$login', '$szyfr');";
-				mysqli_query($con, $kw);
+			if ($haslo != $powtorzoneHaslo) {
+				echo "<p>hasła nie są takie same, konto nie zostało dodane</p>";
+				$blad = true;
+			}
+			
+			if ($blad == false) {
+				$zaszyfrowaneHaslo = sha1($haslo);
+				$zapytanie2 = "INSERT INTO uzytkownicy VALUES (NULL, '$login', '$zaszyfrowaneHaslo');";
+				mysqli_query($polaczenie, $zapytanie2);
 				echo "<p>Konto zostało dodane</p>";
 			}
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 	</div>
 	<div id="prawy2">

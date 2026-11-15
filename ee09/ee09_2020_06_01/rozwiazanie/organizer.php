@@ -20,11 +20,12 @@
                 <button name="wyslij">ZAPISZ</button>
             </form>
             <?php
+            // skrypt obsługujący formularz
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'egzamin6');
             if (isset($_POST['wyslij'])) {
                 $wpis = $_POST['wpis'];
-                $con = mysqli_connect('localhost', 'root', '', 'egzamin6');
-                $q = "UPDATE zadania SET wpis = '$wpis' WHERE dataZadania = '2020-08-27';";
-                mysqli_query($con, $q);
+                $zapytanie4 = "UPDATE zadania SET wpis = '$wpis' WHERE dataZadania = '2020-08-27';";
+                mysqli_query($polaczenie, $zapytanie4);
             }
             ?>
         </section>
@@ -34,25 +35,26 @@
     </header>
     <main>
         <?php
-        $con = mysqli_connect('localhost', 'root', '', 'egzamin6');
-        $q = "SELECT dataZadania, miesiac, wpis FROM zadania WHERE miesiac = 'sierpien';";
-        $res = mysqli_query($con, $q);
-        while ($row = mysqli_fetch_array($res)) {
+        // Skrypt 1
+        $zapytanie1 = "SELECT dataZadania, miesiac, wpis FROM zadania WHERE miesiac = 'sierpien';";
+        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+        while ($wiersz = mysqli_fetch_array($wynik1)) {
             echo "<div class='dzien'>
-                    <h6>$row[0], $row[1]</h6>
-                    <p>$row[2]</p>
+                    <h6>{$wiersz['dataZadania']}, {$wiersz['miesiac']}</h6>
+                    <p>{$wiersz['wpis']}</p>
                 </div>";
         }
         ?>
     </main>
     <footer>
         <?php
-        $q = "SELECT miesiac, rok FROM zadania WHERE dataZadania = '2020-08-01';";
-        $res = mysqli_query($con, $q);
-        while ($row = mysqli_fetch_array($res)) {
-            echo "<h1>miesiąc: $row[0], rok: $row[1]</h1>";
+        // Skrypt 2
+        $zapytanie2 = "SELECT miesiac, rok FROM zadania WHERE dataZadania = '2020-08-01';";
+        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+        while ($wiersz = mysqli_fetch_array($wynik2)) {
+            echo "<h1>miesiąc: {$wiersz['miesiac']}, rok: {$wiersz['rok']}</h1>";
         }
-        mysqli_close($con);
+        mysqli_close($polaczenie);
         ?>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>

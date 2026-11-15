@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>Hurtownia papeirnicza</title>
+	<title>Hurtownia papiernicza</title>
 	<link rel="stylesheet" href="styl.css" />
 </head>
 
@@ -16,11 +16,12 @@
 			<h3>Ceny wybranych artykułów w hurtowni:</h3>
 			<table>
 				<?php
-				$connect = mysqli_connect('localhost', 'root', '', 'sklep');
-				$query1 = "SELECT nazwa, cena FROM towary LIMIT 4;";
-				$result1 = mysqli_query($connect, $query1);
-				while ($row = mysqli_fetch_array($result1)) {
-					echo "<tr><td>{$row['nazwa']}</td><td>{$row['cena']} zł</td></tr>";
+				// Skrypt 1
+				$polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
+				$zapytanie1 = "SELECT nazwa, cena FROM towary LIMIT 4;";
+				$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+				while ($wiersz = mysqli_fetch_array($wynik1)) {
+					echo "<tr><td>{$wiersz['nazwa']}</td><td>{$wiersz['cena']} zł</td></tr>";
 				}
 				?>
 			</table>
@@ -47,18 +48,19 @@
 				<button type="submit" name="submit">OBLICZ</button>
 			</form>
 			<?php
+			// Skrypt 2
 			if (isset($_POST['submit'])) {
 				$produkt = $_POST['lista'];
 				$liczba = $_POST['liczba'];
 				if (!empty($produkt) && !empty($liczba)) {
-					$query2 = "SELECT cena FROM towary WHERE nazwa = '$produkt';";
-					$result2 = mysqli_query($connect, $query2);
-					$row = mysqli_fetch_array($result2);
-					$cena = ROUND($row['cena'] * $liczba, 1);
+					$zapytanie2 = "SELECT cena FROM towary WHERE nazwa = '$produkt';";
+					$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+					$wiersz = mysqli_fetch_array($wynik2);
+					$cena = round($wiersz['cena'] * $liczba, 1);
 					echo $cena;
 				}
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</section>
 		<section id="prawy">

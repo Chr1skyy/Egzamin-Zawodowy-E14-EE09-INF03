@@ -13,38 +13,38 @@
     </header>
     <main>
         <section>
-            <img src="img/pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
+            <img id="obraz1" src="img/pszczola.jpg" alt="pszczoła na fioletowym kwiatku">
             <form>
                 <label>
-                    <input type="radio" name="efekt" value="blur(6px)"> Blur
+                    <input type="radio" name="efekt" id="blur"> Blur
                 </label>
                 <br>
                 <label>
-                    <input type="radio" name="efekt" value="sepia(100%)"> Sepia
+                    <input type="radio" name="efekt" id="sepia"> Sepia
                 </label>
                 <br>
                 <label>
-                    <input type="radio" name="efekt" value="invert(100%)"> Negatyw
+                    <input type="radio" name="efekt" id="negatyw"> Negatyw
                 </label>
                 <br>
                 <button type="button" onclick="zastosujEfekt()">Zastosuj</button>
             </form>
         </section>
         <section>
-            <img src="img/pomarancza.jpg" alt="drzewo pomarańczy">
+            <img id="obraz2" src="img/pomarancza.jpg" alt="drzewo pomarańczy">
             <br>
             <button type="button" onclick="kolor()">Kolorowy</button>
             <button type="button" onclick="czarnoBialy()">Czarno-biały</button>
         </section>
         <section>
-            <img src="img/owoce.jpg" alt="Kosz pełen owoców">
+            <img id="obraz3" src="img/owoce.jpg" alt="Kosz pełen owoców">
             <br>
             <input id="przezroczystosc" type="range" min="0" max="100" value="100">
             <br>
             <button type="button" onclick="zastosujPrzezroczystosc()">Zastosuj</button>
         </section>
         <section>
-            <img src="img/zolw.jpg" alt="Żółw w wodzie">
+            <img id="obraz4" src="img/zolw.jpg" alt="Żółw w wodzie">
             <br>
             <input id="jasnosc" type="range" min="0" max="250">
             <br>

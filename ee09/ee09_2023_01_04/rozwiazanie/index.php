@@ -17,15 +17,19 @@
     </header>
     <main>
         <?php
-        $con = mysqli_connect('localhost', 'root', '', 'firma');
-        $nr = $_POST['nr'] ?? 1;
-        $q = "SELECT id, imie, nazwisko, adres, miasto FROM pracownicy WHERE id = $nr";
-        $res = mysqli_query($con, $q);
-        while ($row = mysqli_fetch_array($res)) {
-            echo "<img src='img/$row[0].jpg' alt='pracownik'/>
-                <h2>$row[1] $row[2]</h2>
+        // Skrypt 1
+        $polaczenie = mysqli_connect('localhost', 'root', '', 'firma');
+        $nr = 1;
+        if (isset($_POST['nr'])) {
+            $nr = $_POST['nr'];
+        }
+        $zapytanie1 = "SELECT id, imie, nazwisko, adres, miasto FROM pracownicy WHERE id = $nr";
+        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+        while ($wiersz = mysqli_fetch_array($wynik1)) {
+            echo "<img src='img/{$wiersz['id']}.jpg' alt='pracownik'/>
+                <h2>{$wiersz['imie']} {$wiersz['nazwisko']}</h2>
                 <h4>Adres:</h4>
-                <p>$row[3], $row[4]</p>";
+                <p>{$wiersz['adres']}, {$wiersz['miasto']}</p>";
         }
         ?>
     </main>
@@ -41,12 +45,13 @@
             <p>Osoby proszone o podpisanie dokumentu RODO.</p>
             <ol>
                 <?php
-                $q = "SELECT imie, nazwisko FROM pracownicy WHERE czyRODO = 0";
-                $res = mysqli_query($con, $q);
-                while ($row = mysqli_fetch_array($res)) {
-                    echo "<li>$row[0] $row[1]";
+                // Skrypt 2
+                $zapytanie2 = "SELECT imie, nazwisko FROM pracownicy WHERE czyRODO = 0";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                while ($wiersz = mysqli_fetch_array($wynik2)) {
+                    echo "<li>{$wiersz['imie']} {$wiersz['nazwisko']}</li>";
                 }
-                mysqli_close($con);
+                mysqli_close($polaczenie);
                 ?>
             </ol>
         </section>

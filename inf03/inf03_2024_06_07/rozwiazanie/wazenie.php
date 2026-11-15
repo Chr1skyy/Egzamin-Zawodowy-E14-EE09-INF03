@@ -8,6 +8,7 @@
 </head>
 
 <?php
+// Skrypt 3: odświeżanie trzeba wysłać, zanim strona wyśle jakikolwiek HTML
 header("refresh: 10;");
 ?>
 
@@ -25,11 +26,12 @@ header("refresh: 10;");
             <h2>Lokalizacje wag</h2>
             <ol>
                 <?php
-                $connect = mysqli_connect("localhost", "root", "", "wazenietirow");
-                $query1 = "SELECT ulica FROM lokalizacje";
-                $result1 = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result1)) {
-                    echo "<li>ulica $row[0]</li>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect("localhost", "root", "", "wazenietirow");
+                $zapytanie2 = "SELECT ulica FROM lokalizacje";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                while ($wiersz = mysqli_fetch_array($wynik2)) {
+                    echo "<li>ulica {$wiersz['ulica']}</li>";
                 }
                 ?>
             </ol>
@@ -47,23 +49,25 @@ header("refresh: 10;");
                     <th>czas</th>
                 </tr>
                 <?php
-                $query2 = "SELECT rejestracja, ulica, waga, dzien, czas FROM wagi JOIN lokalizacje ON wagi.lokalizacje_id = lokalizacje.id WHERE waga > 5";
-                $result2 = mysqli_query($connect, $query2);
-                while ($row = mysqli_fetch_array($result2)) {
+                // Skrypt 2
+                $zapytanie4 = "SELECT rejestracja, ulica, waga, dzien, czas FROM wagi JOIN lokalizacje ON wagi.lokalizacje_id = lokalizacje.id WHERE waga > 5";
+                $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                while ($wiersz = mysqli_fetch_array($wynik4)) {
                     echo "<tr>
-                                <td>$row[0]</td>
-                                <td>$row[1]</td>
-                                <td>$row[2]</td>
-                                <td>$row[3]</td>
-                                <td>$row[4]</td>
+                                <td>{$wiersz['rejestracja']}</td>
+                                <td>{$wiersz['ulica']}</td>
+                                <td>{$wiersz['waga']}</td>
+                                <td>{$wiersz['dzien']}</td>
+                                <td>{$wiersz['czas']}</td>
                             </tr>";
                 }
                 ?>
             </table>
             <?php
-            $query3 = "INSERT INTO wagi(lokalizacje_id, waga, rejestracja, dzien, czas) VALUES ('5', FLOOR(RAND()*10+1), 'DW12345', CURRENT_DATE, CURRENT_TIME)";
-            mysqli_query($connect, $query3);
-            mysqli_close($connect);
+            // Skrypt 3
+            $zapytanie3 = "INSERT INTO wagi(lokalizacje_id, waga, rejestracja, dzien, czas) VALUES ('5', FLOOR(RAND()*10+1), 'DW12345', CURRENT_DATE, CURRENT_TIME)";
+            mysqli_query($polaczenie, $zapytanie3);
+            mysqli_close($polaczenie);
             ?>
         </section>
         <section id="prawy">

@@ -36,16 +36,16 @@
                 <button type="submit" name="wyslij">SPRAWDŹ</button>
             </form>
             <?php
-            $con = mysqli_connect('localhost', 'root', '', 'kwiaciarnia');
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'kwiaciarnia');
             if (isset($_POST['wyslij'])) {
                 $miasto = $_POST['miasto'];
-                $q = "SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto = '$miasto';";
-                $res = mysqli_query($con, $q);
-                while ($row = mysqli_fetch_array($res)) {
-                    echo "<h3>$row[0], $row[1]</h3>";
+                $zapytanie = "SELECT nazwa, ulica FROM kwiaciarnie WHERE miasto = '$miasto';";
+                $wynik = mysqli_query($polaczenie, $zapytanie);
+                while ($wiersz = mysqli_fetch_array($wynik)) {
+                    echo "<h3>{$wiersz['nazwa']}, {$wiersz['ulica']}</h3>";
                 }
             }
-            mysqli_close($con)
+            mysqli_close($polaczenie);
             ?>
         </section>
     </main>

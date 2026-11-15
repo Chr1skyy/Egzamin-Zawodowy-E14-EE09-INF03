@@ -29,18 +29,18 @@
 				<th>CENA</th>
 			</tr>
 			<?php
-			$connect = mysqli_connect('localhost', 'root', '', 'sklep');
-			$query = "SELECT id, nazwa, opis, cena FROM podzespoly WHERE cena < 1000;";
-			$result = mysqli_query($connect, $query);
-			while ($row = mysqli_fetch_array($result)) {
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
+			$zapytanie = "SELECT id, nazwa, opis, cena FROM podzespoly WHERE cena < 1000;";
+			$wynik = mysqli_query($polaczenie, $zapytanie);
+			while ($wiersz = mysqli_fetch_array($wynik)) {
 				echo "<tr>
-						<td>{$row['id']}</td>
-						<td>{$row['nazwa']}</td>
-						<td>{$row['opis']}</td>
-						<td>{$row['cena']}</td>
+						<td>{$wiersz['id']}</td>
+						<td>{$wiersz['nazwa']}</td>
+						<td>{$wiersz['opis']}</td>
+						<td>{$wiersz['cena']}</td>
 					</tr>";
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</table>
 	</main>

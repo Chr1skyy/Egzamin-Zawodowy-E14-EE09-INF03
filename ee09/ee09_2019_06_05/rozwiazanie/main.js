@@ -1,13 +1,12 @@
 function generuj() {
-	let a = parseInt(document.getElementById("a").value);
-	let r = parseInt(document.getElementById("r").value);
-	let n = parseInt(document.getElementById("n").value);
-	let wynik = document.getElementById("wynik");
-	res = "Ciąg arytmetyczny zawiera wyrazy: ";
-	while(n) {
-		res += a + ", ";
-		a = a + r;
-		n--;
-	}
-	wynik.innerHTML = res;
+    let wyraz = Number(document.getElementById("a").value);
+    let roznica = Number(document.getElementById("r").value);
+    let liczbaWyrazow = Number(document.getElementById("n").value);
+    let tekst = "Ciąg arytmetyczny zawiera wyrazy: " + wyraz;
+    for (let i = 2; i <= liczbaWyrazow; i++) {
+        wyraz = wyraz + roznica;
+        tekst = tekst + ", " + wyraz;
+    }
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = tekst;
 }

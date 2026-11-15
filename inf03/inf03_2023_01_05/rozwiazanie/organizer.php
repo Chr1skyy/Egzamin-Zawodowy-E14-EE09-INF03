@@ -20,11 +20,12 @@
                 <button name="submit">OK</button>
             </form>
             <?php
-            $con = mysqli_connect('localhost', 'root', '', 'kalendarz');
+            // skrypt obsługujący formularz
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'kalendarz');
             if (isset($_POST['submit'])) {
                 $wpis = $_POST['wpis'];
-                $q = "UPDATE zadania SET wpis = '$wpis' WHERE dataZadania = '2020-08-09'";
-                mysqli_query($con, $q);
+                $zapytanie4 = "UPDATE zadania SET wpis = '$wpis' WHERE dataZadania = '2020-08-09'";
+                mysqli_query($polaczenie, $zapytanie4);
             }
             ?>
         </section>
@@ -34,15 +35,16 @@
     </header>
     <main>
         <?php
-        $q = "SELECT dataZadania, wpis FROM zadania WHERE miesiac = 'sierpien'";
-        $res = mysqli_query($con, $q);
-        while ($row = mysqli_fetch_array($res)) {
+        // Skrypt 1
+        $zapytanie1 = "SELECT dataZadania, wpis FROM zadania WHERE miesiac = 'sierpien'";
+        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+        while ($wiersz = mysqli_fetch_array($wynik1)) {
             echo "<section class='dzien'>
-                    <h5>$row[0]</h5>
-                    <p>$row[1]</p>
+                    <h5>{$wiersz['dataZadania']}</h5>
+                    <p>{$wiersz['wpis']}</p>
                 </section>";
         }
-        mysqli_close($con);
+        mysqli_close($polaczenie);
         ?>
     </main>
     <footer>

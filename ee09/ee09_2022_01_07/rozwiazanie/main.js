@@ -1,15 +1,12 @@
-function zmienImg(img) {
-    const obraz = document.getElementById('zmiana')
-    obraz.src = img
+function zmienImg(plik) {
+    document.getElementById("zmiana").src = plik;
 }
 
-let zmiana = 0
 function polubZmien() {
-    zmiana++
-    const polub = document.getElementById("polub")
-    if (zmiana % 2 == 0) {
-        polub.src = "img/icon-off.png"
+    let ikona = document.getElementById("polub");
+    if (ikona.src.includes("icon-off")) {
+        ikona.src = "img/icon-on.png";
     } else {
-        polub.src = "img/icon-on.png"
+        ikona.src = "img/icon-off.png";
     }
 }

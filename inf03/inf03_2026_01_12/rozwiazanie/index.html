@@ -16,18 +16,18 @@
             <aside>
                 <h3>Dodaj wzór</h3>
                 <form>
-                    <label for="patternFile">Wzór:</label><br>
-                    <input type="file" id="patternFile" accept=".png"><br><br>
-                    <label for="color">Kolor:</label><br>
-                    <select id="color">
+                    <label for="plikWzoru">Wzór:</label><br>
+                    <input type="file" id="plikWzoru" accept=".png"><br><br>
+                    <label for="kolor">Kolor:</label><br>
+                    <select id="kolor">
                         <option value="Czarny">Czarny</option>
                         <option value="Czerwony">Czerwony</option>
                         <option value="Zielony">Zielony</option>
                         <option value="Niebieski">Niebieski</option>
                     </select><br>
-                    <label for="price">Cena:</label><br>
-                    <input type="number" id="price"><br>
-                    <button type="button" onclick="addPattern()">Dodaj Wzór</button>
+                    <label for="cena">Cena:</label><br>
+                    <input type="number" id="cena"><br>
+                    <button type="button" onclick="dodajWzor()">Dodaj Wzór</button>
                 </form>
             </aside>
         </div>
@@ -35,7 +35,7 @@
             <header id="title">
                 <h1>Studio Tatuażu</h1>
             </header>
-            <section id="gallery">
+            <section id="galeria">
                 <h2>Galeria</h2>
                 <img src="img/smok.png" alt="smok" class="miniatury">
                 <img src="img/koliber.png" alt="koliber" class="miniatury">

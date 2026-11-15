@@ -1,9 +1,14 @@
 function oblicz() {
-	let paliwo = document.getElementById("paliwo").value;
-	let ilosc = document.getElementById("ilosc").value;
-	let wynik = document.getElementById("wynik");
-	let cena = 0;
-	if(paliwo == 1) cena = 4;
-	if(paliwo == 2) cena = 3.5;
-	wynik.innerHTML = "koszt paliwa: " + cena * ilosc + " zł";
+    let rodzajPaliwa = Number(document.getElementById("paliwo").value);
+    let iloscLitrow = Number(document.getElementById("ilosc").value);
+    let cena;
+    if (rodzajPaliwa == 1) {
+        cena = 4;
+    } else if (rodzajPaliwa == 2) {
+        cena = 3.5;
+    } else {
+        cena = 0;
+    }
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = "koszt paliwa: " + cena * iloscLitrow + " zł";
 }

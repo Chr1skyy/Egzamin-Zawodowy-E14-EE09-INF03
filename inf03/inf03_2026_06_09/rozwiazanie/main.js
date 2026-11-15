@@ -1,17 +1,14 @@
 function dodajDoZamowienia(potrawa) {
-    const lista = document.querySelector("ul")
-    const nowyElement = document.createElement("li")
-    nowyElement.innerHTML = potrawa
-    lista.append(nowyElement)
+    let nowyElement = document.createElement("li");
+    nowyElement.innerHTML = potrawa;
+    document.querySelector("ul").appendChild(nowyElement);
 }
 
 function wyczyscZamowienie() {
-    const lista = document.querySelector("ul")
-    lista.innerHTML = ""
+    document.querySelector("ul").innerHTML = "";
 }
 
 function zatwierdzZamowienie() {
-    const lista = document.querySelector("ul")
-    alert("Zamówienie zostało przekazane do realizacji")
-    lista.innerHTML = ""
+    alert("Zamówienie zostało przekazane do realizacji");
+    document.querySelector("ul").innerHTML = "";
 }

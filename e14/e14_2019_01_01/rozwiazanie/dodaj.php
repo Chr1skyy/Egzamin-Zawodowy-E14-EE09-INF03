@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('localhost', 'root', '', 'baza');
+$polaczenie = mysqli_connect('localhost', 'root', '', 'dane');
 if (isset($_POST["submit"])) {
 	$tytul = $_POST['tytul'];
 	$gatunek = $_POST['gatunek'];
@@ -8,10 +8,10 @@ if (isset($_POST["submit"])) {
 	if (empty($tytul) || empty($gatunek) || empty($rok) || empty($ocena)) {
 		echo "Wykryto puste pola";
 	} else {
-		$query = "INSERT INTO filmy(gatunki_id, tytul, rok, ocena) VALUES ($gatunek, '$tytul', $rok, $ocena);";
-		mysqli_query($connect, $query);
+		$zapytanie = "INSERT INTO filmy(gatunki_id, tytul, rok, ocena) VALUES ($gatunek, '$tytul', $rok, $ocena);";
+		mysqli_query($polaczenie, $zapytanie);
 		echo "Film $tytul został dodany do bazy";
 	}
 }
-mysqli_close($connect);
+mysqli_close($polaczenie);
 ?>

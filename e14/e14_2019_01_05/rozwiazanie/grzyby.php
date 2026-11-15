@@ -13,38 +13,42 @@
 			<a href="img/borowik.jpg"><img src="img/borowik-miniatura.jpg" alt="Grzybobranie" /></a>
 		</section>
 		<section id="tytulowy">
-			<h1>Idziemy na grzyby</h1>
+			<h1>Idziemy na grzyby!</h1>
 		</section>
 	</header>
 	<main>
 		<section id="lewy">
 			<?php
-			$connect = mysqli_connect('localhost', 'root', '', 'dane2');
-			$query1 = "SELECT nazwa_pliku, potoczna FROM grzyby;";
-			$result1 = mysqli_query($connect, $query1);
-			while ($row = mysqli_fetch_array($result1)) {
-				echo "<img src='img/{$row['nazwa_pliku']}' title='{$row['potoczna']}' />";
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'dane2');
+			$zapytanie3 = "SELECT nazwa_pliku, potoczna FROM grzyby;";
+			$wynik3 = mysqli_query($polaczenie, $zapytanie3);
+			while ($wiersz = mysqli_fetch_array($wynik3)) {
+				echo "<img src='img/{$wiersz['nazwa_pliku']}' title='{$wiersz['potoczna']}' />";
 			}
 			?>
 		</section>
 		<section id="prawy">
 			<h2>Grzyby jadalne</h2>
 			<?php
-			$query2 = "SELECT nazwa, potoczna FROM grzyby WHERE jadalny = 1;";
-			$result2 = mysqli_query($connect, $query2);
-			while ($row = mysqli_fetch_array($result2)) {
-				echo "<p>{$row['nazwa']} ({$row['potoczna']})</p>";
+			// Skrypt 2
+			$zapytanie1 = "SELECT nazwa, potoczna FROM grzyby WHERE jadalny = 1;";
+			$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+			while ($wiersz = mysqli_fetch_array($wynik1)) {
+				echo "<p>{$wiersz['nazwa']} ({$wiersz['potoczna']})</p>";
 			}
 			?>
 			<h2>Polecamy do sosów</h2>
 			<ol>
 				<?php
-				$query3 = "SELECT grzyby.nazwa, grzyby.potoczna, rodzina.nazwa FROM grzyby JOIN rodzina ON grzyby.rodzina_id = rodzina.id WHERE potrawy_id = 1;";
-				$result3 = mysqli_query($connect, $query3);
-				while ($row = mysqli_fetch_array($result3)) {
-					echo "<li>{$row['nazwa']} ({$row['potoczna']}), rodzina: {$row['rodzina']}</li>";
+				// Skrypt 3
+				$zapytanie2 = "SELECT grzyby.nazwa, grzyby.potoczna, rodzina.nazwa FROM grzyby JOIN rodzina ON grzyby.rodzina_id = rodzina.id WHERE potrawy_id = 1;";
+				$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+				// dwie kolumny nazywają się nazwa, dlatego numer kolumny
+				while ($wiersz = mysqli_fetch_array($wynik2)) {
+					echo "<li>{$wiersz[0]} ({$wiersz[1]}), rodzina: {$wiersz[2]}</li>";
 				}
-				mysqli_close($connect);
+				mysqli_close($polaczenie);
 				?>
 			</ol>
 		</section>

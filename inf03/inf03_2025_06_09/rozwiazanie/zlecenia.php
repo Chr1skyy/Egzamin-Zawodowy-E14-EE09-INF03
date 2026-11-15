@@ -27,13 +27,14 @@
                         <button name="szukaj_firm">Szukaj firm</button>
                     </form>
                     <?php
-                    $connect = mysqli_connect("localhost", "root", "", "remonty");
+                    // Skrypt 1
+                    $polaczenie = mysqli_connect("localhost", "root", "", "remonty");
                     if (isset($_POST['szukaj_firm'])) {
-                        $ilosc_pracownikow = $_POST['ilosc_pracownikow'];
-                        $query2 = "SELECT nazwa_firmy, liczba_pracownikow FROM wykonawcy WHERE liczba_pracownikow >= $ilosc_pracownikow";
-                        $result = mysqli_query($connect, $query2);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<p>{$row['nazwa_firmy']}, {$row['liczba_pracownikow']} pracowników</p>";
+                        $liczbaPracownikow = $_POST['ilosc_pracownikow'];
+                        $zapytanie2 = "SELECT nazwa_firmy, liczba_pracownikow FROM wykonawcy WHERE liczba_pracownikow >= $liczbaPracownikow";
+                        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                        while ($wiersz = mysqli_fetch_array($wynik2)) {
+                            echo "<p>{$wiersz['nazwa_firmy']}, {$wiersz['liczba_pracownikow']} pracowników</p>";
                         }
                     }
                     ?>
@@ -43,10 +44,11 @@
                     <form action="zlecenia.php" method="POST">
                         <select name="miasto">
                             <?php
-                            $query3 = "SELECT DISTINCT miasto FROM klienci ORDER BY miasto;";
-                            $result2 = mysqli_query($connect, $query3);
-                            while ($row = mysqli_fetch_array($result2)) {
-                                echo "<option value='{$row['miasto']}'>{$row['miasto']}</option>";
+                            // Skrypt 2
+                            $zapytanie3 = "SELECT DISTINCT miasto FROM klienci ORDER BY miasto;";
+                            $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                            while ($wiersz = mysqli_fetch_array($wynik3)) {
+                                echo "<option value='{$wiersz['miasto']}'>{$wiersz['miasto']}</option>";
                             }
                             ?>
                         </select>
@@ -60,18 +62,19 @@
                         <button name="szukaj_klientow">Szukaj klientów</button>
                     </form>
                     <?php
+                    // Skrypt 3
                     if (isset($_POST['szukaj_klientow'])) {
                         $usluga = $_POST['usluga'];
                         $miasto = $_POST['miasto'];
-                        $query4 = "SELECT imie, cena FROM klienci JOIN zlecenia ON klienci.id_klienta = zlecenia.id_klienta WHERE miasto = '$miasto' AND rodzaj = '$usluga';";
-                        $result4 = mysqli_query($connect, $query4);
+                        $zapytanie4 = "SELECT imie, cena FROM klienci JOIN zlecenia ON klienci.id_klienta = zlecenia.id_klienta WHERE miasto = '$miasto' AND rodzaj = '$usluga';";
+                        $wynik4 = mysqli_query($polaczenie, $zapytanie4);
                         echo "<ul>";
-                        while ($row = mysqli_fetch_array($result4)) {
-                            echo "<li>{$row['imie']} - {$row['cena']}</li>";
+                        while ($wiersz = mysqli_fetch_array($wynik4)) {
+                            echo "<li>{$wiersz['imie']} - {$wiersz['cena']}</li>";
                         }
                         echo "</ul>";
                     }
-                    mysqli_close($connect);
+                    mysqli_close($polaczenie);
                         ?>
                 </section>
             </div>

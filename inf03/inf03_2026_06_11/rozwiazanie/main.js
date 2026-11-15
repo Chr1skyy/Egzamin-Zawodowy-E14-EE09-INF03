@@ -1,6 +1,6 @@
-const drzewa = ["buk", "lipa", "wierzba", "brzoza", "dąb", "kasztanowiec", "jarzębina", "klon", "magnolia"]
+let drzewa = ["buk", "lipa", "wierzba", "brzoza", "dąb", "kasztanowiec", "jarzębina", "klon", "magnolia"];
 
-const opisy = [
+let opisy = [
     "Duże drzewo liściaste z gładką, szarą korą i gęstą, rozłożystą koroną. Ma błyszczące, ciemnozielone liście, które jesienią przebarwiają się na złociste lub czerwonawe odcienie. Buk kwitnie wiosną, a jego owoce to jadalne orzeszki zwane bukwią, zamknięte w kolczastej okrywie. Rośnie na żyznych, przepuszczalnych glebach w klimacie umiarkowanym i jest ważnym elementem lasów liściastych. Drewno buka jest twarde i wytrzymałe, wykorzystywane w meblarstwie i stolarstwie.",
     "drzewo liściaste o szerokiej, gęstej koronie i gładkiej, szarobrązowej korze, która z wiekiem staje się spękana. Ma duże, sercowate liście o piłkowanych brzegach. Kwiaty lipy są małe, żółtawobiałe, zebrane w wonne, zwisające baldachy, które kwitną na przełomie czerwca i lipca. Owoce to niewielkie orzeszki z trwałymi skrzydełkami. Lipa preferuje żyzne, wilgotne gleby i rośnie w klimacie umiarkowanym. Jest ceniona za drewno używane w rzeźbiarstwie oraz kwiaty stosowane w ziołolecznictwie, szczególnie w formie naparów na przeziębienia.",
     "Drzewo liściaste z długimi, zwisającymi gałęziami i elastycznymi pędami. Ma wąskie, lancetowate liście, które są zazwyczaj zielone na górnej stronie i srebrzyste lub niebieskawe na spodzie. Wierzba kwitnie wczesną wiosną, a jej kwiaty tworzą kotki. Rośnie na wilgotnych, często podmokłych terenach, w pobliżu rzek, jezior i innych zbiorników wodnych. Drewno wierzby jest lekkie i elastyczne, używane do produkcji koszy, mebli oraz w wikliniarstwie. Wierzba jest także ceniona w medycynie ludowej, a kora wierzby białej jest źródłem salicyny, stosowanej jako naturalny środek przeciwbólowy i przeciwgorączkowy.",
@@ -10,26 +10,26 @@ const opisy = [
     "Drzewo lub krzew z rodziny różowatych (Rosaceae). Charakteryzuje się złożonymi liśćmi składającymi się z 9-15 lancetowatych listków o piłkowanych brzegach. Kwiaty są białe lub kremowe, zebrane w baldachy lub wiechy, pojawiające się wiosną lub wczesnym latem. Owoce jarzębiny to czerwone lub pomarańczowe jagody, które są atrakcyjne dla ptaków i czasem używane do wyrobu dżemów i napojów. Jarzębina rośnie na różnych typach gleb i jest popularna jako roślina ozdobna ze względu na swoje piękne kwiaty i owoce.",
     "Charakteryzuje się dłoniastymi liśćmi o pięciu łatkach, często z wyraźnymi wcięciami. Kwiaty klonu są zazwyczaj niepozorne, zebrane w baldachy lub grona, pojawiające się przed rozwojem liści wczesną wiosną. Owoce klonu to skrzydlaki, czyli nasiona zamknięte w długich, błoniastych osnówkach ułatwiających rozprzestrzenianie przez wiatr. Klony są szeroko rozpowszechnione na całym świecie i są cenione zarówno jako rośliny ozdobne, jak i źródło drewna.",
     "Magnolia to drzewo lub krzew o dużych, skórzastych liściach i pięknych, często pachnących kwiatach. Kwiaty magnolii mogą być białe, różowe lub fioletowe, czasem pełne, a czasem w baldachach. Owoce to czerwone lub różowe jagody. Magnolie są cenione za swój estetyczny wygląd i aromatyczne kwiaty, często stosowane w ogrodach i jako rośliny ozdobne."
-]
+];
 
 function wybierz(indeks) {
-    const blokGlowny = document.querySelector('main')
-    blokGlowny.innerHTML = ''
-    const elementH2 = document.createElement('h2')
-    elementH2.textContent = drzewa[indeks]
-    const paragraf = document.createElement('p')
-    paragraf.classList.add('opis')
-    paragraf.innerHTML = opisy[indeks]
-    blokGlowny.appendChild(elementH2)
-    blokGlowny.appendChild(paragraf)
+    let blokGlowny = document.querySelector("main");
+    blokGlowny.innerHTML = "";
+    let naglowek = document.createElement("h2");
+    naglowek.innerHTML = drzewa[indeks];
+    let opis = document.createElement("p");
+    opis.className = "opis";
+    opis.innerHTML = opisy[indeks];
+    blokGlowny.appendChild(naglowek);
+    blokGlowny.appendChild(opis);
 }
 
 function szukaj() {
-    const szukaneDrzewo = document.querySelector('#wyszukajDrzewo').value
-    const blokGlowny = document.querySelector('main')
-    if (drzewa.includes(szukaneDrzewo)) {
-        wybierz(drzewa.indexOf(szukaneDrzewo))
+    let szukaneDrzewo = document.getElementById("wyszukajDrzewo").value;
+    let indeks = drzewa.indexOf(szukaneDrzewo);
+    if (indeks == -1) {
+        document.querySelector("main").innerHTML = "<p>Drzewa, o którym chcesz znaleźć informacje, nie ma w naszym Atlasie drzew.</p>";
     } else {
-        blokGlowny.innerHTML = "<p>Drzewa, o którym chcesz znaleźć informacje, nie ma w naszym Atlasie drzew.</p>";
+        wybierz(indeks);
     }
 }

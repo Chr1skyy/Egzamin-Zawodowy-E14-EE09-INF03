@@ -35,15 +35,16 @@
 				<button name="submit">WYŚLIJ</button>
 			</form>
 			<?php
-			$connect = mysqli_connect('localhost', 'root', '', 'sklep');
+			// Skrypt 2
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
 			if (isset($_POST['submit'])) {
 				$imie = $_POST['imie'];
 				$nazwisko = $_POST['nazwisko'];
 				$email = $_POST['email'];
-				$query = "INSERT INTO zamowienia(imie, nazwisko, adres_email) VALUES ('$imie', '$nazwisko', '$email')";
-				mysqli_query($connect, $query);
+				$zapytanie = "INSERT INTO zamowienia(imie, nazwisko, adres_email) VALUES ('$imie', '$nazwisko', '$email')";
+				mysqli_query($polaczenie, $zapytanie);
 			}
-			mysqli_close($connect);
+			mysqli_close($polaczenie);
 			?>
 		</section>
 		<section id="prawy">

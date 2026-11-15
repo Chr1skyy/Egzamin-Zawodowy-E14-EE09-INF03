@@ -13,21 +13,22 @@
     </header>
     <div id="container">
         <nav>
-            <div id="blokBaza" onclick="changeSection('baza')">Baza</div>
-            <div id="blokOpisy" onclick="changeSection('opisy')">Opisy</div>
-            <div id="blokGaleria" onclick="changeSection('galeria')">Galeria</div>
+            <div id="blokBaza" onclick="zmienSekcje('blokBaza', 'baza')">Baza</div>
+            <div id="blokOpisy" onclick="zmienSekcje('blokOpisy', 'opisy')">Opisy</div>
+            <div id="blokGaleria" onclick="zmienSekcje('blokGaleria', 'galeria')">Galeria</div>
         </nav>
         <main>
             <section id="baza">
-                <h3>Baza smoków</h3>
+                <h3>Baza Smoków</h3>
                 <form action="smoki.php" method="POST">
                     <select name="pochodzenie">
                         <?php
-                        $connect = mysqli_connect("localhost", "root", "", "smoki");
-                        $query = "SELECT DISTINCT pochodzenie FROM smok ORDER BY pochodzenie ASC;";
-                        $result = mysqli_query($connect, $query);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<option name='{$row['pochodzenie']}'>{$row['pochodzenie']}</option>";
+                        // Skrypt 1
+                        $polaczenie = mysqli_connect("localhost", "root", "", "smoki");
+                        $zapytanie2 = "SELECT DISTINCT pochodzenie FROM smok ORDER BY pochodzenie ASC;";
+                        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                        while ($wiersz = mysqli_fetch_array($wynik2)) {
+                            echo "<option value='{$wiersz['pochodzenie']}'>{$wiersz['pochodzenie']}</option>";
                         }
                         ?>
                     </select>
@@ -40,19 +41,20 @@
                         <th>Szerokość</th>
                     </tr>
                     <?php
+                    // Skrypt 2
                     if (isset($_POST["submit"])) {
                         $pochodzenie = $_POST["pochodzenie"];
-                        $query = "SELECT nazwa, dlugosc, szerokosc FROM smok WHERE pochodzenie ='$pochodzenie';";
-                        $result = mysqli_query($connect, $query);
-                        while ($row = mysqli_fetch_array($result)) {
+                        $zapytanie1 = "SELECT nazwa, dlugosc, szerokosc FROM smok WHERE pochodzenie ='$pochodzenie';";
+                        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                        while ($wiersz = mysqli_fetch_array($wynik1)) {
                             echo "<tr>
-                                <td>{$row['nazwa']}</td>
-                                <td>{$row['dlugosc']}</td>
-                                <td>{$row['szerokosc']}</td>
+                                <td>{$wiersz['nazwa']}</td>
+                                <td>{$wiersz['dlugosc']}</td>
+                                <td>{$wiersz['szerokosc']}</td>
                             </tr>";
                         }
                     }
-                    mysqli_close($connect);
+                    mysqli_close($polaczenie);
                     ?>
                 </table>
             </section>

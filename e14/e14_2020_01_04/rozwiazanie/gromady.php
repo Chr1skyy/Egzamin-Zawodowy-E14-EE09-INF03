@@ -21,16 +21,18 @@
 	<main>
 		<section id="lewy">
 			<?php
-			$connect = mysqli_connect('localhost', 'root', '', 'baza');
-			$query1 = "SELECT id, Gromady_id, gatunek, wystepowanie FROM zwierzeta WHERE Gromady_id IN (4, 5);";
-			$result1 = mysqli_query($connect, $query1);
-			while ($row = mysqli_fetch_array($result1)) {
-				if ($row['Gromady_id'] == 4)
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'baza');
+			$zapytanie2 = "SELECT id, Gromady_id, gatunek, wystepowanie FROM zwierzeta WHERE Gromady_id IN (4, 5);";
+			$wynik2 = mysqli_query($polaczenie, $zapytanie2);
+			while ($wiersz = mysqli_fetch_array($wynik2)) {
+				if ($wiersz['Gromady_id'] == 4) {
 					$gromada = "ptaki";
-				if ($row['Gromady_id'] == 5)
+				} else {
 					$gromada = "ssaki";
-				echo "<p>{$row['id']}. {$row['gatunek']}</p>";
-				echo "<p>Występowanie: {$row['wystepowanie']}, gromada $gromada</p>";
+				}
+				echo "<p>{$wiersz['id']}. {$wiersz['gatunek']}</p>";
+				echo "<p>Występowanie: {$wiersz['wystepowanie']}, gromada $gromada</p>";
 				echo "<hr/>";
 			}
 			?>
@@ -39,12 +41,13 @@
 			<h1>PTAKI</h1>
 			<ol>
 				<?php
-				$query2 = "SELECT gatunek, obraz FROM zwierzeta WHERE Gromady_id = 4;";
-				$result2 = mysqli_query($connect, $query2);
-				while ($row = mysqli_fetch_array($result2)) {
-					echo "<li><a href='img/{$row['obraz']}'>{$row['gatunek']}</a></li>";
+				// Skrypt 2
+				$zapytanie1 = "SELECT gatunek, obraz FROM zwierzeta WHERE Gromady_id = 4;";
+				$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+				while ($wiersz = mysqli_fetch_array($wynik1)) {
+					echo "<li><a href='img/{$wiersz['obraz']}'>{$wiersz['gatunek']}</a></li>";
 				}
-				mysqli_close($connect);
+				mysqli_close($polaczenie);
 				?>
 			</ol>
 			<img src="img/sroka.jpg" alt="Sroka zwyczajna, gromada ptaki" />

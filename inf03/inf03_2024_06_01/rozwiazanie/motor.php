@@ -17,13 +17,14 @@
             <h2>Gdzie pojechać?</h2>
             <dl>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'motory');
-                $query1 = "SELECT nazwa, opis, poczatek, zrodlo FROM wycieczki JOIN zdjecia ON zdjecia_id = zdjecia.id";
-                $result1 = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result1)) {
-                    echo "<dt>$row[0], rozpoczyna się w $row[2], ";
-                    echo "<a href='$row[3].jpg'>zobacz zdjęcie</a></dt>";
-                    echo "<dd>$row[1]</dd>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'motory');
+                $zapytanie2 = "SELECT nazwa, opis, poczatek, zrodlo FROM wycieczki JOIN zdjecia ON zdjecia_id = zdjecia.id";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                while ($wiersz = mysqli_fetch_array($wynik2)) {
+                    echo "<dt>{$wiersz['nazwa']}, rozpoczyna się w {$wiersz['poczatek']}, ";
+                    echo "<a href='{$wiersz['zrodlo']}.jpg'>zobacz zdjęcie</a></dt>";
+                    echo "<dd>{$wiersz['opis']}</dd>";
                 }
                 ?>
             </dl>
@@ -42,12 +43,12 @@
             <h2>Statystyki</h2>
             <p>Wpisanych wycieczek:
                 <?php
-                $query2 = "SELECT COUNT(*) as liczba_wycieczek FROM wycieczki";
-                $result2 = mysqli_query($connect, $query2);
-                $row = mysqli_fetch_array($result2);
-                echo $row['liczba_wycieczek'];
-				
-				mysqli_close($connect);
+                // Skrypt 2
+                $zapytanie3 = "SELECT COUNT(*) AS liczba_wycieczek FROM wycieczki";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                $wiersz = mysqli_fetch_array($wynik3);
+                echo $wiersz['liczba_wycieczek'];
+                mysqli_close($polaczenie);
                 ?>
             </p>
             <p>Użytkowników forum: 200</p>

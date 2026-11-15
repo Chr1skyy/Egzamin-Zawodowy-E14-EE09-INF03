@@ -3,11 +3,16 @@ function odkryj() {
     let srednie = document.getElementById("srednie").checked;
     let poldlugie = document.getElementById("poldlugie").checked;
     let dlugie = document.getElementById("dlugie").checked;
-    let wynik = document.getElementById("wynik");
     let cena = 0;
-    if (krotkie) cena = 15;
-    if (srednie) cena = 20;
-    if (poldlugie) cena = 30;
-    if (dlugie) cena = 40;
+    if (krotkie) {
+        cena = 15;
+    } else if (srednie) {
+        cena = 20;
+    } else if (poldlugie) {
+        cena = 30;
+    } else if (dlugie) {
+        cena = 40;
+    }
+    let wynik = document.getElementById("wynik");
     wynik.innerHTML = "cena promocyjna: " + cena;
 }

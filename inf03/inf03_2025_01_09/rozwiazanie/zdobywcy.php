@@ -30,7 +30,7 @@
             </ul>
         </section>
         <section id="prawy">
-            <h2>Dołącz do naszego zespołu</h2>
+            <h2>Dołącz do naszego zespołu!</h2>
             <p>Wpisz swoje dane do formularza</p>
             <form method="POST" action="zdobywcy.php">
                 <label for="nazwisko">Nazwisko:</label>
@@ -50,14 +50,17 @@
                 </label>
                 <button name="submit">Dodaj</button>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'zdobywcy');
-                if (isset($_POST["submit"]) && !empty($_POST["nazwisko"]) && !empty($_POST["imie"]) && !empty($_POST["funkcja"]) && !empty($_POST["email"])) {
+                // Skrypt 2
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'zdobywcy');
+                if (isset($_POST["submit"])) {
                     $nazwisko = $_POST["nazwisko"];
                     $imie = $_POST["imie"];
                     $funkcja = $_POST["funkcja"];
                     $email = $_POST["email"];
-                    $query = "INSERT INTO osoby VALUES (NULL, '$nazwisko', '$imie', '$funkcja', '$email');";
-                    mysqli_query($connect, $query);
+                    if (!empty($nazwisko) && !empty($imie) && !empty($funkcja) && !empty($email)) {
+                        $zapytanie4 = "INSERT INTO osoby VALUES (NULL, '$nazwisko', '$imie', '$funkcja', '$email');";
+                        mysqli_query($polaczenie, $zapytanie4);
+                    }
                 }
                 ?>
                 <table>
@@ -68,17 +71,18 @@
                         <th>Email</th>
                     </tr>
                     <?php
-                    $query = "SELECT nazwisko, imie, funkcja, email FROM osoby;";
-                    $result = mysqli_query($connect, $query);
-                    while ($row = mysqli_fetch_array($result)) {
+                    // Skrypt 1
+                    $zapytanie2 = "SELECT nazwisko, imie, funkcja, email FROM osoby;";
+                    $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                    while ($wiersz = mysqli_fetch_array($wynik2)) {
                         echo "<tr>
-                        <td>{$row['nazwisko']}</td>
-                        <td>{$row['imie']}</td>
-                        <td>{$row['funkcja']}</td>
-                        <td>{$row['email']}</td>
+                        <td>{$wiersz['nazwisko']}</td>
+                        <td>{$wiersz['imie']}</td>
+                        <td>{$wiersz['funkcja']}</td>
+                        <td>{$wiersz['email']}</td>
                     </tr>";
                     }
-                    mysqli_close($connect);
+                    mysqli_close($polaczenie);
                     ?>
                 </table>
             </form>

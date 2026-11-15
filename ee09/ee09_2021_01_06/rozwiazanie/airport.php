@@ -1,3 +1,12 @@
+<?php
+// Skrypt 2
+if (isset($_COOKIE['ciasteczko'])) {
+	$komunikat = "<p><b>Miło nam, że nas znowu odwiedziłeś</b></p>";
+} else {
+	setcookie("ciasteczko", 1, time() + 3600);
+	$komunikat = "<p><i>Dzień dobry! Sprawdź regulamin naszej strony</i></p>";
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +22,7 @@
 		<img src="zad6.png" alt="logotyp" />
 	</div>
 	<div id="glowny">
-		<h4>tavela odlotów</h4>
+		<h4>tabela odlotów</h4>
 		<table>
 			<tr>
 				<th>lp.</th>
@@ -23,13 +32,14 @@
 				<th>status</th>
 			</tr>
 			<?php
-			$con = mysqli_connect('localhost', 'root', '', 'egzamin');
-			$kw1 = "SELECT id, nr_rejsu, czas, kierunek, status_lotu FROM odloty ORDER BY czas DESC;";
-			$res1 = mysqli_query($con, $kw1);
-			while($tab = mysqli_fetch_row($res1)) {
-				echo "<tr><td>$tab[0]</td><td>$tab[1]</td><td>$tab[2]</td><td>$tab[3]</td><td>$tab[4]</td></tr>";
+			// Skrypt 1
+			$polaczenie = mysqli_connect('localhost', 'root', '', 'egzamin');
+			$zapytanie = "SELECT id, nr_rejsu, czas, kierunek, status_lotu FROM odloty ORDER BY czas DESC;";
+			$wynik = mysqli_query($polaczenie, $zapytanie);
+			while ($wiersz = mysqli_fetch_array($wynik)) {
+				echo "<tr><td>{$wiersz['id']}</td><td>{$wiersz['nr_rejsu']}</td><td>{$wiersz['czas']}</td><td>{$wiersz['kierunek']}</td><td>{$wiersz['status_lotu']}</td></tr>";
 			}
-			mysqli_close($con);
+			mysqli_close($polaczenie);
 			?>
 		</table>
 	</div>
@@ -37,14 +47,7 @@
 		<a href="kw.jpg" target="_blank">Pobierz obraz</a>
 	</div>
 	<div id="stopka2">
-	<?php
-	if(isset($_COOKIE['ciasteczko'])) {
-		echo "<p><b>Miło nam, że nas znowu odwiedziłeś</b></p>";
-	} else {
-		setcookie("ciasteczko", 1, TIME() + 3600);
-		echo "<p><i>Dzień dobry! Sprawdź regulamin naszej strony</i></p>";
-	}
-	?>
+	<?php echo $komunikat; ?>
 	</div>
 	<div id="stopka3">
 		Autor: Chr1skyy

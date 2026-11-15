@@ -41,18 +41,18 @@
 	<main>
 		<h1>Podzespoły we wskazanej kategorii</h1>
 		<?php
-		$connect = mysqli_connect('localhost', 'root', '', 'sklep');
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'sklep');
 		if (isset($_POST['submit'])) {
 			$kategoria = $_POST['kategoria'];
 			if (!empty($kategoria)) {
-				$query = "SELECT nazwa, opis, cena FROM podzespoly WHERE typy_id = $kategoria;";
-				$result = mysqli_query($connect, $query);
-				while ($row = mysqli_fetch_array($result)) {
-					echo "<p>{$row['nazwa']} {$row['opis']} CENA: {$row['cena']}</p>";
+				$zapytanie = "SELECT nazwa, opis, cena FROM podzespoly WHERE typy_id = $kategoria;";
+				$wynik = mysqli_query($polaczenie, $zapytanie);
+				while ($wiersz = mysqli_fetch_array($wynik)) {
+					echo "<p>{$wiersz['nazwa']} {$wiersz['opis']} CENA: {$wiersz['cena']}</p>";
 				}
 			}
 		}
-		mysqli_close($connect);
+		mysqli_close($polaczenie);
 		?>
 	</main>
 	<footer>

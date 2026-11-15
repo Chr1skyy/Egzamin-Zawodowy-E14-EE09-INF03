@@ -1,4 +1,4 @@
-var pacjenci = {
+let pacjenci = {
     "id": "1",
     "imie": "Agnieszka",
     "nazwisko": "Nowak",
@@ -12,19 +12,24 @@ var pacjenci = {
     ]
 };
 
-const sekcjaPrawy2 = document.getElementById('prawy2');
+let sekcja = document.getElementById("prawy2");
 
-pacjenci.recepty.forEach(recepta => {
-    let leki = '';
-    if (recepta.lek1 != "") leki += `<li>${recepta.lek1}</li>`;
-    if (recepta.lek2 != "") leki += `<li>${recepta.lek2}</li>`;
-    if (recepta.lek3 != "") leki += `<li>${recepta.lek3}</li>`;
-
-    sekcjaPrawy2.innerHTML += `
-        <div class="recepty">
-            <p>Data wystawienia: ${recepta.data}</p>
-            <ol>${leki}</ol>
-            <h4>kod: ${recepta.kod}</h4>
-        </div>
-    `;
-});
+for (let i = 0; i < pacjenci.recepty.length; i++) {
+    let recepta = pacjenci.recepty[i];
+    let leki = "";
+    if (recepta.lek1 != "") {
+        leki = leki + "<li>" + recepta.lek1 + "</li>";
+    }
+    if (recepta.lek2 != "") {
+        leki = leki + "<li>" + recepta.lek2 + "</li>";
+    }
+    if (recepta.lek3 != "") {
+        leki = leki + "<li>" + recepta.lek3 + "</li>";
+    }
+    sekcja.innerHTML = sekcja.innerHTML +
+        "<div class='recepty'>" +
+        "<p>Data wystawienia: " + recepta.data + "</p>" +
+        "<ol>" + leki + "</ol>" +
+        "<h4>Kod: " + recepta.kod + "</h4>" +
+        "</div>";
+}

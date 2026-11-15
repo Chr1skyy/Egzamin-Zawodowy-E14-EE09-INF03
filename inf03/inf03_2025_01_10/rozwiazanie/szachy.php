@@ -33,19 +33,20 @@
                     <th>Klasa</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'szachy');
-                $query = "SELECT pseudonim, tytul, ranking, klasa FROM zawodnicy WHERE ranking > 2787 ORDER BY ranking DESC;";
-                $result = mysqli_query($connect, $query);
-                $i = 1;
-                while ($row = mysqli_fetch_array($result)) {
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'szachy');
+                $zapytanie1 = "SELECT pseudonim, tytul, ranking, klasa FROM zawodnicy WHERE ranking > 2787 ORDER BY ranking DESC;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                $lp = 1;
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
                     echo "<tr>
-                        <td>$i</td>
-                        <td>{$row['pseudonim']}</td>
-                        <td>{$row['tytul']}</td>
-                        <td>{$row['ranking']}</td>
-                        <td>{$row['klasa']}</td>
+                        <td>$lp</td>
+                        <td>{$wiersz['pseudonim']}</td>
+                        <td>{$wiersz['tytul']}</td>
+                        <td>{$wiersz['ranking']}</td>
+                        <td>{$wiersz['klasa']}</td>
                     </tr>";
-                    $i++;
+                    $lp++;
                 }
                 ?>
             </table>
@@ -53,14 +54,15 @@
                 <button name="submit">Losuj nową parę graczy</button>
             </form>
             <?php
+            // Skrypt 2
             if (isset($_POST["submit"])) {
-                $query = "SELECT pseudonim, klasa FROM zawodnicy ORDER BY RAND() LIMIT 2;";
-                $result = mysqli_query($connect, $query);
-                $player1 = mysqli_fetch_array($result);
-                $player2 = mysqli_fetch_array($result);
-                echo "<h4>{$player1['pseudonim']} {$player1['klasa']} {$player2['pseudonim']} {$player2['klasa']}</h4>";
+                $zapytanie2 = "SELECT pseudonim, klasa FROM zawodnicy ORDER BY RAND() LIMIT 2;";
+                $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                $gracz1 = mysqli_fetch_array($wynik2);
+                $gracz2 = mysqli_fetch_array($wynik2);
+                echo "<h4>{$gracz1['pseudonim']} {$gracz1['klasa']} {$gracz2['pseudonim']} {$gracz2['klasa']}</h4>";
             }
-            mysqli_close($connect);
+            mysqli_close($polaczenie);
             ?>
             <p>Legenda: AM - Absolutny Mistrz, SM - Szkolny Mistrz, PM - Mistrz Poziomu, KM - Mistrz Klasowy</p>
         </section>

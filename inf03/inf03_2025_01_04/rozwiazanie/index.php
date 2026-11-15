@@ -16,11 +16,12 @@
             <label for="model">Model:</label>
             <select class="kontrolki" name="model" id="model">
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'obuwie');
-                $query1 = "SELECT model FROM produkt;";
-                $result1 = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result1)) {
-                    echo "<option>{$row['model']}</option>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'obuwie');
+                $zapytanie1 = "SELECT model FROM produkt;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
+                    echo "<option>{$wiersz['model']}</option>";
                 }
                 ?>
             </select>
@@ -35,12 +36,13 @@
             <button class="kontrolki" name="przycisk">Zamów</button>
         </form>
         <?php
-        $query2 = "SELECT buty.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty JOIN produkt ON buty.model = produkt.model;";
-        $result2 = mysqli_query($connect, $query2);
-        while ($row = mysqli_fetch_array($result2)) {
-            echo "<div class='buty'><img src='img/{$row['nazwa_pliku']}' alt='but męski'><h2>{$row['nazwa']}</h2><h5>Model: {$row['model']}</h5><h4>Cena: {$row['cena']}</h4></div>";
+        // Skrypt 2
+        $zapytanie2 = "SELECT buty.model, buty.nazwa, buty.cena, produkt.nazwa_pliku FROM buty JOIN produkt ON buty.model = produkt.model;";
+        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+        while ($wiersz = mysqli_fetch_array($wynik2)) {
+            echo "<div class='buty'><img src='img/{$wiersz['nazwa_pliku']}' alt='but męski'><h2>{$wiersz['nazwa']}</h2><h5>Model: {$wiersz['model']}</h5><h4>Cena: {$wiersz['cena']}</h4></div>";
         }
-        mysqli_close($connect);
+        mysqli_close($polaczenie);
         ?>
     </main>
     <footer>

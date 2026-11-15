@@ -1,5 +1,6 @@
 function oblicz() {
-    const wynik = document.getElementById('wynik')
-    const powierzchnia = +document.getElementById('powierzchnia').value
-    wynik.innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: " + Math.ceil(powierzchnia / 4)
+    let powierzchnia = Number(document.getElementById("powierzchnia").value);
+    let liczbaPuszek = Math.ceil(powierzchnia / 4);
+    let wynik = document.getElementById("wynik");
+    wynik.innerHTML = "Liczba jednolitrowych puszek farby potrzebnych do pomalowania wynosi: " + liczbaPuszek;
 }

@@ -1,4 +1,5 @@
 <?php
+// Skrypt 2
 session_start();
 if (!isset($_SESSION['username'])) {
     header('location: login.php');
@@ -38,23 +39,25 @@ if (!isset($_SESSION['username'])) {
                     <th>Wynik</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'laboratorium');
-                $query4 = "SELECT imie, nazwisko, pesel, Zlecenie.data, Wynik.data, plik FROM Pacjent JOIN Zlecenie ON Zlecenie.idPacjenta = Pacjent.id LEFT JOIN Wynik ON Zlecenie.id = Wynik.idZlecenia;";
-                $result = mysqli_query($connect, $query4);
-                while ($row = mysqli_fetch_array($result)) {
-                    $wynik = '';
-                    if (!empty($row['plik'])) {
-                        $wynik = "<a href='files/{$row['plik']}' target='_blank'>wynik</a>";
+                // Skrypt 3
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'laboratorium');
+                $zapytanie4 = "SELECT imie, nazwisko, pesel, Zlecenie.data, Wynik.data, plik FROM Pacjent JOIN Zlecenie ON Zlecenie.idPacjenta = Pacjent.id LEFT JOIN Wynik ON Zlecenie.id = Wynik.idZlecenia;";
+                $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                while ($wiersz = mysqli_fetch_array($wynik4)) {
+                    $odnosnik = '';
+                    if (!empty($wiersz['plik'])) {
+                        $odnosnik = "<a href='files/{$wiersz['plik']}' target='_blank'>wynik</a>";
                     }
                     echo "<tr>
-                            <td>{$row['imie']}</td>
-                            <td>{$row['nazwisko']}</td>
-                            <td>{$row['pesel']}</td>
-                            <td>{$row[3]}</td>
-                            <td>{$row[4]}</td>
-                            <td>$wynik</td>
+                            <td>{$wiersz['imie']}</td>
+                            <td>{$wiersz['nazwisko']}</td>
+                            <td>{$wiersz['pesel']}</td>
+                            <td>{$wiersz[3]}</td>
+                            <td>{$wiersz[4]}</td>
+                            <td>$odnosnik</td>
                         </tr>";
                 }
+                mysqli_close($polaczenie);
                 ?>
             </table>
         </div>

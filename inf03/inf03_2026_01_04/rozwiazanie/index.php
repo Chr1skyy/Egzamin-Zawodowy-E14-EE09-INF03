@@ -21,11 +21,12 @@
             <section>
                 <h3>Wybierz ucznia z listy:</h3>
                 <?php
-                $connect = mysqli_connect('localhost', 'root', '', 'matura');
-                $query1 = "SELECT id, imie, nazwisko FROM maturzysta WHERE szkola = 'T3' ORDER BY nazwisko ASC;";
-                $result = mysqli_query($connect, $query1);
-                while ($row = mysqli_fetch_array($result)) {
-                    echo "<a href='wynik.php?id={$row["id"]}&imie={$row["imie"]}&nazwisko={$row["nazwisko"]}'>{$row['id']}. {$row['imie']} {$row['nazwisko']}</a><br>";
+                // Skrypt 2
+                $polaczenie = mysqli_connect('localhost', 'root', '', 'matura');
+                $zapytanie1 = "SELECT id, imie, nazwisko FROM maturzysta WHERE szkola = 'T3' ORDER BY nazwisko ASC;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                while ($wiersz = mysqli_fetch_array($wynik1)) {
+                    echo "<a href='wynik.php?id={$wiersz['id']}&imie={$wiersz['imie']}&nazwisko={$wiersz['nazwisko']}'>{$wiersz['id']}. {$wiersz['imie']} {$wiersz['nazwisko']}</a><br>";
                 }
                 ?>
             </section>
@@ -33,39 +34,43 @@
                 <div class='block'>
                     <h4>Przedmioty</h4>
                     <?php
-                    $query2 = "SELECT DISTINCT przedmiot FROM arkusz;";
-                    $result = mysqli_query($connect, $query2);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "{$row['przedmiot']} ";
+                    // Skrypt 1, blok Przedmioty
+                    $zapytanie2 = "SELECT DISTINCT przedmiot FROM arkusz;";
+                    $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+                    while ($wiersz = mysqli_fetch_array($wynik2)) {
+                        echo "{$wiersz['przedmiot']} ";
                     }
                     ?>
                 </div>
                 <div class='block'>
                     <h4>Lata</h4>
                     <?php
-                    $query3 = "SELECT MIN(rok), MAX(rok) FROM arkusz;";
-                    $result = mysqli_query($connect, $query3);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "{$row['MIN(rok)']} - {$row['MAX(rok)']}";
+                    // Skrypt 1, blok Lata
+                    $zapytanie3 = "SELECT MIN(rok), MAX(rok) FROM arkusz;";
+                    $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                    while ($wiersz = mysqli_fetch_array($wynik3)) {
+                        echo "{$wiersz[0]} - {$wiersz[1]}";
                     }
                     ?>
                 </div>
                 <div class='block'>
                     <h4>Najlepszy wynik</h4>
                     <?php
-                    $query4 = "SELECT maturzysta_id, AVG(punkty) AS 'Wynik' FROM wynik GROUP BY maturzysta_id ORDER BY Wynik DESC LIMIT 1;";
-                    $result = mysqli_query($connect, $query4);
-                    $row = mysqli_fetch_array($result);
-                    echo "{$row['Wynik']}%";
+                    // Skrypt 1, blok Najlepszy wynik
+                    $zapytanie4 = "SELECT maturzysta_id, AVG(punkty) AS 'Wynik' FROM wynik GROUP BY maturzysta_id ORDER BY Wynik DESC LIMIT 1;";
+                    $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                    $wiersz = mysqli_fetch_array($wynik4);
+                    echo "{$wiersz['Wynik']}%";
                     ?>
                 </div>
                 <div class='block'>
                     <h4>Najgorszy wynik</h4>
                     <?php
-                    $query4 = "SELECT maturzysta_id, AVG(punkty) AS 'Wynik' FROM wynik GROUP BY maturzysta_id ORDER BY Wynik ASC LIMIT 1;";
-                    $result = mysqli_query($connect, $query4);
-                    $row = mysqli_fetch_array($result);
-                    echo "{$row['Wynik']}%";
+                    // Skrypt 1, blok Najgorszy wynik
+                    $zapytanie4 = "SELECT maturzysta_id, AVG(punkty) AS 'Wynik' FROM wynik GROUP BY maturzysta_id ORDER BY Wynik ASC LIMIT 1;";
+                    $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                    $wiersz = mysqli_fetch_array($wynik4);
+                    echo "{$wiersz['Wynik']}%";
                     ?>
                 </div>
             </section>
@@ -74,7 +79,7 @@
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

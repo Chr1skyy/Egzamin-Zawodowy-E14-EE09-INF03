@@ -17,11 +17,12 @@
                 <h2>Galeria</h2>
                 <section>
                     <?php
-                    $connect = mysqli_connect('localhost', 'root', '', 'islandia');
-                    $query1 = "SELECT idObiekt, plik, nazwa FROM obiekty WHERE panstwo = 'Islandia';";
-                    $result = mysqli_query($connect, $query1);
-                    while ($row = mysqli_fetch_array($result)) {
-                        echo "<a href='obiekty.php?idObiekt={$row['idObiekt']}'><img class='miniatury' src='img/{$row['plik']}' alt='{$row['nazwa']}' title='{$row['nazwa']}'></a>";
+                    // Skrypt 3
+                    $polaczenie = mysqli_connect('localhost', 'root', '', 'islandia');
+                    $zapytanie1 = "SELECT idObiekt, plik, nazwa FROM obiekty WHERE panstwo = 'Islandia';";
+                    $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                    while ($wiersz = mysqli_fetch_array($wynik1)) {
+                        echo "<a href='obiekty.php?idObiekt={$wiersz['idObiekt']}'><img class='miniatury' src='img/{$wiersz['plik']}' alt='{$wiersz['nazwa']}' title='{$wiersz['nazwa']}'></a>";
                     }
                     ?>
                 </section>
@@ -34,10 +35,11 @@
                 <li>Wodospady:
                     <ol>
                         <?php
-                        $query3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 10;";
-                        $result = mysqli_query($connect, $query3);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<li>{$row['nazwa']}</li>";
+                        // Skrypt 1
+                        $zapytanie3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 10;";
+                        $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                        while ($wiersz = mysqli_fetch_array($wynik3)) {
+                            echo "<li>{$wiersz['nazwa']}</li>";
                         }
                         ?>
                     </ol>
@@ -45,10 +47,11 @@
                 <li>Siedliska zwierząt:
                     <ol>
                         <?php
-                        $query3modified = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 14;";
-                        $result = mysqli_query($connect, $query3modified);
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo "<li>{$row['nazwa']}</li>";
+                        // Skrypt 2
+                        $zapytanie3 = "SELECT nazwa FROM obiekty WHERE panstwo = 'Islandia' AND idRodzaj = 14;";
+                        $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                        while ($wiersz = mysqli_fetch_array($wynik3)) {
+                            echo "<li>{$wiersz['nazwa']}</li>";
                         }
                         ?>
                     </ol>
@@ -60,7 +63,7 @@
         <hr>
         <p>Autor: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

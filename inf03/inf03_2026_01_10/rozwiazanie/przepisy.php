@@ -27,32 +27,40 @@
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
         }
-        $connect = mysqli_connect('localhost', 'root', '', 'przepisy');
-        $query2 = "SELECT potrawy.nazwa, rodzaje.rodzaj FROM potrawy JOIN rodzaje ON potrawy.idRodzaje = rodzaje.idRodzaje WHERE potrawy.idPotrawy = $id;";
-        $result = mysqli_query($connect, $query2);
-        $row = mysqli_fetch_array($result);
-        echo "<h1>{$row['rodzaj']}</h1>";
+        $polaczenie = mysqli_connect('localhost', 'root', '', 'przepisy');
 
-        $query1 = "SELECT nazwa, trudnosc, kalorie FROM potrawy WHERE idPotrawy = $id;";
-        $result = mysqli_query($connect, $query1);
-        $row = mysqli_fetch_array($result);
-        echo "<h2>{$row['nazwa']}</h2>";
-        if ($row['trudnosc'] == 1) $diff = 'łatwe';
-        elseif ($row['trudnosc'] == 2) $diff = 'średnie';
-        else $diff = 'trudne';
-        echo "<p>Trudność: $diff, Kalorie: {$row['kalorie']}</p>";
+        // Skrypt 1
+        $zapytanie2 = "SELECT potrawy.nazwa, rodzaje.rodzaj FROM potrawy JOIN rodzaje ON potrawy.idRodzaje = rodzaje.idRodzaje WHERE potrawy.idPotrawy = $id;";
+        $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+        $wiersz = mysqli_fetch_array($wynik2);
+        echo "<h1>{$wiersz['rodzaj']}</h1>";
+
+        // Skrypt 2
+        $zapytanie1 = "SELECT nazwa, trudnosc, kalorie FROM potrawy WHERE idPotrawy = $id;";
+        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+        $wiersz = mysqli_fetch_array($wynik1);
+        echo "<h2>{$wiersz['nazwa']}</h2>";
+        if ($wiersz['trudnosc'] == 1) {
+            $trudnosc = 'łatwe';
+        } else if ($wiersz['trudnosc'] == 2) {
+            $trudnosc = 'średnie';
+        } else {
+            $trudnosc = 'trudne';
+        }
+        echo "<p>Trudność: $trudnosc, Kalorie: {$wiersz['kalorie']}</p>";
         ?>
         <img src="img/separator.png" alt="przepis">
         <p>Alergeny:
             <?php
-            $query3 = "SELECT alergeny.alergen FROM potrawy JOIN lista_alergenow ON potrawy.idPotrawy = lista_alergenow.idPotrawy JOIN alergeny ON lista_alergenow.idAlergeny = alergeny.idAlergeny WHERE potrawy.idPotrawy = $id;";
-            $result = mysqli_query($connect, $query3);
-            while ($row_a = mysqli_fetch_array($result)) {
-                echo "{$row_a['alergen']} ";
+            // Skrypt 3
+            $zapytanie3 = "SELECT alergeny.alergen FROM potrawy JOIN lista_alergenow ON potrawy.idPotrawy = lista_alergenow.idPotrawy JOIN alergeny ON lista_alergenow.idAlergeny = alergeny.idAlergeny WHERE potrawy.idPotrawy = $id;";
+            $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+            while ($wiersz = mysqli_fetch_array($wynik3)) {
+                echo "{$wiersz['alergen']} ";
             }
             ?>
         </p>
-        <h3>SKŁADNIKI</h3>
+        <h2>Składniki</h2>
         <ul>
             <li>Lorem 1 kg</li>
             <li>Ipsum 2 szt.</li>
@@ -60,16 +68,17 @@
             <li>Sit amet (szczypta)</li>
         </ul>
         <?php
-        $query4 = "SELECT przepis, plik FROM potrawy WHERE idPotrawy = $id;";
-        $result = mysqli_query($connect, $query4);
-        $row_f = mysqli_fetch_array($result);
+        // Skrypt 4
+        $zapytanie4 = "SELECT przepis, plik FROM potrawy WHERE idPotrawy = $id;";
+        $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+        $wiersz = mysqli_fetch_array($wynik4);
         ?>
-        <p><?php echo $row_f['przepis']; ?></p>
+        <p><?php echo $wiersz['przepis']; ?></p>
     </main>
-    <section style="background-image: url('img/<?= $row_f['plik'] ?>')">
+    <section style="background-image: url('img/<?php echo $wiersz['plik']; ?>')">
         <h1>Blog Kulinarny</h1>
     </section>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

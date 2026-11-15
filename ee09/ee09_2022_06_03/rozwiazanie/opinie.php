@@ -12,14 +12,15 @@
 	<main>
 		<h2>Opinie naszych klientów</h2>
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'hurtownia');
-		$q = "SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM klienci JOIN opinie ON klienci.id = opinie.klienci_id AND Typy_id IN (2,3);";
-		$res = mysqli_query($con, $q);
-		while($row = mysqli_fetch_array($res)) {
+		// Skrypt 1
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'hurtownia');
+		$zapytanie3 = "SELECT klienci.zdjecie, klienci.imie, opinie.opinia FROM klienci JOIN opinie ON klienci.id = opinie.klienci_id AND Typy_id IN (2,3);";
+		$wynik3 = mysqli_query($polaczenie, $zapytanie3);
+		while ($wiersz = mysqli_fetch_array($wynik3)) {
 			echo "<div class='opinia'>
-					<img src='img/$row[0]' alt='klient' />
-					<blockquote>$row[2]</blockquote>
-					<h4>$row[1]</h4>
+					<img src='img/{$wiersz['zdjecie']}' alt='klient' />
+					<blockquote>{$wiersz['opinia']}</blockquote>
+					<h4>{$wiersz['imie']}</h4>
 				</div>";
 		}
 		?>
@@ -33,10 +34,11 @@
 			<h3>Nasi top klienci</h3>
 			<ol>
 				<?php
-				$q = "SELECT imie, nazwisko, punkty FROM klienci ORDER BY punkty DESC LIMIT 3;";
-				$res = mysqli_query($con, $q);
-				while($row = mysqli_fetch_array($res)) {
-					echo "<li>$row[0] $row[1], $row[2] pkt.</li>";
+				// Skrypt 2
+				$zapytanie1 = "SELECT imie, nazwisko, punkty FROM klienci ORDER BY punkty DESC LIMIT 3;";
+				$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+				while ($wiersz = mysqli_fetch_array($wynik1)) {
+					echo "<li>{$wiersz['imie']} {$wiersz['nazwisko']}, {$wiersz['punkty']} pkt.</li>";
 				}
 				?>
 			</ol>
@@ -50,7 +52,7 @@
 		</section>
 	</footer>
 	<?php
-	mysqli_close($con);
+	mysqli_close($polaczenie);
 	?>
 </body>
 </html>

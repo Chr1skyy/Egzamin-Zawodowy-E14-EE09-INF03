@@ -1,24 +1,26 @@
 function kolorBg(kolor) {
-	let prawy = document.getElementById("prawy");
-	prawy.style.background = kolor;
+    document.getElementById("prawy").style.backgroundColor = kolor;
 }
+
 function kolorFont() {
-	let prawy = document.getElementById("prawy");
-	let kolor = document.getElementById("kolorC");
-	prawy.style.color = kolor.value;
+    let kolor = document.getElementById("kolorC").value;
+    document.getElementById("prawy").style.color = kolor;
 }
+
 function rozmiarFont() {
-	let prawy = document.getElementById("prawy");
-	let rozmiar = document.getElementById("rozmiar").value;
-	prawy.style.fontSize = rozmiar + "%";
+    let rozmiar = document.getElementById("rozmiar").value;
+    document.getElementById("prawy").style.fontSize = rozmiar + "%";
 }
+
 function ramka() {
-	let obraz = document.getElementById("obraz");
-	let czyRamka = document.getElementById("ramka").checked;
-	if(czyRamka) obraz.style.border = "1px solid white";
-	else obraz.style.border = "none";
+    let obraz = document.getElementById("obraz");
+    if (document.getElementById("ramka").checked) {
+        obraz.style.border = "1px solid white";
+    } else {
+        obraz.style.border = "none";
+    }
 }
+
 function punktor(typ) {
-	let lista = document.getElementById("lista");
-	lista.style.listStyleType = typ;
+    document.getElementById("lista").style.listStyleType = typ;
 }

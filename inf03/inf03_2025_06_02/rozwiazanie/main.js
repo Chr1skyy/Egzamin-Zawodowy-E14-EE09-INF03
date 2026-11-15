@@ -1,11 +1,10 @@
-function zaznaczWykonane(clickedButton) {
-    const elementListy = clickedButton.parentElement
-    elementListy.style = "text-decoration: line-through"
+function zaznaczWykonane(przycisk) {
+    przycisk.parentElement.style.textDecoration = "line-through";
 }
+
 function dodajZadanie() {
-    const lista = document.querySelector("ul")
-    const zadanie = document.querySelector("input")
-    let nowyElementListy = document.createElement("li")
-    nowyElementListy.innerHTML = `${zadanie.value}<button type='button' onclick='zaznaczWykonane(this)'>Wykonane</button>`
-    lista.appendChild(nowyElementListy)
+    let tekst = document.getElementById("zadanie").value;
+    let nowyElement = document.createElement("li");
+    nowyElement.innerHTML = tekst + "<button type='button' onclick='zaznaczWykonane(this)'>Wykonane</button>";
+    document.querySelector("ul").appendChild(nowyElement);
 }

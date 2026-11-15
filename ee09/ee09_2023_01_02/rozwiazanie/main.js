@@ -1,29 +1,22 @@
-let nr = 1
-function zamiana(src, numer) {
-    let glowne = document.getElementById('glowne')
-    glowne.src = src
-    nr = numer
+let numerZdjecia = 1;
 
+function zamiana(numer) {
+    numerZdjecia = numer;
+    document.getElementById("glowne").src = "img/" + numerZdjecia + ".jpg";
 }
 
-function prev() {
-    let aktualne = document.getElementById('glowne')
-    nr--
-    if (nr == 0) nr = 5
-    if (nr == 1) aktualne.src = 'img/1.jpg'
-    if (nr == 2) aktualne.src = 'img/2.jpg'
-    if (nr == 3) aktualne.src = 'img/3.jpg'
-    if (nr == 4) aktualne.src = 'img/4.jpg'
-    if (nr == 5) aktualne.src = 'img/5.jpg'
+function poprzednie() {
+    numerZdjecia--;
+    if (numerZdjecia < 1) {
+        numerZdjecia = 5;
+    }
+    document.getElementById("glowne").src = "img/" + numerZdjecia + ".jpg";
 }
 
-function next() {
-    let aktualne = document.getElementById('glowne')
-    nr++
-    if (nr == 6) nr = 1
-    if (nr == 1) aktualne.src = 'img/1.jpg'
-    if (nr == 2) aktualne.src = 'img/2.jpg'
-    if (nr == 3) aktualne.src = 'img/3.jpg'
-    if (nr == 4) aktualne.src = 'img/4.jpg'
-    if (nr == 5) aktualne.src = 'img/5.jpg'
+function nastepne() {
+    numerZdjecia++;
+    if (numerZdjecia > 5) {
+        numerZdjecia = 1;
+    }
+    document.getElementById("glowne").src = "img/" + numerZdjecia + ".jpg";
 }

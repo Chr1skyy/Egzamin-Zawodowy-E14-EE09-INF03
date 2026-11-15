@@ -20,16 +20,17 @@
         <section id="left">
             <table>
                 <?php
-                $connect = mysqli_connect("localhost", "root", "", "samochody");
-                $query3 = "SELECT pojazdy.marka, pojazdy.model, pojazdy.cena, kolory.nazwa, kolory.doplata FROM pojazdy JOIN kolory ON pojazdy.kolor = kolory.id WHERE pojazdy.model = 'alfa';";
-                $result = mysqli_query($connect, $query3);
-                while ($row = mysqli_fetch_array($result)) {
-                    $fullPrice = $row['cena'] + $row['doplata'];
+                // Skrypt 1
+                $polaczenie = mysqli_connect("localhost", "root", "", "samochody");
+                $zapytanie3 = "SELECT pojazdy.marka, pojazdy.model, pojazdy.cena, kolory.nazwa, kolory.doplata FROM pojazdy JOIN kolory ON pojazdy.kolor = kolory.id WHERE pojazdy.model = 'alfa';";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    $cenaCalkowita = $wiersz['cena'] + $wiersz['doplata'];
                     echo "<tr>
-                    <td>{$row['marka']}</td>
-                    <td>{$row['model']}</td>
-                    <td>{$row['nazwa']}</td>
-                    <td>{$fullPrice}</td>
+                    <td>{$wiersz['marka']}</td>
+                    <td>{$wiersz['model']}</td>
+                    <td>{$wiersz['nazwa']}</td>
+                    <td>{$cenaCalkowita}</td>
                 </tr>
                 ";
                 }
@@ -43,34 +44,35 @@
                     <th>Cena</th>
                 </tr>
                 <?php
-                $query4 = "SELECT marka, model, cena FROM pojazdy ORDER BY RAND() LIMIT 2;";
-                $result = mysqli_query($connect, $query4);
-                $vehicle1 = mysqli_fetch_array($result);
-                $vehicle2 = mysqli_fetch_array($result);
+                // Skrypt 2
+                $zapytanie4 = "SELECT marka, model, cena FROM pojazdy ORDER BY RAND() LIMIT 2;";
+                $wynik4 = mysqli_query($polaczenie, $zapytanie4);
+                $pojazd1 = mysqli_fetch_array($wynik4);
+                $pojazd2 = mysqli_fetch_array($wynik4);
                 ?>
                 <tr>
                     <td colspan="3"><img src="img/a1.jpg" alt="Konfiguracja 1"></td>
                 </tr>
                 <tr>
                     <td>Marka</td>
-                    <td><?= $vehicle1['marka']; ?></td>
-                    <td rowspan="2"><?= $vehicle1['cena']; ?></td>
+                    <td><?php echo $pojazd1['marka']; ?></td>
+                    <td rowspan="2"><?php echo $pojazd1['cena']; ?></td>
                 </tr>
                 <tr>
                     <td>Model</td>
-                    <td><?= $vehicle1['model']; ?></td>
+                    <td><?php echo $pojazd1['model']; ?></td>
                 </tr>
                 <tr>
                     <td colspan="3"><img src="img/a2.jpg" alt="Konfiguracja 2"></td>
                 </tr>
                 <tr>
                     <td>Marka</td>
-                    <td><?= $vehicle2['marka']; ?></td>
-                    <td rowspan="2"><?= $vehicle2['cena']; ?></td>
+                    <td><?php echo $pojazd2['marka']; ?></td>
+                    <td rowspan="2"><?php echo $pojazd2['cena']; ?></td>
                 </tr>
                 <tr>
                     <td>Model</td>
-                    <td><?= $vehicle2['model']; ?></td>
+                    <td><?php echo $pojazd2['model']; ?></td>
                 </tr>
             </table>
         </section>
@@ -82,7 +84,7 @@
     <footer>
         <p>Stronę wykonał: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

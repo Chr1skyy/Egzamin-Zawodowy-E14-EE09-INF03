@@ -32,11 +32,12 @@
         <section id="mid">
             <h2>W tym roku jedziemy do...</h2>
             <?php
-            $con = mysqli_connect('localhost', 'root', '', 'podroze');
-            $q = "SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis ASC;";
-            $res = mysqli_query($con, $q);
-            while ($row = mysqli_fetch_array($res)) {
-                echo "<img src='img/$row[0]' alt='$row[1]' title='$row[1]'>";
+            // Skrypt 1
+            $polaczenie = mysqli_connect('localhost', 'root', '', 'podroze');
+            $zapytanie1 = "SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis ASC;";
+            $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+            while ($wiersz = mysqli_fetch_array($wynik1)) {
+                echo "<img src='img/{$wiersz['nazwaPliku']}' alt='{$wiersz['podpis']}' title='{$wiersz['podpis']}'>";
             }
             ?>
         </section>
@@ -50,12 +51,13 @@
         <h3>W poprzednich latach byliśmy...</h3>
         <ol>
             <?php
-            $q = "SELECT cel, dataWyjazdu FROM wycieczki WHERE dostepna = 0;";
-            $res = mysqli_query($con, $q);
-            while ($row = mysqli_fetch_array($res)) {
-                echo "<li>Dnia $row[1] pojechaliśmy do $row[0]</li>";
+            // Skrypt 2
+            $zapytanie2 = "SELECT cel, dataWyjazdu FROM wycieczki WHERE dostepna = 0;";
+            $wynik2 = mysqli_query($polaczenie, $zapytanie2);
+            while ($wiersz = mysqli_fetch_array($wynik2)) {
+                echo "<li>Dnia {$wiersz['dataWyjazdu']} pojechaliśmy do {$wiersz['cel']}</li>";
             }
-            mysqli_close($con);
+            mysqli_close($polaczenie);
             ?>
         </ol>
     </section>

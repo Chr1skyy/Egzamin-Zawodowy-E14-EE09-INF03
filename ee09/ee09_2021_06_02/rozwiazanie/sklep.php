@@ -20,16 +20,17 @@
 	</div>
 	<div id="glowny">
 		<?php
-		$con = mysqli_connect('localhost', 'root', '', 'dane2');
-		$kw1 = "SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2);";
-		$res1 = mysqli_query($con, $kw1);
-		while ($tab = mysqli_fetch_row($res1)) {
+		// Skrypt 1
+		$polaczenie = mysqli_connect('localhost', 'root', '', 'dane2');
+		$zapytanie1 = "SELECT nazwa, ilosc, opis, cena, zdjecie FROM produkty WHERE Rodzaje_id IN (1, 2);";
+		$wynik1 = mysqli_query($polaczenie, $zapytanie1);
+		while ($wiersz = mysqli_fetch_array($wynik1)) {
 			echo "<div class='produkt'>
-		<img src='img/$tab[4]' alt='warzywniak' />
-		<h5>$tab[0]</h5>
-		<p>opis: $tab[2]</p>
-		<p>na stanie: $tab[1]</p>
-		<h2>$tab[3] zł</h2>
+		<img src='img/{$wiersz['zdjecie']}' alt='warzywniak' />
+		<h5>{$wiersz['nazwa']}</h5>
+		<p>opis: {$wiersz['opis']}</p>
+		<p>na stanie: {$wiersz['ilosc']}</p>
+		<h2>{$wiersz['cena']} zł</h2>
 		</div>";
 		}
 		?>
@@ -47,13 +48,14 @@
 			<button>Dodaj produkt</button>
 		</form>
 		<?php
+		// Skrypt 2
 		if (!empty($_POST['nazwa']) && !empty($_POST['cena'])) {
 			$nazwa = $_POST['nazwa'];
 			$cena = $_POST['cena'];
-			$kw2 = "INSERT INTO produkty VALUES (NULL, 1, 4, '$nazwa', 10, '', $cena, 'owoce.jpg');";
-			mysqli_query($con, $kw2);
+			$zapytanie4 = "INSERT INTO produkty VALUES (NULL, 1, 4, '$nazwa', 10, '', $cena, 'owoce.jpg');";
+			mysqli_query($polaczenie, $zapytanie4);
 		}
-		mysqli_close($con);
+		mysqli_close($polaczenie);
 		?>
 		Stronę wykonał: Chr1skyy
 	</div>

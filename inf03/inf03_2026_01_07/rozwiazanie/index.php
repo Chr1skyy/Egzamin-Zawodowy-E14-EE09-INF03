@@ -27,23 +27,23 @@
                     <th>Pogoda</th>
                 </tr>
                 <?php
-                $connect = mysqli_connect("localhost", "root", "", "pogoda");
-                $query3 = "SELECT miejscowosc.nazwa, miejscowosc.kraj, pomiary.temperatura FROM miejscowosc JOIN pomiary ON miejscowosc.id = pomiary.id_miejscowosc WHERE pomiary.id_miesiac = 7;";
-                $result = mysqli_query($connect, $query3);
-                while ($row = mysqli_fetch_array($result)) {
-                    $weatherImage = "";
-                    if ($row['temperatura'] > 30) {
-                        $weatherImage = "<img src='img/slonce.png'>";
-                    } elseif ($row['temperatura'] < 26) {
-                        $weatherImage = "<img src='img/deszcz.png'>";
+                // Skrypt 1
+                $polaczenie = mysqli_connect("localhost", "root", "", "pogoda");
+                $zapytanie3 = "SELECT miejscowosc.nazwa, miejscowosc.kraj, pomiary.temperatura FROM miejscowosc JOIN pomiary ON miejscowosc.id = pomiary.id_miejscowosc WHERE pomiary.id_miesiac = 7;";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    if ($wiersz['temperatura'] > 30) {
+                        $obrazPogody = "<img src='img/slonce.png'>";
+                    } else if ($wiersz['temperatura'] < 26) {
+                        $obrazPogody = "<img src='img/deszcz.png'>";
                     } else {
-                        $weatherImage = "<img src='img/chmury.png'>";
+                        $obrazPogody = "<img src='img/chmury.png'>";
                     }
                     echo "<tr>
-                            <td>{$row['nazwa']}</td>
-                            <td>{$row['kraj']}</td>
-                            <td>{$row['temperatura']}</td>
-                            <td>$weatherImage</td>
+                            <td>{$wiersz['nazwa']}</td>
+                            <td>{$wiersz['kraj']}</td>
+                            <td>{$wiersz['temperatura']}</td>
+                            <td>$obrazPogody</td>
                           </tr>";
                 }
                 ?>
@@ -65,12 +65,13 @@
             <a href="index.php?id_miesiac=12">Grudzień</a>
             <p>Średnia temperatura dla wybranego miesiąca wynosi:</p>
             <?php
+            // Skrypt 2
             if (isset($_GET['id_miesiac'])) {
-                $id_miesiac = $_GET['id_miesiac'];
-                $query1 = "SELECT ROUND(AVG(temperatura),2) FROM pomiary WHERE id_miesiac = $id_miesiac;";
-                $result = mysqli_query($connect, $query1);
-                $row = mysqli_fetch_array($result);
-                echo "<h3>{$row[0]} stopni</h3>";
+                $idMiesiaca = $_GET['id_miesiac'];
+                $zapytanie1 = "SELECT ROUND(AVG(temperatura),2) FROM pomiary WHERE id_miesiac = $idMiesiaca;";
+                $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+                $wiersz = mysqli_fetch_array($wynik1);
+                echo "<h3>{$wiersz[0]} stopni</h3>";
             }
             ?>
         </section>
@@ -78,7 +79,7 @@
     <footer>
         <p>Numer zdającego: Chr1skyy</p>
     </footer>
-    <?php mysqli_close($connect); ?>
+    <?php mysqli_close($polaczenie); ?>
 </body>
 
 </html>

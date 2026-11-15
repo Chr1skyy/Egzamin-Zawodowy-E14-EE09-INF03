@@ -14,12 +14,13 @@
     </header>
     <article>
         <?php
-        $connect = mysqli_connect("localhost", "root", "", "medica");
-        $query1 = "SELECT nazwa, cena, opis FROM abonamenty;";
-        $result = mysqli_query($connect, $query1);
-        while ($row = mysqli_fetch_array($result)) {
-            echo "<h3>Pakiet {$row['nazwa']} - cena {$row['cena']} zł</h3>";
-            echo "<p>{$row['opis']}</p>";
+        // Skrypt 1
+        $polaczenie = mysqli_connect("localhost", "root", "", "medica");
+        $zapytanie1 = "SELECT nazwa, cena, opis FROM abonamenty;";
+        $wynik1 = mysqli_query($polaczenie, $zapytanie1);
+        while ($wiersz = mysqli_fetch_array($wynik1)) {
+            echo "<h3>Pakiet {$wiersz['nazwa']} - cena {$wiersz['cena']} zł</h3>";
+            echo "<p>{$wiersz['opis']}</p>";
         }
         ?>
         <a href="opis.html">Dowiedz się więcej</a>
@@ -29,10 +30,11 @@
             <h2>Standardowy</h2>
             <ul>
                 <?php
-                $query3_1 = "SELECT nazwa, cecha FROM abonamenty JOIN szczegolyabonamentu ON abonamenty.id = Abonamenty_id JOIN cechy ON cechy.id = Cechy_id WHERE abonamenty.id = 1;";
-                $result3 = mysqli_query($connect, $query3_1);
-                while ($row3 = mysqli_fetch_array($result3)) {
-                    echo "<li>{$row3['cecha']}</li>";
+                // Skrypt 2
+                $zapytanie3 = "SELECT nazwa, cecha FROM abonamenty JOIN szczegolyabonamentu ON abonamenty.id = Abonamenty_id JOIN cechy ON cechy.id = Cechy_id WHERE abonamenty.id = 1;";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    echo "<li>{$wiersz['cecha']}</li>";
                 }
                 ?>
             </ul>
@@ -41,10 +43,11 @@
             <h2>Premium</h2>
             <ul>
                 <?php
-                $query3_2 = "SELECT nazwa, cecha FROM abonamenty JOIN szczegolyabonamentu ON abonamenty.id = Abonamenty_id JOIN cechy ON cechy.id = Cechy_id WHERE abonamenty.id = 2;";
-                $result3 = mysqli_query($connect, $query3_2);
-                while ($row3 = mysqli_fetch_array($result3)) {
-                    echo "<li>{$row3['cecha']}</li>";
+                // Skrypt 2 dla abonamentu 2
+                $zapytanie3 = "SELECT nazwa, cecha FROM abonamenty JOIN szczegolyabonamentu ON abonamenty.id = Abonamenty_id JOIN cechy ON cechy.id = Cechy_id WHERE abonamenty.id = 2;";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    echo "<li>{$wiersz['cecha']}</li>";
                 }
                 ?>
             </ul>
@@ -53,12 +56,13 @@
             <h2>Dziecko</h2>
             <ul>
                 <?php
-                $query3_3 = "SELECT nazwa, cecha FROM abonamenty JOIN szczegolyabonamentu ON abonamenty.id = Abonamenty_id JOIN cechy ON cechy.id = Cechy_id WHERE abonamenty.id = 3;";
-                $result3 = mysqli_query($connect, $query3_3);
-                while ($row3 = mysqli_fetch_array($result3)) {
-                    echo "<li>{$row3['cecha']}</li>";
+                // Skrypt 2 dla abonamentu 3
+                $zapytanie3 = "SELECT nazwa, cecha FROM abonamenty JOIN szczegolyabonamentu ON abonamenty.id = Abonamenty_id JOIN cechy ON cechy.id = Cechy_id WHERE abonamenty.id = 3;";
+                $wynik3 = mysqli_query($polaczenie, $zapytanie3);
+                while ($wiersz = mysqli_fetch_array($wynik3)) {
+                    echo "<li>{$wiersz['cecha']}</li>";
                 }
-                mysqli_close($connect);
+                mysqli_close($polaczenie);
                 ?>
             </ul>
         </section>

@@ -1,3 +1,11 @@
+<?php
+if (isset($_COOKIE['ciastko'])) {
+	$komunikat = "<p>Witaj ponownie na naszej stronie</p>";
+} else {
+	setcookie('ciastko', 1, time() + 3600);
+	$komunikat = "<p>Witaj! Nasza strona używa ciasteczek</p>";
+}
+?>
 <!DOCTYPE html>
 <html lang="pl">
 
@@ -12,14 +20,7 @@
 		<h1>Biuro podróży: WESOŁA WYPRAWA</h1>
 	</header>
 	<section id="ciasteczko">
-		<?php
-		if (empty($_COOKIE['ciastko'])) {
-			echo "<p>Witaj! Nasza strona używa ciasteczek</p>";
-			setcookie('ciastko', 1, time() + 3600, 'localhost');
-		} else {
-			echo "<p>Witaj ponownie na naszej stronie</p>";
-		}
-		?>
+		<?php echo $komunikat; ?>
 	</section>
 	<main>
 		<section id="lewy">
